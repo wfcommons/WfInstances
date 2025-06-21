@@ -5,15 +5,13 @@ import sys
 README_PATH = sys.argv[1] if len(sys.argv) > 1 else "README.md"
 
 totals_url = "https://wfinstances.ics.hawaii.edu/usage/public/totals/"
-ips_url = "https://wfinstances.ics.hawaii.edu/usage/public/ips/"
 
 totals = requests.get(totals_url).json()["result"]
-ips = requests.get(ips_url).json()["result"]
 
 downloads = totals.get("downloads", 0)
 visualizations = totals.get("visualizations", 0)
 simulations = totals.get("simulations", 0)
-ip_count = len(ips)
+ip_count = totals.get("ips", 0)
 
 with open(README_PATH, "r", encoding="utf-8") as f:
     content = f.read()
