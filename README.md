@@ -15,9 +15,9 @@ A [WfFormat WfInstances browser web application](https://wfinstances.ics.hawaii.
 <a href="https://wfinstances.ics.hawaii.edu" target="_blank"><img src="./wfinstances-browser-screenshot.jpeg" width=600 style="border-radius: 1em" /></a>
 
 ![Downloads](https://img.shields.io/badge/downloads-342-blue.svg)
-![Visualizations](https://img.shields.io/badge/visualizations-813-orange.svg)
+![Visualizations](https://img.shields.io/badge/visualizations-816-orange.svg)
 ![Simulations](https://img.shields.io/badge/simulations-146-success.svg)
-![Users](https://img.shields.io/badge/users-142-lightgrey.svg)
+![Users](https://img.shields.io/badge/users-143-lightgrey.svg)
 
 
 
