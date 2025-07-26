@@ -14,10 +14,10 @@ A [WfFormat WfInstances browser web application](https://wfinstances.ics.hawaii.
 
 <a href="https://wfinstances.ics.hawaii.edu" target="_blank"><img src="./wfinstances-browser-screenshot.jpeg" width=600 style="border-radius: 1em" /></a>
 
-![Downloads](https://img.shields.io/badge/downloads-352-blue.svg)
-![Visualizations](https://img.shields.io/badge/visualizations-841-orange.svg)
-![Simulations](https://img.shields.io/badge/simulations-147-success.svg)
-![Users](https://img.shields.io/badge/users-148-lightgrey.svg)
+![Downloads](https://img.shields.io/badge/downloads-387-blue.svg)
+![Visualizations](https://img.shields.io/badge/visualizations-844-orange.svg)
+![Simulations](https://img.shields.io/badge/simulations-152-success.svg)
+![Users](https://img.shields.io/badge/users-150-lightgrey.svg)
 
 
 
