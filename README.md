@@ -16,7 +16,7 @@ A [WfFormat WfInstances browser web application](https://wfinstances.ics.hawaii.
 
 ![Downloads](https://img.shields.io/badge/downloads-417-blue.svg)
 ![Visualizations](https://img.shields.io/badge/visualizations-1031-orange.svg)
-![Simulations](https://img.shields.io/badge/simulations-188-success.svg)
+![Simulations](https://img.shields.io/badge/simulations-189-success.svg)
 ![Users](https://img.shields.io/badge/users-191-lightgrey.svg)
 
 
