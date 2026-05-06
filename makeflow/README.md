@@ -20,7 +20,7 @@ _computing platforms_.
 #### Workflow Simulator
 
 The execution instances provided in this directory are compatible with any
-[simulator framework](https://wfcommons.org/simulation) that
+[simulation framework](https://wfcommons.org/simulation) that
 implements the
 [WfCommons JSON format](https://github.com/wfcommons/workflow-schema).
 

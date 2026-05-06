@@ -34,5 +34,5 @@ repository:
 ### Workflow Simulator
 
 The execution instances provided in this directory are compatible with any
-[simulator framework](https://wfcommons.org/simulation) that implements
+[simulation framework](https://wfcommons.org/simulation) that implements
 [WfFormat](https://github.com/wfcommons/wfformat).
