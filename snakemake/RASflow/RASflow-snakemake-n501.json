@@ -24286,7 +24286,7 @@
     },
     "runtimeSystem": {
         "name": "Snakemake",
-        "version": "1.5-dev",
+        "version": "9.20.0",
         "url": "https://snakemake.readthedocs.io/"
     }
 }
