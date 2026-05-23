@@ -16,6 +16,7 @@ The workflow execution instances recorded in this directory are from
 the following applications:
 
 - [RASflow](https://github.com/zhxiaokang/RASflow)
+- [Varlociraptor](https://github.com/snakemake-workflows/dna-seq-varlociraptor)
 
 ### Workflow Simulator
 
