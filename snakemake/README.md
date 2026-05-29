@@ -17,6 +17,7 @@ the following applications:
 
 - [RASflow](https://github.com/zhxiaokang/RASflow)
 - [Varlociraptor](https://github.com/snakemake-workflows/dna-seq-varlociraptor)
+- [rna-seq-star-deseq2](https://github.com/snakemake-workflows/rna-seq-star-deseq2)
 
 ### Workflow Simulator
 
