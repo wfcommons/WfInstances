@@ -1,7 +1,7 @@
 {
     "name": "reconstructed_workflow",
     "description": "Instance generated with WfCommons - https://wfcommons.org",
-    "createdAt": "2026-05-27T04:39:15.091502-10:00",
+    "createdAt": "2026-05-29T05:26:49.736897-10:00",
     "schemaVersion": "1.5",
     "author": {
         "name": "henric",
@@ -15,70 +15,7 @@
                     "id": "fastp_pe_1",
                     "parents": [],
                     "children": [
-                        "star_align_24"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039508_1.fastq",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039508_2.fastq"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R1.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R2.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.unpaired.R1.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.unpaired.R2.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_paired.failed.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.html",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.json"
-                    ]
-                },
-                {
-                    "name": "fastp_pe_2",
-                    "id": "fastp_pe_2",
-                    "parents": [],
-                    "children": [
-                        "star_align_33"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039509_1.fastq",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039509_2.fastq"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_R1.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_R2.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.unpaired.R1.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.unpaired.R2.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_paired.failed.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.html",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.json"
-                    ]
-                },
-                {
-                    "name": "fastp_pe_3",
-                    "id": "fastp_pe_3",
-                    "parents": [],
-                    "children": [
-                        "star_align_9"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039512_1.fastq",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039512_2.fastq"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R1.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R2.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.unpaired.R1.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.unpaired.R2.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_paired.failed.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.html",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.json"
-                    ]
-                },
-                {
-                    "name": "fastp_pe_4",
-                    "id": "fastp_pe_4",
-                    "parents": [],
-                    "children": [
-                        "star_align_5"
+                        "star_align_2"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039513_1.fastq",
@@ -95,22 +32,22 @@
                     ]
                 },
                 {
-                    "name": "star_align_5",
-                    "id": "star_align_5",
+                    "name": "star_align_2",
+                    "id": "star_align_2",
                     "parents": [
-                        "fastp_pe_4"
+                        "fastp_pe_1"
                     ],
                     "children": [
-                        "rseqc_readdup_6",
-                        "rseqc_readgc_7",
-                        "rseqc_stat_8",
-                        "rseqc_readdis_15",
-                        "rseqc_innerdis_18",
-                        "rseqc_infer_20",
-                        "rseqc_junction_annotation_22",
-                        "rseqc_junction_saturation_23",
-                        "multiqc_42",
-                        "count_matrix_43"
+                        "rseqc_readgc_3",
+                        "rseqc_readdup_5",
+                        "rseqc_stat_6",
+                        "rseqc_readdis_7",
+                        "rseqc_innerdis_8",
+                        "rseqc_junction_annotation_9",
+                        "rseqc_junction_saturation_10",
+                        "rseqc_infer_11",
+                        "multiqc_48",
+                        "count_matrix_42"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1_R1.fastq.gz",
@@ -127,29 +64,13 @@
                     ]
                 },
                 {
-                    "name": "rseqc_readdup_6",
-                    "id": "rseqc_readdup_6",
+                    "name": "rseqc_readgc_3",
+                    "id": "rseqc_readgc_3",
                     "parents": [
-                        "star_align_5"
+                        "star_align_2"
                     ],
                     "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.readdup.DupRate_plot.pdf"
-                    ]
-                },
-                {
-                    "name": "rseqc_readgc_7",
-                    "id": "rseqc_readgc_7",
-                    "parents": [
-                        "star_align_5"
-                    ],
-                    "children": [
-                        "multiqc_42"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam"
@@ -159,126 +80,30 @@
                     ]
                 },
                 {
-                    "name": "rseqc_stat_8",
-                    "id": "rseqc_stat_8",
-                    "parents": [
-                        "star_align_5"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.stats.txt"
-                    ]
-                },
-                {
-                    "name": "star_align_9",
-                    "id": "star_align_9",
-                    "parents": [
-                        "fastp_pe_3"
-                    ],
-                    "children": [
-                        "rseqc_stat_10",
-                        "rseqc_readdup_11",
-                        "rseqc_readgc_12",
-                        "rseqc_junction_saturation_14",
-                        "rseqc_infer_16",
-                        "rseqc_junction_annotation_17",
-                        "rseqc_readdis_19",
-                        "rseqc_innerdis_21",
-                        "multiqc_42",
-                        "count_matrix_43"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R1.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R2.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/star_genome",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/genome.gtf"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/ReadsPerGene.out.tab",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Log.out",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/SJ.out.tab",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Log.final.out"
-                    ]
-                },
-                {
-                    "name": "rseqc_stat_10",
-                    "id": "rseqc_stat_10",
-                    "parents": [
-                        "star_align_9"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.stats.txt"
-                    ]
-                },
-                {
-                    "name": "rseqc_readdup_11",
-                    "id": "rseqc_readdup_11",
-                    "parents": [
-                        "star_align_9"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readdup.DupRate_plot.pdf"
-                    ]
-                },
-                {
-                    "name": "rseqc_readgc_12",
-                    "id": "rseqc_readgc_12",
-                    "parents": [
-                        "star_align_9"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readgc.GC_plot.pdf"
-                    ]
-                },
-                {
-                    "name": "rseqc_gtf2bed_13",
-                    "id": "rseqc_gtf2bed_13",
+                    "name": "rseqc_gtf2bed_4",
+                    "id": "rseqc_gtf2bed_4",
                     "parents": [],
                     "children": [
-                        "rseqc_junction_saturation_14",
-                        "rseqc_readdis_15",
-                        "rseqc_infer_16",
-                        "rseqc_junction_annotation_17",
-                        "rseqc_innerdis_18",
-                        "rseqc_readdis_19",
+                        "rseqc_readdis_7",
+                        "rseqc_innerdis_8",
+                        "rseqc_junction_annotation_9",
+                        "rseqc_junction_saturation_10",
+                        "rseqc_infer_11",
+                        "rseqc_innerdis_16",
+                        "rseqc_readdis_17",
+                        "rseqc_junction_annotation_18",
+                        "rseqc_junction_saturation_19",
                         "rseqc_infer_20",
-                        "rseqc_innerdis_21",
-                        "rseqc_junction_annotation_22",
-                        "rseqc_junction_saturation_23",
-                        "rseqc_infer_26",
-                        "rseqc_junction_saturation_27",
-                        "rseqc_junction_annotation_29",
-                        "rseqc_innerdis_30",
-                        "rseqc_readdis_31",
-                        "rseqc_readdis_35",
-                        "rseqc_innerdis_36",
-                        "rseqc_infer_38",
-                        "rseqc_junction_saturation_39",
-                        "rseqc_junction_annotation_40"
+                        "rseqc_junction_annotation_25",
+                        "rseqc_junction_saturation_26",
+                        "rseqc_infer_27",
+                        "rseqc_readdis_30",
+                        "rseqc_innerdis_32",
+                        "rseqc_junction_annotation_34",
+                        "rseqc_junction_saturation_35",
+                        "rseqc_readdis_36",
+                        "rseqc_infer_37",
+                        "rseqc_innerdis_41"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/genome.gtf"
@@ -289,32 +114,46 @@
                     ]
                 },
                 {
-                    "name": "rseqc_junction_saturation_14",
-                    "id": "rseqc_junction_saturation_14",
+                    "name": "rseqc_readdup_5",
+                    "id": "rseqc_readdup_5",
                     "parents": [
-                        "star_align_9",
-                        "rseqc_gtf2bed_13"
+                        "star_align_2"
                     ],
                     "children": [
-                        "multiqc_42"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam"
                     ],
                     "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.junctionsat.junctionSaturation_plot.pdf"
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.readdup.DupRate_plot.pdf"
                     ]
                 },
                 {
-                    "name": "rseqc_readdis_15",
-                    "id": "rseqc_readdis_15",
+                    "name": "rseqc_stat_6",
+                    "id": "rseqc_stat_6",
                     "parents": [
-                        "star_align_5",
-                        "rseqc_gtf2bed_13"
+                        "star_align_2"
                     ],
                     "children": [
-                        "multiqc_42"
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.stats.txt"
+                    ]
+                },
+                {
+                    "name": "rseqc_readdis_7",
+                    "id": "rseqc_readdis_7",
+                    "parents": [
+                        "star_align_2",
+                        "rseqc_gtf2bed_4"
+                    ],
+                    "children": [
+                        "multiqc_48"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
@@ -325,50 +164,14 @@
                     ]
                 },
                 {
-                    "name": "rseqc_infer_16",
-                    "id": "rseqc_infer_16",
+                    "name": "rseqc_innerdis_8",
+                    "id": "rseqc_innerdis_8",
                     "parents": [
-                        "star_align_9",
-                        "rseqc_gtf2bed_13"
+                        "star_align_2",
+                        "rseqc_gtf2bed_4"
                     ],
                     "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.infer_experiment.txt"
-                    ]
-                },
-                {
-                    "name": "rseqc_junction_annotation_17",
-                    "id": "rseqc_junction_annotation_17",
-                    "parents": [
-                        "star_align_9",
-                        "rseqc_gtf2bed_13"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.junctionanno.junction.bed"
-                    ]
-                },
-                {
-                    "name": "rseqc_innerdis_18",
-                    "id": "rseqc_innerdis_18",
-                    "parents": [
-                        "star_align_5",
-                        "rseqc_gtf2bed_13"
-                    ],
-                    "children": [
-                        "multiqc_42"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
@@ -379,68 +182,14 @@
                     ]
                 },
                 {
-                    "name": "rseqc_readdis_19",
-                    "id": "rseqc_readdis_19",
+                    "name": "rseqc_junction_annotation_9",
+                    "id": "rseqc_junction_annotation_9",
                     "parents": [
-                        "star_align_9",
-                        "rseqc_gtf2bed_13"
+                        "star_align_2",
+                        "rseqc_gtf2bed_4"
                     ],
                     "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readdistribution.txt"
-                    ]
-                },
-                {
-                    "name": "rseqc_infer_20",
-                    "id": "rseqc_infer_20",
-                    "parents": [
-                        "star_align_5",
-                        "rseqc_gtf2bed_13"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.infer_experiment.txt"
-                    ]
-                },
-                {
-                    "name": "rseqc_innerdis_21",
-                    "id": "rseqc_innerdis_21",
-                    "parents": [
-                        "star_align_9",
-                        "rseqc_gtf2bed_13"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.inner_distance_freq.inner_distance.txt"
-                    ]
-                },
-                {
-                    "name": "rseqc_junction_annotation_22",
-                    "id": "rseqc_junction_annotation_22",
-                    "parents": [
-                        "star_align_5",
-                        "rseqc_gtf2bed_13"
-                    ],
-                    "children": [
-                        "multiqc_42"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
@@ -451,14 +200,14 @@
                     ]
                 },
                 {
-                    "name": "rseqc_junction_saturation_23",
-                    "id": "rseqc_junction_saturation_23",
+                    "name": "rseqc_junction_saturation_10",
+                    "id": "rseqc_junction_saturation_10",
                     "parents": [
-                        "star_align_5",
-                        "rseqc_gtf2bed_13"
+                        "star_align_2",
+                        "rseqc_gtf2bed_4"
                     ],
                     "children": [
-                        "multiqc_42"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
@@ -469,192 +218,61 @@
                     ]
                 },
                 {
-                    "name": "star_align_24",
-                    "id": "star_align_24",
+                    "name": "rseqc_infer_11",
+                    "id": "rseqc_infer_11",
                     "parents": [
-                        "fastp_pe_1"
+                        "star_align_2",
+                        "rseqc_gtf2bed_4"
                     ],
                     "children": [
-                        "rseqc_stat_25",
-                        "rseqc_infer_26",
-                        "rseqc_junction_saturation_27",
-                        "rseqc_readgc_28",
-                        "rseqc_junction_annotation_29",
-                        "rseqc_innerdis_30",
-                        "rseqc_readdis_31",
-                        "rseqc_readdup_32",
-                        "multiqc_42",
-                        "count_matrix_43"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R1.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R2.fastq.gz",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/star_genome",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/genome.gtf"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/ReadsPerGene.out.tab",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Log.out",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/SJ.out.tab",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Log.final.out"
-                    ]
-                },
-                {
-                    "name": "rseqc_stat_25",
-                    "id": "rseqc_stat_25",
-                    "parents": [
-                        "star_align_24"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.stats.txt"
-                    ]
-                },
-                {
-                    "name": "rseqc_infer_26",
-                    "id": "rseqc_infer_26",
-                    "parents": [
-                        "rseqc_gtf2bed_13",
-                        "star_align_24"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
                     ],
                     "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.infer_experiment.txt"
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.infer_experiment.txt"
                     ]
                 },
                 {
-                    "name": "rseqc_junction_saturation_27",
-                    "id": "rseqc_junction_saturation_27",
-                    "parents": [
-                        "rseqc_gtf2bed_13",
-                        "star_align_24"
-                    ],
+                    "name": "fastp_pe_12",
+                    "id": "fastp_pe_12",
+                    "parents": [],
                     "children": [
-                        "multiqc_42"
+                        "star_align_13"
                     ],
                     "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039509_1.fastq",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039509_2.fastq"
                     ],
                     "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.junctionsat.junctionSaturation_plot.pdf"
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_R1.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_R2.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.unpaired.R1.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.unpaired.R2.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_paired.failed.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.html",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.json"
                     ]
                 },
                 {
-                    "name": "rseqc_readgc_28",
-                    "id": "rseqc_readgc_28",
+                    "name": "star_align_13",
+                    "id": "star_align_13",
                     "parents": [
-                        "star_align_24"
+                        "fastp_pe_12"
                     ],
                     "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readgc.GC_plot.pdf"
-                    ]
-                },
-                {
-                    "name": "rseqc_junction_annotation_29",
-                    "id": "rseqc_junction_annotation_29",
-                    "parents": [
-                        "rseqc_gtf2bed_13",
-                        "star_align_24"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.junctionanno.junction.bed"
-                    ]
-                },
-                {
-                    "name": "rseqc_innerdis_30",
-                    "id": "rseqc_innerdis_30",
-                    "parents": [
-                        "rseqc_gtf2bed_13",
-                        "star_align_24"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.inner_distance_freq.inner_distance.txt"
-                    ]
-                },
-                {
-                    "name": "rseqc_readdis_31",
-                    "id": "rseqc_readdis_31",
-                    "parents": [
-                        "rseqc_gtf2bed_13",
-                        "star_align_24"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readdistribution.txt"
-                    ]
-                },
-                {
-                    "name": "rseqc_readdup_32",
-                    "id": "rseqc_readdup_32",
-                    "parents": [
-                        "star_align_24"
-                    ],
-                    "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readdup.DupRate_plot.pdf"
-                    ]
-                },
-                {
-                    "name": "star_align_33",
-                    "id": "star_align_33",
-                    "parents": [
-                        "fastp_pe_2"
-                    ],
-                    "children": [
-                        "rseqc_readdup_34",
-                        "rseqc_readdis_35",
-                        "rseqc_innerdis_36",
-                        "rseqc_stat_37",
-                        "rseqc_infer_38",
-                        "rseqc_junction_saturation_39",
-                        "rseqc_junction_annotation_40",
-                        "rseqc_readgc_41",
-                        "multiqc_42",
-                        "count_matrix_43"
+                        "rseqc_readgc_14",
+                        "rseqc_stat_15",
+                        "rseqc_innerdis_16",
+                        "rseqc_readdis_17",
+                        "rseqc_junction_annotation_18",
+                        "rseqc_junction_saturation_19",
+                        "rseqc_infer_20",
+                        "rseqc_readdup_21",
+                        "multiqc_48",
+                        "count_matrix_42"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_R1.fastq.gz",
@@ -671,48 +289,46 @@
                     ]
                 },
                 {
-                    "name": "rseqc_readdup_34",
-                    "id": "rseqc_readdup_34",
+                    "name": "rseqc_readgc_14",
+                    "id": "rseqc_readgc_14",
                     "parents": [
-                        "star_align_33"
+                        "star_align_13"
                     ],
                     "children": [
-                        "multiqc_42"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam"
                     ],
                     "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readdup.DupRate_plot.pdf"
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readgc.GC_plot.pdf"
                     ]
                 },
                 {
-                    "name": "rseqc_readdis_35",
-                    "id": "rseqc_readdis_35",
+                    "name": "rseqc_stat_15",
+                    "id": "rseqc_stat_15",
                     "parents": [
-                        "rseqc_gtf2bed_13",
-                        "star_align_33"
+                        "star_align_13"
                     ],
                     "children": [
-                        "multiqc_42"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam"
                     ],
                     "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readdistribution.txt"
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.stats.txt"
                     ]
                 },
                 {
-                    "name": "rseqc_innerdis_36",
-                    "id": "rseqc_innerdis_36",
+                    "name": "rseqc_innerdis_16",
+                    "id": "rseqc_innerdis_16",
                     "parents": [
-                        "rseqc_gtf2bed_13",
-                        "star_align_33"
+                        "rseqc_gtf2bed_4",
+                        "star_align_13"
                     ],
                     "children": [
-                        "multiqc_42"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
@@ -723,66 +339,32 @@
                     ]
                 },
                 {
-                    "name": "rseqc_stat_37",
-                    "id": "rseqc_stat_37",
+                    "name": "rseqc_readdis_17",
+                    "id": "rseqc_readdis_17",
                     "parents": [
-                        "star_align_33"
+                        "rseqc_gtf2bed_4",
+                        "star_align_13"
                     ],
                     "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.stats.txt"
-                    ]
-                },
-                {
-                    "name": "rseqc_infer_38",
-                    "id": "rseqc_infer_38",
-                    "parents": [
-                        "rseqc_gtf2bed_13",
-                        "star_align_33"
-                    ],
-                    "children": [
-                        "multiqc_42"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
                     ],
                     "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.infer_experiment.txt"
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readdistribution.txt"
                     ]
                 },
                 {
-                    "name": "rseqc_junction_saturation_39",
-                    "id": "rseqc_junction_saturation_39",
+                    "name": "rseqc_junction_annotation_18",
+                    "id": "rseqc_junction_annotation_18",
                     "parents": [
-                        "rseqc_gtf2bed_13",
-                        "star_align_33"
+                        "rseqc_gtf2bed_4",
+                        "star_align_13"
                     ],
                     "children": [
-                        "multiqc_42"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.junctionsat.junctionSaturation_plot.pdf"
-                    ]
-                },
-                {
-                    "name": "rseqc_junction_annotation_40",
-                    "id": "rseqc_junction_annotation_40",
-                    "parents": [
-                        "rseqc_gtf2bed_13",
-                        "star_align_33"
-                    ],
-                    "children": [
-                        "multiqc_42"
+                        "multiqc_48"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
@@ -793,61 +375,585 @@
                     ]
                 },
                 {
-                    "name": "rseqc_readgc_41",
-                    "id": "rseqc_readgc_41",
+                    "name": "rseqc_junction_saturation_19",
+                    "id": "rseqc_junction_saturation_19",
                     "parents": [
-                        "star_align_33"
+                        "rseqc_gtf2bed_4",
+                        "star_align_13"
                     ],
                     "children": [
-                        "multiqc_42"
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.junctionsat.junctionSaturation_plot.pdf"
+                    ]
+                },
+                {
+                    "name": "rseqc_infer_20",
+                    "id": "rseqc_infer_20",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_13"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.infer_experiment.txt"
+                    ]
+                },
+                {
+                    "name": "rseqc_readdup_21",
+                    "id": "rseqc_readdup_21",
+                    "parents": [
+                        "star_align_13"
+                    ],
+                    "children": [
+                        "multiqc_48"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam"
                     ],
                     "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readgc.GC_plot.pdf"
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readdup.DupRate_plot.pdf"
                     ]
                 },
                 {
-                    "name": "multiqc_42",
-                    "id": "multiqc_42",
+                    "name": "fastp_pe_22",
+                    "id": "fastp_pe_22",
+                    "parents": [],
+                    "children": [
+                        "star_align_33"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039508_1.fastq",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039508_2.fastq"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R1.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R2.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.unpaired.R1.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.unpaired.R2.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_paired.failed.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.html",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.json"
+                    ]
+                },
+                {
+                    "name": "fastp_pe_23",
+                    "id": "fastp_pe_23",
+                    "parents": [],
+                    "children": [
+                        "star_align_24"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039512_1.fastq",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039512_2.fastq"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R1.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R2.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.unpaired.R1.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.unpaired.R2.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_paired.failed.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.html",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.json"
+                    ]
+                },
+                {
+                    "name": "star_align_24",
+                    "id": "star_align_24",
                     "parents": [
-                        "star_align_5",
-                        "rseqc_readdup_6",
-                        "rseqc_readgc_7",
-                        "rseqc_stat_8",
-                        "star_align_9",
-                        "rseqc_stat_10",
-                        "rseqc_readdup_11",
-                        "rseqc_readgc_12",
-                        "rseqc_junction_saturation_14",
-                        "rseqc_readdis_15",
-                        "rseqc_infer_16",
-                        "rseqc_junction_annotation_17",
-                        "rseqc_innerdis_18",
-                        "rseqc_readdis_19",
-                        "rseqc_infer_20",
-                        "rseqc_innerdis_21",
-                        "rseqc_junction_annotation_22",
-                        "rseqc_junction_saturation_23",
+                        "fastp_pe_23"
+                    ],
+                    "children": [
+                        "rseqc_junction_annotation_25",
+                        "rseqc_junction_saturation_26",
+                        "rseqc_infer_27",
+                        "rseqc_readdup_28",
+                        "rseqc_stat_29",
+                        "rseqc_readdis_30",
+                        "rseqc_readgc_31",
+                        "rseqc_innerdis_32",
+                        "multiqc_48",
+                        "count_matrix_42"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R1.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R2.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/star_genome",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/genome.gtf"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/ReadsPerGene.out.tab",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Log.out",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/SJ.out.tab",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Log.final.out"
+                    ]
+                },
+                {
+                    "name": "rseqc_junction_annotation_25",
+                    "id": "rseqc_junction_annotation_25",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_24"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.junctionanno.junction.bed"
+                    ]
+                },
+                {
+                    "name": "rseqc_junction_saturation_26",
+                    "id": "rseqc_junction_saturation_26",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_24"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.junctionsat.junctionSaturation_plot.pdf"
+                    ]
+                },
+                {
+                    "name": "rseqc_infer_27",
+                    "id": "rseqc_infer_27",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_24"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.infer_experiment.txt"
+                    ]
+                },
+                {
+                    "name": "rseqc_readdup_28",
+                    "id": "rseqc_readdup_28",
+                    "parents": [
+                        "star_align_24"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readdup.DupRate_plot.pdf"
+                    ]
+                },
+                {
+                    "name": "rseqc_stat_29",
+                    "id": "rseqc_stat_29",
+                    "parents": [
+                        "star_align_24"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.stats.txt"
+                    ]
+                },
+                {
+                    "name": "rseqc_readdis_30",
+                    "id": "rseqc_readdis_30",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_24"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readdistribution.txt"
+                    ]
+                },
+                {
+                    "name": "rseqc_readgc_31",
+                    "id": "rseqc_readgc_31",
+                    "parents": [
+                        "star_align_24"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readgc.GC_plot.pdf"
+                    ]
+                },
+                {
+                    "name": "rseqc_innerdis_32",
+                    "id": "rseqc_innerdis_32",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_24"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.inner_distance_freq.inner_distance.txt"
+                    ]
+                },
+                {
+                    "name": "star_align_33",
+                    "id": "star_align_33",
+                    "parents": [
+                        "fastp_pe_22"
+                    ],
+                    "children": [
+                        "rseqc_junction_annotation_34",
+                        "rseqc_junction_saturation_35",
+                        "rseqc_readdis_36",
+                        "rseqc_infer_37",
+                        "rseqc_readdup_38",
+                        "rseqc_readgc_39",
+                        "rseqc_stat_40",
+                        "rseqc_innerdis_41",
+                        "multiqc_48",
+                        "count_matrix_42"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R1.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R2.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/star_genome",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/genome.gtf"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/ReadsPerGene.out.tab",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Log.out",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/SJ.out.tab",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Log.final.out"
+                    ]
+                },
+                {
+                    "name": "rseqc_junction_annotation_34",
+                    "id": "rseqc_junction_annotation_34",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_33"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.junctionanno.junction.bed"
+                    ]
+                },
+                {
+                    "name": "rseqc_junction_saturation_35",
+                    "id": "rseqc_junction_saturation_35",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_33"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.junctionsat.junctionSaturation_plot.pdf"
+                    ]
+                },
+                {
+                    "name": "rseqc_readdis_36",
+                    "id": "rseqc_readdis_36",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_33"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readdistribution.txt"
+                    ]
+                },
+                {
+                    "name": "rseqc_infer_37",
+                    "id": "rseqc_infer_37",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_33"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.infer_experiment.txt"
+                    ]
+                },
+                {
+                    "name": "rseqc_readdup_38",
+                    "id": "rseqc_readdup_38",
+                    "parents": [
+                        "star_align_33"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readdup.DupRate_plot.pdf"
+                    ]
+                },
+                {
+                    "name": "rseqc_readgc_39",
+                    "id": "rseqc_readgc_39",
+                    "parents": [
+                        "star_align_33"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readgc.GC_plot.pdf"
+                    ]
+                },
+                {
+                    "name": "rseqc_stat_40",
+                    "id": "rseqc_stat_40",
+                    "parents": [
+                        "star_align_33"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.stats.txt"
+                    ]
+                },
+                {
+                    "name": "rseqc_innerdis_41",
+                    "id": "rseqc_innerdis_41",
+                    "parents": [
+                        "rseqc_gtf2bed_4",
+                        "star_align_33"
+                    ],
+                    "children": [
+                        "multiqc_48"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.inner_distance_freq.inner_distance.txt"
+                    ]
+                },
+                {
+                    "name": "count_matrix_42",
+                    "id": "count_matrix_42",
+                    "parents": [
+                        "star_align_2",
+                        "star_align_13",
                         "star_align_24",
-                        "rseqc_stat_25",
-                        "rseqc_infer_26",
-                        "rseqc_junction_saturation_27",
-                        "rseqc_readgc_28",
-                        "rseqc_junction_annotation_29",
-                        "rseqc_innerdis_30",
-                        "rseqc_readdis_31",
-                        "rseqc_readdup_32",
+                        "star_align_33"
+                    ],
+                    "children": [
+                        "deseq2_init_43",
+                        "gene_2_symbol_44"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/ReadsPerGene.out.tab",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/ReadsPerGene.out.tab",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/ReadsPerGene.out.tab",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/ReadsPerGene.out.tab"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.tsv"
+                    ]
+                },
+                {
+                    "name": "deseq2_init_43",
+                    "id": "deseq2_init_43",
+                    "parents": [
+                        "count_matrix_42"
+                    ],
+                    "children": [
+                        "deseq2_45",
+                        "gene_2_symbol_47"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.tsv"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/all.rds",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/normcounts.tsv"
+                    ]
+                },
+                {
+                    "name": "gene_2_symbol_44",
+                    "id": "gene_2_symbol_44",
+                    "parents": [
+                        "count_matrix_42"
+                    ],
+                    "children": [
+                        "all_49"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.tsv"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.symbol.tsv"
+                    ]
+                },
+                {
+                    "name": "deseq2_45",
+                    "id": "deseq2_45",
+                    "parents": [
+                        "deseq2_init_43"
+                    ],
+                    "children": [
+                        "gene_2_symbol_46"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/all.rds"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.diffexp.tsv",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.ma-plot.svg"
+                    ]
+                },
+                {
+                    "name": "gene_2_symbol_46",
+                    "id": "gene_2_symbol_46",
+                    "parents": [
+                        "deseq2_45"
+                    ],
+                    "children": [
+                        "all_49"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.diffexp.tsv"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.diffexp.symbol.tsv"
+                    ]
+                },
+                {
+                    "name": "gene_2_symbol_47",
+                    "id": "gene_2_symbol_47",
+                    "parents": [
+                        "deseq2_init_43"
+                    ],
+                    "children": [
+                        "all_49"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/normcounts.tsv"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/normcounts.symbol.tsv"
+                    ]
+                },
+                {
+                    "name": "multiqc_48",
+                    "id": "multiqc_48",
+                    "parents": [
+                        "star_align_2",
+                        "rseqc_readgc_3",
+                        "rseqc_readdup_5",
+                        "rseqc_stat_6",
+                        "rseqc_readdis_7",
+                        "rseqc_innerdis_8",
+                        "rseqc_junction_annotation_9",
+                        "rseqc_junction_saturation_10",
+                        "rseqc_infer_11",
+                        "star_align_13",
+                        "rseqc_readgc_14",
+                        "rseqc_stat_15",
+                        "rseqc_innerdis_16",
+                        "rseqc_readdis_17",
+                        "rseqc_junction_annotation_18",
+                        "rseqc_junction_saturation_19",
+                        "rseqc_infer_20",
+                        "rseqc_readdup_21",
+                        "star_align_24",
+                        "rseqc_junction_annotation_25",
+                        "rseqc_junction_saturation_26",
+                        "rseqc_infer_27",
+                        "rseqc_readdup_28",
+                        "rseqc_stat_29",
+                        "rseqc_readdis_30",
+                        "rseqc_readgc_31",
+                        "rseqc_innerdis_32",
                         "star_align_33",
-                        "rseqc_readdup_34",
-                        "rseqc_readdis_35",
-                        "rseqc_innerdis_36",
-                        "rseqc_stat_37",
-                        "rseqc_infer_38",
-                        "rseqc_junction_saturation_39",
-                        "rseqc_junction_annotation_40",
-                        "rseqc_readgc_41"
+                        "rseqc_junction_annotation_34",
+                        "rseqc_junction_saturation_35",
+                        "rseqc_readdis_36",
+                        "rseqc_infer_37",
+                        "rseqc_readdup_38",
+                        "rseqc_readgc_39",
+                        "rseqc_stat_40",
+                        "rseqc_innerdis_41"
                     ],
                     "children": [
                         "all_49"
@@ -899,119 +1005,13 @@
                     ]
                 },
                 {
-                    "name": "count_matrix_43",
-                    "id": "count_matrix_43",
-                    "parents": [
-                        "star_align_5",
-                        "star_align_9",
-                        "star_align_24",
-                        "star_align_33"
-                    ],
-                    "children": [
-                        "deseq2_init_44",
-                        "gene_2_symbol_45"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/ReadsPerGene.out.tab",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/ReadsPerGene.out.tab",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/ReadsPerGene.out.tab",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/ReadsPerGene.out.tab"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.tsv"
-                    ]
-                },
-                {
-                    "name": "deseq2_init_44",
-                    "id": "deseq2_init_44",
-                    "parents": [
-                        "count_matrix_43"
-                    ],
-                    "children": [
-                        "deseq2_46",
-                        "gene_2_symbol_48"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.tsv"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/all.rds",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/normcounts.tsv"
-                    ]
-                },
-                {
-                    "name": "gene_2_symbol_45",
-                    "id": "gene_2_symbol_45",
-                    "parents": [
-                        "count_matrix_43"
-                    ],
-                    "children": [
-                        "all_49"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.tsv"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.symbol.tsv"
-                    ]
-                },
-                {
-                    "name": "deseq2_46",
-                    "id": "deseq2_46",
-                    "parents": [
-                        "deseq2_init_44"
-                    ],
-                    "children": [
-                        "gene_2_symbol_47"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/all.rds"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.diffexp.tsv",
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.ma-plot.svg"
-                    ]
-                },
-                {
-                    "name": "gene_2_symbol_47",
-                    "id": "gene_2_symbol_47",
-                    "parents": [
-                        "deseq2_46"
-                    ],
-                    "children": [
-                        "all_49"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.diffexp.tsv"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.diffexp.symbol.tsv"
-                    ]
-                },
-                {
-                    "name": "gene_2_symbol_48",
-                    "id": "gene_2_symbol_48",
-                    "parents": [
-                        "deseq2_init_44"
-                    ],
-                    "children": [
-                        "all_49"
-                    ],
-                    "inputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/normcounts.tsv"
-                    ],
-                    "outputFiles": [
-                        "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/normcounts.symbol.tsv"
-                    ]
-                },
-                {
                     "name": "all_49",
                     "id": "all_49",
                     "parents": [
-                        "multiqc_42",
-                        "gene_2_symbol_45",
+                        "gene_2_symbol_44",
+                        "gene_2_symbol_46",
                         "gene_2_symbol_47",
-                        "gene_2_symbol_48"
+                        "multiqc_48"
                     ],
                     "children": [],
                     "inputFiles": [
@@ -1025,348 +1025,272 @@
             ],
             "files": [
                 {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.json",
-                    "sizeInBytes": 104606
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.junctionanno.junction.bed",
-                    "sizeInBytes": 13438944
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/star_genome",
-                    "sizeInBytes": 4096
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readgc.GC_plot.pdf",
-                    "sizeInBytes": 5099
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.tsv",
-                    "sizeInBytes": 1618674
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.json",
-                    "sizeInBytes": 104083
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.inner_distance_freq.inner_distance.txt",
-                    "sizeInBytes": 55020796
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.unpaired.R2.fastq.gz",
-                    "sizeInBytes": 11506714
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.unpaired.R1.fastq.gz",
-                    "sizeInBytes": 41669544
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.infer_experiment.txt",
-                    "sizeInBytes": 183
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039508_1.fastq",
-                    "sizeInBytes": 6309691928
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R2.fastq.gz",
-                    "sizeInBytes": 1737631504
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/SJ.out.tab",
-                    "sizeInBytes": 6247266
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.diffexp.tsv",
-                    "sizeInBytes": 2628581
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.readgc.GC_plot.pdf",
-                    "sizeInBytes": 4886
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Log.out",
-                    "sizeInBytes": 14608
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.stats.txt",
-                    "sizeInBytes": 843
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.html",
-                    "sizeInBytes": 442846
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_R1.fastq.gz",
-                    "sizeInBytes": 1262090777
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.junctionsat.junctionSaturation_plot.pdf",
-                    "sizeInBytes": 8449
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/SJ.out.tab",
-                    "sizeInBytes": 6491783
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1.unpaired.R2.fastq.gz",
-                    "sizeInBytes": 15020446
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
-                    "sizeInBytes": 1983078737
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039513_1.fastq",
-                    "sizeInBytes": 3454757892
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1_paired.failed.fastq.gz",
-                    "sizeInBytes": 36047095
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039513_2.fastq",
-                    "sizeInBytes": 3454757892
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readgc.GC_plot.pdf",
-                    "sizeInBytes": 5134
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.junctionsat.junctionSaturation_plot.pdf",
-                    "sizeInBytes": 8456
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/multiqc_report.html",
-                    "sizeInBytes": 5029722
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/SJ.out.tab",
-                    "sizeInBytes": 5811856
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.json",
-                    "sizeInBytes": 103937
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readdistribution.txt",
-                    "sizeInBytes": 1128
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.html",
-                    "sizeInBytes": 443075
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/ReadsPerGene.out.tab",
-                    "sizeInBytes": 1460214
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.ma-plot.svg",
-                    "sizeInBytes": 6021774
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.infer_experiment.txt",
-                    "sizeInBytes": 183
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039509_1.fastq",
-                    "sizeInBytes": 5818327826
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.junctionanno.junction.bed",
-                    "sizeInBytes": 14653218
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Log.final.out",
-                    "sizeInBytes": 2023
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/all.rds",
-                    "sizeInBytes": 5867254
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.junctionanno.junction.bed",
-                    "sizeInBytes": 13991556
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039509_2.fastq",
-                    "sizeInBytes": 5818327826
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039508_2.fastq",
-                    "sizeInBytes": 6309691928
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/logs/rseqc/rseqc_junction_annotation/N052611_untrt-lane1.log",
-                    "sizeInBytes": 649
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readdup.DupRate_plot.pdf",
-                    "sizeInBytes": 103046
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/logs/rseqc/rseqc_junction_annotation/N052611_trt-lane1.log",
-                    "sizeInBytes": 644
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed",
-                    "sizeInBytes": 31637233
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.infer_experiment.txt",
-                    "sizeInBytes": 183
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.junctionsat.junctionSaturation_plot.pdf",
-                    "sizeInBytes": 8419
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.inner_distance_freq.inner_distance.txt",
-                    "sizeInBytes": 55367420
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/ReadsPerGene.out.tab",
-                    "sizeInBytes": 1463462
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1.unpaired.R1.fastq.gz",
-                    "sizeInBytes": 31410646
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/SJ.out.tab",
-                    "sizeInBytes": 6807696
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/ReadsPerGene.out.tab",
+                    "sizeInBytes": 1467294
                 },
                 {
                     "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/logs/rseqc/rseqc_junction_annotation/N61311_untrt-lane1.log",
                     "sizeInBytes": 645
                 },
                 {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readgc.GC_plot.pdf",
-                    "sizeInBytes": 5130
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.html",
-                    "sizeInBytes": 443451
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Log.out",
-                    "sizeInBytes": 14589
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Log.final.out",
-                    "sizeInBytes": 2023
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_paired.failed.fastq.gz",
-                    "sizeInBytes": 27430058
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/logs/rseqc/rseqc_junction_annotation/N61311_trt-lane1.log",
-                    "sizeInBytes": 645
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Log.final.out",
-                    "sizeInBytes": 2026
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R2.fastq.gz",
-                    "sizeInBytes": 1371827651
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/ReadsPerGene.out.tab",
-                    "sizeInBytes": 1467294
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1.html",
-                    "sizeInBytes": 441875
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.readdup.DupRate_plot.pdf",
-                    "sizeInBytes": 66697
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/ReadsPerGene.out.tab",
-                    "sizeInBytes": 1453756
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.junctionsat.junctionSaturation_plot.pdf",
-                    "sizeInBytes": 8453
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R1.fastq.gz",
-                    "sizeInBytes": 1737020320
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/normcounts.symbol.tsv",
-                    "sizeInBytes": 1827456
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039512_2.fastq",
-                    "sizeInBytes": 7745159096
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.stats.txt",
-                    "sizeInBytes": 843
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.stats.txt",
-                    "sizeInBytes": 843
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.diffexp.symbol.tsv",
-                    "sizeInBytes": 2402873
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.readdistribution.txt",
-                    "sizeInBytes": 1128
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_paired.failed.fastq.gz",
-                    "sizeInBytes": 21252639
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readdistribution.txt",
-                    "sizeInBytes": 1128
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1.json",
-                    "sizeInBytes": 103147
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.junctionanno.junction.bed",
-                    "sizeInBytes": 12443981
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.infer_experiment.txt",
+                    "sizeInBytes": 183
                 },
                 {
                     "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039512_1.fastq",
                     "sizeInBytes": 7745159096
                 },
                 {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Log.final.out",
-                    "sizeInBytes": 2023
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_R2.fastq.gz",
+                    "sizeInBytes": 1272144213
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readgc.GC_plot.pdf",
+                    "sizeInBytes": 5130
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.readgc.GC_plot.pdf",
+                    "sizeInBytes": 4886
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.ma-plot.svg",
+                    "sizeInBytes": 6021774
                 },
                 {
                     "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.stats.txt",
                     "sizeInBytes": 844
                 },
                 {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                    "sizeInBytes": 2700421635
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_R2.fastq.gz",
-                    "sizeInBytes": 1272144213
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039509_2.fastq",
+                    "sizeInBytes": 5818327826
                 },
                 {
                     "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readdup.DupRate_plot.pdf",
                     "sizeInBytes": 71499
                 },
                 {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.unpaired.R2.fastq.gz",
-                    "sizeInBytes": 11363386
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.unpaired.R1.fastq.gz",
+                    "sizeInBytes": 22590557
                 },
                 {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.infer_experiment.txt",
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1_R2.fastq.gz",
+                    "sizeInBytes": 973542249
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/normcounts.symbol.tsv",
+                    "sizeInBytes": 1827456
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1.unpaired.R1.fastq.gz",
+                    "sizeInBytes": 31410646
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/genome.gtf",
+                    "sizeInBytes": 1459572708
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1.html",
+                    "sizeInBytes": 441874
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/star_genome",
+                    "sizeInBytes": 4096
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.readdup.DupRate_plot.pdf",
+                    "sizeInBytes": 66697
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R1.fastq.gz",
+                    "sizeInBytes": 1737020320
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readdistribution.txt",
+                    "sizeInBytes": 1128
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1.json",
+                    "sizeInBytes": 103088
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Log.final.out",
+                    "sizeInBytes": 2024
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.html",
+                    "sizeInBytes": 442677
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Log.final.out",
+                    "sizeInBytes": 2027
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.diffexp.symbol.tsv",
+                    "sizeInBytes": 2402873
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/logs/rseqc/rseqc_junction_annotation/N61311_trt-lane1.log",
+                    "sizeInBytes": 645
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.infer_experiment.txt",
                     "sizeInBytes": 183
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.junctionsat.junctionSaturation_plot.pdf",
+                    "sizeInBytes": 8418
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/SJ.out.tab",
+                    "sizeInBytes": 6491783
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readdistribution.txt",
+                    "sizeInBytes": 1128
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.inner_distance_freq.inner_distance.txt",
+                    "sizeInBytes": 55020796
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/multiqc_report.html",
+                    "sizeInBytes": 5029710
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/ReadsPerGene.out.tab",
+                    "sizeInBytes": 1453756
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.stats.txt",
+                    "sizeInBytes": 843
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R1.fastq.gz",
+                    "sizeInBytes": 1382082338
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.json",
+                    "sizeInBytes": 104515
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Log.final.out",
+                    "sizeInBytes": 2024
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039512_2.fastq",
+                    "sizeInBytes": 7745159096
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.db",
+                    "sizeInBytes": 2999107584
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.inner_distance_freq.inner_distance.txt",
+                    "sizeInBytes": 55367420
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Log.out",
+                    "sizeInBytes": 14934
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.html",
+                    "sizeInBytes": 442563
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.junctionsat.junctionSaturation_plot.pdf",
+                    "sizeInBytes": 8406
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Log.out",
+                    "sizeInBytes": 15012
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readdup.DupRate_plot.pdf",
+                    "sizeInBytes": 103046
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039508_2.fastq",
+                    "sizeInBytes": 6309691928
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readdistribution.txt",
+                    "sizeInBytes": 1128
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.stats.txt",
+                    "sizeInBytes": 843
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readgc.GC_plot.pdf",
+                    "sizeInBytes": 5134
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.symbol.tsv",
+                    "sizeInBytes": 1357978
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039513_1.fastq",
+                    "sizeInBytes": 3454757892
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/SJ.out.tab",
+                    "sizeInBytes": 5811856
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.html",
+                    "sizeInBytes": 443316
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.junctionanno.junction.bed",
+                    "sizeInBytes": 14653218
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.unpaired.R2.fastq.gz",
+                    "sizeInBytes": 22922289
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/SJ.out.tab",
+                    "sizeInBytes": 6247266
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.readdistribution.txt",
+                    "sizeInBytes": 1128
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Log.out",
+                    "sizeInBytes": 14994
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Log.final.out",
+                    "sizeInBytes": 2024
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.tsv",
+                    "sizeInBytes": 1618674
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/diffexp/treated_vs_untreated.diffexp.tsv",
+                    "sizeInBytes": 2628581
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1_R1.fastq.gz",
+                    "sizeInBytes": 966826799
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/ReadsPerGene.out.tab",
+                    "sizeInBytes": 1460214
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_paired.failed.fastq.gz",
+                    "sizeInBytes": 21252639
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.stats.txt",
+                    "sizeInBytes": 843
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_R1.fastq.gz",
+                    "sizeInBytes": 1262090777
                 },
                 {
                     "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.unpaired.R1.fastq.gz",
@@ -1374,167 +1298,185 @@
                 },
                 {
                     "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Log.out",
-                    "sizeInBytes": 14558
+                    "sizeInBytes": 14963
                 },
                 {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
-                    "sizeInBytes": 1734197432
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
+                    "sizeInBytes": 1983081036
                 },
                 {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/counts/all.symbol.tsv",
-                    "sizeInBytes": 1357978
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1_R2.fastq.gz",
-                    "sizeInBytes": 973542249
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.inner_distance_freq.inner_distance.txt",
-                    "sizeInBytes": 56493966
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.unpaired.R1.fastq.gz",
-                    "sizeInBytes": 22590557
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/resources/genome.gtf",
-                    "sizeInBytes": 1459572708
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_paired.failed.fastq.gz",
-                    "sizeInBytes": 52409314
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.readdistribution.txt",
-                    "sizeInBytes": 1128
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.inner_distance_freq.inner_distance.txt",
-                    "sizeInBytes": 55450833
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.unpaired.R2.fastq.gz",
-                    "sizeInBytes": 22922289
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/normcounts.tsv",
-                    "sizeInBytes": 2043208
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R1.fastq.gz",
-                    "sizeInBytes": 1382082338
-                },
-                {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.db",
-                    "sizeInBytes": 2999107584
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039513_2.fastq",
+                    "sizeInBytes": 3454757892
                 },
                 {
                     "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.readdup.DupRate_plot.pdf",
                     "sizeInBytes": 78859
                 },
                 {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1_R1.fastq.gz",
-                    "sizeInBytes": 966826799
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/normcounts.tsv",
+                    "sizeInBytes": 2043208
                 },
                 {
-                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_trt-lane1/Log.out",
-                    "sizeInBytes": 14529
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/SJ.out.tab",
+                    "sizeInBytes": 6807696
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.json",
+                    "sizeInBytes": 103951
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1.unpaired.R2.fastq.gz",
+                    "sizeInBytes": 15020446
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.infer_experiment.txt",
+                    "sizeInBytes": 183
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.junctionanno.junction.bed",
+                    "sizeInBytes": 12443981
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                    "sizeInBytes": 2700425615
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.junctionanno.junction.bed",
+                    "sizeInBytes": 13438944
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
+                    "sizeInBytes": 1734209004
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1.unpaired.R2.fastq.gz",
+                    "sizeInBytes": 11363386
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_untrt/N61311_untrt-lane1_R2.fastq.gz",
+                    "sizeInBytes": 1371827651
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/ReadsPerGene.out.tab",
+                    "sizeInBytes": 1463462
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.junctionsat.junctionSaturation_plot.pdf",
+                    "sizeInBytes": 8450
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039509_1.fastq",
+                    "sizeInBytes": 5818327826
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_trt-lane1.infer_experiment.txt",
+                    "sizeInBytes": 183
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.json",
+                    "sizeInBytes": 103824
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_trt/N052611_trt-lane1_paired.failed.fastq.gz",
+                    "sizeInBytes": 36047095
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.inner_distance_freq.inner_distance.txt",
+                    "sizeInBytes": 55450833
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/deseq2/all.rds",
+                    "sizeInBytes": 5867254
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_R2.fastq.gz",
+                    "sizeInBytes": 1737631504
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1_paired.failed.fastq.gz",
+                    "sizeInBytes": 27430058
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/logs/rseqc/rseqc_junction_annotation/N052611_trt-lane1.log",
+                    "sizeInBytes": 644
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.junctionsat.junctionSaturation_plot.pdf",
+                    "sizeInBytes": 8447
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_trt-lane1.readgc.GC_plot.pdf",
+                    "sizeInBytes": 5099
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1_paired.failed.fastq.gz",
+                    "sizeInBytes": 52409314
                 },
                 {
                     "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                    "sizeInBytes": 2181363942
+                    "sizeInBytes": 2181393149
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N61311_trt/N61311_trt-lane1.unpaired.R2.fastq.gz",
+                    "sizeInBytes": 11506714
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N61311_untrt-lane1.junctionanno.junction.bed",
+                    "sizeInBytes": 13991556
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/N052611_untrt-lane1.inner_distance_freq.inner_distance.txt",
+                    "sizeInBytes": 56493966
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/logs/rseqc/rseqc_junction_annotation/N052611_untrt-lane1.log",
+                    "sizeInBytes": 649
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/sra/SRR1039508_1.fastq",
+                    "sizeInBytes": 6309691928
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/qc/rseqc/annotation.bed",
+                    "sizeInBytes": 31637233
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/MY_RNA_SEQ_RUN/results/trimmed/N052611_untrt/N052611_untrt-lane1.unpaired.R1.fastq.gz",
+                    "sizeInBytes": 41669544
                 }
             ]
         },
         "execution": {
-            "makespanInSeconds": 10958.4371240139,
-            "executedAt": "2026-05-27T04:39:15.091582-10:00",
+            "makespanInSeconds": 3156.1486868858337,
+            "executedAt": "2026-05-29T05:26:49.736927-10:00",
             "tasks": [
                 {
                     "id": "fastp_pe_1",
-                    "runtimeInSeconds": 155.017877,
+                    "runtimeInSeconds": 47.071955,
                     "command": {
                         "arguments": []
                     },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 11:36:29.021781",
+                    "coreCount": 8,
+                    "executedAt": "2026-05-29 14:34:06.059800",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "fastp_pe_2",
-                    "runtimeInSeconds": 143.053625,
+                    "id": "star_align_2",
+                    "runtimeInSeconds": 283.907019,
                     "command": {
                         "arguments": []
                     },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 11:39:04.085840",
+                    "coreCount": 8,
+                    "executedAt": "2026-05-29 14:34:53.172841",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "fastp_pe_3",
-                    "runtimeInSeconds": 188.018447,
-                    "command": {
-                        "arguments": []
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 11:41:27.178206",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "fastp_pe_4",
-                    "runtimeInSeconds": 111.357954,
-                    "command": {
-                        "arguments": []
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 11:44:35.239752",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "star_align_5",
-                    "runtimeInSeconds": 932.97514,
-                    "command": {
-                        "arguments": []
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 11:46:26.648828",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_readdup_6",
-                    "runtimeInSeconds": 183.005204,
-                    "command": {
-                        "program": "read_duplication.py",
-                        "arguments": [
-                            "read_duplication.py",
-                            "-i",
-                            "results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-o",
-                            "results/qc/rseqc/N052611_trt-lane1.readdup",
-                            ">",
-                            "logs/rseqc/rseqc_readdup/N052611_trt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 12:01:59.693783",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_readgc_7",
-                    "runtimeInSeconds": 114.495556,
+                    "id": "rseqc_readgc_3",
+                    "runtimeInSeconds": 116.938301,
                     "command": {
                         "program": "read_GC.py",
                         "arguments": [
@@ -1549,14 +1491,48 @@
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 12:05:02.746101",
+                    "executedAt": "2026-05-29 14:39:38.105817",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_stat_8",
-                    "runtimeInSeconds": 131.744274,
+                    "id": "rseqc_gtf2bed_4",
+                    "runtimeInSeconds": 522.217217,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 14:39:38.112022",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_readdup_5",
+                    "runtimeInSeconds": 186.179889,
+                    "command": {
+                        "program": "read_duplication.py",
+                        "arguments": [
+                            "read_duplication.py",
+                            "-i",
+                            "results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-o",
+                            "results/qc/rseqc/N052611_trt-lane1.readdup",
+                            ">",
+                            "logs/rseqc/rseqc_readdup/N052611_trt-lane1.log",
+                            "2>&1"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 14:39:38.117917",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_stat_6",
+                    "runtimeInSeconds": 141.568363,
                     "command": {
                         "program": "bam_stat.py",
                         "arguments": [
@@ -1570,129 +1546,14 @@
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 12:06:57.296357",
+                    "executedAt": "2026-05-29 14:39:38.126017",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "star_align_9",
-                    "runtimeInSeconds": 1524.760124,
-                    "command": {
-                        "arguments": []
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 12:09:09.099571",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_stat_10",
-                    "runtimeInSeconds": 229.335988,
-                    "command": {
-                        "program": "bam_stat.py",
-                        "arguments": [
-                            "bam_stat.py",
-                            "-i",
-                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            ">",
-                            "results/qc/rseqc/N052611_untrt-lane1.stats.txt",
-                            "2>",
-                            "logs/rseqc/rseqc_stat/N052611_untrt-lane1.log"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 12:34:35.345360",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_readdup_11",
-                    "runtimeInSeconds": 301.909919,
-                    "command": {
-                        "program": "read_duplication.py",
-                        "arguments": [
-                            "read_duplication.py",
-                            "-i",
-                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-o",
-                            "results/qc/rseqc/N052611_untrt-lane1.readdup",
-                            ">",
-                            "logs/rseqc/rseqc_readdup/N052611_untrt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 12:38:24.749632",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_readgc_12",
-                    "runtimeInSeconds": 185.665914,
-                    "command": {
-                        "program": "read_GC.py",
-                        "arguments": [
-                            "read_GC.py",
-                            "-i",
-                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-o",
-                            "results/qc/rseqc/N052611_untrt-lane1.readgc",
-                            ">",
-                            "logs/rseqc/rseqc_readgc/N052611_untrt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 12:43:26.708230",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_gtf2bed_13",
-                    "runtimeInSeconds": 423.66737,
-                    "command": {
-                        "arguments": []
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 12:46:32.437556",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_junction_saturation_14",
-                    "runtimeInSeconds": 190.058392,
-                    "command": {
-                        "program": "junction_saturation.py",
-                        "arguments": [
-                            "junction_saturation.py",
-                            "-q",
-                            "255",
-                            "-i",
-                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-o",
-                            "results/qc/rseqc/N052611_untrt-lane1.junctionsat",
-                            ">",
-                            "logs/rseqc/rseqc_junction_saturation/N052611_untrt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 12:53:36.172595",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_readdis_15",
-                    "runtimeInSeconds": 181.468803,
+                    "id": "rseqc_readdis_7",
+                    "runtimeInSeconds": 192.557823,
                     "command": {
                         "program": "read_distribution.py",
                         "arguments": [
@@ -1708,63 +1569,14 @@
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 12:56:46.286808",
+                    "executedAt": "2026-05-29 14:48:20.371309",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_infer_16",
-                    "runtimeInSeconds": 2.552052,
-                    "command": {
-                        "program": "infer_experiment.py",
-                        "arguments": [
-                            "infer_experiment.py",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-i",
-                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            ">",
-                            "results/qc/rseqc/N052611_untrt-lane1.infer_experiment.txt",
-                            "2>",
-                            "logs/rseqc/rseqc_infer/N052611_untrt-lane1.log"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 12:59:47.787228",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_junction_annotation_17",
-                    "runtimeInSeconds": 177.958351,
-                    "command": {
-                        "program": "junction_annotation.py",
-                        "arguments": [
-                            "junction_annotation.py",
-                            "-q",
-                            "255",
-                            "-i",
-                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-o",
-                            "results/qc/rseqc/N052611_untrt-lane1.junctionanno",
-                            ">",
-                            "logs/rseqc/rseqc_junction_annotation/N052611_untrt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 12:59:50.386508",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_innerdis_18",
-                    "runtimeInSeconds": 49.590192,
+                    "id": "rseqc_innerdis_8",
+                    "runtimeInSeconds": 51.651146,
                     "command": {
                         "program": "inner_distance.py",
                         "arguments": [
@@ -1781,84 +1593,14 @@
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 13:02:48.382575",
+                    "executedAt": "2026-05-29 14:48:20.377044",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_readdis_19",
-                    "runtimeInSeconds": 275.93263,
-                    "command": {
-                        "program": "read_distribution.py",
-                        "arguments": [
-                            "read_distribution.py",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-i",
-                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            ">",
-                            "results/qc/rseqc/N052611_untrt-lane1.readdistribution.txt",
-                            "2>",
-                            "logs/rseqc/rseqc_readdis/N052611_untrt-lane1.log"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:03:38.011142",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_infer_20",
-                    "runtimeInSeconds": 2.405702,
-                    "command": {
-                        "program": "infer_experiment.py",
-                        "arguments": [
-                            "infer_experiment.py",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-i",
-                            "results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
-                            ">",
-                            "results/qc/rseqc/N052611_trt-lane1.infer_experiment.txt",
-                            "2>",
-                            "logs/rseqc/rseqc_infer/N052611_trt-lane1.log"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:08:14.004637",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_innerdis_21",
-                    "runtimeInSeconds": 50.977921,
-                    "command": {
-                        "program": "inner_distance.py",
-                        "arguments": [
-                            "inner_distance.py",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-i",
-                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-o",
-                            "results/qc/rseqc/N052611_untrt-lane1.inner_distance_freq",
-                            ">",
-                            "logs/rseqc/rseqc_innerdis/N052611_untrt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:08:16.465520",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_junction_annotation_22",
-                    "runtimeInSeconds": 117.883013,
+                    "id": "rseqc_junction_annotation_9",
+                    "runtimeInSeconds": 111.224805,
                     "command": {
                         "program": "junction_annotation.py",
                         "arguments": [
@@ -1877,14 +1619,14 @@
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 13:09:07.497932",
+                    "executedAt": "2026-05-29 14:48:20.382142",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_junction_saturation_23",
-                    "runtimeInSeconds": 113.064426,
+                    "id": "rseqc_junction_saturation_10",
+                    "runtimeInSeconds": 128.93364,
                     "command": {
                         "program": "junction_saturation.py",
                         "arguments": [
@@ -1903,47 +1645,14 @@
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 13:11:05.419481",
+                    "executedAt": "2026-05-29 14:48:20.386886",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "star_align_24",
-                    "runtimeInSeconds": 1330.623622,
-                    "command": {
-                        "arguments": []
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:12:58.534648",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_stat_25",
-                    "runtimeInSeconds": 187.095541,
-                    "command": {
-                        "program": "bam_stat.py",
-                        "arguments": [
-                            "bam_stat.py",
-                            "-i",
-                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            ">",
-                            "results/qc/rseqc/N61311_untrt-lane1.stats.txt",
-                            "2>",
-                            "logs/rseqc/rseqc_stat/N61311_untrt-lane1.log"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:35:09.846212",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_infer_26",
-                    "runtimeInSeconds": 2.578526,
+                    "id": "rseqc_infer_11",
+                    "runtimeInSeconds": 2.508501,
                     "command": {
                         "program": "infer_experiment.py",
                         "arguments": [
@@ -1951,222 +1660,89 @@
                             "-r",
                             "results/qc/rseqc/annotation.bed",
                             "-i",
-                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            "results/star/N052611_trt-lane1/Aligned.sortedByCoord.out.bam",
                             ">",
-                            "results/qc/rseqc/N61311_untrt-lane1.infer_experiment.txt",
+                            "results/qc/rseqc/N052611_trt-lane1.infer_experiment.txt",
                             "2>",
-                            "logs/rseqc/rseqc_infer/N61311_untrt-lane1.log"
+                            "logs/rseqc/rseqc_infer/N052611_trt-lane1.log"
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 13:38:17.008666",
+                    "executedAt": "2026-05-29 14:48:20.389141",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_junction_saturation_27",
-                    "runtimeInSeconds": 158.932735,
+                    "id": "fastp_pe_12",
+                    "runtimeInSeconds": 61.903964,
                     "command": {
-                        "program": "junction_saturation.py",
-                        "arguments": [
-                            "junction_saturation.py",
-                            "-q",
-                            "255",
-                            "-i",
-                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-o",
-                            "results/qc/rseqc/N61311_untrt-lane1.junctionsat",
-                            ">",
-                            "logs/rseqc/rseqc_junction_saturation/N61311_untrt-lane1.log",
-                            "2>&1"
-                        ]
+                        "arguments": []
                     },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:38:19.642079",
+                    "coreCount": 8,
+                    "executedAt": "2026-05-29 14:51:32.958033",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_readgc_28",
-                    "runtimeInSeconds": 152.529685,
+                    "id": "star_align_13",
+                    "runtimeInSeconds": 319.730079,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 8,
+                    "executedAt": "2026-05-29 14:52:34.900326",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_readgc_14",
+                    "runtimeInSeconds": 143.916586,
                     "command": {
                         "program": "read_GC.py",
                         "arguments": [
                             "read_GC.py",
                             "-i",
-                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-o",
-                            "results/qc/rseqc/N61311_untrt-lane1.readgc",
-                            ">",
-                            "logs/rseqc/rseqc_readgc/N61311_untrt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:40:58.633723",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_junction_annotation_29",
-                    "runtimeInSeconds": 147.857654,
-                    "command": {
-                        "program": "junction_annotation.py",
-                        "arguments": [
-                            "junction_annotation.py",
-                            "-q",
-                            "255",
-                            "-i",
-                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-o",
-                            "results/qc/rseqc/N61311_untrt-lane1.junctionanno",
-                            ">",
-                            "logs/rseqc/rseqc_junction_annotation/N61311_untrt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:43:31.201297",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_innerdis_30",
-                    "runtimeInSeconds": 48.967958,
-                    "command": {
-                        "program": "inner_distance.py",
-                        "arguments": [
-                            "inner_distance.py",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-i",
-                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-o",
-                            "results/qc/rseqc/N61311_untrt-lane1.inner_distance_freq",
-                            ">",
-                            "logs/rseqc/rseqc_innerdis/N61311_untrt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:45:59.123263",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_readdis_31",
-                    "runtimeInSeconds": 239.389544,
-                    "command": {
-                        "program": "read_distribution.py",
-                        "arguments": [
-                            "read_distribution.py",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-i",
-                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            ">",
-                            "results/qc/rseqc/N61311_untrt-lane1.readdistribution.txt",
-                            "2>",
-                            "logs/rseqc/rseqc_readdis/N61311_untrt-lane1.log"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:46:48.146508",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_readdup_32",
-                    "runtimeInSeconds": 248.921001,
-                    "command": {
-                        "program": "read_duplication.py",
-                        "arguments": [
-                            "read_duplication.py",
-                            "-i",
-                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-o",
-                            "results/qc/rseqc/N61311_untrt-lane1.readdup",
-                            ">",
-                            "logs/rseqc/rseqc_readdup/N61311_untrt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:50:47.596955",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "star_align_33",
-                    "runtimeInSeconds": 1207.66957,
-                    "command": {
-                        "arguments": []
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 13:54:56.566575",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_readdup_34",
-                    "runtimeInSeconds": 224.982674,
-                    "command": {
-                        "program": "read_duplication.py",
-                        "arguments": [
-                            "read_duplication.py",
-                            "-i",
                             "results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
                             "-o",
-                            "results/qc/rseqc/N61311_trt-lane1.readdup",
+                            "results/qc/rseqc/N61311_trt-lane1.readgc",
                             ">",
-                            "logs/rseqc/rseqc_readdup/N61311_trt-lane1.log",
+                            "logs/rseqc/rseqc_readgc/N61311_trt-lane1.log",
                             "2>&1"
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:15:05.442466",
+                    "executedAt": "2026-05-29 14:57:55.001291",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_readdis_35",
-                    "runtimeInSeconds": 220.920976,
+                    "id": "rseqc_stat_15",
+                    "runtimeInSeconds": 188.511156,
                     "command": {
-                        "program": "read_distribution.py",
+                        "program": "bam_stat.py",
                         "arguments": [
-                            "read_distribution.py",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
+                            "bam_stat.py",
                             "-i",
                             "results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
                             ">",
-                            "results/qc/rseqc/N61311_trt-lane1.readdistribution.txt",
+                            "results/qc/rseqc/N61311_trt-lane1.stats.txt",
                             "2>",
-                            "logs/rseqc/rseqc_readdis/N61311_trt-lane1.log"
+                            "logs/rseqc/rseqc_stat/N61311_trt-lane1.log"
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:18:50.477135",
+                    "executedAt": "2026-05-29 14:57:55.008356",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_innerdis_36",
-                    "runtimeInSeconds": 49.499712,
+                    "id": "rseqc_innerdis_16",
+                    "runtimeInSeconds": 50.850053,
                     "command": {
                         "program": "inner_distance.py",
                         "arguments": [
@@ -2183,84 +1759,37 @@
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:22:31.432639",
+                    "executedAt": "2026-05-29 14:57:55.013037",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_stat_37",
-                    "runtimeInSeconds": 166.900098,
+                    "id": "rseqc_readdis_17",
+                    "runtimeInSeconds": 247.539678,
                     "command": {
-                        "program": "bam_stat.py",
+                        "program": "read_distribution.py",
                         "arguments": [
-                            "bam_stat.py",
-                            "-i",
-                            "results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
-                            ">",
-                            "results/qc/rseqc/N61311_trt-lane1.stats.txt",
-                            "2>",
-                            "logs/rseqc/rseqc_stat/N61311_trt-lane1.log"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 14:23:20.998463",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_infer_38",
-                    "runtimeInSeconds": 2.488315,
-                    "command": {
-                        "program": "infer_experiment.py",
-                        "arguments": [
-                            "infer_experiment.py",
+                            "read_distribution.py",
                             "-r",
                             "results/qc/rseqc/annotation.bed",
                             "-i",
                             "results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
                             ">",
-                            "results/qc/rseqc/N61311_trt-lane1.infer_experiment.txt",
+                            "results/qc/rseqc/N61311_trt-lane1.readdistribution.txt",
                             "2>",
-                            "logs/rseqc/rseqc_infer/N61311_trt-lane1.log"
+                            "logs/rseqc/rseqc_readdis/N61311_trt-lane1.log"
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:26:07.928452",
+                    "executedAt": "2026-05-29 14:57:55.019392",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_junction_saturation_39",
-                    "runtimeInSeconds": 140.336539,
-                    "command": {
-                        "program": "junction_saturation.py",
-                        "arguments": [
-                            "junction_saturation.py",
-                            "-q",
-                            "255",
-                            "-i",
-                            "results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
-                            "-r",
-                            "results/qc/rseqc/annotation.bed",
-                            "-o",
-                            "results/qc/rseqc/N61311_trt-lane1.junctionsat",
-                            ">",
-                            "logs/rseqc/rseqc_junction_saturation/N61311_trt-lane1.log",
-                            "2>&1"
-                        ]
-                    },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 14:26:10.450978",
-                    "machines": [
-                        "disco"
-                    ]
-                },
-                {
-                    "id": "rseqc_junction_annotation_40",
-                    "runtimeInSeconds": 135.48853,
+                    "id": "rseqc_junction_annotation_18",
+                    "runtimeInSeconds": 144.329914,
                     "command": {
                         "program": "junction_annotation.py",
                         "arguments": [
@@ -2279,125 +1808,596 @@
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:28:30.820073",
+                    "executedAt": "2026-05-29 14:57:55.025418",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "rseqc_readgc_41",
-                    "runtimeInSeconds": 145.127174,
+                    "id": "rseqc_junction_saturation_19",
+                    "runtimeInSeconds": 148.865505,
+                    "command": {
+                        "program": "junction_saturation.py",
+                        "arguments": [
+                            "junction_saturation.py",
+                            "-q",
+                            "255",
+                            "-i",
+                            "results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-o",
+                            "results/qc/rseqc/N61311_trt-lane1.junctionsat",
+                            ">",
+                            "logs/rseqc/rseqc_junction_saturation/N61311_trt-lane1.log",
+                            "2>&1"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 14:57:55.093743",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_infer_20",
+                    "runtimeInSeconds": 3.187053,
+                    "command": {
+                        "program": "infer_experiment.py",
+                        "arguments": [
+                            "infer_experiment.py",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-i",
+                            "results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
+                            ">",
+                            "results/qc/rseqc/N61311_trt-lane1.infer_experiment.txt",
+                            "2>",
+                            "logs/rseqc/rseqc_infer/N61311_trt-lane1.log"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 14:57:55.099679",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_readdup_21",
+                    "runtimeInSeconds": 238.375558,
+                    "command": {
+                        "program": "read_duplication.py",
+                        "arguments": [
+                            "read_duplication.py",
+                            "-i",
+                            "results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-o",
+                            "results/qc/rseqc/N61311_trt-lane1.readdup",
+                            ">",
+                            "logs/rseqc/rseqc_readdup/N61311_trt-lane1.log",
+                            "2>&1"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 14:57:55.104708",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "fastp_pe_22",
+                    "runtimeInSeconds": 66.583962,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 8,
+                    "executedAt": "2026-05-29 15:02:02.590845",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "fastp_pe_23",
+                    "runtimeInSeconds": 82.351536,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 8,
+                    "executedAt": "2026-05-29 15:03:09.207029",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "star_align_24",
+                    "runtimeInSeconds": 363.859047,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 8,
+                    "executedAt": "2026-05-29 15:04:31.591655",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_junction_annotation_25",
+                    "runtimeInSeconds": 193.55888,
+                    "command": {
+                        "program": "junction_annotation.py",
+                        "arguments": [
+                            "junction_annotation.py",
+                            "-q",
+                            "255",
+                            "-i",
+                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-o",
+                            "results/qc/rseqc/N052611_untrt-lane1.junctionanno",
+                            ">",
+                            "logs/rseqc/rseqc_junction_annotation/N052611_untrt-lane1.log",
+                            "2>&1"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:10:35.990844",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_junction_saturation_26",
+                    "runtimeInSeconds": 226.08579,
+                    "command": {
+                        "program": "junction_saturation.py",
+                        "arguments": [
+                            "junction_saturation.py",
+                            "-q",
+                            "255",
+                            "-i",
+                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-o",
+                            "results/qc/rseqc/N052611_untrt-lane1.junctionsat",
+                            ">",
+                            "logs/rseqc/rseqc_junction_saturation/N052611_untrt-lane1.log",
+                            "2>&1"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:10:36.002494",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_infer_27",
+                    "runtimeInSeconds": 12.015068,
+                    "command": {
+                        "program": "infer_experiment.py",
+                        "arguments": [
+                            "infer_experiment.py",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-i",
+                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            ">",
+                            "results/qc/rseqc/N052611_untrt-lane1.infer_experiment.txt",
+                            "2>",
+                            "logs/rseqc/rseqc_infer/N052611_untrt-lane1.log"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:10:36.010821",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_readdup_28",
+                    "runtimeInSeconds": 362.671445,
+                    "command": {
+                        "program": "read_duplication.py",
+                        "arguments": [
+                            "read_duplication.py",
+                            "-i",
+                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-o",
+                            "results/qc/rseqc/N052611_untrt-lane1.readdup",
+                            ">",
+                            "logs/rseqc/rseqc_readdup/N052611_untrt-lane1.log",
+                            "2>&1"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:10:36.015384",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_stat_29",
+                    "runtimeInSeconds": 245.336318,
+                    "command": {
+                        "program": "bam_stat.py",
+                        "arguments": [
+                            "bam_stat.py",
+                            "-i",
+                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            ">",
+                            "results/qc/rseqc/N052611_untrt-lane1.stats.txt",
+                            "2>",
+                            "logs/rseqc/rseqc_stat/N052611_untrt-lane1.log"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:10:36.019218",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_readdis_30",
+                    "runtimeInSeconds": 346.255516,
+                    "command": {
+                        "program": "read_distribution.py",
+                        "arguments": [
+                            "read_distribution.py",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-i",
+                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            ">",
+                            "results/qc/rseqc/N052611_untrt-lane1.readdistribution.txt",
+                            "2>",
+                            "logs/rseqc/rseqc_readdis/N052611_untrt-lane1.log"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:10:36.024176",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_readgc_31",
+                    "runtimeInSeconds": 203.184998,
                     "command": {
                         "program": "read_GC.py",
                         "arguments": [
                             "read_GC.py",
                             "-i",
-                            "results/star/N61311_trt-lane1/Aligned.sortedByCoord.out.bam",
+                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
                             "-o",
-                            "results/qc/rseqc/N61311_trt-lane1.readgc",
+                            "results/qc/rseqc/N052611_untrt-lane1.readgc",
                             ">",
-                            "logs/rseqc/rseqc_readgc/N61311_trt-lane1.log",
+                            "logs/rseqc/rseqc_readgc/N052611_untrt-lane1.log",
                             "2>&1"
                         ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:30:46.368185",
+                    "executedAt": "2026-05-29 15:10:36.030740",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "multiqc_42",
-                    "runtimeInSeconds": 21.188643,
+                    "id": "rseqc_innerdis_32",
+                    "runtimeInSeconds": 72.183718,
                     "command": {
-                        "arguments": []
+                        "program": "inner_distance.py",
+                        "arguments": [
+                            "inner_distance.py",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-i",
+                            "results/star/N052611_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-o",
+                            "results/qc/rseqc/N052611_untrt-lane1.inner_distance_freq",
+                            ">",
+                            "logs/rseqc/rseqc_innerdis/N052611_untrt-lane1.log",
+                            "2>&1"
+                        ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:33:11.537582",
+                    "executedAt": "2026-05-29 15:10:36.034947",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "count_matrix_43",
-                    "runtimeInSeconds": 6.131215,
+                    "id": "star_align_33",
+                    "runtimeInSeconds": 329.489752,
                     "command": {
                         "arguments": []
                     },
-                    "coreCount": 1,
-                    "executedAt": "2026-05-27 14:33:32.796322",
+                    "coreCount": 8,
+                    "executedAt": "2026-05-29 15:16:38.715801",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "deseq2_init_44",
-                    "runtimeInSeconds": 17.040618,
+                    "id": "rseqc_junction_annotation_34",
+                    "runtimeInSeconds": 152.611708,
                     "command": {
-                        "arguments": []
+                        "program": "junction_annotation.py",
+                        "arguments": [
+                            "junction_annotation.py",
+                            "-q",
+                            "255",
+                            "-i",
+                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-o",
+                            "results/qc/rseqc/N61311_untrt-lane1.junctionanno",
+                            ">",
+                            "logs/rseqc/rseqc_junction_annotation/N61311_untrt-lane1.log",
+                            "2>&1"
+                        ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:33:38.973639",
+                    "executedAt": "2026-05-29 15:22:08.243092",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "gene_2_symbol_45",
-                    "runtimeInSeconds": 86.157203,
+                    "id": "rseqc_junction_saturation_35",
+                    "runtimeInSeconds": 159.935568,
                     "command": {
-                        "arguments": []
+                        "program": "junction_saturation.py",
+                        "arguments": [
+                            "junction_saturation.py",
+                            "-q",
+                            "255",
+                            "-i",
+                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-o",
+                            "results/qc/rseqc/N61311_untrt-lane1.junctionsat",
+                            ">",
+                            "logs/rseqc/rseqc_junction_saturation/N61311_untrt-lane1.log",
+                            "2>&1"
+                        ]
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:33:56.048136",
+                    "executedAt": "2026-05-29 15:22:08.249403",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "deseq2_46",
-                    "runtimeInSeconds": 11.244259,
+                    "id": "rseqc_readdis_36",
+                    "runtimeInSeconds": 246.209266,
+                    "command": {
+                        "program": "read_distribution.py",
+                        "arguments": [
+                            "read_distribution.py",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-i",
+                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            ">",
+                            "results/qc/rseqc/N61311_untrt-lane1.readdistribution.txt",
+                            "2>",
+                            "logs/rseqc/rseqc_readdis/N61311_untrt-lane1.log"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:22:08.255234",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_infer_37",
+                    "runtimeInSeconds": 3.895384,
+                    "command": {
+                        "program": "infer_experiment.py",
+                        "arguments": [
+                            "infer_experiment.py",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-i",
+                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            ">",
+                            "results/qc/rseqc/N61311_untrt-lane1.infer_experiment.txt",
+                            "2>",
+                            "logs/rseqc/rseqc_infer/N61311_untrt-lane1.log"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:22:08.261077",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_readdup_38",
+                    "runtimeInSeconds": 247.753765,
+                    "command": {
+                        "program": "read_duplication.py",
+                        "arguments": [
+                            "read_duplication.py",
+                            "-i",
+                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-o",
+                            "results/qc/rseqc/N61311_untrt-lane1.readdup",
+                            ">",
+                            "logs/rseqc/rseqc_readdup/N61311_untrt-lane1.log",
+                            "2>&1"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:22:08.266795",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_readgc_39",
+                    "runtimeInSeconds": 156.668635,
+                    "command": {
+                        "program": "read_GC.py",
+                        "arguments": [
+                            "read_GC.py",
+                            "-i",
+                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-o",
+                            "results/qc/rseqc/N61311_untrt-lane1.readgc",
+                            ">",
+                            "logs/rseqc/rseqc_readgc/N61311_untrt-lane1.log",
+                            "2>&1"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:22:08.272028",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_stat_40",
+                    "runtimeInSeconds": 190.09082,
+                    "command": {
+                        "program": "bam_stat.py",
+                        "arguments": [
+                            "bam_stat.py",
+                            "-i",
+                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            ">",
+                            "results/qc/rseqc/N61311_untrt-lane1.stats.txt",
+                            "2>",
+                            "logs/rseqc/rseqc_stat/N61311_untrt-lane1.log"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:22:08.274353",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "rseqc_innerdis_41",
+                    "runtimeInSeconds": 51.545764,
+                    "command": {
+                        "program": "inner_distance.py",
+                        "arguments": [
+                            "inner_distance.py",
+                            "-r",
+                            "results/qc/rseqc/annotation.bed",
+                            "-i",
+                            "results/star/N61311_untrt-lane1/Aligned.sortedByCoord.out.bam",
+                            "-o",
+                            "results/qc/rseqc/N61311_untrt-lane1.inner_distance_freq",
+                            ">",
+                            "logs/rseqc/rseqc_innerdis/N61311_untrt-lane1.log",
+                            "2>&1"
+                        ]
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:22:08.276932",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "count_matrix_42",
+                    "runtimeInSeconds": 5.628899,
                     "command": {
                         "arguments": []
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:35:22.256778",
+                    "executedAt": "2026-05-29 15:22:12.191929",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "deseq2_init_43",
+                    "runtimeInSeconds": 17.607096,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:22:17.882825",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "gene_2_symbol_44",
+                    "runtimeInSeconds": 142.723817,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:22:35.521749",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "deseq2_45",
+                    "runtimeInSeconds": 11.08887,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:22:59.880677",
+                    "machines": [
+                        "disco"
+                    ]
+                },
+                {
+                    "id": "gene_2_symbol_46",
+                    "runtimeInSeconds": 95.335533,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1,
+                    "executedAt": "2026-05-29 15:23:11.026843",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
                     "id": "gene_2_symbol_47",
-                    "runtimeInSeconds": 20.972051,
+                    "runtimeInSeconds": 112.844909,
                     "command": {
                         "arguments": []
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:35:33.534552",
+                    "executedAt": "2026-05-29 15:24:40.916600",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
-                    "id": "gene_2_symbol_48",
-                    "runtimeInSeconds": 186.083755,
+                    "id": "multiqc_48",
+                    "runtimeInSeconds": 19.291263,
                     "command": {
                         "arguments": []
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:35:54.536883",
+                    "executedAt": "2026-05-29 15:26:16.074692",
                     "machines": [
                         "disco"
                     ]
                 },
                 {
                     "id": "all_49",
-                    "runtimeInSeconds": 0.005275,
+                    "runtimeInSeconds": 0.004538,
                     "command": {
                         "arguments": []
                     },
                     "coreCount": 1,
-                    "executedAt": "2026-05-27 14:39:00.662637",
+                    "executedAt": "2026-05-29 15:26:35.400843",
                     "machines": [
                         "disco"
                     ]
@@ -2411,7 +2411,7 @@
                     "architecture": "x86_64",
                     "memoryInBytes": 65352160,
                     "cpu": {
-                        "coreCount": 1,
+                        "coreCount": 8,
                         "speedInMHz": 2100,
                         "vendor": "Intel"
                     }
