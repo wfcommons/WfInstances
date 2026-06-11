@@ -1,0 +1,3153 @@
+{
+    "name": "nfcore_rnaseq_gse110004_local_2runs_clean",
+    "description": "nf-core/rnaseq 3.25.0 execution on two paired-end public GSE110004 Saccharomyces cerevisiae RNA-seq runs",
+    "createdAt": "2026-05-28T18:31:16.106712+00:00",
+    "schemaVersion": "1.5",
+    "author": {
+        "name": "tom",
+        "email": "support@wfcommons.org"
+    },
+    "workflow": {
+        "specification": {
+            "tasks": [
+                {
+                    "name": "gunzip_gtf_saccharomyces_cerevisiae.r64-1-1.115.gtf.gz",
+                    "id": "ID000002",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "gunzip_fasta_saccharomyces_cerevisiae.r64-1-1.dna.toplevel.fa.gz",
+                    "id": "ID000001",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_faidx_saccharomyces_cerevisiae.r64-1-1.dna.toplevel.fa",
+                    "id": "ID000005",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "fq_lint_gse110004_srr6357070",
+                    "id": "ID000003",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "fq_lint_gse110004_srr6357076",
+                    "id": "ID000004",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "custom_gtffilter_saccharomyces_cerevisiae.r64-1-1.115.filtered",
+                    "id": "ID000006",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "make_transcripts_fasta_rsem/saccharomyces_cerevisiae.r64-1-1.dna.toplevel.fa",
+                    "id": "ID000007",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "star_genomegenerate_saccharomyces_cerevisiae.r64-1-1.dna.toplevel.fa",
+                    "id": "ID000008",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "salmon_index_genome.transcripts.fa",
+                    "id": "ID000010",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "eautils_gtf2bed_saccharomyces_cerevisiae.r64-1-1.115.filtered",
+                    "id": "ID000009",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "trimgalore_gse110004_srr6357070",
+                    "id": "ID000012",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "fastqc_gse110004_srr6357070",
+                    "id": "ID000011",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "fastqc_gse110004_srr6357076",
+                    "id": "ID000014",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "trimgalore_gse110004_srr6357076",
+                    "id": "ID000013",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "fq_lint_after_trimming_gse110004_srr6357070",
+                    "id": "ID000015",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "fq_subsample_gse110004_srr6357070",
+                    "id": "ID000016",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "salmon_quant_gse110004_srr6357070",
+                    "id": "ID000028",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "custom_tx2gene_null",
+                    "id": "ID000034",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "star_align_gse110004_srr6357070",
+                    "id": "ID000018",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "fq_lint_after_trimming_gse110004_srr6357076",
+                    "id": "ID000021",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "fq_subsample_gse110004_srr6357076",
+                    "id": "ID000022",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "salmon_quant_gse110004_srr6357076",
+                    "id": "ID000057",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "star_align_gse110004_srr6357076",
+                    "id": "ID000025",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_sort_gse110004_srr6357070",
+                    "id": "ID000027",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_index_gse110004_srr6357070",
+                    "id": "ID000039",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_flagstat_gse110004_srr6357070",
+                    "id": "ID000044",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_idxstats_gse110004_srr6357070",
+                    "id": "ID000043",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_stats_gse110004_srr6357070",
+                    "id": "ID000045",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "tximeta_tximport_all_samples",
+                    "id": "ID000067",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "picard_markduplicates_gse110004_srr6357070",
+                    "id": "ID000033",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "deseq2_qc_pseudo",
+                    "id": "ID000035",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "se_gene_unified_all_samples",
+                    "id": "ID000074",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "bedtools_genomecov_fw_gse110004_srr6357070",
+                    "id": "ID000041",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "bedtools_genomecov_combined_gse110004_srr6357070",
+                    "id": "ID000038",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "se_transcript_unified_all_samples",
+                    "id": "ID000073",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "bedtools_genomecov_rev_gse110004_srr6357070",
+                    "id": "ID000042",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "dupradar_gse110004_srr6357070",
+                    "id": "ID000053",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_sort_qualimap_gse110004_srr6357070",
+                    "id": "ID000052",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_bamstat_gse110004_srr6357070",
+                    "id": "ID000051",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_inferexperiment_gse110004_srr6357070",
+                    "id": "ID000047",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_readdistribution_gse110004_srr6357070",
+                    "id": "ID000049",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_junctionannotation_gse110004_srr6357070",
+                    "id": "ID000054",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_readduplication_gse110004_srr6357070",
+                    "id": "ID000046",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_innerdistance_gse110004_srr6357070",
+                    "id": "ID000050",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_junctionsaturation_gse110004_srr6357070",
+                    "id": "ID000048",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_sort_gse110004_srr6357076",
+                    "id": "ID000056",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_index_gse110004_srr6357076",
+                    "id": "ID000076",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_stats_gse110004_srr6357076",
+                    "id": "ID000082",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_flagstat_gse110004_srr6357076",
+                    "id": "ID000080",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_idxstats_gse110004_srr6357076",
+                    "id": "ID000081",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "subread_featurecounts_gse110004_srr6357070",
+                    "id": "ID000055",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "stringtie_stringtie_gse110004_srr6357070",
+                    "id": "ID000040",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "ucsc_bedclip_gse110004_srr6357070",
+                    "id": "ID000061",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "picard_markduplicates_gse110004_srr6357076",
+                    "id": "ID000066",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "ucsc_bedgraphtobigwig_gse110004_srr6357070",
+                    "id": "ID000069",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "deseq2_qc_bam_salmon",
+                    "id": "ID000072",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "custom_multiqccustombiotype_gse110004_srr6357070",
+                    "id": "ID000071",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "qualimap_rnaseq_gse110004_srr6357070",
+                    "id": "ID000060",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "stringtie_stringtie_gse110004_srr6357076",
+                    "id": "ID000075",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "bedtools_genomecov_combined_gse110004_srr6357076",
+                    "id": "ID000077",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "bedtools_genomecov_rev_gse110004_srr6357076",
+                    "id": "ID000078",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "bedtools_genomecov_fw_gse110004_srr6357076",
+                    "id": "ID000079",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_inferexperiment_gse110004_srr6357076",
+                    "id": "ID000085",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "dupradar_gse110004_srr6357076",
+                    "id": "ID000084",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_junctionsaturation_gse110004_srr6357076",
+                    "id": "ID000090",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "subread_featurecounts_gse110004_srr6357076",
+                    "id": "ID000091",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "samtools_sort_qualimap_gse110004_srr6357076",
+                    "id": "ID000089",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_junctionannotation_gse110004_srr6357076",
+                    "id": "ID000086",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "custom_multiqccustombiotype_gse110004_srr6357076",
+                    "id": "ID000095",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_readdistribution_gse110004_srr6357076",
+                    "id": "ID000087",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_readduplication_gse110004_srr6357076",
+                    "id": "ID000092",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_innerdistance_gse110004_srr6357076",
+                    "id": "ID000088",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "rseqc_bamstat_gse110004_srr6357076",
+                    "id": "ID000083",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "ucsc_bedclip_gse110004_srr6357076",
+                    "id": "ID000096",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "ucsc_bedgraphtobigwig_gse110004_srr6357076",
+                    "id": "ID000100",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "qualimap_rnaseq_gse110004_srr6357076",
+                    "id": "ID000097",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "multiqc_multiqc_report",
+                    "id": "ID000101",
+                    "parents": [],
+                    "children": [],
+                    "inputFiles": [],
+                    "outputFiles": []
+                }
+            ],
+            "files": []
+        },
+        "execution": {
+            "makespanInSeconds": 18905.277,
+            "executedAt": "2026-05-28T18:31:16.106735+00:00",
+            "tasks": [
+                {
+                    "id": "ID000002",
+                    "runtimeInSeconds": 0.278,
+                    "command": {
+                        "program": "gunzip_gtf",
+                        "arguments": [
+                            "#",
+                            "Not",
+                            "calling",
+                            "gunzip",
+                            "itself",
+                            "because",
+                            "it",
+                            "creates",
+                            "files",
+                            "#",
+                            "with",
+                            "the",
+                            "original",
+                            "group",
+                            "ownership",
+                            "rather",
+                            "than",
+                            "the",
+                            "#",
+                            "default",
+                            "one",
+                            "for",
+                            "that",
+                            "user",
+                            "/",
+                            "the",
+                            "work",
+                            "directory",
+                            "gzip",
+                            "-cd",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.gtf.gz",
+                            ">",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.gtf"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 125.0,
+                    "readBytes": 1168,
+                    "writtenBytes": 20443,
+                    "memoryInBytes": 5400,
+                    "executedAt": "2026-05-28T18:31:16.114794+00:00",
+                    "category": "gunzip_gtf"
+                },
+                {
+                    "id": "ID000001",
+                    "runtimeInSeconds": 0.33,
+                    "command": {
+                        "program": "gunzip_fasta",
+                        "arguments": [
+                            "#",
+                            "Not",
+                            "calling",
+                            "gunzip",
+                            "itself",
+                            "because",
+                            "it",
+                            "creates",
+                            "files",
+                            "#",
+                            "with",
+                            "the",
+                            "original",
+                            "group",
+                            "ownership",
+                            "rather",
+                            "than",
+                            "the",
+                            "#",
+                            "default",
+                            "one",
+                            "for",
+                            "that",
+                            "user",
+                            "/",
+                            "the",
+                            "work",
+                            "directory",
+                            "gzip",
+                            "-cd",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz",
+                            ">",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 112.8,
+                    "readBytes": 4282,
+                    "writtenBytes": 24148,
+                    "memoryInBytes": 5364,
+                    "executedAt": "2026-05-28T18:31:16.114843+00:00",
+                    "category": "gunzip_fasta"
+                },
+                {
+                    "id": "ID000005",
+                    "runtimeInSeconds": 0.427,
+                    "command": {
+                        "program": "samtools_faidx",
+                        "arguments": [
+                            "samtools",
+                            "faidx",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "cut",
+                            "-f",
+                            "1,2",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.fai",
+                            ">",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.sizes"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 98.4,
+                    "readBytes": 18344,
+                    "writtenBytes": 15,
+                    "memoryInBytes": 6736,
+                    "executedAt": "2026-05-28T18:31:16.114871+00:00",
+                    "category": "samtools_faidx"
+                },
+                {
+                    "id": "ID000003",
+                    "runtimeInSeconds": 150.887,
+                    "command": {
+                        "program": "fq_lint",
+                        "arguments": [
+                            "fq",
+                            "lint",
+                            "--disable-validator",
+                            "P001",
+                            "SRR6357070_1.fastq.gz",
+                            "SRR6357070_2.fastq.gz",
+                            ">",
+                            "GSE110004_SRR6357070.fq_lint.txt"
+                        ]
+                    },
+                    "coreCount": 2.0,
+                    "avgCPU": 100.0,
+                    "readBytes": 7364562,
+                    "writtenBytes": 18,
+                    "memoryInBytes": 224552,
+                    "executedAt": "2026-05-28T18:31:16.114893+00:00",
+                    "category": "fq_lint"
+                },
+                {
+                    "id": "ID000004",
+                    "runtimeInSeconds": 176.544,
+                    "command": {
+                        "program": "fq_lint",
+                        "arguments": [
+                            "fq",
+                            "lint",
+                            "--disable-validator",
+                            "P001",
+                            "SRR6357076_1.fastq.gz",
+                            "SRR6357076_2.fastq.gz",
+                            ">",
+                            "GSE110004_SRR6357076.fq_lint.txt"
+                        ]
+                    },
+                    "coreCount": 2.0,
+                    "avgCPU": 100.0,
+                    "readBytes": 8490688,
+                    "writtenBytes": 18,
+                    "memoryInBytes": 224524,
+                    "executedAt": "2026-05-28T18:31:16.114909+00:00",
+                    "category": "fq_lint"
+                },
+                {
+                    "id": "ID000006",
+                    "runtimeInSeconds": 0.689,
+                    "command": {
+                        "program": "custom_gtffilter",
+                        "arguments": [
+                            "prefix",
+                            "=",
+                            "task.ext.prefix",
+                            "?:",
+                            "\"${meta.id}\"",
+                            "suffix",
+                            "=",
+                            "\"gtf\"",
+                            "+",
+                            "(gtf.extension",
+                            "==",
+                            "gz",
+                            "?",
+                            ".gz",
+                            ":",
+                            ")",
+                            "args",
+                            "=",
+                            "task.ext.args",
+                            "?:",
+                            "template",
+                            "gtffilter.py"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 95.8,
+                    "readBytes": 32934,
+                    "writtenBytes": 18851,
+                    "memoryInBytes": 2316,
+                    "executedAt": "2026-05-28T18:31:16.114927+00:00",
+                    "category": "custom_gtffilter"
+                },
+                {
+                    "id": "ID000007",
+                    "runtimeInSeconds": 1.06,
+                    "command": {
+                        "program": "make_transcripts_fasta",
+                        "arguments": [
+                            "rsem-prepare-reference",
+                            "--gtf",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "--num-threads",
+                            "12",
+                            "rsem/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "rsem/genome",
+                            "cp",
+                            "rsem/genome.transcripts.fa",
+                            "."
+                        ]
+                    },
+                    "coreCount": 12.0,
+                    "avgCPU": 101.0,
+                    "readBytes": 45982,
+                    "writtenBytes": 96153,
+                    "memoryInBytes": 8648,
+                    "executedAt": "2026-05-28T18:31:16.114947+00:00",
+                    "category": "make_transcripts_fasta"
+                },
+                {
+                    "id": "ID000008",
+                    "runtimeInSeconds": 4.04,
+                    "command": {
+                        "program": "star_genomegenerate",
+                        "arguments": [
+                            "samtools",
+                            "faidx",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "NUM_BASES=`gawk",
+                            "{sum",
+                            "=",
+                            "sum",
+                            "+",
+                            "$2}END{if",
+                            "((log(sum)/log(2))/2",
+                            "-",
+                            "1",
+                            ">",
+                            "14)",
+                            "{printf",
+                            "\"%.0f\",",
+                            "14}",
+                            "else",
+                            "{printf",
+                            "\"%.0f\",",
+                            "(log(sum)/log(2))/2",
+                            "-",
+                            "1}}",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.fai`",
+                            "mkdir",
+                            "star",
+                            "STAR",
+                            "--runMode",
+                            "genomeGenerate",
+                            "--genomeDir",
+                            "star/",
+                            "--genomeFastaFiles",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "--sjdbGTFfile",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "--runThreadN",
+                            "12",
+                            "--genomeSAindexNbases",
+                            "$NUM_BASES",
+                            "--limitGenomeGenerateRAM",
+                            "77209411328"
+                        ]
+                    },
+                    "coreCount": 12.0,
+                    "avgCPU": 328.4,
+                    "readBytes": 253180,
+                    "writtenBytes": 655375,
+                    "memoryInBytes": 321796,
+                    "executedAt": "2026-05-28T18:31:16.114977+00:00",
+                    "category": "star_genomegenerate"
+                },
+                {
+                    "id": "ID000010",
+                    "runtimeInSeconds": 7.839,
+                    "command": {
+                        "program": "salmon_index",
+                        "arguments": [
+                            "if",
+                            "[",
+                            "-n",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "]",
+                            "then",
+                            "grep",
+                            "^>",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "|",
+                            "cut",
+                            "-d",
+                            "-f",
+                            "1",
+                            "|",
+                            "cut",
+                            "-d",
+                            "$t",
+                            "-f",
+                            "1",
+                            "|",
+                            "sed",
+                            "s/>//g",
+                            ">",
+                            "decoys.txt",
+                            "cat",
+                            "genome.transcripts.fa",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            ">",
+                            "gentrome.fa",
+                            "fi",
+                            "salmon",
+                            "index",
+                            "--threads",
+                            "6",
+                            "-t",
+                            "gentrome.fa",
+                            "-d",
+                            "decoys.txt",
+                            "-k",
+                            "31",
+                            "-i",
+                            "salmon"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 433.5,
+                    "readBytes": 399521,
+                    "writtenBytes": 258572,
+                    "memoryInBytes": 97024,
+                    "executedAt": "2026-05-28T18:31:16.114998+00:00",
+                    "category": "salmon_index"
+                },
+                {
+                    "id": "ID000009",
+                    "runtimeInSeconds": 1.512,
+                    "command": {
+                        "program": "eautils_gtf2bed",
+                        "arguments": [
+                            "prefix",
+                            "=",
+                            "task.ext.prefix",
+                            "?:",
+                            "\"${meta.id}\"",
+                            "args",
+                            "=",
+                            "task.ext.args",
+                            "?:",
+                            "template",
+                            "gtf2bed.pl"
+                        ]
+                    },
+                    "coreCount": 2.0,
+                    "avgCPU": 97.1,
+                    "readBytes": 11452,
+                    "writtenBytes": 858,
+                    "memoryInBytes": 704,
+                    "executedAt": "2026-05-28T18:31:16.115016+00:00",
+                    "category": "eautils_gtf2bed"
+                },
+                {
+                    "id": "ID000012",
+                    "runtimeInSeconds": 897.678,
+                    "command": {
+                        "program": "trimgalore",
+                        "arguments": [
+                            "[",
+                            "!",
+                            "-f",
+                            "GSE110004_SRR6357070_trimmed_1.fastq.gz",
+                            "]",
+                            "&&",
+                            "ln",
+                            "-s",
+                            "SRR6357070_1.fastq.gz",
+                            "GSE110004_SRR6357070_trimmed_1.fastq.gz",
+                            "[",
+                            "!",
+                            "-f",
+                            "GSE110004_SRR6357070_trimmed_2.fastq.gz",
+                            "]",
+                            "&&",
+                            "ln",
+                            "-s",
+                            "SRR6357070_2.fastq.gz",
+                            "GSE110004_SRR6357070_trimmed_2.fastq.gz",
+                            "trim_galore",
+                            "--fastqc_args",
+                            "-t",
+                            "12",
+                            "--cores",
+                            "8",
+                            "--paired",
+                            "--gzip",
+                            "GSE110004_SRR6357070_trimmed_1.fastq.gz",
+                            "GSE110004_SRR6357070_trimmed_2.fastq.gz"
+                        ]
+                    },
+                    "coreCount": 12.0,
+                    "avgCPU": 697.3,
+                    "readBytes": 145006987,
+                    "writtenBytes": 149572487,
+                    "memoryInBytes": 1888320,
+                    "executedAt": "2026-05-28T18:31:16.115037+00:00",
+                    "category": "trimgalore"
+                },
+                {
+                    "id": "ID000011",
+                    "runtimeInSeconds": 243.41,
+                    "command": {
+                        "program": "fastqc",
+                        "arguments": [
+                            "printf",
+                            "\"%s",
+                            "%sn\"",
+                            "SRR6357070_1.fastq.gz",
+                            "GSE110004_SRR6357070_raw_1.gz",
+                            "SRR6357070_2.fastq.gz",
+                            "GSE110004_SRR6357070_raw_2.gz",
+                            "|",
+                            "while",
+                            "read",
+                            "old_name",
+                            "new_name",
+                            "do",
+                            "[",
+                            "-f",
+                            "\"${new_name}\"",
+                            "]",
+                            "||",
+                            "ln",
+                            "-s",
+                            "$old_name",
+                            "$new_name",
+                            "done",
+                            "fastqc",
+                            "--quiet",
+                            "--threads",
+                            "2",
+                            "--memory",
+                            "6144",
+                            "GSE110004_SRR6357070_raw_1.gz",
+                            "GSE110004_SRR6357070_raw_2.gz"
+                        ]
+                    },
+                    "coreCount": 2.0,
+                    "avgCPU": 204.6,
+                    "readBytes": 4960335,
+                    "writtenBytes": 7680,
+                    "memoryInBytes": 3900620,
+                    "executedAt": "2026-05-28T18:31:16.115059+00:00",
+                    "category": "fastqc"
+                },
+                {
+                    "id": "ID000014",
+                    "runtimeInSeconds": 279.412,
+                    "command": {
+                        "program": "fastqc",
+                        "arguments": [
+                            "printf",
+                            "\"%s",
+                            "%sn\"",
+                            "SRR6357076_1.fastq.gz",
+                            "GSE110004_SRR6357076_raw_1.gz",
+                            "SRR6357076_2.fastq.gz",
+                            "GSE110004_SRR6357076_raw_2.gz",
+                            "|",
+                            "while",
+                            "read",
+                            "old_name",
+                            "new_name",
+                            "do",
+                            "[",
+                            "-f",
+                            "\"${new_name}\"",
+                            "]",
+                            "||",
+                            "ln",
+                            "-s",
+                            "$old_name",
+                            "$new_name",
+                            "done",
+                            "fastqc",
+                            "--quiet",
+                            "--threads",
+                            "2",
+                            "--memory",
+                            "6144",
+                            "GSE110004_SRR6357076_raw_1.gz",
+                            "GSE110004_SRR6357076_raw_2.gz"
+                        ]
+                    },
+                    "coreCount": 2.0,
+                    "avgCPU": 204.6,
+                    "readBytes": 5704590,
+                    "writtenBytes": 7549,
+                    "memoryInBytes": 4184036,
+                    "executedAt": "2026-05-28T18:31:16.115088+00:00",
+                    "category": "fastqc"
+                },
+                {
+                    "id": "ID000013",
+                    "runtimeInSeconds": 1042.607,
+                    "command": {
+                        "program": "trimgalore",
+                        "arguments": [
+                            "[",
+                            "!",
+                            "-f",
+                            "GSE110004_SRR6357076_trimmed_1.fastq.gz",
+                            "]",
+                            "&&",
+                            "ln",
+                            "-s",
+                            "SRR6357076_1.fastq.gz",
+                            "GSE110004_SRR6357076_trimmed_1.fastq.gz",
+                            "[",
+                            "!",
+                            "-f",
+                            "GSE110004_SRR6357076_trimmed_2.fastq.gz",
+                            "]",
+                            "&&",
+                            "ln",
+                            "-s",
+                            "SRR6357076_2.fastq.gz",
+                            "GSE110004_SRR6357076_trimmed_2.fastq.gz",
+                            "trim_galore",
+                            "--fastqc_args",
+                            "-t",
+                            "12",
+                            "--cores",
+                            "8",
+                            "--paired",
+                            "--gzip",
+                            "GSE110004_SRR6357076_trimmed_1.fastq.gz",
+                            "GSE110004_SRR6357076_trimmed_2.fastq.gz"
+                        ]
+                    },
+                    "coreCount": 12.0,
+                    "avgCPU": 709.5,
+                    "readBytes": 167541101,
+                    "writtenBytes": 172852491,
+                    "memoryInBytes": 1885200,
+                    "executedAt": "2026-05-28T18:31:16.115107+00:00",
+                    "category": "trimgalore"
+                },
+                {
+                    "id": "ID000015",
+                    "runtimeInSeconds": 156.071,
+                    "command": {
+                        "program": "fq_lint_after_trimming",
+                        "arguments": [
+                            "fq",
+                            "lint",
+                            "--disable-validator",
+                            "P001",
+                            "GSE110004_SRR6357070_trimmed_1_val_1.fq.gz",
+                            "GSE110004_SRR6357070_trimmed_2_val_2.fq.gz",
+                            ">",
+                            "GSE110004_SRR6357070.fq_lint.txt"
+                        ]
+                    },
+                    "coreCount": 2.0,
+                    "avgCPU": 100.6,
+                    "readBytes": 7176226,
+                    "writtenBytes": 18,
+                    "memoryInBytes": 224344,
+                    "executedAt": "2026-05-28T18:31:16.115123+00:00",
+                    "category": "fq_lint_after_trimming"
+                },
+                {
+                    "id": "ID000016",
+                    "runtimeInSeconds": 143.147,
+                    "command": {
+                        "program": "fq_subsample",
+                        "arguments": [
+                            "fq",
+                            "subsample",
+                            "--record-count",
+                            "1000000",
+                            "--seed",
+                            "1",
+                            "GSE110004_SRR6357070_trimmed_1_val_1.fq.gz",
+                            "GSE110004_SRR6357070_trimmed_2_val_2.fq.gz",
+                            "--r1-dst",
+                            "GSE110004_SRR6357070.subsampled_R1.fastq.gz",
+                            "--r2-dst",
+                            "GSE110004_SRR6357070.subsampled_R2.fastq.gz"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 100.6,
+                    "readBytes": 7176129,
+                    "writtenBytes": 206449,
+                    "memoryInBytes": 13896,
+                    "executedAt": "2026-05-28T18:31:16.115139+00:00",
+                    "category": "fq_subsample"
+                },
+                {
+                    "id": "ID000028",
+                    "runtimeInSeconds": 129.47,
+                    "command": {
+                        "program": "salmon_quant",
+                        "arguments": [
+                            "salmon",
+                            "quant",
+                            "--geneMap",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "--threads",
+                            "6",
+                            "--libType=ISR",
+                            "-t",
+                            "genome.transcripts.fa",
+                            "-a",
+                            "GSE110004_SRR6357070.Aligned.toTranscriptome.out.bam",
+                            "-o",
+                            "GSE110004_SRR6357070",
+                            "if",
+                            "[",
+                            "-f",
+                            "GSE110004_SRR6357070/aux_info/meta_info.json",
+                            "]",
+                            "then",
+                            "cp",
+                            "GSE110004_SRR6357070/aux_info/meta_info.json",
+                            "\"GSE110004_SRR6357070_meta_info.json\"",
+                            "fi",
+                            "if",
+                            "[",
+                            "-f",
+                            "GSE110004_SRR6357070/lib_format_counts.json",
+                            "]",
+                            "then",
+                            "cp",
+                            "GSE110004_SRR6357070/lib_format_counts.json",
+                            "\"GSE110004_SRR6357070_lib_format_counts.json\"",
+                            "fi"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 563.4,
+                    "readBytes": 5116479,
+                    "writtenBytes": 1237,
+                    "memoryInBytes": 2792380,
+                    "executedAt": "2026-05-28T18:31:16.115363+00:00",
+                    "category": "salmon_quant"
+                },
+                {
+                    "id": "ID000034",
+                    "runtimeInSeconds": 1.154,
+                    "command": {
+                        "program": "custom_tx2gene",
+                        "arguments": [
+                            "template",
+                            "tx2gene.py"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 99.4,
+                    "readBytes": 26841,
+                    "writtenBytes": 388,
+                    "memoryInBytes": 1376,
+                    "executedAt": "2026-05-28T18:31:16.115459+00:00",
+                    "category": "custom_tx2gene"
+                },
+                {
+                    "id": "ID000018",
+                    "runtimeInSeconds": 2147.04,
+                    "command": {
+                        "program": "star_align",
+                        "arguments": [
+                            "STAR",
+                            "--genomeDir",
+                            "star",
+                            "--readFilesIn",
+                            "input1/GSE110004_SRR6357070_trimmed_1_val_1.fq.gz",
+                            "input2/GSE110004_SRR6357070_trimmed_2_val_2.fq.gz",
+                            "--runThreadN",
+                            "12",
+                            "--outFileNamePrefix",
+                            "GSE110004_SRR6357070.",
+                            "--sjdbGTFfile",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "--quantMode",
+                            "TranscriptomeSAM",
+                            "--outSAMtype",
+                            "BAM",
+                            "Unsorted",
+                            "--outSAMattributes",
+                            "NH",
+                            "HI",
+                            "AS",
+                            "NM",
+                            "MD",
+                            "--readFilesCommand",
+                            "zcat",
+                            "--twopassMode",
+                            "Basic",
+                            "--runRNGseed",
+                            "0",
+                            "--outFilterMultimapNmax",
+                            "20",
+                            "--alignSJDBoverhangMin",
+                            "1",
+                            "--outSAMstrandField",
+                            "intronMotif",
+                            "--quantTranscriptomeSAMoutput",
+                            "BanSingleEnd",
+                            "--outSAMattrRGline",
+                            "ID:GSE110004_SRR6357070",
+                            "SM:GSE110004_SRR6357070",
+                            "if",
+                            "[",
+                            "-f",
+                            "GSE110004_SRR6357070.Unmapped.out.mate1",
+                            "]",
+                            "then",
+                            "mv",
+                            "GSE110004_SRR6357070.Unmapped.out.mate1",
+                            "GSE110004_SRR6357070.unmapped_1.fastq",
+                            "gzip",
+                            "GSE110004_SRR6357070.unmapped_1.fastq",
+                            "fi",
+                            "if",
+                            "[",
+                            "-f",
+                            "GSE110004_SRR6357070.Unmapped.out.mate2",
+                            "]",
+                            "then",
+                            "mv",
+                            "GSE110004_SRR6357070.Unmapped.out.mate2",
+                            "GSE110004_SRR6357070.unmapped_2.fastq",
+                            "gzip",
+                            "GSE110004_SRR6357070.unmapped_2.fastq",
+                            "fi"
+                        ]
+                    },
+                    "coreCount": 12.0,
+                    "avgCPU": 1183.5,
+                    "readBytes": 43224755,
+                    "writtenBytes": 24286843,
+                    "memoryInBytes": 4174960,
+                    "executedAt": "2026-05-28T18:31:16.115226+00:00",
+                    "category": "star_align"
+                },
+                {
+                    "id": "ID000021",
+                    "runtimeInSeconds": 176.885,
+                    "command": {
+                        "program": "fq_lint_after_trimming",
+                        "arguments": [
+                            "fq",
+                            "lint",
+                            "--disable-validator",
+                            "P001",
+                            "GSE110004_SRR6357076_trimmed_1_val_1.fq.gz",
+                            "GSE110004_SRR6357076_trimmed_2_val_2.fq.gz",
+                            ">",
+                            "GSE110004_SRR6357076.fq_lint.txt"
+                        ]
+                    },
+                    "coreCount": 2.0,
+                    "avgCPU": 100.0,
+                    "readBytes": 8300586,
+                    "writtenBytes": 18,
+                    "memoryInBytes": 224276,
+                    "executedAt": "2026-05-28T18:31:16.115240+00:00",
+                    "category": "fq_lint_after_trimming"
+                },
+                {
+                    "id": "ID000022",
+                    "runtimeInSeconds": 155.126,
+                    "command": {
+                        "program": "fq_subsample",
+                        "arguments": [
+                            "fq",
+                            "subsample",
+                            "--record-count",
+                            "1000000",
+                            "--seed",
+                            "1",
+                            "GSE110004_SRR6357076_trimmed_1_val_1.fq.gz",
+                            "GSE110004_SRR6357076_trimmed_2_val_2.fq.gz",
+                            "--r1-dst",
+                            "GSE110004_SRR6357076.subsampled_R1.fastq.gz",
+                            "--r2-dst",
+                            "GSE110004_SRR6357076.subsampled_R2.fastq.gz"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 100.1,
+                    "readBytes": 8300489,
+                    "writtenBytes": 206819,
+                    "memoryInBytes": 14436,
+                    "executedAt": "2026-05-28T18:31:16.115260+00:00",
+                    "category": "fq_subsample"
+                },
+                {
+                    "id": "ID000057",
+                    "runtimeInSeconds": 135.351,
+                    "command": {
+                        "program": "salmon_quant",
+                        "arguments": [
+                            "salmon",
+                            "quant",
+                            "--geneMap",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "--threads",
+                            "6",
+                            "--libType=ISR",
+                            "-t",
+                            "genome.transcripts.fa",
+                            "-a",
+                            "GSE110004_SRR6357076.Aligned.toTranscriptome.out.bam",
+                            "-o",
+                            "GSE110004_SRR6357076",
+                            "if",
+                            "[",
+                            "-f",
+                            "GSE110004_SRR6357076/aux_info/meta_info.json",
+                            "]",
+                            "then",
+                            "cp",
+                            "GSE110004_SRR6357076/aux_info/meta_info.json",
+                            "\"GSE110004_SRR6357076_meta_info.json\"",
+                            "fi",
+                            "if",
+                            "[",
+                            "-f",
+                            "GSE110004_SRR6357076/lib_format_counts.json",
+                            "]",
+                            "then",
+                            "cp",
+                            "GSE110004_SRR6357076/lib_format_counts.json",
+                            "\"GSE110004_SRR6357076_lib_format_counts.json\"",
+                            "fi"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 567.0,
+                    "readBytes": 6188040,
+                    "writtenBytes": 1242,
+                    "memoryInBytes": 2737776,
+                    "executedAt": "2026-05-28T18:31:16.115851+00:00",
+                    "category": "salmon_quant"
+                },
+                {
+                    "id": "ID000025",
+                    "runtimeInSeconds": 1547.913,
+                    "command": {
+                        "program": "star_align",
+                        "arguments": [
+                            "STAR",
+                            "--genomeDir",
+                            "star",
+                            "--readFilesIn",
+                            "input1/GSE110004_SRR6357076_trimmed_1_val_1.fq.gz",
+                            "input2/GSE110004_SRR6357076_trimmed_2_val_2.fq.gz",
+                            "--runThreadN",
+                            "12",
+                            "--outFileNamePrefix",
+                            "GSE110004_SRR6357076.",
+                            "--sjdbGTFfile",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "--quantMode",
+                            "TranscriptomeSAM",
+                            "--outSAMtype",
+                            "BAM",
+                            "Unsorted",
+                            "--outSAMattributes",
+                            "NH",
+                            "HI",
+                            "AS",
+                            "NM",
+                            "MD",
+                            "--readFilesCommand",
+                            "zcat",
+                            "--twopassMode",
+                            "Basic",
+                            "--runRNGseed",
+                            "0",
+                            "--outFilterMultimapNmax",
+                            "20",
+                            "--alignSJDBoverhangMin",
+                            "1",
+                            "--outSAMstrandField",
+                            "intronMotif",
+                            "--quantTranscriptomeSAMoutput",
+                            "BanSingleEnd",
+                            "--outSAMattrRGline",
+                            "ID:GSE110004_SRR6357076",
+                            "SM:GSE110004_SRR6357076",
+                            "if",
+                            "[",
+                            "-f",
+                            "GSE110004_SRR6357076.Unmapped.out.mate1",
+                            "]",
+                            "then",
+                            "mv",
+                            "GSE110004_SRR6357076.Unmapped.out.mate1",
+                            "GSE110004_SRR6357076.unmapped_1.fastq",
+                            "gzip",
+                            "GSE110004_SRR6357076.unmapped_1.fastq",
+                            "fi",
+                            "if",
+                            "[",
+                            "-f",
+                            "GSE110004_SRR6357076.Unmapped.out.mate2",
+                            "]",
+                            "then",
+                            "mv",
+                            "GSE110004_SRR6357076.Unmapped.out.mate2",
+                            "GSE110004_SRR6357076.unmapped_2.fastq",
+                            "gzip",
+                            "GSE110004_SRR6357076.unmapped_2.fastq",
+                            "fi"
+                        ]
+                    },
+                    "coreCount": 12.0,
+                    "avgCPU": 1179.7,
+                    "readBytes": 49993067,
+                    "writtenBytes": 28898045,
+                    "memoryInBytes": 4173456,
+                    "executedAt": "2026-05-28T18:31:16.115328+00:00",
+                    "category": "star_align"
+                },
+                {
+                    "id": "ID000027",
+                    "runtimeInSeconds": 134.556,
+                    "command": {
+                        "program": "samtools_sort",
+                        "arguments": [
+                            "samtools",
+                            "cat",
+                            "GSE110004_SRR6357070.Aligned.out.bam",
+                            "|",
+                            "samtools",
+                            "sort",
+                            "-T",
+                            "GSE110004_SRR6357070.sorted",
+                            "--threads",
+                            "6",
+                            "--reference",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "-o",
+                            "GSE110004_SRR6357070.sorted.bam",
+                            "-"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 586.9,
+                    "readBytes": 18319374,
+                    "writtenBytes": 23044890,
+                    "memoryInBytes": 5294404,
+                    "executedAt": "2026-05-28T18:31:16.115345+00:00",
+                    "category": "samtools_sort"
+                },
+                {
+                    "id": "ID000039",
+                    "runtimeInSeconds": 18.424,
+                    "command": {
+                        "program": "samtools_index",
+                        "arguments": [
+                            "samtools",
+                            "index",
+                            "-@",
+                            "2",
+                            "GSE110004_SRR6357070.markdup.sorted.bam"
+                        ]
+                    },
+                    "coreCount": 2.0,
+                    "avgCPU": 291.2,
+                    "readBytes": 4123595,
+                    "writtenBytes": 2014,
+                    "memoryInBytes": 22680,
+                    "executedAt": "2026-05-28T18:31:16.115518+00:00",
+                    "category": "samtools_index"
+                },
+                {
+                    "id": "ID000044",
+                    "runtimeInSeconds": 32.308,
+                    "command": {
+                        "program": "samtools_flagstat",
+                        "arguments": [
+                            "samtools",
+                            "flagstat",
+                            "--threads",
+                            "1",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            ">",
+                            "GSE110004_SRR6357070.markdup.sorted.bam.flagstat"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 162.7,
+                    "readBytes": 4123595,
+                    "writtenBytes": 11,
+                    "memoryInBytes": 7780,
+                    "executedAt": "2026-05-28T18:31:16.115651+00:00",
+                    "category": "samtools_flagstat"
+                },
+                {
+                    "id": "ID000043",
+                    "runtimeInSeconds": 0.35,
+                    "command": {
+                        "program": "samtools_idxstats",
+                        "arguments": [
+                            "#",
+                            "Note:",
+                            "--threads",
+                            "value",
+                            "represents",
+                            "*additional*",
+                            "CPUs",
+                            "to",
+                            "allocate",
+                            "(total",
+                            "CPUs",
+                            "=",
+                            "1",
+                            "+",
+                            "--threads).",
+                            "samtools",
+                            "idxstats",
+                            "--threads",
+                            "0",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            ">",
+                            "GSE110004_SRR6357070.markdup.sorted.bam.idxstats"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 106.0,
+                    "readBytes": 7226,
+                    "writtenBytes": 11,
+                    "memoryInBytes": 3512,
+                    "executedAt": "2026-05-28T18:31:16.115636+00:00",
+                    "category": "samtools_idxstats"
+                },
+                {
+                    "id": "ID000045",
+                    "runtimeInSeconds": 119.867,
+                    "command": {
+                        "program": "samtools_stats",
+                        "arguments": [
+                            "samtools",
+                            "stats",
+                            "--threads",
+                            "1",
+                            "--reference",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            ">",
+                            "GSE110004_SRR6357070.markdup.sorted.bam.stats"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 144.1,
+                    "readBytes": 4123599,
+                    "writtenBytes": 355,
+                    "memoryInBytes": 8660,
+                    "executedAt": "2026-05-28T18:31:16.115619+00:00",
+                    "category": "samtools_stats"
+                },
+                {
+                    "id": "ID000067",
+                    "runtimeInSeconds": 6.942,
+                    "command": {
+                        "program": "tximeta_tximport",
+                        "arguments": [
+                            "template",
+                            "tximport.r"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 139.7,
+                    "readBytes": 69610,
+                    "writtenBytes": 4002,
+                    "memoryInBytes": 525884,
+                    "executedAt": "2026-05-28T18:31:16.116030+00:00",
+                    "category": "tximeta_tximport"
+                },
+                {
+                    "id": "ID000033",
+                    "runtimeInSeconds": 1240.342,
+                    "command": {
+                        "program": "picard_markduplicates",
+                        "arguments": [
+                            "picard",
+                            "-Xmx29491M",
+                            "MarkDuplicates",
+                            "--ASSUME_SORTED",
+                            "true",
+                            "--REMOVE_DUPLICATES",
+                            "false",
+                            "--VALIDATION_STRINGENCY",
+                            "LENIENT",
+                            "--TMP_DIR",
+                            "tmp",
+                            "--INPUT",
+                            "GSE110004_SRR6357070.sorted.bam",
+                            "--OUTPUT",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "--REFERENCE_SEQUENCE",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "--METRICS_FILE",
+                            "GSE110004_SRR6357070.markdup.sorted.metrics.txt"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 126.0,
+                    "readBytes": 7618118,
+                    "writtenBytes": 8237241,
+                    "memoryInBytes": 30709800,
+                    "executedAt": "2026-05-28T18:31:16.115479+00:00",
+                    "category": "picard_markduplicates"
+                },
+                {
+                    "id": "ID000035",
+                    "runtimeInSeconds": 15.858,
+                    "command": {
+                        "program": "deseq2_qc_pseudo",
+                        "arguments": [
+                            "deseq2_qc.r",
+                            "--count_file",
+                            "salmon.merged.gene_counts_length_scaled.tsv",
+                            "--outdir",
+                            "./",
+                            "--cores",
+                            "6",
+                            "--outprefix",
+                            "deseq2",
+                            "--id_col",
+                            "1",
+                            "--sample_suffix",
+                            "--count_col",
+                            "3",
+                            "--vst",
+                            "TRUE",
+                            "if",
+                            "[",
+                            "-f",
+                            "\"R_sessionInfo.log\"",
+                            "]",
+                            "then",
+                            "#",
+                            "Handle",
+                            "PCA",
+                            "files",
+                            "sed",
+                            "\"s/deseq2_pca/salmon_deseq2_pca/g\"",
+                            "<deseq2_pca_header.txt",
+                            ">",
+                            "pca_header.tmp",
+                            "sed",
+                            "-i",
+                            "-e",
+                            "\"s/DESeq2",
+                            "PCA/SALMON",
+                            "DESeq2",
+                            "PCA/g\"",
+                            "pca_header.tmp",
+                            "cat",
+                            "pca_header.tmp",
+                            "*.pca.vals.txt",
+                            ">",
+                            "salmon.pca.vals_mqc.tsv",
+                            "rm",
+                            "pca_header.tmp",
+                            "#",
+                            "Handle",
+                            "clustering",
+                            "files",
+                            "sed",
+                            "\"s/deseq2_clustering/salmon_deseq2_clustering/g\"",
+                            "<deseq2_clustering_header.txt",
+                            ">",
+                            "clustering_header.tmp",
+                            "sed",
+                            "-i",
+                            "-e",
+                            "\"s/DESeq2",
+                            "sample/SALMON",
+                            "DESeq2",
+                            "sample/g\"",
+                            "clustering_header.tmp",
+                            "cat",
+                            "clustering_header.tmp",
+                            "*.sample.dists.txt",
+                            ">",
+                            "salmon.sample.dists_mqc.tsv",
+                            "rm",
+                            "clustering_header.tmp",
+                            "fi"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 138.1,
+                    "readBytes": 136791,
+                    "writtenBytes": 816,
+                    "memoryInBytes": 734352,
+                    "executedAt": "2026-05-28T18:31:16.115504+00:00",
+                    "category": "deseq2_qc_pseudo"
+                },
+                {
+                    "id": "ID000074",
+                    "runtimeInSeconds": 8.24,
+                    "command": {
+                        "program": "se_gene_unified",
+                        "arguments": [
+                            "template",
+                            "summarizedexperiment.r"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 133.9,
+                    "readBytes": 68956,
+                    "writtenBytes": 1158,
+                    "memoryInBytes": 688628,
+                    "executedAt": "2026-05-28T18:31:16.116139+00:00",
+                    "category": "se_gene_unified"
+                },
+                {
+                    "id": "ID000041",
+                    "runtimeInSeconds": 200.663,
+                    "command": {
+                        "program": "bedtools_genomecov_fw",
+                        "arguments": [
+                            "bedtools",
+                            "genomecov",
+                            "-ibam",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "-split",
+                            "-du",
+                            "-strand",
+                            "-",
+                            "-bg",
+                            "|",
+                            "LC_ALL=C",
+                            "sort",
+                            "--parallel=1",
+                            "--buffer-size=3G",
+                            "-k1,1",
+                            "-k2,2n",
+                            ">",
+                            "GSE110004_SRR6357070.reverse.bedGraph"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 104.0,
+                    "readBytes": 4207887,
+                    "writtenBytes": 264118,
+                    "memoryInBytes": 266568,
+                    "executedAt": "2026-05-28T18:31:16.115549+00:00",
+                    "category": "bedtools_genomecov_fw"
+                },
+                {
+                    "id": "ID000038",
+                    "runtimeInSeconds": 240.853,
+                    "command": {
+                        "program": "bedtools_genomecov_combined",
+                        "arguments": [
+                            "bedtools",
+                            "genomecov",
+                            "-ibam",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "-split",
+                            "-bg",
+                            "|",
+                            "LC_ALL=C",
+                            "sort",
+                            "--parallel=1",
+                            "--buffer-size=3G",
+                            "-k1,1",
+                            "-k2,2n",
+                            ">",
+                            "GSE110004_SRR6357070.bedGraph"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 105.2,
+                    "readBytes": 4282637,
+                    "writtenBytes": 488294,
+                    "memoryInBytes": 533332,
+                    "executedAt": "2026-05-28T18:31:16.115569+00:00",
+                    "category": "bedtools_genomecov_combined"
+                },
+                {
+                    "id": "ID000073",
+                    "runtimeInSeconds": 8.24,
+                    "command": {
+                        "program": "se_transcript_unified",
+                        "arguments": [
+                            "template",
+                            "summarizedexperiment.r"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 132.6,
+                    "readBytes": 68460,
+                    "writtenBytes": 712,
+                    "memoryInBytes": 689584,
+                    "executedAt": "2026-05-28T18:31:16.116126+00:00",
+                    "category": "se_transcript_unified"
+                },
+                {
+                    "id": "ID000042",
+                    "runtimeInSeconds": 194.191,
+                    "command": {
+                        "program": "bedtools_genomecov_rev",
+                        "arguments": [
+                            "bedtools",
+                            "genomecov",
+                            "-ibam",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "-split",
+                            "-du",
+                            "-strand",
+                            "+",
+                            "-bg",
+                            "|",
+                            "LC_ALL=C",
+                            "sort",
+                            "--parallel=1",
+                            "--buffer-size=3G",
+                            "-k1,1",
+                            "-k2,2n",
+                            ">",
+                            "GSE110004_SRR6357070.forward.bedGraph"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 103.9,
+                    "readBytes": 4205909,
+                    "writtenBytes": 258132,
+                    "memoryInBytes": 194664,
+                    "executedAt": "2026-05-28T18:31:16.115604+00:00",
+                    "category": "bedtools_genomecov_rev"
+                },
+                {
+                    "id": "ID000053",
+                    "runtimeInSeconds": 720.98,
+                    "command": {
+                        "program": "dupradar",
+                        "arguments": [
+                            "template",
+                            "dupradar.r"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 100.8,
+                    "readBytes": 28481526,
+                    "writtenBytes": 19017276,
+                    "memoryInBytes": 289524,
+                    "executedAt": "2026-05-28T18:31:16.115664+00:00",
+                    "category": "dupradar"
+                },
+                {
+                    "id": "ID000052",
+                    "runtimeInSeconds": 206.206,
+                    "command": {
+                        "program": "samtools_sort_qualimap",
+                        "arguments": [
+                            "samtools",
+                            "cat",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "|",
+                            "samtools",
+                            "sort",
+                            "-n",
+                            "-T",
+                            "GSE110004_SRR6357070.namesorted",
+                            "--threads",
+                            "6",
+                            "--reference",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "-o",
+                            "GSE110004_SRR6357070.namesorted.bam",
+                            "-"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 570.9,
+                    "readBytes": 15928865,
+                    "writtenBytes": 32810700,
+                    "memoryInBytes": 5435420,
+                    "executedAt": "2026-05-28T18:31:16.115681+00:00",
+                    "category": "samtools_sort_qualimap"
+                },
+                {
+                    "id": "ID000051",
+                    "runtimeInSeconds": 286.518,
+                    "command": {
+                        "program": "rseqc_bamstat",
+                        "arguments": [
+                            "bam_stat.py",
+                            "-i",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            ">",
+                            "GSE110004_SRR6357070.bam_stat.txt"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 102.5,
+                    "readBytes": 4153995,
+                    "writtenBytes": 9,
+                    "memoryInBytes": 44580,
+                    "executedAt": "2026-05-28T18:31:16.115702+00:00",
+                    "category": "rseqc_bamstat"
+                },
+                {
+                    "id": "ID000047",
+                    "runtimeInSeconds": 2.681,
+                    "command": {
+                        "program": "rseqc_inferexperiment",
+                        "arguments": [
+                            "infer_experiment.py",
+                            "-i",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "-r",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.bed",
+                            ">",
+                            "GSE110004_SRR6357070.infer_experiment.txt"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 302.5,
+                    "readBytes": 60514,
+                    "writtenBytes": 9,
+                    "memoryInBytes": 45660,
+                    "executedAt": "2026-05-28T18:31:16.115720+00:00",
+                    "category": "rseqc_inferexperiment"
+                },
+                {
+                    "id": "ID000049",
+                    "runtimeInSeconds": 267.647,
+                    "command": {
+                        "program": "rseqc_readdistribution",
+                        "arguments": [
+                            "read_distribution.py",
+                            "-i",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "-r",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.bed",
+                            ">",
+                            "GSE110004_SRR6357070.read_distribution.txt"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 102.0,
+                    "readBytes": 4158168,
+                    "writtenBytes": 10,
+                    "memoryInBytes": 62476,
+                    "executedAt": "2026-05-28T18:31:16.115735+00:00",
+                    "category": "rseqc_readdistribution"
+                },
+                {
+                    "id": "ID000054",
+                    "runtimeInSeconds": 234.078,
+                    "command": {
+                        "program": "rseqc_junctionannotation",
+                        "arguments": [
+                            "junction_annotation.py",
+                            "-i",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "-r",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.bed",
+                            "-o",
+                            "GSE110004_SRR6357070",
+                            "2>|",
+                            ">(grep",
+                            "-v",
+                            "E::idx_find_and_load",
+                            "|",
+                            "tee",
+                            "GSE110004_SRR6357070.junction_annotation.log",
+                            ">&2)"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 103.5,
+                    "readBytes": 4175659,
+                    "writtenBytes": 6572,
+                    "memoryInBytes": 53096,
+                    "executedAt": "2026-05-28T18:31:16.115751+00:00",
+                    "category": "rseqc_junctionannotation"
+                },
+                {
+                    "id": "ID000046",
+                    "runtimeInSeconds": 492.875,
+                    "command": {
+                        "program": "rseqc_readduplication",
+                        "arguments": [
+                            "read_duplication.py",
+                            "-i",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "-o",
+                            "GSE110004_SRR6357070"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 101.8,
+                    "readBytes": 4175038,
+                    "writtenBytes": 1874,
+                    "memoryInBytes": 4294508,
+                    "executedAt": "2026-05-28T18:31:16.115768+00:00",
+                    "category": "rseqc_readduplication"
+                },
+                {
+                    "id": "ID000050",
+                    "runtimeInSeconds": 43.355,
+                    "command": {
+                        "program": "rseqc_innerdistance",
+                        "arguments": [
+                            "inner_distance.py",
+                            "-i",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "-r",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.bed",
+                            "-o",
+                            "GSE110004_SRR6357070",
+                            ">",
+                            "stdout.txt",
+                            "head",
+                            "-n",
+                            "2",
+                            "stdout.txt",
+                            ">",
+                            "GSE110004_SRR6357070.inner_distance_mean.txt"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 118.5,
+                    "readBytes": 272453,
+                    "writtenBytes": 94247,
+                    "memoryInBytes": 265232,
+                    "executedAt": "2026-05-28T18:31:16.115790+00:00",
+                    "category": "rseqc_innerdistance"
+                },
+                {
+                    "id": "ID000048",
+                    "runtimeInSeconds": 307.038,
+                    "command": {
+                        "program": "rseqc_junctionsaturation",
+                        "arguments": [
+                            "junction_saturation.py",
+                            "-i",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "-r",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.bed",
+                            "-o",
+                            "GSE110004_SRR6357070"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 103.2,
+                    "readBytes": 4174819,
+                    "writtenBytes": 64,
+                    "memoryInBytes": 77608,
+                    "executedAt": "2026-05-28T18:31:16.115805+00:00",
+                    "category": "rseqc_junctionsaturation"
+                },
+                {
+                    "id": "ID000056",
+                    "runtimeInSeconds": 148.703,
+                    "command": {
+                        "program": "samtools_sort",
+                        "arguments": [
+                            "samtools",
+                            "cat",
+                            "GSE110004_SRR6357076.Aligned.out.bam",
+                            "|",
+                            "samtools",
+                            "sort",
+                            "-T",
+                            "GSE110004_SRR6357076.sorted",
+                            "--threads",
+                            "6",
+                            "--reference",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "-o",
+                            "GSE110004_SRR6357076.sorted.bam",
+                            "-"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 588.5,
+                    "readBytes": 21429218,
+                    "writtenBytes": 26747192,
+                    "memoryInBytes": 5143104,
+                    "executedAt": "2026-05-28T18:31:16.115829+00:00",
+                    "category": "samtools_sort"
+                },
+                {
+                    "id": "ID000076",
+                    "runtimeInSeconds": 18.211,
+                    "command": {
+                        "program": "samtools_index",
+                        "arguments": [
+                            "samtools",
+                            "index",
+                            "-@",
+                            "2",
+                            "GSE110004_SRR6357076.markdup.sorted.bam"
+                        ]
+                    },
+                    "coreCount": 2.0,
+                    "avgCPU": 310.0,
+                    "readBytes": 4762290,
+                    "writtenBytes": 1963,
+                    "memoryInBytes": 21724,
+                    "executedAt": "2026-05-28T18:31:16.116212+00:00",
+                    "category": "samtools_index"
+                },
+                {
+                    "id": "ID000082",
+                    "runtimeInSeconds": 140.177,
+                    "command": {
+                        "program": "samtools_stats",
+                        "arguments": [
+                            "samtools",
+                            "stats",
+                            "--threads",
+                            "1",
+                            "--reference",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            ">",
+                            "GSE110004_SRR6357076.markdup.sorted.bam.stats"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 143.0,
+                    "readBytes": 4762296,
+                    "writtenBytes": 197,
+                    "memoryInBytes": 8652,
+                    "executedAt": "2026-05-28T18:31:16.116309+00:00",
+                    "category": "samtools_stats"
+                },
+                {
+                    "id": "ID000080",
+                    "runtimeInSeconds": 30.703,
+                    "command": {
+                        "program": "samtools_flagstat",
+                        "arguments": [
+                            "samtools",
+                            "flagstat",
+                            "--threads",
+                            "1",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            ">",
+                            "GSE110004_SRR6357076.markdup.sorted.bam.flagstat"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 170.6,
+                    "readBytes": 4762292,
+                    "writtenBytes": 11,
+                    "memoryInBytes": 7712,
+                    "executedAt": "2026-05-28T18:31:16.116263+00:00",
+                    "category": "samtools_flagstat"
+                },
+                {
+                    "id": "ID000081",
+                    "runtimeInSeconds": 0.368,
+                    "command": {
+                        "program": "samtools_idxstats",
+                        "arguments": [
+                            "#",
+                            "Note:",
+                            "--threads",
+                            "value",
+                            "represents",
+                            "*additional*",
+                            "CPUs",
+                            "to",
+                            "allocate",
+                            "(total",
+                            "CPUs",
+                            "=",
+                            "1",
+                            "+",
+                            "--threads).",
+                            "samtools",
+                            "idxstats",
+                            "--threads",
+                            "0",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            ">",
+                            "GSE110004_SRR6357076.markdup.sorted.bam.idxstats"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 107.9,
+                    "readBytes": 7187,
+                    "writtenBytes": 11,
+                    "memoryInBytes": 3488,
+                    "executedAt": "2026-05-28T18:31:16.116294+00:00",
+                    "category": "samtools_idxstats"
+                },
+                {
+                    "id": "ID000055",
+                    "runtimeInSeconds": 18.471,
+                    "command": {
+                        "program": "subread_featurecounts",
+                        "arguments": [
+                            "featureCounts",
+                            "-B",
+                            "-C",
+                            "-g",
+                            "gene_biotype",
+                            "-t",
+                            "exon",
+                            "-p",
+                            "-T",
+                            "6",
+                            "-a",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "-s",
+                            "2",
+                            "-o",
+                            "GSE110004_SRR6357070.featureCounts.tsv",
+                            "GSE110004_SRR6357070.markdup.sorted.bam"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 593.6,
+                    "readBytes": 4127426,
+                    "writtenBytes": 299,
+                    "memoryInBytes": 95084,
+                    "executedAt": "2026-05-28T18:31:16.115933+00:00",
+                    "category": "subread_featurecounts"
+                },
+                {
+                    "id": "ID000040",
+                    "runtimeInSeconds": 201.499,
+                    "command": {
+                        "program": "stringtie_stringtie",
+                        "arguments": [
+                            "stringtie",
+                            "GSE110004_SRR6357070.markdup.sorted.bam",
+                            "--rf",
+                            "-G",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "-o",
+                            "GSE110004_SRR6357070.transcripts.gtf",
+                            "-A",
+                            "GSE110004_SRR6357070.gene.abundance.txt",
+                            "-C",
+                            "GSE110004_SRR6357070.coverage.gtf",
+                            "-b",
+                            "GSE110004_SRR6357070.ballgown",
+                            "-p",
+                            "6",
+                            "-v",
+                            "-e"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 114.8,
+                    "readBytes": 4131393,
+                    "writtenBytes": 15355,
+                    "memoryInBytes": 908020,
+                    "executedAt": "2026-05-28T18:31:16.115950+00:00",
+                    "category": "stringtie_stringtie"
+                },
+                {
+                    "id": "ID000061",
+                    "runtimeInSeconds": 3.204,
+                    "command": {
+                        "program": "ucsc_bedclip",
+                        "arguments": [
+                            "bedClip",
+                            "GSE110004_SRR6357070.bedGraph",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.sizes",
+                            "GSE110004_SRR6357070.clip.bedGraph"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 100.6,
+                    "readBytes": 164844,
+                    "writtenBytes": 325531,
+                    "memoryInBytes": 8112,
+                    "executedAt": "2026-05-28T18:31:16.116000+00:00",
+                    "category": "ucsc_bedclip"
+                },
+                {
+                    "id": "ID000066",
+                    "runtimeInSeconds": 1345.067,
+                    "command": {
+                        "program": "picard_markduplicates",
+                        "arguments": [
+                            "picard",
+                            "-Xmx29491M",
+                            "MarkDuplicates",
+                            "--ASSUME_SORTED",
+                            "true",
+                            "--REMOVE_DUPLICATES",
+                            "false",
+                            "--VALIDATION_STRINGENCY",
+                            "LENIENT",
+                            "--TMP_DIR",
+                            "tmp",
+                            "--INPUT",
+                            "GSE110004_SRR6357076.sorted.bam",
+                            "--OUTPUT",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "--REFERENCE_SEQUENCE",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "--METRICS_FILE",
+                            "GSE110004_SRR6357076.markdup.sorted.metrics.txt"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 128.5,
+                    "readBytes": 8802124,
+                    "writtenBytes": 9515471,
+                    "memoryInBytes": 31025056,
+                    "executedAt": "2026-05-28T18:31:16.116017+00:00",
+                    "category": "picard_markduplicates"
+                },
+                {
+                    "id": "ID000069",
+                    "runtimeInSeconds": 7.076,
+                    "command": {
+                        "program": "ucsc_bedgraphtobigwig",
+                        "arguments": [
+                            "bedGraphToBigWig",
+                            "GSE110004_SRR6357070.clip.reverse.bedGraph",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.sizes",
+                            "GSE110004_SRR6357070.reverse.bigWig"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 100.6,
+                    "readBytes": 261768,
+                    "writtenBytes": 44197,
+                    "memoryInBytes": 18776,
+                    "executedAt": "2026-05-28T18:31:16.116073+00:00",
+                    "category": "ucsc_bedgraphtobigwig"
+                },
+                {
+                    "id": "ID000072",
+                    "runtimeInSeconds": 15.88,
+                    "command": {
+                        "program": "deseq2_qc_bam_salmon",
+                        "arguments": [
+                            "deseq2_qc.r",
+                            "--count_file",
+                            "salmon.merged.gene_counts_length_scaled.tsv",
+                            "--outdir",
+                            "./",
+                            "--cores",
+                            "6",
+                            "--outprefix",
+                            "deseq2",
+                            "--id_col",
+                            "1",
+                            "--sample_suffix",
+                            "--count_col",
+                            "3",
+                            "--vst",
+                            "TRUE",
+                            "if",
+                            "[",
+                            "-f",
+                            "\"R_sessionInfo.log\"",
+                            "]",
+                            "then",
+                            "#",
+                            "Handle",
+                            "PCA",
+                            "files",
+                            "sed",
+                            "\"s/deseq2_pca/star_salmon_deseq2_pca/g\"",
+                            "<deseq2_pca_header.txt",
+                            ">",
+                            "pca_header.tmp",
+                            "sed",
+                            "-i",
+                            "-e",
+                            "\"s/DESeq2",
+                            "PCA/STAR_SALMON",
+                            "DESeq2",
+                            "PCA/g\"",
+                            "pca_header.tmp",
+                            "cat",
+                            "pca_header.tmp",
+                            "*.pca.vals.txt",
+                            ">",
+                            "star_salmon.pca.vals_mqc.tsv",
+                            "rm",
+                            "pca_header.tmp",
+                            "#",
+                            "Handle",
+                            "clustering",
+                            "files",
+                            "sed",
+                            "\"s/deseq2_clustering/star_salmon_deseq2_clustering/g\"",
+                            "<deseq2_clustering_header.txt",
+                            ">",
+                            "clustering_header.tmp",
+                            "sed",
+                            "-i",
+                            "-e",
+                            "\"s/DESeq2",
+                            "sample/STAR_SALMON",
+                            "DESeq2",
+                            "sample/g\"",
+                            "clustering_header.tmp",
+                            "cat",
+                            "clustering_header.tmp",
+                            "*.sample.dists.txt",
+                            ">",
+                            "star_salmon.sample.dists_mqc.tsv",
+                            "rm",
+                            "clustering_header.tmp",
+                            "fi"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 151.0,
+                    "readBytes": 136801,
+                    "writtenBytes": 828,
+                    "memoryInBytes": 734576,
+                    "executedAt": "2026-05-28T18:31:16.116095+00:00",
+                    "category": "deseq2_qc_bam_salmon"
+                },
+                {
+                    "id": "ID000071",
+                    "runtimeInSeconds": 0.526,
+                    "command": {
+                        "program": "custom_multiqccustombiotype",
+                        "arguments": [
+                            "template",
+                            "mqc_features_stat.py"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 99.0,
+                    "readBytes": 8237,
+                    "writtenBytes": 13,
+                    "memoryInBytes": 420,
+                    "executedAt": "2026-05-28T18:31:16.116112+00:00",
+                    "category": "custom_multiqccustombiotype"
+                },
+                {
+                    "id": "ID000060",
+                    "runtimeInSeconds": 257.418,
+                    "command": {
+                        "program": "qualimap_rnaseq",
+                        "arguments": [
+                            "unset",
+                            "DISPLAY",
+                            "mkdir",
+                            "-p",
+                            "tmp",
+                            "export",
+                            "_JAVA_OPTIONS=-Djava.io.tmpdir=./tmp",
+                            "qualimap",
+                            "--java-mem-size=29491M",
+                            "rnaseq",
+                            "--sorted",
+                            "-bam",
+                            "GSE110004_SRR6357070.namesorted.bam",
+                            "-gtf",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "-p",
+                            "strand-specific-reverse",
+                            "-pe",
+                            "-outdir",
+                            "GSE110004_SRR6357070"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 105.1,
+                    "readBytes": 6715736,
+                    "writtenBytes": 1965,
+                    "memoryInBytes": 597240,
+                    "executedAt": "2026-05-28T18:31:16.116157+00:00",
+                    "category": "qualimap_rnaseq"
+                },
+                {
+                    "id": "ID000075",
+                    "runtimeInSeconds": 229.11,
+                    "command": {
+                        "program": "stringtie_stringtie",
+                        "arguments": [
+                            "stringtie",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "--rf",
+                            "-G",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "-o",
+                            "GSE110004_SRR6357076.transcripts.gtf",
+                            "-A",
+                            "GSE110004_SRR6357076.gene.abundance.txt",
+                            "-C",
+                            "GSE110004_SRR6357076.coverage.gtf",
+                            "-b",
+                            "GSE110004_SRR6357076.ballgown",
+                            "-p",
+                            "6",
+                            "-v",
+                            "-e"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 116.8,
+                    "readBytes": 4770110,
+                    "writtenBytes": 15240,
+                    "memoryInBytes": 1148500,
+                    "executedAt": "2026-05-28T18:31:16.116174+00:00",
+                    "category": "stringtie_stringtie"
+                },
+                {
+                    "id": "ID000077",
+                    "runtimeInSeconds": 275.14,
+                    "command": {
+                        "program": "bedtools_genomecov_combined",
+                        "arguments": [
+                            "bedtools",
+                            "genomecov",
+                            "-ibam",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "-split",
+                            "-bg",
+                            "|",
+                            "LC_ALL=C",
+                            "sort",
+                            "--parallel=1",
+                            "--buffer-size=3G",
+                            "-k1,1",
+                            "-k2,2n",
+                            ">",
+                            "GSE110004_SRR6357076.bedGraph"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 105.0,
+                    "readBytes": 4939921,
+                    "writtenBytes": 543986,
+                    "memoryInBytes": 501340,
+                    "executedAt": "2026-05-28T18:31:16.116195+00:00",
+                    "category": "bedtools_genomecov_combined"
+                },
+                {
+                    "id": "ID000078",
+                    "runtimeInSeconds": 221.444,
+                    "command": {
+                        "program": "bedtools_genomecov_rev",
+                        "arguments": [
+                            "bedtools",
+                            "genomecov",
+                            "-ibam",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "-split",
+                            "-du",
+                            "-strand",
+                            "+",
+                            "-bg",
+                            "|",
+                            "LC_ALL=C",
+                            "sort",
+                            "--parallel=1",
+                            "--buffer-size=3G",
+                            "-k1,1",
+                            "-k2,2n",
+                            ">",
+                            "GSE110004_SRR6357076.forward.bedGraph"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 103.7,
+                    "readBytes": 4855588,
+                    "writtenBytes": 291061,
+                    "memoryInBytes": 284440,
+                    "executedAt": "2026-05-28T18:31:16.116229+00:00",
+                    "category": "bedtools_genomecov_rev"
+                },
+                {
+                    "id": "ID000079",
+                    "runtimeInSeconds": 226.383,
+                    "command": {
+                        "program": "bedtools_genomecov_fw",
+                        "arguments": [
+                            "bedtools",
+                            "genomecov",
+                            "-ibam",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "-split",
+                            "-du",
+                            "-strand",
+                            "-",
+                            "-bg",
+                            "|",
+                            "LC_ALL=C",
+                            "sort",
+                            "--parallel=1",
+                            "--buffer-size=3G",
+                            "-k1,1",
+                            "-k2,2n",
+                            ">",
+                            "GSE110004_SRR6357076.reverse.bedGraph"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 103.6,
+                    "readBytes": 4857675,
+                    "writtenBytes": 297249,
+                    "memoryInBytes": 294908,
+                    "executedAt": "2026-05-28T18:31:16.116248+00:00",
+                    "category": "bedtools_genomecov_fw"
+                },
+                {
+                    "id": "ID000085",
+                    "runtimeInSeconds": 2.311,
+                    "command": {
+                        "program": "rseqc_inferexperiment",
+                        "arguments": [
+                            "infer_experiment.py",
+                            "-i",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "-r",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.bed",
+                            ">",
+                            "GSE110004_SRR6357076.infer_experiment.txt"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 336.9,
+                    "readBytes": 53795,
+                    "writtenBytes": 9,
+                    "memoryInBytes": 45564,
+                    "executedAt": "2026-05-28T18:31:16.116278+00:00",
+                    "category": "rseqc_inferexperiment"
+                },
+                {
+                    "id": "ID000084",
+                    "runtimeInSeconds": 838.264,
+                    "command": {
+                        "program": "dupradar",
+                        "arguments": [
+                            "template",
+                            "dupradar.r"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 100.6,
+                    "readBytes": 33295973,
+                    "writtenBytes": 22613438,
+                    "memoryInBytes": 315764,
+                    "executedAt": "2026-05-28T18:31:16.116329+00:00",
+                    "category": "dupradar"
+                },
+                {
+                    "id": "ID000090",
+                    "runtimeInSeconds": 350.991,
+                    "command": {
+                        "program": "rseqc_junctionsaturation",
+                        "arguments": [
+                            "junction_saturation.py",
+                            "-i",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "-r",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.bed",
+                            "-o",
+                            "GSE110004_SRR6357076"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 102.6,
+                    "readBytes": 4813471,
+                    "writtenBytes": 63,
+                    "memoryInBytes": 105492,
+                    "executedAt": "2026-05-28T18:31:16.116349+00:00",
+                    "category": "rseqc_junctionsaturation"
+                },
+                {
+                    "id": "ID000091",
+                    "runtimeInSeconds": 21.466,
+                    "command": {
+                        "program": "subread_featurecounts",
+                        "arguments": [
+                            "featureCounts",
+                            "-B",
+                            "-C",
+                            "-g",
+                            "gene_biotype",
+                            "-t",
+                            "exon",
+                            "-p",
+                            "-T",
+                            "6",
+                            "-a",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "-s",
+                            "2",
+                            "-o",
+                            "GSE110004_SRR6357076.featureCounts.tsv",
+                            "GSE110004_SRR6357076.markdup.sorted.bam"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 596.1,
+                    "readBytes": 4766132,
+                    "writtenBytes": 299,
+                    "memoryInBytes": 95124,
+                    "executedAt": "2026-05-28T18:31:16.116367+00:00",
+                    "category": "subread_featurecounts"
+                },
+                {
+                    "id": "ID000089",
+                    "runtimeInSeconds": 237.589,
+                    "command": {
+                        "program": "samtools_sort_qualimap",
+                        "arguments": [
+                            "samtools",
+                            "cat",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "|",
+                            "samtools",
+                            "sort",
+                            "-n",
+                            "-T",
+                            "GSE110004_SRR6357076.namesorted",
+                            "--threads",
+                            "6",
+                            "--reference",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa",
+                            "-o",
+                            "GSE110004_SRR6357076.namesorted.bam",
+                            "-"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 569.1,
+                    "readBytes": 18112578,
+                    "writtenBytes": 37604393,
+                    "memoryInBytes": 5435024,
+                    "executedAt": "2026-05-28T18:31:16.116389+00:00",
+                    "category": "samtools_sort_qualimap"
+                },
+                {
+                    "id": "ID000086",
+                    "runtimeInSeconds": 277.726,
+                    "command": {
+                        "program": "rseqc_junctionannotation",
+                        "arguments": [
+                            "junction_annotation.py",
+                            "-i",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "-r",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.bed",
+                            "-o",
+                            "GSE110004_SRR6357076",
+                            "2>|",
+                            ">(grep",
+                            "-v",
+                            "E::idx_find_and_load",
+                            "|",
+                            "tee",
+                            "GSE110004_SRR6357076.junction_annotation.log",
+                            ">&2)"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 103.1,
+                    "readBytes": 4814240,
+                    "writtenBytes": 5610,
+                    "memoryInBytes": 52268,
+                    "executedAt": "2026-05-28T18:31:16.116405+00:00",
+                    "category": "rseqc_junctionannotation"
+                },
+                {
+                    "id": "ID000095",
+                    "runtimeInSeconds": 0.491,
+                    "command": {
+                        "program": "custom_multiqccustombiotype",
+                        "arguments": [
+                            "template",
+                            "mqc_features_stat.py"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 99.6,
+                    "readBytes": 8237,
+                    "writtenBytes": 13,
+                    "memoryInBytes": 1084,
+                    "executedAt": "2026-05-28T18:31:16.116418+00:00",
+                    "category": "custom_multiqccustombiotype"
+                },
+                {
+                    "id": "ID000087",
+                    "runtimeInSeconds": 338.815,
+                    "command": {
+                        "program": "rseqc_readdistribution",
+                        "arguments": [
+                            "read_distribution.py",
+                            "-i",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "-r",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.bed",
+                            ">",
+                            "GSE110004_SRR6357076.read_distribution.txt"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 101.7,
+                    "readBytes": 4796843,
+                    "writtenBytes": 10,
+                    "memoryInBytes": 62200,
+                    "executedAt": "2026-05-28T18:31:16.116432+00:00",
+                    "category": "rseqc_readdistribution"
+                },
+                {
+                    "id": "ID000092",
+                    "runtimeInSeconds": 583.488,
+                    "command": {
+                        "program": "rseqc_readduplication",
+                        "arguments": [
+                            "read_duplication.py",
+                            "-i",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "-o",
+                            "GSE110004_SRR6357076"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 101.5,
+                    "readBytes": 4813754,
+                    "writtenBytes": 1885,
+                    "memoryInBytes": 5018580,
+                    "executedAt": "2026-05-28T18:31:16.116446+00:00",
+                    "category": "rseqc_readduplication"
+                },
+                {
+                    "id": "ID000088",
+                    "runtimeInSeconds": 42.371,
+                    "command": {
+                        "program": "rseqc_innerdistance",
+                        "arguments": [
+                            "inner_distance.py",
+                            "-i",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            "-r",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.bed",
+                            "-o",
+                            "GSE110004_SRR6357076",
+                            ">",
+                            "stdout.txt",
+                            "head",
+                            "-n",
+                            "2",
+                            "stdout.txt",
+                            ">",
+                            "GSE110004_SRR6357076.inner_distance_mean.txt"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 119.2,
+                    "readBytes": 238689,
+                    "writtenBytes": 93820,
+                    "memoryInBytes": 224476,
+                    "executedAt": "2026-05-28T18:31:16.116463+00:00",
+                    "category": "rseqc_innerdistance"
+                },
+                {
+                    "id": "ID000083",
+                    "runtimeInSeconds": 347.311,
+                    "command": {
+                        "program": "rseqc_bamstat",
+                        "arguments": [
+                            "bam_stat.py",
+                            "-i",
+                            "GSE110004_SRR6357076.markdup.sorted.bam",
+                            ">",
+                            "GSE110004_SRR6357076.bam_stat.txt"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 101.6,
+                    "readBytes": 4792696,
+                    "writtenBytes": 9,
+                    "memoryInBytes": 44856,
+                    "executedAt": "2026-05-28T18:31:16.116480+00:00",
+                    "category": "rseqc_bamstat"
+                },
+                {
+                    "id": "ID000096",
+                    "runtimeInSeconds": 3.276,
+                    "command": {
+                        "program": "ucsc_bedclip",
+                        "arguments": [
+                            "bedClip",
+                            "GSE110004_SRR6357076.bedGraph",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.sizes",
+                            "GSE110004_SRR6357076.clip.bedGraph"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 100.2,
+                    "readBytes": 183408,
+                    "writtenBytes": 362659,
+                    "memoryInBytes": 8124,
+                    "executedAt": "2026-05-28T18:31:16.116537+00:00",
+                    "category": "ucsc_bedclip"
+                },
+                {
+                    "id": "ID000100",
+                    "runtimeInSeconds": 13.855,
+                    "command": {
+                        "program": "ucsc_bedgraphtobigwig",
+                        "arguments": [
+                            "bedGraphToBigWig",
+                            "GSE110004_SRR6357076.clip.bedGraph",
+                            "Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.sizes",
+                            "GSE110004_SRR6357076.bigWig"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 100.0,
+                    "readBytes": 547623,
+                    "writtenBytes": 86275,
+                    "memoryInBytes": 10704,
+                    "executedAt": "2026-05-28T18:31:16.116586+00:00",
+                    "category": "ucsc_bedgraphtobigwig"
+                },
+                {
+                    "id": "ID000097",
+                    "runtimeInSeconds": 298.722,
+                    "command": {
+                        "program": "qualimap_rnaseq",
+                        "arguments": [
+                            "unset",
+                            "DISPLAY",
+                            "mkdir",
+                            "-p",
+                            "tmp",
+                            "export",
+                            "_JAVA_OPTIONS=-Djava.io.tmpdir=./tmp",
+                            "qualimap",
+                            "--java-mem-size=29491M",
+                            "rnaseq",
+                            "--sorted",
+                            "-bam",
+                            "GSE110004_SRR6357076.namesorted.bam",
+                            "-gtf",
+                            "Saccharomyces_cerevisiae.R64-1-1.115.filtered.gtf",
+                            "-p",
+                            "strand-specific-reverse",
+                            "-pe",
+                            "-outdir",
+                            "GSE110004_SRR6357076"
+                        ]
+                    },
+                    "coreCount": 6.0,
+                    "avgCPU": 104.8,
+                    "readBytes": 7884954,
+                    "writtenBytes": 1606,
+                    "memoryInBytes": 592764,
+                    "executedAt": "2026-05-28T18:31:16.116557+00:00",
+                    "category": "qualimap_rnaseq"
+                },
+                {
+                    "id": "ID000101",
+                    "runtimeInSeconds": 30.607,
+                    "command": {
+                        "program": "multiqc",
+                        "arguments": [
+                            "multiqc",
+                            "--force",
+                            "--config",
+                            "1/multiqc_config.yml",
+                            "--config",
+                            "2/multiqc_sample_merge.yml",
+                            "--filename",
+                            "multiqc_report.html",
+                            "--replace-names",
+                            "name_replacement.txt",
+                            "."
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "avgCPU": 50.2,
+                    "readBytes": 167500,
+                    "writtenBytes": 66686,
+                    "memoryInBytes": 952160,
+                    "executedAt": "2026-05-28T18:31:16.116602+00:00",
+                    "category": "multiqc"
+                }
+            ]
+        }
+    },
+    "runtimeSystem": {
+        "name": "WfCommons",
+        "version": "1.4",
+        "url": "https://docs.wfcommons.org/en/v1.4/"
+    }
+}
