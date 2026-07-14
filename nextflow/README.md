@@ -13,23 +13,17 @@ for describing workflow executions.
 
 The workflow execution instances recorded in this directory are from
 open-source applications hosted at the [nf-co.re](https://nf-co.re)
-repository:
+repository.
 
-- [airrflow](https://nf-co.re/airrflow)
-- [atacseq](https://nf-co.re/atacseq)
-- [bacass](https://nf-co.re/bacass)
-- [chipseq](https://nf-co.re/chipseq)
-- [cutandrun](https://nf-co.re/cutandrun)
-- [fetchngs](https://nf-co.re/fetchngs)
-- [hic](https://nf-co.re/hic)
-- [mag](https://nf-co.re/mag)
-- [methylseq](https://nf-co.re/methylseq)
-- [rnaseq](https://nf-co.re/rnaseq)
-- [sarek](https://nf-co.re/sarek)
-- [scrnaseq](https://nf-co.re/scrnaseq)
-- [smrnaseq](https://nf-co.re/smrnaseq)
-- [taxprofiler](https://nf-co.re/taxprofiler)
-- [viralrecon](https://nf-co.re/viralrecon)
+
+### Provenance
+
+The instances in the `not-from-ro-crate` directory were obtained circa 2023 using a now-defunct Nextflow log parser for executions conducted with a patched version of Nextflow v23.04.1. 
+
+The instanced in the `from-ro-crate` directory were obtained with the current Nextflow log parser implementation in WfCommons, which relies on the Nextflow-generated trace file and the RO-Crate data produced by the `nf-prov` Nextflow plugin. 
+
+In both the above, it is likely that non-file-based inter-task dependencies are not captured by the workflow instances.
+
 
 ### Workflow Simulator
 
