@@ -18,9 +18,9 @@ repository.
 
 ### Provenance
 
-The instances in the `not-from-ro-crate` directory were obtained circa 2023 using a now-defunct Nextflow log parser for executions conducted with a patched version of Nextflow v23.04.1. 
+The instanced in the `ro-crate` directory were obtained with the current Nextflow log parser implementation in WfCommons, which relies on the Nextflow-generated trace file and the RO-Crate data produced by the `nf-prov` Nextflow plugin. 
 
-The instanced in the `from-ro-crate` directory were obtained with the current Nextflow log parser implementation in WfCommons, which relies on the Nextflow-generated trace file and the RO-Crate data produced by the `nf-prov` Nextflow plugin. 
+The instances in the `legacy` directory were obtained circa 2023 using a now-defunct Nextflow log parser for executions conducted with a patched version of Nextflow v23.04.1. 
 
 In both the above, it is likely that non-file-based inter-task dependencies are not captured by the workflow instances.
 
