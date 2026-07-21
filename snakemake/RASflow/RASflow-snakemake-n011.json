@@ -11,11 +11,11 @@
         "specification": {
             "tasks": [
                 {
-                    "name": "getReads_1",
-                    "id": "getReads_1",
+                    "name": "getReads_ID0000001",
+                    "id": "getReads_ID0000001",
                     "parents": [],
                     "children": [
-                        "quantify_7"
+                        "quantify_ID0000007"
                     ],
                     "inputFiles": [],
                     "outputFiles": [
@@ -24,11 +24,11 @@
                     ]
                 },
                 {
-                    "name": "getReads_2",
-                    "id": "getReads_2",
+                    "name": "getReads_ID0000002",
+                    "id": "getReads_ID0000002",
                     "parents": [],
                     "children": [
-                        "quantify_9"
+                        "quantify_ID0000009"
                     ],
                     "inputFiles": [],
                     "outputFiles": [
@@ -37,11 +37,11 @@
                     ]
                 },
                 {
-                    "name": "getReads_3",
-                    "id": "getReads_3",
+                    "name": "getReads_ID0000003",
+                    "id": "getReads_ID0000003",
                     "parents": [],
                     "children": [
-                        "quantify_8"
+                        "quantify_ID0000008"
                     ],
                     "inputFiles": [],
                     "outputFiles": [
@@ -50,11 +50,11 @@
                     ]
                 },
                 {
-                    "name": "getReads_4",
-                    "id": "getReads_4",
+                    "name": "getReads_ID0000004",
+                    "id": "getReads_ID0000004",
                     "parents": [],
                     "children": [
-                        "quantify_6"
+                        "quantify_ID0000006"
                     ],
                     "inputFiles": [],
                     "outputFiles": [
@@ -63,14 +63,14 @@
                     ]
                 },
                 {
-                    "name": "indexTrans_5",
-                    "id": "indexTrans_5",
+                    "name": "indexTrans_ID0000005",
+                    "id": "indexTrans_ID0000005",
                     "parents": [],
                     "children": [
-                        "quantify_6",
-                        "quantify_7",
-                        "quantify_8",
-                        "quantify_9"
+                        "quantify_ID0000006",
+                        "quantify_ID0000007",
+                        "quantify_ID0000008",
+                        "quantify_ID0000009"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n011/data/example/ref/transcriptome/Homo_sapiens.GRCh38.cdna.all.fa.gz"
@@ -80,14 +80,14 @@
                     ]
                 },
                 {
-                    "name": "quantify_6",
-                    "id": "quantify_6",
+                    "name": "quantify_ID0000006",
+                    "id": "quantify_ID0000006",
                     "parents": [
-                        "getReads_4",
-                        "indexTrans_5"
+                        "getReads_ID0000004",
+                        "indexTrans_ID0000005"
                     ],
                     "children": [
-                        "summaryReport_10"
+                        "summaryReport_ID0000010"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n011/data/output/test/trans/reads/SRR1039508_forward_read.fastq.gz",
@@ -100,14 +100,14 @@
                     ]
                 },
                 {
-                    "name": "quantify_7",
-                    "id": "quantify_7",
+                    "name": "quantify_ID0000007",
+                    "id": "quantify_ID0000007",
                     "parents": [
-                        "getReads_1",
-                        "indexTrans_5"
+                        "getReads_ID0000001",
+                        "indexTrans_ID0000005"
                     ],
                     "children": [
-                        "summaryReport_10"
+                        "summaryReport_ID0000010"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n011/data/output/test/trans/reads/SRR1039513_forward_read.fastq.gz",
@@ -120,14 +120,14 @@
                     ]
                 },
                 {
-                    "name": "quantify_8",
-                    "id": "quantify_8",
+                    "name": "quantify_ID0000008",
+                    "id": "quantify_ID0000008",
                     "parents": [
-                        "getReads_3",
-                        "indexTrans_5"
+                        "getReads_ID0000003",
+                        "indexTrans_ID0000005"
                     ],
                     "children": [
-                        "summaryReport_10"
+                        "summaryReport_ID0000010"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n011/data/output/test/trans/reads/SRR1039509_forward_read.fastq.gz",
@@ -140,14 +140,14 @@
                     ]
                 },
                 {
-                    "name": "quantify_9",
-                    "id": "quantify_9",
+                    "name": "quantify_ID0000009",
+                    "id": "quantify_ID0000009",
                     "parents": [
-                        "getReads_2",
-                        "indexTrans_5"
+                        "getReads_ID0000002",
+                        "indexTrans_ID0000005"
                     ],
                     "children": [
-                        "summaryReport_10"
+                        "summaryReport_ID0000010"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n011/data/output/test/trans/reads/SRR1039512_forward_read.fastq.gz",
@@ -160,16 +160,16 @@
                     ]
                 },
                 {
-                    "name": "summaryReport_10",
-                    "id": "summaryReport_10",
+                    "name": "summaryReport_ID0000010",
+                    "id": "summaryReport_ID0000010",
                     "parents": [
-                        "quantify_6",
-                        "quantify_7",
-                        "quantify_8",
-                        "quantify_9"
+                        "quantify_ID0000006",
+                        "quantify_ID0000007",
+                        "quantify_ID0000008",
+                        "quantify_ID0000009"
                     ],
                     "children": [
-                        "end_11"
+                        "end_ID0000011"
                     ],
                     "inputFiles": [
                         "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n011/output/test/trans/quant/SRR1039508",
@@ -182,10 +182,10 @@
                     ]
                 },
                 {
-                    "name": "end_11",
-                    "id": "end_11",
+                    "name": "end_ID0000011",
+                    "id": "end_ID0000011",
                     "parents": [
-                        "summaryReport_10"
+                        "summaryReport_ID0000010"
                     ],
                     "children": [],
                     "inputFiles": [
@@ -278,7 +278,7 @@
             "executedAt": "2026-05-08T05:11:47.845960+00:00",
             "tasks": [
                 {
-                    "id": "getReads_1",
+                    "id": "getReads_ID0000001",
                     "runtimeInSeconds": 3.451927,
                     "command": {
                         "program": "n/a",
@@ -288,7 +288,7 @@
                     "executedAt": "2026-05-08 02:44:13.251536"
                 },
                 {
-                    "id": "getReads_2",
+                    "id": "getReads_ID0000002",
                     "runtimeInSeconds": 3.638599,
                     "command": {
                         "program": "n/a",
@@ -298,7 +298,7 @@
                     "executedAt": "2026-05-08 02:44:16.774387"
                 },
                 {
-                    "id": "getReads_3",
+                    "id": "getReads_ID0000003",
                     "runtimeInSeconds": 3.566173,
                     "command": {
                         "program": "n/a",
@@ -308,7 +308,7 @@
                     "executedAt": "2026-05-08 02:44:20.496559"
                 },
                 {
-                    "id": "getReads_4",
+                    "id": "getReads_ID0000004",
                     "runtimeInSeconds": 3.557495,
                     "command": {
                         "program": "n/a",
@@ -318,7 +318,7 @@
                     "executedAt": "2026-05-08 02:44:24.101083"
                 },
                 {
-                    "id": "indexTrans_5",
+                    "id": "indexTrans_ID0000005",
                     "runtimeInSeconds": 392.515614,
                     "command": {
                         "program": "salmon",
@@ -339,7 +339,7 @@
                     "executedAt": "2026-05-08 02:44:27.719082"
                 },
                 {
-                    "id": "quantify_6",
+                    "id": "quantify_ID0000006",
                     "runtimeInSeconds": 7.950415,
                     "command": {
                         "program": "salmon",
@@ -373,7 +373,7 @@
                     "executedAt": "2026-05-08 02:51:00.297906"
                 },
                 {
-                    "id": "quantify_7",
+                    "id": "quantify_ID0000007",
                     "runtimeInSeconds": 7.982792,
                     "command": {
                         "program": "salmon",
@@ -407,7 +407,7 @@
                     "executedAt": "2026-05-08 02:51:08.624620"
                 },
                 {
-                    "id": "quantify_8",
+                    "id": "quantify_ID0000008",
                     "runtimeInSeconds": 8.892623,
                     "command": {
                         "program": "salmon",
@@ -441,7 +441,7 @@
                     "executedAt": "2026-05-08 02:51:16.722368"
                 },
                 {
-                    "id": "quantify_9",
+                    "id": "quantify_ID0000009",
                     "runtimeInSeconds": 6.672395,
                     "command": {
                         "program": "salmon",
@@ -475,7 +475,7 @@
                     "executedAt": "2026-05-08 02:51:25.655916"
                 },
                 {
-                    "id": "summaryReport_10",
+                    "id": "summaryReport_ID0000010",
                     "runtimeInSeconds": 4.43139,
                     "command": {
                         "program": "multiqc",
@@ -494,7 +494,7 @@
                     "executedAt": "2026-05-08 02:51:32.378970"
                 },
                 {
-                    "id": "end_11",
+                    "id": "end_ID0000011",
                     "runtimeInSeconds": 0.042904,
                     "command": {
                         "program": "n/a",
@@ -504,7 +504,7 @@
                     "executedAt": "2026-05-08 02:51:36.861846"
                 }
             ],
-	    "machines": [
+            "machines": [
                 {
                     "nodeName": "dirt02",
                     "system": "linux",
