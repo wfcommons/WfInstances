@@ -34357,7 +34357,7 @@
   },
   "runtimeSystem": {
     "name": "Nextflow",
-    "version": "26.04.4.12445",
+    "version": "26.04.4",
     "url": "https://www.nextflow.io"
   }
 }
