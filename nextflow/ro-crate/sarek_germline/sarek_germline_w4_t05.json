@@ -20312,7 +20312,15 @@
           "id": "#task/ace32c90589b390fb2fd51b0496668ba/HG00096_chr10_47870369-124121200.recal.cram",
           "sizeInBytes": 569360
         }
-      ]
+      ],
+      "metrics": {
+        "numberOfTasks": 516,
+        "numberOfFiles": 1456,
+        "sumOfFileSizesInBytes": 11016867036,
+        "numberOfLevels": 14,
+        "minimumWidth": 1,
+        "maximumWidth": 133
+      }
     },
     "execution": {
       "makespanInSeconds": 7931.77231,
@@ -26524,7 +26532,10 @@
             "vendor": "Intel"
           }
         }
-      ]
+      ],
+      "metrics": {
+        "sumTaskRuntimesInSeconds": 395046.20000000007
+      }
     }
   },
   "runtimeSystem": {

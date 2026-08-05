@@ -3237,7 +3237,15 @@
           "id": "#task/decaf4a3cfb35bfb9f6cba573fe09d09/GSE110004_SRR6357076.bigWig",
           "sizeInBytes": 44169130
         }
-      ]
+      ],
+      "metrics": {
+        "numberOfTasks": 101,
+        "numberOfFiles": 258,
+        "sumOfFileSizesInBytes": 72098035576,
+        "numberOfLevels": 9,
+        "minimumWidth": 3,
+        "maximumWidth": 36
+      }
     },
     "execution": {
       "makespanInSeconds": 16218.501266,
@@ -4469,7 +4477,10 @@
             "vendor": "Intel"
           }
         }
-      ]
+      ],
+      "metrics": {
+        "sumTaskRuntimesInSeconds": 362957.5000000002
+      }
     }
   },
   "runtimeSystem": {

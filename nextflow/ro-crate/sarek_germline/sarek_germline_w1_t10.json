@@ -30424,7 +30424,15 @@
           "id": "#task/baa37490b74f0789efdcf7cf0bc74bbb/HG00096.haplotypecaller.chr9_68220553-134183092.vcf.gz.tbi",
           "sizeInBytes": 77
         }
-      ]
+      ],
+      "metrics": {
+        "numberOfTasks": 772,
+        "numberOfFiles": 2160,
+        "sumOfFileSizesInBytes": 3431585371,
+        "numberOfLevels": 14,
+        "minimumWidth": 1,
+        "maximumWidth": 197
+      }
     },
     "execution": {
       "makespanInSeconds": 4975.650571,
@@ -39708,7 +39716,10 @@
             "vendor": "Intel"
           }
         }
-      ]
+      ],
+      "metrics": {
+        "sumTaskRuntimesInSeconds": 287901.5000000022
+      }
     }
   },
   "runtimeSystem": {

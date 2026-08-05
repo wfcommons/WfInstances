@@ -26316,7 +26316,15 @@
           "id": "#task/ad921c1a848ee7b4d12e167092d0e539/chr16_10001-18436486.bed",
           "sizeInBytes": 21
         }
-      ]
+      ],
+      "metrics": {
+        "numberOfTasks": 668,
+        "numberOfFiles": 1874,
+        "sumOfFileSizesInBytes": 4452468052,
+        "numberOfLevels": 14,
+        "minimumWidth": 1,
+        "maximumWidth": 171
+      }
     },
     "execution": {
       "makespanInSeconds": 5386.882801,
@@ -34352,7 +34360,10 @@
             "vendor": "Intel"
           }
         }
-      ]
+      ],
+      "metrics": {
+        "sumTaskRuntimesInSeconds": 448803.8000000002
+      }
     }
   },
   "runtimeSystem": {

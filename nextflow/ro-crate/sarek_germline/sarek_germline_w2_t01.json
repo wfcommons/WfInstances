@@ -13518,7 +13518,15 @@
           "id": "#task/e218d63c17f9bb5295ead1d80e88ac35/0010.HG00096-L001_2.fastp.fastq.gz",
           "sizeInBytes": 51876958
         }
-      ]
+      ],
+      "metrics": {
+        "numberOfTasks": 344,
+        "numberOfFiles": 983,
+        "sumOfFileSizesInBytes": 4438578608,
+        "numberOfLevels": 14,
+        "minimumWidth": 1,
+        "maximumWidth": 90
+      }
     },
     "execution": {
       "makespanInSeconds": 4715.47804,
@@ -17666,7 +17674,10 @@
             "vendor": "Intel"
           }
         }
-      ]
+      ],
+      "metrics": {
+        "sumTaskRuntimesInSeconds": 383613.39999999874
+      }
     }
   },
   "runtimeSystem": {

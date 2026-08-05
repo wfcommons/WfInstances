@@ -13518,7 +13518,15 @@
           "id": "#task/5abc8be0074f9ac731cca10c1b0d2c0b/HG00096_chrY_2781480-9046914.recal.table",
           "sizeInBytes": 38621
         }
-      ]
+      ],
+      "metrics": {
+        "numberOfTasks": 344,
+        "numberOfFiles": 983,
+        "sumOfFileSizesInBytes": 17083612376,
+        "numberOfLevels": 14,
+        "minimumWidth": 1,
+        "maximumWidth": 90
+      }
     },
     "execution": {
       "makespanInSeconds": 9986.011386,
@@ -17666,7 +17674,10 @@
             "vendor": "Intel"
           }
         }
-      ]
+      ],
+      "metrics": {
+        "sumTaskRuntimesInSeconds": 443651.799999998
+      }
     }
   },
   "runtimeSystem": {

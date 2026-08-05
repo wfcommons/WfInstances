@@ -21892,7 +21892,15 @@
           "id": "#task/605c89b770c4f44001a7482b4b3cb38c/versions.yml",
           "sizeInBytes": 71
         }
-      ]
+      ],
+      "metrics": {
+        "numberOfTasks": 556,
+        "numberOfFiles": 1566,
+        "sumOfFileSizesInBytes": 6179859191,
+        "numberOfLevels": 14,
+        "minimumWidth": 1,
+        "maximumWidth": 143
+      }
     },
     "execution": {
       "makespanInSeconds": 5958.408995,
@@ -28584,7 +28592,10 @@
             "vendor": "Intel"
           }
         }
-      ]
+      ],
+      "metrics": {
+        "sumTaskRuntimesInSeconds": 438879.59999999707
+      }
     }
   },
   "runtimeSystem": {

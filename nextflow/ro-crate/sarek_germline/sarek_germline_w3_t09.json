@@ -29160,7 +29160,15 @@
           "id": "#task/88bc6ad5f5934f159c3096864e422ccd/HG00096-L001.fastp.json",
           "sizeInBytes": 136122
         }
-      ]
+      ],
+      "metrics": {
+        "numberOfTasks": 740,
+        "numberOfFiles": 2072,
+        "sumOfFileSizesInBytes": 6186657459,
+        "numberOfLevels": 14,
+        "minimumWidth": 1,
+        "maximumWidth": 189
+      }
     },
     "execution": {
       "makespanInSeconds": 6498.034886,
@@ -38060,7 +38068,10 @@
             "vendor": "Intel"
           }
         }
-      ]
+      ],
+      "metrics": {
+        "sumTaskRuntimesInSeconds": 512251.3000000044
+      }
     }
   },
   "runtimeSystem": {
