@@ -1,695 +1,695 @@
 {
-  "name": "bacass",
-  "description": "Trace generated from Nextflow (via https://github.com/wfcommons/nextflow_workflow_tracer)",
-  "createdAt": "2023-03-29T20:02:41.814660+00:00",
-  "schemaVersion": "1.5",
-  "workflow": {
-    "repo": "https://github.com/nf-core/bacass",
-    "runName": "cheesy_gautier",
-    "specification": {
-      "tasks": [
-        {
-          "name": "NFCORE_BACASS.BACASS.FASTQC",
-          "id": "NFCORE_BACASS.BACASS.FASTQC_2",
-          "children": [
-            "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10",
-            "NFCORE_BACASS.BACASS.MULTIQC_11"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/bacass/ERR044595_1M_1.fastq.gz",
-            "/nf-core/test-datasets/raw/bacass/ERR044595_1M_2.fastq.gz"
-          ],
-          "outputFiles": [
-            "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_1_fastqc.html",
-            "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_2_fastqc.html",
-            "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_1_fastqc.zip",
-            "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_2_fastqc.zip",
-            "/b6/e95c72d7ef9da13b7641118999df15/fastqc.version.txt"
-          ],
-          "parents": []
+    "name": "bacass",
+    "description": "Trace generated from Nextflow (via https://github.com/wfcommons/nextflow_workflow_tracer)",
+    "createdAt": "2023-03-29T20:02:41.814660+00:00",
+    "schemaVersion": "1.6",
+    "workflow": {
+        "repo": "https://github.com/nf-core/bacass",
+        "runName": "cheesy_gautier",
+        "specification": {
+            "tasks": [
+                {
+                    "name": "NFCORE_BACASS.BACASS.FASTQC",
+                    "id": "NFCORE_BACASS.BACASS.FASTQC_2",
+                    "children": [
+                        "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10",
+                        "NFCORE_BACASS.BACASS.MULTIQC_11"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/bacass/ERR044595_1M_1.fastq.gz",
+                        "/nf-core/test-datasets/raw/bacass/ERR044595_1M_2.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_1_fastqc.html",
+                        "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_2_fastqc.html",
+                        "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_1_fastqc.zip",
+                        "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_2_fastqc.zip",
+                        "/b6/e95c72d7ef9da13b7641118999df15/fastqc.version.txt"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_BACASS.BACASS.SKEWER",
+                    "id": "NFCORE_BACASS.BACASS.SKEWER_1",
+                    "children": [
+                        "NFCORE_BACASS.BACASS.UNICYCLER_5",
+                        "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/bacass/ERR044595_1M_1.fastq.gz",
+                        "/nf-core/test-datasets/raw/bacass/ERR044595_1M_2.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R1.fastq.gz",
+                        "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R2.fastq.gz",
+                        "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_1M_1.fastq-trimmed.log",
+                        "/3d/7a64449bc37c576aba41bbd65e7f04/skewer.version.txt"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_BACASS.BACASS.FASTQC",
+                    "id": "NFCORE_BACASS.BACASS.FASTQC_4",
+                    "children": [
+                        "NFCORE_BACASS.BACASS.MULTIQC_11"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/bacass/ERR064912_1M_1.fastq.gz",
+                        "/nf-core/test-datasets/raw/bacass/ERR064912_1M_2.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_1_fastqc.html",
+                        "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_2_fastqc.html",
+                        "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_1_fastqc.zip",
+                        "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_2_fastqc.zip",
+                        "/ff/4f4c6dcc93a320dd39a720fe5e90a2/fastqc.version.txt"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_BACASS.BACASS.SKEWER",
+                    "id": "NFCORE_BACASS.BACASS.SKEWER_3",
+                    "children": [
+                        "NFCORE_BACASS.BACASS.UNICYCLER_6"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/bacass/ERR064912_1M_1.fastq.gz",
+                        "/nf-core/test-datasets/raw/bacass/ERR064912_1M_2.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R1.fastq.gz",
+                        "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R2.fastq.gz",
+                        "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_1M_1.fastq-trimmed.log",
+                        "/17/2ebf9cc4b87470e9a57c9b7042576e/skewer.version.txt"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_BACASS.BACASS.UNICYCLER",
+                    "id": "NFCORE_BACASS.BACASS.UNICYCLER_5",
+                    "children": [
+                        "NFCORE_BACASS.BACASS.PROKKA_7",
+                        "NFCORE_BACASS.BACASS.QUAST_9",
+                        "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10"
+                    ],
+                    "inputFiles": [
+                        "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R1.fastq.gz",
+                        "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R2.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.scaffolds.fa",
+                        "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.assembly.gfa",
+                        "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.unicycler.log",
+                        "/6f/1e54d3680877daf943e956e3dd66fb/unicycler.version.txt"
+                    ],
+                    "parents": [
+                        "NFCORE_BACASS.BACASS.SKEWER_1"
+                    ]
+                },
+                {
+                    "name": "NFCORE_BACASS.BACASS.UNICYCLER",
+                    "id": "NFCORE_BACASS.BACASS.UNICYCLER_6",
+                    "children": [
+                        "NFCORE_BACASS.BACASS.QUAST_9",
+                        "NFCORE_BACASS.BACASS.PROKKA_8"
+                    ],
+                    "inputFiles": [
+                        "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R1.fastq.gz",
+                        "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R2.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.scaffolds.fa",
+                        "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.assembly.gfa",
+                        "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.unicycler.log",
+                        "/bb/09067ce6b0622cfdce89f8e324f710/unicycler.version.txt"
+                    ],
+                    "parents": [
+                        "NFCORE_BACASS.BACASS.SKEWER_3"
+                    ]
+                },
+                {
+                    "name": "NFCORE_BACASS.BACASS.PROKKA",
+                    "id": "NFCORE_BACASS.BACASS.PROKKA_7",
+                    "children": [
+                        "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10"
+                    ],
+                    "inputFiles": [
+                        "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.scaffolds.fa"
+                    ],
+                    "outputFiles": [
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.gff",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.gbk",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.fna",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.faa",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.ffn",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.sqn",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.fsa",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.tbl",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.err",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.log",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.txt",
+                        "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.tsv",
+                        "/56/26b8d2b2d88b6e5dcd92cebc95aa91/prokka.version.txt"
+                    ],
+                    "parents": [
+                        "NFCORE_BACASS.BACASS.UNICYCLER_5"
+                    ]
+                },
+                {
+                    "name": "NFCORE_BACASS.BACASS.QUAST",
+                    "id": "NFCORE_BACASS.BACASS.QUAST_9",
+                    "children": [
+                        "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10"
+                    ],
+                    "inputFiles": [
+                        "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.scaffolds.fa",
+                        "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.scaffolds.fa"
+                    ],
+                    "outputFiles": [
+                        "/2f/73aaad0ed486240f15a25e3fef3537/other_files",
+                        "/2f/73aaad0ed486240f15a25e3fef3537/report.tsv",
+                        "/2f/73aaad0ed486240f15a25e3fef3537/quast.version.txt"
+                    ],
+                    "parents": [
+                        "NFCORE_BACASS.BACASS.UNICYCLER_5",
+                        "NFCORE_BACASS.BACASS.UNICYCLER_6"
+                    ]
+                },
+                {
+                    "name": "NFCORE_BACASS.BACASS.PROKKA",
+                    "id": "NFCORE_BACASS.BACASS.PROKKA_8",
+                    "children": [],
+                    "inputFiles": [
+                        "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.scaffolds.fa"
+                    ],
+                    "outputFiles": [
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.gff",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.gbk",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.fna",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.faa",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.ffn",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.sqn",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.fsa",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.tbl",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.err",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.log",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.txt",
+                        "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.tsv",
+                        "/b2/356812a3d30eba15a3511dd27e41a5/prokka.version.txt"
+                    ],
+                    "parents": [
+                        "NFCORE_BACASS.BACASS.UNICYCLER_6"
+                    ]
+                },
+                {
+                    "name": "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS",
+                    "id": "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10",
+                    "children": [
+                        "NFCORE_BACASS.BACASS.MULTIQC_11"
+                    ],
+                    "inputFiles": [
+                        "/b6/e95c72d7ef9da13b7641118999df15/fastqc.version.txt",
+                        "/3d/7a64449bc37c576aba41bbd65e7f04/skewer.version.txt",
+                        "/6f/1e54d3680877daf943e956e3dd66fb/unicycler.version.txt",
+                        "/56/26b8d2b2d88b6e5dcd92cebc95aa91/prokka.version.txt",
+                        "/2f/73aaad0ed486240f15a25e3fef3537/quast.version.txt"
+                    ],
+                    "outputFiles": [
+                        "/31/3d2dfea63e52682c85348817599705/software_versions.tsv",
+                        "/31/3d2dfea63e52682c85348817599705/software_versions_mqc.yaml"
+                    ],
+                    "parents": [
+                        "NFCORE_BACASS.BACASS.FASTQC_2",
+                        "NFCORE_BACASS.BACASS.SKEWER_1",
+                        "NFCORE_BACASS.BACASS.UNICYCLER_5",
+                        "NFCORE_BACASS.BACASS.PROKKA_7",
+                        "NFCORE_BACASS.BACASS.QUAST_9"
+                    ]
+                },
+                {
+                    "name": "NFCORE_BACASS.BACASS.MULTIQC",
+                    "id": "NFCORE_BACASS.BACASS.MULTIQC_11",
+                    "children": [],
+                    "inputFiles": [
+                        "/bacass/assets/multiqc_config.yaml",
+                        "/04/fec352a89161343df8c88c32e69ee1/workflow_summary_mqc.yaml",
+                        "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_1_fastqc.zip",
+                        "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_2_fastqc.zip",
+                        "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_1_fastqc.zip",
+                        "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_2_fastqc.zip",
+                        "/31/3d2dfea63e52682c85348817599705/software_versions_mqc.yaml"
+                    ],
+                    "outputFiles": [
+                        "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_report.html",
+                        "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_data",
+                        "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_plots",
+                        "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc.version.txt"
+                    ],
+                    "parents": [
+                        "NFCORE_BACASS.BACASS.FASTQC_2",
+                        "NFCORE_BACASS.BACASS.FASTQC_4",
+                        "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10"
+                    ]
+                }
+            ],
+            "files": [
+                {
+                    "id": "/nf-core/test-datasets/raw/bacass/ERR044595_1M_1.fastq.gz",
+                    "sizeInBytes": 57604034
+                },
+                {
+                    "id": "/nf-core/test-datasets/raw/bacass/ERR044595_1M_2.fastq.gz",
+                    "sizeInBytes": 59494461
+                },
+                {
+                    "id": "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_1_fastqc.html",
+                    "sizeInBytes": 721620
+                },
+                {
+                    "id": "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_2_fastqc.html",
+                    "sizeInBytes": 715864
+                },
+                {
+                    "id": "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_1_fastqc.zip",
+                    "sizeInBytes": 406073
+                },
+                {
+                    "id": "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_2_fastqc.zip",
+                    "sizeInBytes": 391467
+                },
+                {
+                    "id": "/b6/e95c72d7ef9da13b7641118999df15/fastqc.version.txt",
+                    "sizeInBytes": 7
+                },
+                {
+                    "id": "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R1.fastq.gz",
+                    "sizeInBytes": 55830723
+                },
+                {
+                    "id": "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R2.fastq.gz",
+                    "sizeInBytes": 57671513
+                },
+                {
+                    "id": "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_1M_1.fastq-trimmed.log",
+                    "sizeInBytes": 2358
+                },
+                {
+                    "id": "/3d/7a64449bc37c576aba41bbd65e7f04/skewer.version.txt",
+                    "sizeInBytes": 6
+                },
+                {
+                    "id": "/nf-core/test-datasets/raw/bacass/ERR064912_1M_1.fastq.gz",
+                    "sizeInBytes": 53691898
+                },
+                {
+                    "id": "/nf-core/test-datasets/raw/bacass/ERR064912_1M_2.fastq.gz",
+                    "sizeInBytes": 56303947
+                },
+                {
+                    "id": "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_1_fastqc.html",
+                    "sizeInBytes": 709082
+                },
+                {
+                    "id": "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_2_fastqc.html",
+                    "sizeInBytes": 715345
+                },
+                {
+                    "id": "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_1_fastqc.zip",
+                    "sizeInBytes": 404152
+                },
+                {
+                    "id": "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_2_fastqc.zip",
+                    "sizeInBytes": 395393
+                },
+                {
+                    "id": "/ff/4f4c6dcc93a320dd39a720fe5e90a2/fastqc.version.txt",
+                    "sizeInBytes": 7
+                },
+                {
+                    "id": "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R1.fastq.gz",
+                    "sizeInBytes": 52163305
+                },
+                {
+                    "id": "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R2.fastq.gz",
+                    "sizeInBytes": 54778579
+                },
+                {
+                    "id": "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_1M_1.fastq-trimmed.log",
+                    "sizeInBytes": 1769
+                },
+                {
+                    "id": "/17/2ebf9cc4b87470e9a57c9b7042576e/skewer.version.txt",
+                    "sizeInBytes": 6
+                },
+                {
+                    "id": "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.scaffolds.fa",
+                    "sizeInBytes": 2820746
+                },
+                {
+                    "id": "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.assembly.gfa",
+                    "sizeInBytes": 2797122
+                },
+                {
+                    "id": "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.unicycler.log",
+                    "sizeInBytes": 17474
+                },
+                {
+                    "id": "/6f/1e54d3680877daf943e956e3dd66fb/unicycler.version.txt",
+                    "sizeInBytes": 6
+                },
+                {
+                    "id": "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.scaffolds.fa",
+                    "sizeInBytes": 2955111
+                },
+                {
+                    "id": "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.assembly.gfa",
+                    "sizeInBytes": 2940497
+                },
+                {
+                    "id": "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.unicycler.log",
+                    "sizeInBytes": 16817
+                },
+                {
+                    "id": "/bb/09067ce6b0622cfdce89f8e324f710/unicycler.version.txt",
+                    "sizeInBytes": 6
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.gff",
+                    "sizeInBytes": 3392917
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.gbk",
+                    "sizeInBytes": 5739448
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.fna",
+                    "sizeInBytes": 2825237
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.faa",
+                    "sizeInBytes": 907971
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.ffn",
+                    "sizeInBytes": 2502641
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.sqn",
+                    "sizeInBytes": 8937390
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.fsa",
+                    "sizeInBytes": 2829813
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.tbl",
+                    "sizeInBytes": 495530
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.err",
+                    "sizeInBytes": 661490
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.log",
+                    "sizeInBytes": 38737
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.txt",
+                    "sizeInBytes": 95
+                },
+                {
+                    "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.tsv",
+                    "sizeInBytes": 163198
+                },
+                {
+                    "id": "/56/26b8d2b2d88b6e5dcd92cebc95aa91/prokka.version.txt",
+                    "sizeInBytes": 7
+                },
+                {
+                    "id": "/2f/73aaad0ed486240f15a25e3fef3537/other_files",
+                    "sizeInBytes": 1337679
+                },
+                {
+                    "id": "/2f/73aaad0ed486240f15a25e3fef3537/report.tsv",
+                    "sizeInBytes": 650
+                },
+                {
+                    "id": "/2f/73aaad0ed486240f15a25e3fef3537/quast.version.txt",
+                    "sizeInBytes": 6
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.gff",
+                    "sizeInBytes": 3551369
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.gbk",
+                    "sizeInBytes": 6050914
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.fna",
+                    "sizeInBytes": 2957436
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.faa",
+                    "sizeInBytes": 945058
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.ffn",
+                    "sizeInBytes": 2605010
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.sqn",
+                    "sizeInBytes": 9500675
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.fsa",
+                    "sizeInBytes": 2967472
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.tbl",
+                    "sizeInBytes": 515352
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.err",
+                    "sizeInBytes": 731664
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.log",
+                    "sizeInBytes": 39170
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.txt",
+                    "sizeInBytes": 96
+                },
+                {
+                    "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.tsv",
+                    "sizeInBytes": 170166
+                },
+                {
+                    "id": "/b2/356812a3d30eba15a3511dd27e41a5/prokka.version.txt",
+                    "sizeInBytes": 7
+                },
+                {
+                    "id": "/31/3d2dfea63e52682c85348817599705/software_versions.tsv",
+                    "sizeInBytes": 107
+                },
+                {
+                    "id": "/31/3d2dfea63e52682c85348817599705/software_versions_mqc.yaml",
+                    "sizeInBytes": 632
+                },
+                {
+                    "id": "/bacass/assets/multiqc_config.yaml",
+                    "sizeInBytes": 449
+                },
+                {
+                    "id": "/04/fec352a89161343df8c88c32e69ee1/workflow_summary_mqc.yaml",
+                    "sizeInBytes": 2490
+                },
+                {
+                    "id": "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_report.html",
+                    "sizeInBytes": 1197072
+                },
+                {
+                    "id": "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_data",
+                    "sizeInBytes": 289790
+                },
+                {
+                    "id": "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_plots",
+                    "sizeInBytes": 636924
+                },
+                {
+                    "id": "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc.version.txt",
+                    "sizeInBytes": 7
+                }
+            ],
+            "metrics": {
+                "numberOfTasks": 11,
+                "numberOfFiles": 67,
+                "sumOfFileSizesInBytes": 525544057,
+                "numberOfLevels": 5,
+                "minimumWidth": 1,
+                "maximumWidth": 4
+            }
         },
-        {
-          "name": "NFCORE_BACASS.BACASS.SKEWER",
-          "id": "NFCORE_BACASS.BACASS.SKEWER_1",
-          "children": [
-            "NFCORE_BACASS.BACASS.UNICYCLER_5",
-            "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/bacass/ERR044595_1M_1.fastq.gz",
-            "/nf-core/test-datasets/raw/bacass/ERR044595_1M_2.fastq.gz"
-          ],
-          "outputFiles": [
-            "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R1.fastq.gz",
-            "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R2.fastq.gz",
-            "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_1M_1.fastq-trimmed.log",
-            "/3d/7a64449bc37c576aba41bbd65e7f04/skewer.version.txt"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_BACASS.BACASS.FASTQC",
-          "id": "NFCORE_BACASS.BACASS.FASTQC_4",
-          "children": [
-            "NFCORE_BACASS.BACASS.MULTIQC_11"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/bacass/ERR064912_1M_1.fastq.gz",
-            "/nf-core/test-datasets/raw/bacass/ERR064912_1M_2.fastq.gz"
-          ],
-          "outputFiles": [
-            "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_1_fastqc.html",
-            "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_2_fastqc.html",
-            "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_1_fastqc.zip",
-            "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_2_fastqc.zip",
-            "/ff/4f4c6dcc93a320dd39a720fe5e90a2/fastqc.version.txt"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_BACASS.BACASS.SKEWER",
-          "id": "NFCORE_BACASS.BACASS.SKEWER_3",
-          "children": [
-            "NFCORE_BACASS.BACASS.UNICYCLER_6"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/bacass/ERR064912_1M_1.fastq.gz",
-            "/nf-core/test-datasets/raw/bacass/ERR064912_1M_2.fastq.gz"
-          ],
-          "outputFiles": [
-            "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R1.fastq.gz",
-            "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R2.fastq.gz",
-            "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_1M_1.fastq-trimmed.log",
-            "/17/2ebf9cc4b87470e9a57c9b7042576e/skewer.version.txt"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_BACASS.BACASS.UNICYCLER",
-          "id": "NFCORE_BACASS.BACASS.UNICYCLER_5",
-          "children": [
-            "NFCORE_BACASS.BACASS.PROKKA_7",
-            "NFCORE_BACASS.BACASS.QUAST_9",
-            "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10"
-          ],
-          "inputFiles": [
-            "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R1.fastq.gz",
-            "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R2.fastq.gz"
-          ],
-          "outputFiles": [
-            "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.scaffolds.fa",
-            "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.assembly.gfa",
-            "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.unicycler.log",
-            "/6f/1e54d3680877daf943e956e3dd66fb/unicycler.version.txt"
-          ],
-          "parents": [
-            "NFCORE_BACASS.BACASS.SKEWER_1"
-          ]
-        },
-        {
-          "name": "NFCORE_BACASS.BACASS.UNICYCLER",
-          "id": "NFCORE_BACASS.BACASS.UNICYCLER_6",
-          "children": [
-            "NFCORE_BACASS.BACASS.QUAST_9",
-            "NFCORE_BACASS.BACASS.PROKKA_8"
-          ],
-          "inputFiles": [
-            "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R1.fastq.gz",
-            "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R2.fastq.gz"
-          ],
-          "outputFiles": [
-            "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.scaffolds.fa",
-            "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.assembly.gfa",
-            "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.unicycler.log",
-            "/bb/09067ce6b0622cfdce89f8e324f710/unicycler.version.txt"
-          ],
-          "parents": [
-            "NFCORE_BACASS.BACASS.SKEWER_3"
-          ]
-        },
-        {
-          "name": "NFCORE_BACASS.BACASS.PROKKA",
-          "id": "NFCORE_BACASS.BACASS.PROKKA_7",
-          "children": [
-            "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10"
-          ],
-          "inputFiles": [
-            "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.scaffolds.fa"
-          ],
-          "outputFiles": [
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.gff",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.gbk",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.fna",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.faa",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.ffn",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.sqn",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.fsa",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.tbl",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.err",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.log",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.txt",
-            "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.tsv",
-            "/56/26b8d2b2d88b6e5dcd92cebc95aa91/prokka.version.txt"
-          ],
-          "parents": [
-            "NFCORE_BACASS.BACASS.UNICYCLER_5"
-          ]
-        },
-        {
-          "name": "NFCORE_BACASS.BACASS.QUAST",
-          "id": "NFCORE_BACASS.BACASS.QUAST_9",
-          "children": [
-            "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10"
-          ],
-          "inputFiles": [
-            "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.scaffolds.fa",
-            "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.scaffolds.fa"
-          ],
-          "outputFiles": [
-            "/2f/73aaad0ed486240f15a25e3fef3537/other_files",
-            "/2f/73aaad0ed486240f15a25e3fef3537/report.tsv",
-            "/2f/73aaad0ed486240f15a25e3fef3537/quast.version.txt"
-          ],
-          "parents": [
-            "NFCORE_BACASS.BACASS.UNICYCLER_5",
-            "NFCORE_BACASS.BACASS.UNICYCLER_6"
-          ]
-        },
-        {
-          "name": "NFCORE_BACASS.BACASS.PROKKA",
-          "id": "NFCORE_BACASS.BACASS.PROKKA_8",
-          "children": [],
-          "inputFiles": [
-            "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.scaffolds.fa"
-          ],
-          "outputFiles": [
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.gff",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.gbk",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.fna",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.faa",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.ffn",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.sqn",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.fsa",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.tbl",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.err",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.log",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.txt",
-            "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.tsv",
-            "/b2/356812a3d30eba15a3511dd27e41a5/prokka.version.txt"
-          ],
-          "parents": [
-            "NFCORE_BACASS.BACASS.UNICYCLER_6"
-          ]
-        },
-        {
-          "name": "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS",
-          "id": "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10",
-          "children": [
-            "NFCORE_BACASS.BACASS.MULTIQC_11"
-          ],
-          "inputFiles": [
-            "/b6/e95c72d7ef9da13b7641118999df15/fastqc.version.txt",
-            "/3d/7a64449bc37c576aba41bbd65e7f04/skewer.version.txt",
-            "/6f/1e54d3680877daf943e956e3dd66fb/unicycler.version.txt",
-            "/56/26b8d2b2d88b6e5dcd92cebc95aa91/prokka.version.txt",
-            "/2f/73aaad0ed486240f15a25e3fef3537/quast.version.txt"
-          ],
-          "outputFiles": [
-            "/31/3d2dfea63e52682c85348817599705/software_versions.tsv",
-            "/31/3d2dfea63e52682c85348817599705/software_versions_mqc.yaml"
-          ],
-          "parents": [
-            "NFCORE_BACASS.BACASS.FASTQC_2",
-            "NFCORE_BACASS.BACASS.SKEWER_1",
-            "NFCORE_BACASS.BACASS.UNICYCLER_5",
-            "NFCORE_BACASS.BACASS.PROKKA_7",
-            "NFCORE_BACASS.BACASS.QUAST_9"
-          ]
-        },
-        {
-          "name": "NFCORE_BACASS.BACASS.MULTIQC",
-          "id": "NFCORE_BACASS.BACASS.MULTIQC_11",
-          "children": [],
-          "inputFiles": [
-            "/bacass/assets/multiqc_config.yaml",
-            "/04/fec352a89161343df8c88c32e69ee1/workflow_summary_mqc.yaml",
-            "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_1_fastqc.zip",
-            "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_2_fastqc.zip",
-            "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_1_fastqc.zip",
-            "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_2_fastqc.zip",
-            "/31/3d2dfea63e52682c85348817599705/software_versions_mqc.yaml"
-          ],
-          "outputFiles": [
-            "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_report.html",
-            "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_data",
-            "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_plots",
-            "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc.version.txt"
-          ],
-          "parents": [
-            "NFCORE_BACASS.BACASS.FASTQC_2",
-            "NFCORE_BACASS.BACASS.FASTQC_4",
-            "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10"
-          ]
+        "execution": {
+            "makespanInSeconds": 4243,
+            "executedAt": "2023-03-29T10:02:36-10:00",
+            "tasks": [
+                {
+                    "id": "NFCORE_BACASS.BACASS.FASTQC_2",
+                    "runtimeInSeconds": 37.0,
+                    "command": {
+                        "program": "[ ! -f  ERR044595_1.fastq.gz ] && ln -s ERR044595_1M_1.fastq.gz ERR044595_1.fastq.gz\n        [ ! -f  ERR044595_2.fastq.gz ] && ln -s ERR044595_1M_2.fastq.gz ERR044595_2.fastq.gz\n        fastqc --quiet --threads 1 ERR044595_1.fastq.gz ERR044595_2.fastq.gz\n        fastqc --version | sed -e \"s/FastQC v//g\" > fastqc.version.txt",
+                        "arguments": []
+                    },
+                    "avgCPU": 90.8,
+                    "readBytes": 139236642,
+                    "writtenBytes": 4380167,
+                    "memoryInBytes": 356302848
+                },
+                {
+                    "id": "NFCORE_BACASS.BACASS.SKEWER_1",
+                    "runtimeInSeconds": 208.0,
+                    "command": {
+                        "program": "# loop over readunits in pairs per sample\n    pairno=0\n    echo \"ERR044595_1M_1.fastq.gz ERR044595_1M_2.fastq.gz\" | xargs -n2 | while read fq1 fq2; do\n        skewer -m pe -q 3 -n --quiet -t 1 $fq1 $fq2;\n    done\n\n    # gzip, because skewer's -z returns an error\n    gzip *.fastq\n\n    cat $(ls *trimmed-pair1.fastq.gz | sort) >> ERR044595_trm-cmb.R1.fastq.gz\n    cat $(ls *trimmed-pair2.fastq.gz | sort) >> ERR044595_trm-cmb.R2.fastq.gz\n\n    echo $(skewer --version 2>&1) | sed 's/^.*skewer version: //; s/ .*//' > skewer.version.txt",
+                        "arguments": []
+                    },
+                    "avgCPU": 97.2,
+                    "readBytes": 1055485017,
+                    "writtenBytes": 1051803315,
+                    "memoryInBytes": 9932800
+                },
+                {
+                    "id": "NFCORE_BACASS.BACASS.FASTQC_4",
+                    "runtimeInSeconds": 37.0,
+                    "command": {
+                        "program": "[ ! -f  ERR064912_1.fastq.gz ] && ln -s ERR064912_1M_1.fastq.gz ERR064912_1.fastq.gz\n        [ ! -f  ERR064912_2.fastq.gz ] && ln -s ERR064912_1M_2.fastq.gz ERR064912_2.fastq.gz\n        fastqc --quiet --threads 1 ERR064912_1.fastq.gz ERR064912_2.fastq.gz\n        fastqc --version | sed -e \"s/FastQC v//g\" > fastqc.version.txt",
+                        "arguments": []
+                    },
+                    "avgCPU": 87.9,
+                    "readBytes": 132095919,
+                    "writtenBytes": 4349821,
+                    "memoryInBytes": 342794240
+                },
+                {
+                    "id": "NFCORE_BACASS.BACASS.SKEWER_3",
+                    "runtimeInSeconds": 192.0,
+                    "command": {
+                        "program": "# loop over readunits in pairs per sample\n    pairno=0\n    echo \"ERR064912_1M_1.fastq.gz ERR064912_1M_2.fastq.gz\" | xargs -n2 | while read fq1 fq2; do\n        skewer -m pe -q 3 -n --quiet -t 1 $fq1 $fq2;\n    done\n\n    # gzip, because skewer's -z returns an error\n    gzip *.fastq\n\n    cat $(ls *trimmed-pair1.fastq.gz | sort) >> ERR064912_trm-cmb.R1.fastq.gz\n    cat $(ls *trimmed-pair2.fastq.gz | sort) >> ERR064912_trm-cmb.R2.fastq.gz\n\n    echo $(skewer --version 2>&1) | sed 's/^.*skewer version: //; s/ .*//' > skewer.version.txt",
+                        "arguments": []
+                    },
+                    "avgCPU": 97.2,
+                    "readBytes": 1038199623,
+                    "writtenBytes": 1035059815,
+                    "memoryInBytes": 9314304
+                },
+                {
+                    "id": "NFCORE_BACASS.BACASS.UNICYCLER_5",
+                    "runtimeInSeconds": 949.0,
+                    "command": {
+                        "program": "unicycler \\\n        --threads 1 \\\n         --no_correct --no_pilon \\\n        -1 ERR044595_trm-cmb.R1.fastq.gz -2 ERR044595_trm-cmb.R2.fastq.gz \\\n        --out ./\n\n    mv assembly.fasta ERR044595.scaffolds.fa\n    mv assembly.gfa ERR044595.assembly.gfa\n    mv unicycler.log ERR044595.unicycler.log\n\n    echo $(unicycler --version 2>&1) | sed 's/^.*Unicycler v//; s/ .*$//' > unicycler.version.txt",
+                        "arguments": []
+                    },
+                    "avgCPU": 95.3,
+                    "readBytes": 3839067195,
+                    "writtenBytes": 10321983523,
+                    "memoryInBytes": 1112813568
+                },
+                {
+                    "id": "NFCORE_BACASS.BACASS.UNICYCLER_6",
+                    "runtimeInSeconds": 1385.0,
+                    "command": {
+                        "program": "unicycler \\\n        --threads 1 \\\n         --no_correct --no_pilon \\\n        -1 ERR064912_trm-cmb.R1.fastq.gz -2 ERR064912_trm-cmb.R2.fastq.gz \\\n        --out ./\n\n    mv assembly.fasta ERR064912.scaffolds.fa\n    mv assembly.gfa ERR064912.assembly.gfa\n    mv unicycler.log ERR064912.unicycler.log\n\n    echo $(unicycler --version 2>&1) | sed 's/^.*Unicycler v//; s/ .*$//' > unicycler.version.txt",
+                        "arguments": []
+                    },
+                    "avgCPU": 95.6,
+                    "readBytes": 3841079174,
+                    "writtenBytes": 17756976227,
+                    "memoryInBytes": 1112702976
+                },
+                {
+                    "id": "NFCORE_BACASS.BACASS.PROKKA_7",
+                    "runtimeInSeconds": 553.0,
+                    "command": {
+                        "program": "prokka \\\n          --fast \\\n        --cpus 1 \\\n        --prefix ERR044595 \\\n         \\\n         \\\n        ERR044595.scaffolds.fa\n\n    echo $(prokka --version 2>&1) | sed 's/^.*prokka //' > prokka.version.txt",
+                        "arguments": []
+                    },
+                    "avgCPU": 94.0,
+                    "readBytes": 90144563,
+                    "writtenBytes": 82962073,
+                    "memoryInBytes": 128004096
+                },
+                {
+                    "id": "NFCORE_BACASS.BACASS.QUAST_9",
+                    "runtimeInSeconds": 7.287,
+                    "command": {
+                        "program": "quast.py \\\n        --output-dir other_files \\\n         \\\n         \\\n        --threads 1 \\\n         \\\n        ERR044595.scaffolds.fa ERR064912.scaffolds.fa\n    ln -s other_files/report.tsv\n    echo $(quast.py --version 2>&1) | sed 's/^.*QUAST v//; s/ .*$//' > quast.version.txt",
+                        "arguments": []
+                    },
+                    "avgCPU": 89.3,
+                    "readBytes": 158392836,
+                    "writtenBytes": 10091175,
+                    "memoryInBytes": 76689408
+                },
+                {
+                    "id": "NFCORE_BACASS.BACASS.PROKKA_8",
+                    "runtimeInSeconds": 573.0,
+                    "command": {
+                        "program": "prokka \\\n          --fast \\\n        --cpus 1 \\\n        --prefix ERR064912 \\\n         \\\n         \\\n        ERR064912.scaffolds.fa\n\n    echo $(prokka --version 2>&1) | sed 's/^.*prokka //' > prokka.version.txt",
+                        "arguments": []
+                    },
+                    "avgCPU": 93.8,
+                    "readBytes": 94026402,
+                    "writtenBytes": 86539890,
+                    "memoryInBytes": 252088320
+                },
+                {
+                    "id": "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10",
+                    "runtimeInSeconds": 0.0,
+                    "command": {
+                        "program": "echo 2.0.0 > pipeline.version.txt\n    echo 22.10.7 > nextflow.version.txt\n    scrape_software_versions.py &> software_versions_mqc.yaml",
+                        "arguments": []
+                    },
+                    "avgCPU": 16.4,
+                    "readBytes": 202368,
+                    "writtenBytes": 965,
+                    "memoryInBytes": 3592192
+                },
+                {
+                    "id": "NFCORE_BACASS.BACASS.MULTIQC_11",
+                    "runtimeInSeconds": 20.583,
+                    "command": {
+                        "program": "multiqc -f  .\n    multiqc --version | sed -e \"s/multiqc, version //g\" > multiqc.version.txt",
+                        "arguments": []
+                    },
+                    "avgCPU": 87.1,
+                    "readBytes": 269095256,
+                    "writtenBytes": 4043042,
+                    "memoryInBytes": 123867136
+                }
+            ],
+            "machines": [
+                {
+                    "nodeName": "dirt02",
+                    "system": "linux",
+                    "release": "5.15.0-48-generic",
+                    "architecture": "x86_64",
+                    "cpu": {
+                        "coreCount": 1,
+                        "speedInMHz": 2400
+                    }
+                }
+            ],
+            "metrics": {
+                "sumTaskRuntimesInSeconds": 3961.87,
+                "totalNumBytesRead": 10657024995,
+                "totalNumBytesWritten": 30358190013
+            }
         }
-      ],
-      "files": [
-        {
-          "id": "/nf-core/test-datasets/raw/bacass/ERR044595_1M_1.fastq.gz",
-          "sizeInBytes": 57604034
-        },
-        {
-          "id": "/nf-core/test-datasets/raw/bacass/ERR044595_1M_2.fastq.gz",
-          "sizeInBytes": 59494461
-        },
-        {
-          "id": "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_1_fastqc.html",
-          "sizeInBytes": 721620
-        },
-        {
-          "id": "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_2_fastqc.html",
-          "sizeInBytes": 715864
-        },
-        {
-          "id": "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_1_fastqc.zip",
-          "sizeInBytes": 406073
-        },
-        {
-          "id": "/b6/e95c72d7ef9da13b7641118999df15/ERR044595_2_fastqc.zip",
-          "sizeInBytes": 391467
-        },
-        {
-          "id": "/b6/e95c72d7ef9da13b7641118999df15/fastqc.version.txt",
-          "sizeInBytes": 7
-        },
-        {
-          "id": "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R1.fastq.gz",
-          "sizeInBytes": 55830723
-        },
-        {
-          "id": "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_trm-cmb.R2.fastq.gz",
-          "sizeInBytes": 57671513
-        },
-        {
-          "id": "/3d/7a64449bc37c576aba41bbd65e7f04/ERR044595_1M_1.fastq-trimmed.log",
-          "sizeInBytes": 2358
-        },
-        {
-          "id": "/3d/7a64449bc37c576aba41bbd65e7f04/skewer.version.txt",
-          "sizeInBytes": 6
-        },
-        {
-          "id": "/nf-core/test-datasets/raw/bacass/ERR064912_1M_1.fastq.gz",
-          "sizeInBytes": 53691898
-        },
-        {
-          "id": "/nf-core/test-datasets/raw/bacass/ERR064912_1M_2.fastq.gz",
-          "sizeInBytes": 56303947
-        },
-        {
-          "id": "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_1_fastqc.html",
-          "sizeInBytes": 709082
-        },
-        {
-          "id": "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_2_fastqc.html",
-          "sizeInBytes": 715345
-        },
-        {
-          "id": "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_1_fastqc.zip",
-          "sizeInBytes": 404152
-        },
-        {
-          "id": "/ff/4f4c6dcc93a320dd39a720fe5e90a2/ERR064912_2_fastqc.zip",
-          "sizeInBytes": 395393
-        },
-        {
-          "id": "/ff/4f4c6dcc93a320dd39a720fe5e90a2/fastqc.version.txt",
-          "sizeInBytes": 7
-        },
-        {
-          "id": "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R1.fastq.gz",
-          "sizeInBytes": 52163305
-        },
-        {
-          "id": "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_trm-cmb.R2.fastq.gz",
-          "sizeInBytes": 54778579
-        },
-        {
-          "id": "/17/2ebf9cc4b87470e9a57c9b7042576e/ERR064912_1M_1.fastq-trimmed.log",
-          "sizeInBytes": 1769
-        },
-        {
-          "id": "/17/2ebf9cc4b87470e9a57c9b7042576e/skewer.version.txt",
-          "sizeInBytes": 6
-        },
-        {
-          "id": "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.scaffolds.fa",
-          "sizeInBytes": 2820746
-        },
-        {
-          "id": "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.assembly.gfa",
-          "sizeInBytes": 2797122
-        },
-        {
-          "id": "/6f/1e54d3680877daf943e956e3dd66fb/ERR044595.unicycler.log",
-          "sizeInBytes": 17474
-        },
-        {
-          "id": "/6f/1e54d3680877daf943e956e3dd66fb/unicycler.version.txt",
-          "sizeInBytes": 6
-        },
-        {
-          "id": "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.scaffolds.fa",
-          "sizeInBytes": 2955111
-        },
-        {
-          "id": "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.assembly.gfa",
-          "sizeInBytes": 2940497
-        },
-        {
-          "id": "/bb/09067ce6b0622cfdce89f8e324f710/ERR064912.unicycler.log",
-          "sizeInBytes": 16817
-        },
-        {
-          "id": "/bb/09067ce6b0622cfdce89f8e324f710/unicycler.version.txt",
-          "sizeInBytes": 6
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.gff",
-          "sizeInBytes": 3392917
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.gbk",
-          "sizeInBytes": 5739448
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.fna",
-          "sizeInBytes": 2825237
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.faa",
-          "sizeInBytes": 907971
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.ffn",
-          "sizeInBytes": 2502641
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.sqn",
-          "sizeInBytes": 8937390
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.fsa",
-          "sizeInBytes": 2829813
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.tbl",
-          "sizeInBytes": 495530
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.err",
-          "sizeInBytes": 661490
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.log",
-          "sizeInBytes": 38737
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.txt",
-          "sizeInBytes": 95
-        },
-        {
-          "id": "/26b8d2b2d88b6e5dcd92cebc95aa91/ERR044595/ERR044595.tsv",
-          "sizeInBytes": 163198
-        },
-        {
-          "id": "/56/26b8d2b2d88b6e5dcd92cebc95aa91/prokka.version.txt",
-          "sizeInBytes": 7
-        },
-        {
-          "id": "/2f/73aaad0ed486240f15a25e3fef3537/other_files",
-          "sizeInBytes": 1337679
-        },
-        {
-          "id": "/2f/73aaad0ed486240f15a25e3fef3537/report.tsv",
-          "sizeInBytes": 650
-        },
-        {
-          "id": "/2f/73aaad0ed486240f15a25e3fef3537/quast.version.txt",
-          "sizeInBytes": 6
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.gff",
-          "sizeInBytes": 3551369
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.gbk",
-          "sizeInBytes": 6050914
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.fna",
-          "sizeInBytes": 2957436
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.faa",
-          "sizeInBytes": 945058
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.ffn",
-          "sizeInBytes": 2605010
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.sqn",
-          "sizeInBytes": 9500675
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.fsa",
-          "sizeInBytes": 2967472
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.tbl",
-          "sizeInBytes": 515352
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.err",
-          "sizeInBytes": 731664
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.log",
-          "sizeInBytes": 39170
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.txt",
-          "sizeInBytes": 96
-        },
-        {
-          "id": "/356812a3d30eba15a3511dd27e41a5/ERR064912/ERR064912.tsv",
-          "sizeInBytes": 170166
-        },
-        {
-          "id": "/b2/356812a3d30eba15a3511dd27e41a5/prokka.version.txt",
-          "sizeInBytes": 7
-        },
-        {
-          "id": "/31/3d2dfea63e52682c85348817599705/software_versions.tsv",
-          "sizeInBytes": 107
-        },
-        {
-          "id": "/31/3d2dfea63e52682c85348817599705/software_versions_mqc.yaml",
-          "sizeInBytes": 632
-        },
-        {
-          "id": "/bacass/assets/multiqc_config.yaml",
-          "sizeInBytes": 449
-        },
-        {
-          "id": "/04/fec352a89161343df8c88c32e69ee1/workflow_summary_mqc.yaml",
-          "sizeInBytes": 2490
-        },
-        {
-          "id": "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_report.html",
-          "sizeInBytes": 1197072
-        },
-        {
-          "id": "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_data",
-          "sizeInBytes": 289790
-        },
-        {
-          "id": "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc_plots",
-          "sizeInBytes": 636924
-        },
-        {
-          "id": "/cf/ed6a673ddf2529409be0ade4088ff6/multiqc.version.txt",
-          "sizeInBytes": 7
-        }
-      ],
-      "metrics": {
-        "numberOfTasks": 11,
-        "numberOfFiles": 67,
-        "sumOfFileSizesInBytes": 525544057,
-        "numberOfLevels": 5,
-        "minimumWidth": 1,
-        "maximumWidth": 4
-      }
     },
-    "execution": {
-      "makespanInSeconds": 4243,
-      "executedAt": "2023-03-29T10:02:36-10:00",
-      "tasks": [
-        {
-          "id": "NFCORE_BACASS.BACASS.FASTQC_2",
-          "runtimeInSeconds": 37.0,
-          "command": {
-            "program": "[ ! -f  ERR044595_1.fastq.gz ] && ln -s ERR044595_1M_1.fastq.gz ERR044595_1.fastq.gz\n        [ ! -f  ERR044595_2.fastq.gz ] && ln -s ERR044595_1M_2.fastq.gz ERR044595_2.fastq.gz\n        fastqc --quiet --threads 1 ERR044595_1.fastq.gz ERR044595_2.fastq.gz\n        fastqc --version | sed -e \"s/FastQC v//g\" > fastqc.version.txt",
-            "arguments": []
-          },
-          "avgCPU": 90.8,
-          "readBytes": 139236642,
-          "writtenBytes": 4380167,
-          "memoryInBytes": 356302848
-        },
-        {
-          "id": "NFCORE_BACASS.BACASS.SKEWER_1",
-          "runtimeInSeconds": 208.0,
-          "command": {
-            "program": "# loop over readunits in pairs per sample\n    pairno=0\n    echo \"ERR044595_1M_1.fastq.gz ERR044595_1M_2.fastq.gz\" | xargs -n2 | while read fq1 fq2; do\n        skewer -m pe -q 3 -n --quiet -t 1 $fq1 $fq2;\n    done\n\n    # gzip, because skewer's -z returns an error\n    gzip *.fastq\n\n    cat $(ls *trimmed-pair1.fastq.gz | sort) >> ERR044595_trm-cmb.R1.fastq.gz\n    cat $(ls *trimmed-pair2.fastq.gz | sort) >> ERR044595_trm-cmb.R2.fastq.gz\n\n    echo $(skewer --version 2>&1) | sed 's/^.*skewer version: //; s/ .*//' > skewer.version.txt",
-            "arguments": []
-          },
-          "avgCPU": 97.2,
-          "readBytes": 1055485017,
-          "writtenBytes": 1051803315,
-          "memoryInBytes": 9932800
-        },
-        {
-          "id": "NFCORE_BACASS.BACASS.FASTQC_4",
-          "runtimeInSeconds": 37.0,
-          "command": {
-            "program": "[ ! -f  ERR064912_1.fastq.gz ] && ln -s ERR064912_1M_1.fastq.gz ERR064912_1.fastq.gz\n        [ ! -f  ERR064912_2.fastq.gz ] && ln -s ERR064912_1M_2.fastq.gz ERR064912_2.fastq.gz\n        fastqc --quiet --threads 1 ERR064912_1.fastq.gz ERR064912_2.fastq.gz\n        fastqc --version | sed -e \"s/FastQC v//g\" > fastqc.version.txt",
-            "arguments": []
-          },
-          "avgCPU": 87.9,
-          "readBytes": 132095919,
-          "writtenBytes": 4349821,
-          "memoryInBytes": 342794240
-        },
-        {
-          "id": "NFCORE_BACASS.BACASS.SKEWER_3",
-          "runtimeInSeconds": 192.0,
-          "command": {
-            "program": "# loop over readunits in pairs per sample\n    pairno=0\n    echo \"ERR064912_1M_1.fastq.gz ERR064912_1M_2.fastq.gz\" | xargs -n2 | while read fq1 fq2; do\n        skewer -m pe -q 3 -n --quiet -t 1 $fq1 $fq2;\n    done\n\n    # gzip, because skewer's -z returns an error\n    gzip *.fastq\n\n    cat $(ls *trimmed-pair1.fastq.gz | sort) >> ERR064912_trm-cmb.R1.fastq.gz\n    cat $(ls *trimmed-pair2.fastq.gz | sort) >> ERR064912_trm-cmb.R2.fastq.gz\n\n    echo $(skewer --version 2>&1) | sed 's/^.*skewer version: //; s/ .*//' > skewer.version.txt",
-            "arguments": []
-          },
-          "avgCPU": 97.2,
-          "readBytes": 1038199623,
-          "writtenBytes": 1035059815,
-          "memoryInBytes": 9314304
-        },
-        {
-          "id": "NFCORE_BACASS.BACASS.UNICYCLER_5",
-          "runtimeInSeconds": 949.0,
-          "command": {
-            "program": "unicycler \\\n        --threads 1 \\\n         --no_correct --no_pilon \\\n        -1 ERR044595_trm-cmb.R1.fastq.gz -2 ERR044595_trm-cmb.R2.fastq.gz \\\n        --out ./\n\n    mv assembly.fasta ERR044595.scaffolds.fa\n    mv assembly.gfa ERR044595.assembly.gfa\n    mv unicycler.log ERR044595.unicycler.log\n\n    echo $(unicycler --version 2>&1) | sed 's/^.*Unicycler v//; s/ .*$//' > unicycler.version.txt",
-            "arguments": []
-          },
-          "avgCPU": 95.3,
-          "readBytes": 3839067195,
-          "writtenBytes": 10321983523,
-          "memoryInBytes": 1112813568
-        },
-        {
-          "id": "NFCORE_BACASS.BACASS.UNICYCLER_6",
-          "runtimeInSeconds": 1385.0,
-          "command": {
-            "program": "unicycler \\\n        --threads 1 \\\n         --no_correct --no_pilon \\\n        -1 ERR064912_trm-cmb.R1.fastq.gz -2 ERR064912_trm-cmb.R2.fastq.gz \\\n        --out ./\n\n    mv assembly.fasta ERR064912.scaffolds.fa\n    mv assembly.gfa ERR064912.assembly.gfa\n    mv unicycler.log ERR064912.unicycler.log\n\n    echo $(unicycler --version 2>&1) | sed 's/^.*Unicycler v//; s/ .*$//' > unicycler.version.txt",
-            "arguments": []
-          },
-          "avgCPU": 95.6,
-          "readBytes": 3841079174,
-          "writtenBytes": 17756976227,
-          "memoryInBytes": 1112702976
-        },
-        {
-          "id": "NFCORE_BACASS.BACASS.PROKKA_7",
-          "runtimeInSeconds": 553.0,
-          "command": {
-            "program": "prokka \\\n          --fast \\\n        --cpus 1 \\\n        --prefix ERR044595 \\\n         \\\n         \\\n        ERR044595.scaffolds.fa\n\n    echo $(prokka --version 2>&1) | sed 's/^.*prokka //' > prokka.version.txt",
-            "arguments": []
-          },
-          "avgCPU": 94.0,
-          "readBytes": 90144563,
-          "writtenBytes": 82962073,
-          "memoryInBytes": 128004096
-        },
-        {
-          "id": "NFCORE_BACASS.BACASS.QUAST_9",
-          "runtimeInSeconds": 7.287,
-          "command": {
-            "program": "quast.py \\\n        --output-dir other_files \\\n         \\\n         \\\n        --threads 1 \\\n         \\\n        ERR044595.scaffolds.fa ERR064912.scaffolds.fa\n    ln -s other_files/report.tsv\n    echo $(quast.py --version 2>&1) | sed 's/^.*QUAST v//; s/ .*$//' > quast.version.txt",
-            "arguments": []
-          },
-          "avgCPU": 89.3,
-          "readBytes": 158392836,
-          "writtenBytes": 10091175,
-          "memoryInBytes": 76689408
-        },
-        {
-          "id": "NFCORE_BACASS.BACASS.PROKKA_8",
-          "runtimeInSeconds": 573.0,
-          "command": {
-            "program": "prokka \\\n          --fast \\\n        --cpus 1 \\\n        --prefix ERR064912 \\\n         \\\n         \\\n        ERR064912.scaffolds.fa\n\n    echo $(prokka --version 2>&1) | sed 's/^.*prokka //' > prokka.version.txt",
-            "arguments": []
-          },
-          "avgCPU": 93.8,
-          "readBytes": 94026402,
-          "writtenBytes": 86539890,
-          "memoryInBytes": 252088320
-        },
-        {
-          "id": "NFCORE_BACASS.BACASS.GET_SOFTWARE_VERSIONS_10",
-          "runtimeInSeconds": 0.0,
-          "command": {
-            "program": "echo 2.0.0 > pipeline.version.txt\n    echo 22.10.7 > nextflow.version.txt\n    scrape_software_versions.py &> software_versions_mqc.yaml",
-            "arguments": []
-          },
-          "avgCPU": 16.4,
-          "readBytes": 202368,
-          "writtenBytes": 965,
-          "memoryInBytes": 3592192
-        },
-        {
-          "id": "NFCORE_BACASS.BACASS.MULTIQC_11",
-          "runtimeInSeconds": 20.583,
-          "command": {
-            "program": "multiqc -f  .\n    multiqc --version | sed -e \"s/multiqc, version //g\" > multiqc.version.txt",
-            "arguments": []
-          },
-          "avgCPU": 87.1,
-          "readBytes": 269095256,
-          "writtenBytes": 4043042,
-          "memoryInBytes": 123867136
-        }
-      ],
-      "machines": [
-        {
-          "nodeName": "dirt02",
-          "system": "linux",
-          "release": "5.15.0-48-generic",
-          "architecture": "x86_64",
-          "cpu": {
-            "coreCount": 1,
-            "speedInMHz": 2400
-          }
-        }
-      ],
-      "metrics": {
-        "sumTaskRuntimesInSeconds": 3961.87,
-        "totalNumBytesRead": 10657024995,
-        "totalNumBytesWritten": 30358190013
-      }
+    "runtimeSystem": {
+        "name": "Nextflow",
+        "url": "https://www.nextflow.io/",
+        "version": "23.04.1"
     }
-  },
-  "runtimeSystem": {
-    "name": "Nextflow",
-    "url": "https://www.nextflow.io/",
-    "version": "23.04.1"
-  }
 }

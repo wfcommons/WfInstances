@@ -1,1700 +1,1700 @@
 {
-  "name": "hic",
-  "description": "Trace generated from Nextflow (via https://github.com/wfcommons/nextflow_workflow_tracer)",
-  "createdAt": "2023-03-29T04:01:35.898087+00:00",
-  "schemaVersion": "1.5",
-  "workflow": {
-    "repo": "https://github.com/nf-core/hic",
-    "runName": "focused_newton",
-    "specification": {
-      "tasks": [
-        {
-          "name": "NFCORE_HIC.HIC.INPUT_CHECK.SAMPLESHEET_CHECK",
-          "id": "NFCORE_HIC.HIC.INPUT_CHECK.SAMPLESHEET_CHECK_4",
-          "children": [],
-          "inputFiles": [
-            "/hic/assets/samplesheet.csv"
-          ],
-          "outputFiles": [
-            "/85/87f3aa798384909507c3133e8e4b53/samplesheet.valid.csv",
-            "/85/87f3aa798384909507c3133e8e4b53/versions.yml"
-          ],
-          "parents": []
+    "name": "hic",
+    "description": "Trace generated from Nextflow (via https://github.com/wfcommons/nextflow_workflow_tracer)",
+    "createdAt": "2023-03-29T04:01:35.898087+00:00",
+    "schemaVersion": "1.6",
+    "workflow": {
+        "repo": "https://github.com/nf-core/hic",
+        "runName": "focused_newton",
+        "specification": {
+            "tasks": [
+                {
+                    "name": "NFCORE_HIC.HIC.INPUT_CHECK.SAMPLESHEET_CHECK",
+                    "id": "NFCORE_HIC.HIC.INPUT_CHECK.SAMPLESHEET_CHECK_4",
+                    "children": [],
+                    "inputFiles": [
+                        "/hic/assets/samplesheet.csv"
+                    ],
+                    "outputFiles": [
+                        "/85/87f3aa798384909507c3133e8e4b53/samplesheet.valid.csv",
+                        "/85/87f3aa798384909507c3133e8e4b53/versions.yml"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES",
+                    "id": "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1",
+                    "children": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_6",
+                        "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_5",
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
+                        "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26",
+                        "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_25",
+                        "NFCORE_HIC.HIC.COMPARTMENTS.COOLTOOLS_EIGSCIS_35"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa"
+                    ],
+                    "outputFiles": [
+                        "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes",
+                        "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.fai",
+                        "/97/a908a7b50657bf930ebe0f9ab3c820/versions.yml"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.PREPARE_GENOME.GET_RESTRICTION_FRAGMENTS",
+                    "id": "NFCORE_HIC.HIC.PREPARE_GENOME.GET_RESTRICTION_FRAGMENTS_3",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa"
+                    ],
+                    "outputFiles": [
+                        "/0b/313dd189c0ce9ff0b943b5fa234f56/restriction_fragments.bed",
+                        "/0b/313dd189c0ce9ff0b943b5fa234f56/versions.yml"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD",
+                    "id": "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_9",
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_8",
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_12",
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_13"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa"
+                    ],
+                    "outputFiles": [
+                        "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2",
+                        "/91/fe0694b427ce8596a46dedbb80ef45/versions.yml"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS",
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_6",
+                    "children": [],
+                    "inputFiles": [
+                        "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
+                    ],
+                    "outputFiles": [
+                        "/c3/9d13c2126693b8724af96451d360fb/cooler_bins_1000.bed",
+                        "/c3/9d13c2126693b8724af96451d360fb/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS",
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_5",
+                    "children": [],
+                    "inputFiles": [
+                        "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
+                    ],
+                    "outputFiles": [
+                        "/da/cbe6b4cd9cc556da46f763d7a630f1/cooler_bins_2000.bed",
+                        "/da/cbe6b4cd9cc556da46f763d7a630f1/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.FASTQC",
+                    "id": "NFCORE_HIC.HIC.FASTQC_7",
+                    "children": [
+                        "NFCORE_HIC.HIC.MULTIQC_24"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R1.fastq.gz",
+                        "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R2.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_1_fastqc.html",
+                        "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_2_fastqc.html",
+                        "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_1_fastqc.zip",
+                        "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_2_fastqc.zip",
+                        "/48/cca69448ab94d6e6086249c75aee81/versions.yml"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN",
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_9",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_10",
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R2.fastq.gz",
+                        "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2"
+                    ],
+                    "outputFiles": [
+                        "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.bam",
+                        "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.bowtie2.log",
+                        "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.unmapped.fastq.gz",
+                        "/96/c0dee37e55a15a86730695f61755b9/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN",
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_8",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_11",
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R1.fastq.gz",
+                        "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2"
+                    ],
+                    "outputFiles": [
+                        "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.bam",
+                        "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.bowtie2.log",
+                        "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.unmapped.fastq.gz",
+                        "/8b/744c19cbad3dcde0256b6a9c6cf015/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS",
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_10",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_12"
+                    ],
+                    "inputFiles": [
+                        "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.unmapped.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/84/5ea1584a885604a1b372b2e2ee65d0/SRR4292758_0_R2_trimmed.fastq.gz",
+                        "/84/5ea1584a885604a1b372b2e2ee65d0/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_9"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS",
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_11",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_13"
+                    ],
+                    "inputFiles": [
+                        "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.unmapped.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/22/a0bb25789655c145ba1424e6db0fca/SRR4292758_0_R1_trimmed.fastq.gz",
+                        "/22/a0bb25789655c145ba1424e6db0fca/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_8"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED",
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_12",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14"
+                    ],
+                    "inputFiles": [
+                        "/84/5ea1584a885604a1b372b2e2ee65d0/SRR4292758_0_R2_trimmed.fastq.gz",
+                        "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2"
+                    ],
+                    "outputFiles": [
+                        "/fd/1a43062958c22f2d5a9375d7c32e0a/SRR4292758_0_R2_trimmed.bam",
+                        "/fd/1a43062958c22f2d5a9375d7c32e0a/SRR4292758_0_R2_trimmed.bowtie2.log",
+                        "/fd/1a43062958c22f2d5a9375d7c32e0a/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_10",
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED",
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_13",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15"
+                    ],
+                    "inputFiles": [
+                        "/22/a0bb25789655c145ba1424e6db0fca/SRR4292758_0_R1_trimmed.fastq.gz",
+                        "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2"
+                    ],
+                    "outputFiles": [
+                        "/00/a0fb6c13a979fce6c31543d3047891/SRR4292758_0_R1_trimmed.bam",
+                        "/00/a0fb6c13a979fce6c31543d3047891/SRR4292758_0_R1_trimmed.bowtie2.log",
+                        "/00/a0fb6c13a979fce6c31543d3047891/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_11",
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2",
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_16",
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17"
+                    ],
+                    "inputFiles": [
+                        "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.bam",
+                        "/fd/1a43062958c22f2d5a9375d7c32e0a/SRR4292758_0_R2_trimmed.bam"
+                    ],
+                    "outputFiles": [
+                        "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2_bwt2merged.bam",
+                        "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2.mapstat",
+                        "/00/00bff8f14ad11ced396f3fe129d83a/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_9",
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_12"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2",
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17",
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_18"
+                    ],
+                    "inputFiles": [
+                        "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.bam",
+                        "/00/a0fb6c13a979fce6c31543d3047891/SRR4292758_0_R1_trimmed.bam"
+                    ],
+                    "outputFiles": [
+                        "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1_bwt2merged.bam",
+                        "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1.mapstat",
+                        "/e5/7ab5992e236515ce4850d01db96622/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_8",
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_13"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS",
+                    "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_16",
+                    "children": [
+                        "NFCORE_HIC.HIC.MULTIQC_24"
+                    ],
+                    "inputFiles": [
+                        "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2.mapstat"
+                    ],
+                    "outputFiles": [
+                        "/12/9956bb0568f5dbf4b42b2c3518e2d3/SRR4292758",
+                        "/12/9956bb0568f5dbf4b42b2c3518e2d3/SRR4292758.R2.mmapstat",
+                        "/12/9956bb0568f5dbf4b42b2c3518e2d3/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES",
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_20",
+                        "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19"
+                    ],
+                    "inputFiles": [
+                        "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2_bwt2merged.bam",
+                        "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1_bwt2merged.bam"
+                    ],
+                    "outputFiles": [
+                        "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.bam",
+                        "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.pairstat",
+                        "/2e/a0f98201feb0bf286fac085bfb48d1/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14",
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS",
+                    "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_18",
+                    "children": [
+                        "NFCORE_HIC.HIC.MULTIQC_24"
+                    ],
+                    "inputFiles": [
+                        "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1.mapstat"
+                    ],
+                    "outputFiles": [
+                        "/f3/cec082c046449821fe9f8f3b759f68/SRR4292758",
+                        "/f3/cec082c046449821fe9f8f3b759f68/SRR4292758.R1.mmapstat",
+                        "/f3/cec082c046449821fe9f8f3b759f68/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS",
+                    "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_20",
+                    "children": [
+                        "NFCORE_HIC.HIC.MULTIQC_24"
+                    ],
+                    "inputFiles": [
+                        "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.pairstat"
+                    ],
+                    "outputFiles": [
+                        "/7a/297bd6d0b92ef8201f2b5b1a766645/SRR4292758",
+                        "/7a/297bd6d0b92ef8201f2b5b1a766645/SRR4292758.mpairstat",
+                        "/7a/297bd6d0b92ef8201f2b5b1a766645/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION",
+                    "id": "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION_21",
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_22"
+                    ],
+                    "inputFiles": [
+                        "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.bam",
+                        "/0b/313dd189c0ce9ff0b943b5fa234f56/restriction_fragments.bed"
+                    ],
+                    "outputFiles": [
+                        "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.validPairs",
+                        "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.DEPairs",
+                        "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.SCPairs",
+                        "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.REPairs",
+                        "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.FiltPairs",
+                        "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.RSstat",
+                        "/57/cd5c942bc906ea3b03243472fb2ea6/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17",
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.GET_RESTRICTION_FRAGMENTS_3"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION",
+                    "id": "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION_21",
+                    "children": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
+                        "NFCORE_HIC.HIC.MULTIQC_24"
+                    ],
+                    "inputFiles": [
+                        "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.validPairs"
+                    ],
+                    "outputFiles": [
+                        "/05/2262a0e79af44115958cbc490251f8/SRR4292758.allValidPairs",
+                        "/05/2262a0e79af44115958cbc490251f8/SRR4292758",
+                        "/05/2262a0e79af44115958cbc490251f8/SRR4292758_allValidPairs.mergestat",
+                        "/05/2262a0e79af44115958cbc490251f8/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS",
+                    "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_22",
+                    "children": [
+                        "NFCORE_HIC.HIC.MULTIQC_24"
+                    ],
+                    "inputFiles": [
+                        "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.RSstat"
+                    ],
+                    "outputFiles": [
+                        "/ed/9d8267493435eacf5d17eac986a0e7/SRR4292758",
+                        "/ed/9d8267493435eacf5d17eac986a0e7/SRR4292758.mRSstat",
+                        "/ed/9d8267493435eacf5d17eac986a0e7/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS",
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
+                    "children": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26",
+                        "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_25"
+                    ],
+                    "inputFiles": [
+                        "/05/2262a0e79af44115958cbc490251f8/SRR4292758.allValidPairs",
+                        "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
+                    ],
+                    "outputFiles": [
+                        "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz",
+                        "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz.px2",
+                        "/d4/3ebf9d1d950031f974ef4cbee2e759/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION_21",
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.MULTIQC",
+                    "id": "NFCORE_HIC.HIC.MULTIQC_24",
+                    "children": [],
+                    "inputFiles": [
+                        "/hic/assets/multiqc_config.yml",
+                        "/8c/bf8fe43a321ab4bff83dc140188a4b/workflow_summary_mqc.yaml",
+                        "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_1_fastqc.zip",
+                        "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_2_fastqc.zip",
+                        "/05/2262a0e79af44115958cbc490251f8/SRR4292758",
+                        "/12/9956bb0568f5dbf4b42b2c3518e2d3/SRR4292758",
+                        "/f3/cec082c046449821fe9f8f3b759f68/SRR4292758",
+                        "/7a/297bd6d0b92ef8201f2b5b1a766645/SRR4292758",
+                        "/ed/9d8267493435eacf5d17eac986a0e7/SRR4292758"
+                    ],
+                    "outputFiles": [
+                        "/d3/646abb1be0e2962177ef0034460e23/multiqc_report.html",
+                        "/d3/646abb1be0e2962177ef0034460e23/multiqc_data",
+                        "/d3/646abb1be0e2962177ef0034460e23/multiqc_plots",
+                        "/d3/646abb1be0e2962177ef0034460e23/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.FASTQC_7",
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION_21",
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_16",
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_18",
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_20",
+                        "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_22"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD",
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26",
+                    "children": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27",
+                        "NFCORE_HIC.HIC.COOLER.COOLER_ZOOMIFY_28"
+                    ],
+                    "inputFiles": [
+                        "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz",
+                        "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz.px2",
+                        "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
+                    ],
+                    "outputFiles": [
+                        "/19/6ffc7abe18cf5d3fb063dd31d15705/SRR4292758.1000.cool",
+                        "/19/6ffc7abe18cf5d3fb063dd31d15705/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD",
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_25",
+                    "children": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_29"
+                    ],
+                    "inputFiles": [
+                        "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz",
+                        "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz.px2",
+                        "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
+                    ],
+                    "outputFiles": [
+                        "/f9/32da3ac4c6b0b7d2c2ed314fa583e2/SRR4292758.2000.cool",
+                        "/f9/32da3ac4c6b0b7d2c2ed314fa583e2/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE",
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27",
+                    "children": [
+                        "NFCORE_HIC.HIC.TADS.HIC_FIND_TADS_33",
+                        "NFCORE_HIC.HIC.HIC_PLOT_DIST_VS_COUNTS_31",
+                        "NFCORE_HIC.HIC.TADS.COOLTOOLS_INSULATION_32",
+                        "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_30"
+                    ],
+                    "inputFiles": [
+                        "/19/6ffc7abe18cf5d3fb063dd31d15705/SRR4292758.1000.cool"
+                    ],
+                    "outputFiles": [
+                        "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool",
+                        "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.COOLER_ZOOMIFY",
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_ZOOMIFY_28",
+                    "children": [],
+                    "inputFiles": [
+                        "/19/6ffc7abe18cf5d3fb063dd31d15705/SRR4292758.1000.cool"
+                    ],
+                    "outputFiles": [
+                        "/e3/60725657cb0c52a31ff0c49c4c1beb/SRR4292758.mcool",
+                        "/e3/60725657cb0c52a31ff0c49c4c1beb/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE",
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_29",
+                    "children": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_34",
+                        "NFCORE_HIC.HIC.COMPARTMENTS.COOLTOOLS_EIGSCIS_35"
+                    ],
+                    "inputFiles": [
+                        "/f9/32da3ac4c6b0b7d2c2ed314fa583e2/SRR4292758.2000.cool"
+                    ],
+                    "outputFiles": [
+                        "/40/3e3f51ab09064c9a27881a3802419f/SRR4292758.2000_balanced.cool",
+                        "/40/3e3f51ab09064c9a27881a3802419f/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_25"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.TADS.HIC_FIND_TADS",
+                    "id": "NFCORE_HIC.HIC.TADS.HIC_FIND_TADS_33",
+                    "children": [],
+                    "inputFiles": [
+                        "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool"
+                    ],
+                    "outputFiles": [
+                        "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_boundaries.bed",
+                        "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_boundaries.gff",
+                        "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_domains.bed",
+                        "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_score.bedgraph",
+                        "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_tad_score.bm",
+                        "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_zscore_matrix.cool",
+                        "/4b/7322bf8bcf7499071a33292208a0ca/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.HIC_PLOT_DIST_VS_COUNTS",
+                    "id": "NFCORE_HIC.HIC.HIC_PLOT_DIST_VS_COUNTS_31",
+                    "children": [],
+                    "inputFiles": [
+                        "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool"
+                    ],
+                    "outputFiles": [
+                        "/dc/f4ca3bcf97071f9d320f38c8d20c4a/SRR4292758_distcount.png",
+                        "/dc/f4ca3bcf97071f9d320f38c8d20c4a/SRR4292758_distcount.txt",
+                        "/dc/f4ca3bcf97071f9d320f38c8d20c4a/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.TADS.COOLTOOLS_INSULATION",
+                    "id": "NFCORE_HIC.HIC.TADS.COOLTOOLS_INSULATION_32",
+                    "children": [],
+                    "inputFiles": [
+                        "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool"
+                    ],
+                    "outputFiles": [
+                        "/66/1ed45ffebfb381765c449f1a7d6733/SRR4292758.1000_balanced_insulation.tsv",
+                        "/66/1ed45ffebfb381765c449f1a7d6733/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP",
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_30",
+                    "children": [
+                        "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_36"
+                    ],
+                    "inputFiles": [
+                        "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool"
+                    ],
+                    "outputFiles": [
+                        "/99/ce07518ee82d12c9dffeb9cf4920b8/SRR4292758.1000_balanced.bedpe",
+                        "/99/ce07518ee82d12c9dffeb9cf4920b8/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP",
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_34",
+                    "children": [
+                        "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_37"
+                    ],
+                    "inputFiles": [
+                        "/40/3e3f51ab09064c9a27881a3802419f/SRR4292758.2000_balanced.cool"
+                    ],
+                    "outputFiles": [
+                        "/96/eff5e1cc3b4d9c7f39a44240b97b03/SRR4292758.2000_balanced.bedpe",
+                        "/96/eff5e1cc3b4d9c7f39a44240b97b03/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_29"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COMPARTMENTS.COOLTOOLS_EIGSCIS",
+                    "id": "NFCORE_HIC.HIC.COMPARTMENTS.COOLTOOLS_EIGSCIS_35",
+                    "children": [],
+                    "inputFiles": [
+                        "/40/3e3f51ab09064c9a27881a3802419f/SRR4292758.2000_balanced.cool",
+                        "/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa",
+                        "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
+                    ],
+                    "outputFiles": [
+                        "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.bw",
+                        "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.lam.txt",
+                        "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.vecs.tsv",
+                        "/71/3a28474603c946958e763a212df777/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_29",
+                        "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP",
+                    "id": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_36",
+                    "children": [],
+                    "inputFiles": [
+                        "/99/ce07518ee82d12c9dffeb9cf4920b8/SRR4292758.1000_balanced.bedpe"
+                    ],
+                    "outputFiles": [
+                        "/8f/8c4158367f3fcd00513ba97aa02485/SRR4292758.1000_balanced.txt",
+                        "/8f/8c4158367f3fcd00513ba97aa02485/SRR4292758.1000_raw.txt",
+                        "/8f/8c4158367f3fcd00513ba97aa02485/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_30"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP",
+                    "id": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_37",
+                    "children": [],
+                    "inputFiles": [
+                        "/96/eff5e1cc3b4d9c7f39a44240b97b03/SRR4292758.2000_balanced.bedpe"
+                    ],
+                    "outputFiles": [
+                        "/8f/740708bf64996845ed92b2ae246d50/SRR4292758.2000_balanced.txt",
+                        "/8f/740708bf64996845ed92b2ae246d50/SRR4292758.2000_raw.txt",
+                        "/8f/740708bf64996845ed92b2ae246d50/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_34"
+                    ]
+                },
+                {
+                    "name": "NFCORE_HIC.HIC.CUSTOM_DUMPSOFTWAREVERSIONS",
+                    "id": "NFCORE_HIC.HIC.CUSTOM_DUMPSOFTWAREVERSIONS_38",
+                    "children": [],
+                    "inputFiles": [
+                        "/bb/d34d9288cab4d5301daf3247ca5302/collated_versions.yml"
+                    ],
+                    "outputFiles": [
+                        "/4c/8ba455a29807f717f76feea2709e0b/software_versions.yml",
+                        "/4c/8ba455a29807f717f76feea2709e0b/software_versions_mqc.yml",
+                        "/4c/8ba455a29807f717f76feea2709e0b/versions.yml"
+                    ],
+                    "parents": []
+                }
+            ],
+            "files": [
+                {
+                    "id": "/hic/assets/samplesheet.csv",
+                    "sizeInBytes": 194
+                },
+                {
+                    "id": "/85/87f3aa798384909507c3133e8e4b53/samplesheet.valid.csv",
+                    "sizeInBytes": 213
+                },
+                {
+                    "id": "/85/87f3aa798384909507c3133e8e4b53/versions.yml",
+                    "sizeInBytes": 66
+                },
+                {
+                    "id": "/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa",
+                    "sizeInBytes": 11542637
+                },
+                {
+                    "id": "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes",
+                    "sizeInBytes": 8889
+                },
+                {
+                    "id": "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.fai",
+                    "sizeInBytes": 12249
+                },
+                {
+                    "id": "/97/a908a7b50657bf930ebe0f9ab3c820/versions.yml",
+                    "sizeInBytes": 81
+                },
+                {
+                    "id": "/0b/313dd189c0ce9ff0b943b5fa234f56/restriction_fragments.bed",
+                    "sizeInBytes": 390905
+                },
+                {
+                    "id": "/0b/313dd189c0ce9ff0b943b5fa234f56/versions.yml",
+                    "sizeInBytes": 78
+                },
+                {
+                    "id": "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2",
+                    "sizeInBytes": 24532794
+                },
+                {
+                    "id": "/91/fe0694b427ce8596a46dedbb80ef45/versions.yml",
+                    "sizeInBytes": 66
+                },
+                {
+                    "id": "/c3/9d13c2126693b8724af96451d360fb/cooler_bins_1000.bed",
+                    "sizeInBytes": 505925
+                },
+                {
+                    "id": "/c3/9d13c2126693b8724af96451d360fb/versions.yml",
+                    "sizeInBytes": 60
+                },
+                {
+                    "id": "/da/cbe6b4cd9cc556da46f763d7a630f1/cooler_bins_2000.bed",
+                    "sizeInBytes": 255773
+                },
+                {
+                    "id": "/da/cbe6b4cd9cc556da46f763d7a630f1/versions.yml",
+                    "sizeInBytes": 60
+                },
+                {
+                    "id": "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R1.fastq.gz",
+                    "sizeInBytes": 26066317
+                },
+                {
+                    "id": "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R2.fastq.gz",
+                    "sizeInBytes": 26201604
+                },
+                {
+                    "id": "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_1_fastqc.html",
+                    "sizeInBytes": 584447
+                },
+                {
+                    "id": "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_2_fastqc.html",
+                    "sizeInBytes": 583231
+                },
+                {
+                    "id": "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_1_fastqc.zip",
+                    "sizeInBytes": 306974
+                },
+                {
+                    "id": "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_2_fastqc.zip",
+                    "sizeInBytes": 308165
+                },
+                {
+                    "id": "/48/cca69448ab94d6e6086249c75aee81/versions.yml",
+                    "sizeInBytes": 44
+                },
+                {
+                    "id": "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.bam",
+                    "sizeInBytes": 19374983
+                },
+                {
+                    "id": "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.bowtie2.log",
+                    "sizeInBytes": 211
+                },
+                {
+                    "id": "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.unmapped.fastq.gz",
+                    "sizeInBytes": 6031893
+                },
+                {
+                    "id": "/96/c0dee37e55a15a86730695f61755b9/versions.yml",
+                    "sizeInBytes": 109
+                },
+                {
+                    "id": "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.bam",
+                    "sizeInBytes": 19423555
+                },
+                {
+                    "id": "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.bowtie2.log",
+                    "sizeInBytes": 211
+                },
+                {
+                    "id": "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.unmapped.fastq.gz",
+                    "sizeInBytes": 5748941
+                },
+                {
+                    "id": "/8b/744c19cbad3dcde0256b6a9c6cf015/versions.yml",
+                    "sizeInBytes": 109
+                },
+                {
+                    "id": "/84/5ea1584a885604a1b372b2e2ee65d0/SRR4292758_0_R2_trimmed.fastq.gz",
+                    "sizeInBytes": 5300788
+                },
+                {
+                    "id": "/84/5ea1584a885604a1b372b2e2ee65d0/versions.yml",
+                    "sizeInBytes": 66
+                },
+                {
+                    "id": "/22/a0bb25789655c145ba1424e6db0fca/SRR4292758_0_R1_trimmed.fastq.gz",
+                    "sizeInBytes": 5037896
+                },
+                {
+                    "id": "/22/a0bb25789655c145ba1424e6db0fca/versions.yml",
+                    "sizeInBytes": 66
+                },
+                {
+                    "id": "/fd/1a43062958c22f2d5a9375d7c32e0a/SRR4292758_0_R2_trimmed.bam",
+                    "sizeInBytes": 4596947
+                },
+                {
+                    "id": "/fd/1a43062958c22f2d5a9375d7c32e0a/SRR4292758_0_R2_trimmed.bowtie2.log",
+                    "sizeInBytes": 2090
+                },
+                {
+                    "id": "/fd/1a43062958c22f2d5a9375d7c32e0a/versions.yml",
+                    "sizeInBytes": 117
+                },
+                {
+                    "id": "/00/a0fb6c13a979fce6c31543d3047891/SRR4292758_0_R1_trimmed.bam",
+                    "sizeInBytes": 4394835
+                },
+                {
+                    "id": "/00/a0fb6c13a979fce6c31543d3047891/SRR4292758_0_R1_trimmed.bowtie2.log",
+                    "sizeInBytes": 2638
+                },
+                {
+                    "id": "/00/a0fb6c13a979fce6c31543d3047891/versions.yml",
+                    "sizeInBytes": 117
+                },
+                {
+                    "id": "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2_bwt2merged.bam",
+                    "sizeInBytes": 24522069
+                },
+                {
+                    "id": "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2.mapstat",
+                    "sizeInBytes": 83
+                },
+                {
+                    "id": "/00/00bff8f14ad11ced396f3fe129d83a/versions.yml",
+                    "sizeInBytes": 76
+                },
+                {
+                    "id": "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1_bwt2merged.bam",
+                    "sizeInBytes": 24356153
+                },
+                {
+                    "id": "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1.mapstat",
+                    "sizeInBytes": 83
+                },
+                {
+                    "id": "/e5/7ab5992e236515ce4850d01db96622/versions.yml",
+                    "sizeInBytes": 76
+                },
+                {
+                    "id": "/12/9956bb0568f5dbf4b42b2c3518e2d3/SRR4292758",
+                    "sizeInBytes": 64
+                },
+                {
+                    "id": "/12/9956bb0568f5dbf4b42b2c3518e2d3/SRR4292758.R2.mmapstat",
+                    "sizeInBytes": 64
+                },
+                {
+                    "id": "/12/9956bb0568f5dbf4b42b2c3518e2d3/versions.yml",
+                    "sizeInBytes": 56
+                },
+                {
+                    "id": "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.bam",
+                    "sizeInBytes": 36531318
+                },
+                {
+                    "id": "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.pairstat",
+                    "sizeInBytes": 319
+                },
+                {
+                    "id": "/2e/a0f98201feb0bf286fac085bfb48d1/versions.yml",
+                    "sizeInBytes": 73
+                },
+                {
+                    "id": "/f3/cec082c046449821fe9f8f3b759f68/SRR4292758",
+                    "sizeInBytes": 64
+                },
+                {
+                    "id": "/f3/cec082c046449821fe9f8f3b759f68/SRR4292758.R1.mmapstat",
+                    "sizeInBytes": 64
+                },
+                {
+                    "id": "/f3/cec082c046449821fe9f8f3b759f68/versions.yml",
+                    "sizeInBytes": 56
+                },
+                {
+                    "id": "/7a/297bd6d0b92ef8201f2b5b1a766645/SRR4292758",
+                    "sizeInBytes": 319
+                },
+                {
+                    "id": "/7a/297bd6d0b92ef8201f2b5b1a766645/SRR4292758.mpairstat",
+                    "sizeInBytes": 319
+                },
+                {
+                    "id": "/7a/297bd6d0b92ef8201f2b5b1a766645/versions.yml",
+                    "sizeInBytes": 56
+                },
+                {
+                    "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.validPairs",
+                    "sizeInBytes": 5476826
+                },
+                {
+                    "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.DEPairs",
+                    "sizeInBytes": 45923673
+                },
+                {
+                    "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.SCPairs",
+                    "sizeInBytes": 427577
+                },
+                {
+                    "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.REPairs",
+                    "sizeInBytes": 2401429
+                },
+                {
+                    "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.FiltPairs",
+                    "sizeInBytes": 9597107
+                },
+                {
+                    "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.RSstat",
+                    "sizeInBytes": 306
+                },
+                {
+                    "id": "/57/cd5c942bc906ea3b03243472fb2ea6/versions.yml",
+                    "sizeInBytes": 66
+                },
+                {
+                    "id": "/05/2262a0e79af44115958cbc490251f8/SRR4292758.allValidPairs",
+                    "sizeInBytes": 5473293
+                },
+                {
+                    "id": "/05/2262a0e79af44115958cbc490251f8/SRR4292758",
+                    "sizeInBytes": 138
+                },
+                {
+                    "id": "/05/2262a0e79af44115958cbc490251f8/SRR4292758_allValidPairs.mergestat",
+                    "sizeInBytes": 138
+                },
+                {
+                    "id": "/05/2262a0e79af44115958cbc490251f8/versions.yml",
+                    "sizeInBytes": 64
+                },
+                {
+                    "id": "/ed/9d8267493435eacf5d17eac986a0e7/SRR4292758",
+                    "sizeInBytes": 287
+                },
+                {
+                    "id": "/ed/9d8267493435eacf5d17eac986a0e7/SRR4292758.mRSstat",
+                    "sizeInBytes": 287
+                },
+                {
+                    "id": "/ed/9d8267493435eacf5d17eac986a0e7/versions.yml",
+                    "sizeInBytes": 56
+                },
+                {
+                    "id": "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz",
+                    "sizeInBytes": 442410
+                },
+                {
+                    "id": "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz.px2",
+                    "sizeInBytes": 123774
+                },
+                {
+                    "id": "/d4/3ebf9d1d950031f974ef4cbee2e759/versions.yml",
+                    "sizeInBytes": 56
+                },
+                {
+                    "id": "/hic/assets/multiqc_config.yml",
+                    "sizeInBytes": 465
+                },
+                {
+                    "id": "/8c/bf8fe43a321ab4bff83dc140188a4b/workflow_summary_mqc.yaml",
+                    "sizeInBytes": 3800
+                },
+                {
+                    "id": "/d3/646abb1be0e2962177ef0034460e23/multiqc_report.html",
+                    "sizeInBytes": 1197397
+                },
+                {
+                    "id": "/d3/646abb1be0e2962177ef0034460e23/multiqc_data",
+                    "sizeInBytes": 161501
+                },
+                {
+                    "id": "/d3/646abb1be0e2962177ef0034460e23/multiqc_plots",
+                    "sizeInBytes": 1121675
+                },
+                {
+                    "id": "/d3/646abb1be0e2962177ef0034460e23/versions.yml",
+                    "sizeInBytes": 44
+                },
+                {
+                    "id": "/19/6ffc7abe18cf5d3fb063dd31d15705/SRR4292758.1000.cool",
+                    "sizeInBytes": 119521
+                },
+                {
+                    "id": "/19/6ffc7abe18cf5d3fb063dd31d15705/versions.yml",
+                    "sizeInBytes": 57
+                },
+                {
+                    "id": "/f9/32da3ac4c6b0b7d2c2ed314fa583e2/SRR4292758.2000.cool",
+                    "sizeInBytes": 108601
+                },
+                {
+                    "id": "/f9/32da3ac4c6b0b7d2c2ed314fa583e2/versions.yml",
+                    "sizeInBytes": 57
+                },
+                {
+                    "id": "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool",
+                    "sizeInBytes": 146949
+                },
+                {
+                    "id": "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/versions.yml",
+                    "sizeInBytes": 59
+                },
+                {
+                    "id": "/e3/60725657cb0c52a31ff0c49c4c1beb/SRR4292758.mcool",
+                    "sizeInBytes": 673010
+                },
+                {
+                    "id": "/e3/60725657cb0c52a31ff0c49c4c1beb/versions.yml",
+                    "sizeInBytes": 59
+                },
+                {
+                    "id": "/40/3e3f51ab09064c9a27881a3802419f/SRR4292758.2000_balanced.cool",
+                    "sizeInBytes": 132689
+                },
+                {
+                    "id": "/40/3e3f51ab09064c9a27881a3802419f/versions.yml",
+                    "sizeInBytes": 59
+                },
+                {
+                    "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_boundaries.bed",
+                    "sizeInBytes": 0
+                },
+                {
+                    "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_boundaries.gff",
+                    "sizeInBytes": 0
+                },
+                {
+                    "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_domains.bed",
+                    "sizeInBytes": 0
+                },
+                {
+                    "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_score.bedgraph",
+                    "sizeInBytes": 17260
+                },
+                {
+                    "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_tad_score.bm",
+                    "sizeInBytes": 49364
+                },
+                {
+                    "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_zscore_matrix.cool",
+                    "sizeInBytes": 227065
+                },
+                {
+                    "id": "/4b/7322bf8bcf7499071a33292208a0ca/versions.yml",
+                    "sizeInBytes": 60
+                },
+                {
+                    "id": "/dc/f4ca3bcf97071f9d320f38c8d20c4a/SRR4292758_distcount.png",
+                    "sizeInBytes": 21281
+                },
+                {
+                    "id": "/dc/f4ca3bcf97071f9d320f38c8d20c4a/SRR4292758_distcount.txt",
+                    "sizeInBytes": 10588
+                },
+                {
+                    "id": "/dc/f4ca3bcf97071f9d320f38c8d20c4a/versions.yml",
+                    "sizeInBytes": 65
+                },
+                {
+                    "id": "/66/1ed45ffebfb381765c449f1a7d6733/SRR4292758.1000_balanced_insulation.tsv",
+                    "sizeInBytes": 1604534
+                },
+                {
+                    "id": "/66/1ed45ffebfb381765c449f1a7d6733/versions.yml",
+                    "sizeInBytes": 65
+                },
+                {
+                    "id": "/99/ce07518ee82d12c9dffeb9cf4920b8/SRR4292758.1000_balanced.bedpe",
+                    "sizeInBytes": 525245
+                },
+                {
+                    "id": "/99/ce07518ee82d12c9dffeb9cf4920b8/versions.yml",
+                    "sizeInBytes": 56
+                },
+                {
+                    "id": "/96/eff5e1cc3b4d9c7f39a44240b97b03/SRR4292758.2000_balanced.bedpe",
+                    "sizeInBytes": 528371
+                },
+                {
+                    "id": "/96/eff5e1cc3b4d9c7f39a44240b97b03/versions.yml",
+                    "sizeInBytes": 56
+                },
+                {
+                    "id": "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.bw",
+                    "sizeInBytes": 88499
+                },
+                {
+                    "id": "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.lam.txt",
+                    "sizeInBytes": 23855
+                },
+                {
+                    "id": "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.vecs.tsv",
+                    "sizeInBytes": 452733
+                },
+                {
+                    "id": "/71/3a28474603c946958e763a212df777/versions.yml",
+                    "sizeInBytes": 70
+                },
+                {
+                    "id": "/8f/8c4158367f3fcd00513ba97aa02485/SRR4292758.1000_balanced.txt",
+                    "sizeInBytes": 470513
+                },
+                {
+                    "id": "/8f/8c4158367f3fcd00513ba97aa02485/SRR4292758.1000_raw.txt",
+                    "sizeInBytes": 332336
+                },
+                {
+                    "id": "/8f/8c4158367f3fcd00513ba97aa02485/versions.yml",
+                    "sizeInBytes": 56
+                },
+                {
+                    "id": "/8f/740708bf64996845ed92b2ae246d50/SRR4292758.2000_balanced.txt",
+                    "sizeInBytes": 475477
+                },
+                {
+                    "id": "/8f/740708bf64996845ed92b2ae246d50/SRR4292758.2000_raw.txt",
+                    "sizeInBytes": 307708
+                },
+                {
+                    "id": "/8f/740708bf64996845ed92b2ae246d50/versions.yml",
+                    "sizeInBytes": 56
+                },
+                {
+                    "id": "/bb/d34d9288cab4d5301daf3247ca5302/collated_versions.yml",
+                    "sizeInBytes": 2383
+                },
+                {
+                    "id": "/4c/8ba455a29807f717f76feea2709e0b/software_versions.yml",
+                    "sizeInBytes": 983
+                },
+                {
+                    "id": "/4c/8ba455a29807f717f76feea2709e0b/software_versions_mqc.yml",
+                    "sizeInBytes": 5078
+                },
+                {
+                    "id": "/4c/8ba455a29807f717f76feea2709e0b/versions.yml",
+                    "sizeInBytes": 75
+                }
+            ],
+            "metrics": {
+                "numberOfTasks": 38,
+                "numberOfFiles": 121,
+                "sumOfFileSizesInBytes": 325304918,
+                "numberOfLevels": 13,
+                "minimumWidth": 2,
+                "maximumWidth": 6
+            }
         },
-        {
-          "name": "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES",
-          "id": "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1",
-          "children": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_6",
-            "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_5",
-            "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
-            "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26",
-            "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_25",
-            "NFCORE_HIC.HIC.COMPARTMENTS.COOLTOOLS_EIGSCIS_35"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa"
-          ],
-          "outputFiles": [
-            "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes",
-            "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.fai",
-            "/97/a908a7b50657bf930ebe0f9ab3c820/versions.yml"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_HIC.HIC.PREPARE_GENOME.GET_RESTRICTION_FRAGMENTS",
-          "id": "NFCORE_HIC.HIC.PREPARE_GENOME.GET_RESTRICTION_FRAGMENTS_3",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa"
-          ],
-          "outputFiles": [
-            "/0b/313dd189c0ce9ff0b943b5fa234f56/restriction_fragments.bed",
-            "/0b/313dd189c0ce9ff0b943b5fa234f56/versions.yml"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD",
-          "id": "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_9",
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_8",
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_12",
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_13"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa"
-          ],
-          "outputFiles": [
-            "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2",
-            "/91/fe0694b427ce8596a46dedbb80ef45/versions.yml"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS",
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_6",
-          "children": [],
-          "inputFiles": [
-            "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
-          ],
-          "outputFiles": [
-            "/c3/9d13c2126693b8724af96451d360fb/cooler_bins_1000.bed",
-            "/c3/9d13c2126693b8724af96451d360fb/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS",
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_5",
-          "children": [],
-          "inputFiles": [
-            "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
-          ],
-          "outputFiles": [
-            "/da/cbe6b4cd9cc556da46f763d7a630f1/cooler_bins_2000.bed",
-            "/da/cbe6b4cd9cc556da46f763d7a630f1/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.FASTQC",
-          "id": "NFCORE_HIC.HIC.FASTQC_7",
-          "children": [
-            "NFCORE_HIC.HIC.MULTIQC_24"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R1.fastq.gz",
-            "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R2.fastq.gz"
-          ],
-          "outputFiles": [
-            "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_1_fastqc.html",
-            "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_2_fastqc.html",
-            "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_1_fastqc.zip",
-            "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_2_fastqc.zip",
-            "/48/cca69448ab94d6e6086249c75aee81/versions.yml"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN",
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_9",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_10",
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R2.fastq.gz",
-            "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2"
-          ],
-          "outputFiles": [
-            "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.bam",
-            "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.bowtie2.log",
-            "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.unmapped.fastq.gz",
-            "/96/c0dee37e55a15a86730695f61755b9/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN",
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_8",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_11",
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R1.fastq.gz",
-            "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2"
-          ],
-          "outputFiles": [
-            "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.bam",
-            "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.bowtie2.log",
-            "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.unmapped.fastq.gz",
-            "/8b/744c19cbad3dcde0256b6a9c6cf015/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS",
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_10",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_12"
-          ],
-          "inputFiles": [
-            "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.unmapped.fastq.gz"
-          ],
-          "outputFiles": [
-            "/84/5ea1584a885604a1b372b2e2ee65d0/SRR4292758_0_R2_trimmed.fastq.gz",
-            "/84/5ea1584a885604a1b372b2e2ee65d0/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_9"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS",
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_11",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_13"
-          ],
-          "inputFiles": [
-            "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.unmapped.fastq.gz"
-          ],
-          "outputFiles": [
-            "/22/a0bb25789655c145ba1424e6db0fca/SRR4292758_0_R1_trimmed.fastq.gz",
-            "/22/a0bb25789655c145ba1424e6db0fca/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_8"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED",
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_12",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14"
-          ],
-          "inputFiles": [
-            "/84/5ea1584a885604a1b372b2e2ee65d0/SRR4292758_0_R2_trimmed.fastq.gz",
-            "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2"
-          ],
-          "outputFiles": [
-            "/fd/1a43062958c22f2d5a9375d7c32e0a/SRR4292758_0_R2_trimmed.bam",
-            "/fd/1a43062958c22f2d5a9375d7c32e0a/SRR4292758_0_R2_trimmed.bowtie2.log",
-            "/fd/1a43062958c22f2d5a9375d7c32e0a/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_10",
-            "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED",
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_13",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15"
-          ],
-          "inputFiles": [
-            "/22/a0bb25789655c145ba1424e6db0fca/SRR4292758_0_R1_trimmed.fastq.gz",
-            "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2"
-          ],
-          "outputFiles": [
-            "/00/a0fb6c13a979fce6c31543d3047891/SRR4292758_0_R1_trimmed.bam",
-            "/00/a0fb6c13a979fce6c31543d3047891/SRR4292758_0_R1_trimmed.bowtie2.log",
-            "/00/a0fb6c13a979fce6c31543d3047891/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_11",
-            "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2",
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_16",
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17"
-          ],
-          "inputFiles": [
-            "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.bam",
-            "/fd/1a43062958c22f2d5a9375d7c32e0a/SRR4292758_0_R2_trimmed.bam"
-          ],
-          "outputFiles": [
-            "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2_bwt2merged.bam",
-            "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2.mapstat",
-            "/00/00bff8f14ad11ced396f3fe129d83a/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_9",
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_12"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2",
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17",
-            "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_18"
-          ],
-          "inputFiles": [
-            "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.bam",
-            "/00/a0fb6c13a979fce6c31543d3047891/SRR4292758_0_R1_trimmed.bam"
-          ],
-          "outputFiles": [
-            "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1_bwt2merged.bam",
-            "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1.mapstat",
-            "/e5/7ab5992e236515ce4850d01db96622/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_8",
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_13"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS",
-          "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_16",
-          "children": [
-            "NFCORE_HIC.HIC.MULTIQC_24"
-          ],
-          "inputFiles": [
-            "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2.mapstat"
-          ],
-          "outputFiles": [
-            "/12/9956bb0568f5dbf4b42b2c3518e2d3/SRR4292758",
-            "/12/9956bb0568f5dbf4b42b2c3518e2d3/SRR4292758.R2.mmapstat",
-            "/12/9956bb0568f5dbf4b42b2c3518e2d3/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES",
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_20",
-            "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19"
-          ],
-          "inputFiles": [
-            "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2_bwt2merged.bam",
-            "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1_bwt2merged.bam"
-          ],
-          "outputFiles": [
-            "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.bam",
-            "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.pairstat",
-            "/2e/a0f98201feb0bf286fac085bfb48d1/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14",
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS",
-          "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_18",
-          "children": [
-            "NFCORE_HIC.HIC.MULTIQC_24"
-          ],
-          "inputFiles": [
-            "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1.mapstat"
-          ],
-          "outputFiles": [
-            "/f3/cec082c046449821fe9f8f3b759f68/SRR4292758",
-            "/f3/cec082c046449821fe9f8f3b759f68/SRR4292758.R1.mmapstat",
-            "/f3/cec082c046449821fe9f8f3b759f68/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS",
-          "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_20",
-          "children": [
-            "NFCORE_HIC.HIC.MULTIQC_24"
-          ],
-          "inputFiles": [
-            "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.pairstat"
-          ],
-          "outputFiles": [
-            "/7a/297bd6d0b92ef8201f2b5b1a766645/SRR4292758",
-            "/7a/297bd6d0b92ef8201f2b5b1a766645/SRR4292758.mpairstat",
-            "/7a/297bd6d0b92ef8201f2b5b1a766645/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION",
-          "id": "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION_21",
-            "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_22"
-          ],
-          "inputFiles": [
-            "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.bam",
-            "/0b/313dd189c0ce9ff0b943b5fa234f56/restriction_fragments.bed"
-          ],
-          "outputFiles": [
-            "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.validPairs",
-            "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.DEPairs",
-            "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.SCPairs",
-            "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.REPairs",
-            "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.FiltPairs",
-            "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.RSstat",
-            "/57/cd5c942bc906ea3b03243472fb2ea6/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17",
-            "NFCORE_HIC.HIC.PREPARE_GENOME.GET_RESTRICTION_FRAGMENTS_3"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION",
-          "id": "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION_21",
-          "children": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
-            "NFCORE_HIC.HIC.MULTIQC_24"
-          ],
-          "inputFiles": [
-            "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.validPairs"
-          ],
-          "outputFiles": [
-            "/05/2262a0e79af44115958cbc490251f8/SRR4292758.allValidPairs",
-            "/05/2262a0e79af44115958cbc490251f8/SRR4292758",
-            "/05/2262a0e79af44115958cbc490251f8/SRR4292758_allValidPairs.mergestat",
-            "/05/2262a0e79af44115958cbc490251f8/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS",
-          "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_22",
-          "children": [
-            "NFCORE_HIC.HIC.MULTIQC_24"
-          ],
-          "inputFiles": [
-            "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.RSstat"
-          ],
-          "outputFiles": [
-            "/ed/9d8267493435eacf5d17eac986a0e7/SRR4292758",
-            "/ed/9d8267493435eacf5d17eac986a0e7/SRR4292758.mRSstat",
-            "/ed/9d8267493435eacf5d17eac986a0e7/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS",
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
-          "children": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26",
-            "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_25"
-          ],
-          "inputFiles": [
-            "/05/2262a0e79af44115958cbc490251f8/SRR4292758.allValidPairs",
-            "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
-          ],
-          "outputFiles": [
-            "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz",
-            "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz.px2",
-            "/d4/3ebf9d1d950031f974ef4cbee2e759/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION_21",
-            "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.MULTIQC",
-          "id": "NFCORE_HIC.HIC.MULTIQC_24",
-          "children": [],
-          "inputFiles": [
-            "/hic/assets/multiqc_config.yml",
-            "/8c/bf8fe43a321ab4bff83dc140188a4b/workflow_summary_mqc.yaml",
-            "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_1_fastqc.zip",
-            "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_2_fastqc.zip",
-            "/05/2262a0e79af44115958cbc490251f8/SRR4292758",
-            "/12/9956bb0568f5dbf4b42b2c3518e2d3/SRR4292758",
-            "/f3/cec082c046449821fe9f8f3b759f68/SRR4292758",
-            "/7a/297bd6d0b92ef8201f2b5b1a766645/SRR4292758",
-            "/ed/9d8267493435eacf5d17eac986a0e7/SRR4292758"
-          ],
-          "outputFiles": [
-            "/d3/646abb1be0e2962177ef0034460e23/multiqc_report.html",
-            "/d3/646abb1be0e2962177ef0034460e23/multiqc_data",
-            "/d3/646abb1be0e2962177ef0034460e23/multiqc_plots",
-            "/d3/646abb1be0e2962177ef0034460e23/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.FASTQC_7",
-            "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION_21",
-            "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_16",
-            "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_18",
-            "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_20",
-            "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_22"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD",
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26",
-          "children": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27",
-            "NFCORE_HIC.HIC.COOLER.COOLER_ZOOMIFY_28"
-          ],
-          "inputFiles": [
-            "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz",
-            "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz.px2",
-            "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
-          ],
-          "outputFiles": [
-            "/19/6ffc7abe18cf5d3fb063dd31d15705/SRR4292758.1000.cool",
-            "/19/6ffc7abe18cf5d3fb063dd31d15705/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
-            "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD",
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_25",
-          "children": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_29"
-          ],
-          "inputFiles": [
-            "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz",
-            "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz.px2",
-            "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
-          ],
-          "outputFiles": [
-            "/f9/32da3ac4c6b0b7d2c2ed314fa583e2/SRR4292758.2000.cool",
-            "/f9/32da3ac4c6b0b7d2c2ed314fa583e2/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
-            "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE",
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27",
-          "children": [
-            "NFCORE_HIC.HIC.TADS.HIC_FIND_TADS_33",
-            "NFCORE_HIC.HIC.HIC_PLOT_DIST_VS_COUNTS_31",
-            "NFCORE_HIC.HIC.TADS.COOLTOOLS_INSULATION_32",
-            "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_30"
-          ],
-          "inputFiles": [
-            "/19/6ffc7abe18cf5d3fb063dd31d15705/SRR4292758.1000.cool"
-          ],
-          "outputFiles": [
-            "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool",
-            "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.COOLER_ZOOMIFY",
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_ZOOMIFY_28",
-          "children": [],
-          "inputFiles": [
-            "/19/6ffc7abe18cf5d3fb063dd31d15705/SRR4292758.1000.cool"
-          ],
-          "outputFiles": [
-            "/e3/60725657cb0c52a31ff0c49c4c1beb/SRR4292758.mcool",
-            "/e3/60725657cb0c52a31ff0c49c4c1beb/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE",
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_29",
-          "children": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_34",
-            "NFCORE_HIC.HIC.COMPARTMENTS.COOLTOOLS_EIGSCIS_35"
-          ],
-          "inputFiles": [
-            "/f9/32da3ac4c6b0b7d2c2ed314fa583e2/SRR4292758.2000.cool"
-          ],
-          "outputFiles": [
-            "/40/3e3f51ab09064c9a27881a3802419f/SRR4292758.2000_balanced.cool",
-            "/40/3e3f51ab09064c9a27881a3802419f/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_25"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.TADS.HIC_FIND_TADS",
-          "id": "NFCORE_HIC.HIC.TADS.HIC_FIND_TADS_33",
-          "children": [],
-          "inputFiles": [
-            "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool"
-          ],
-          "outputFiles": [
-            "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_boundaries.bed",
-            "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_boundaries.gff",
-            "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_domains.bed",
-            "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_score.bedgraph",
-            "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_tad_score.bm",
-            "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_zscore_matrix.cool",
-            "/4b/7322bf8bcf7499071a33292208a0ca/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.HIC_PLOT_DIST_VS_COUNTS",
-          "id": "NFCORE_HIC.HIC.HIC_PLOT_DIST_VS_COUNTS_31",
-          "children": [],
-          "inputFiles": [
-            "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool"
-          ],
-          "outputFiles": [
-            "/dc/f4ca3bcf97071f9d320f38c8d20c4a/SRR4292758_distcount.png",
-            "/dc/f4ca3bcf97071f9d320f38c8d20c4a/SRR4292758_distcount.txt",
-            "/dc/f4ca3bcf97071f9d320f38c8d20c4a/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.TADS.COOLTOOLS_INSULATION",
-          "id": "NFCORE_HIC.HIC.TADS.COOLTOOLS_INSULATION_32",
-          "children": [],
-          "inputFiles": [
-            "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool"
-          ],
-          "outputFiles": [
-            "/66/1ed45ffebfb381765c449f1a7d6733/SRR4292758.1000_balanced_insulation.tsv",
-            "/66/1ed45ffebfb381765c449f1a7d6733/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP",
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_30",
-          "children": [
-            "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_36"
-          ],
-          "inputFiles": [
-            "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool"
-          ],
-          "outputFiles": [
-            "/99/ce07518ee82d12c9dffeb9cf4920b8/SRR4292758.1000_balanced.bedpe",
-            "/99/ce07518ee82d12c9dffeb9cf4920b8/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP",
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_34",
-          "children": [
-            "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_37"
-          ],
-          "inputFiles": [
-            "/40/3e3f51ab09064c9a27881a3802419f/SRR4292758.2000_balanced.cool"
-          ],
-          "outputFiles": [
-            "/96/eff5e1cc3b4d9c7f39a44240b97b03/SRR4292758.2000_balanced.bedpe",
-            "/96/eff5e1cc3b4d9c7f39a44240b97b03/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_29"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COMPARTMENTS.COOLTOOLS_EIGSCIS",
-          "id": "NFCORE_HIC.HIC.COMPARTMENTS.COOLTOOLS_EIGSCIS_35",
-          "children": [],
-          "inputFiles": [
-            "/40/3e3f51ab09064c9a27881a3802419f/SRR4292758.2000_balanced.cool",
-            "/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa",
-            "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes"
-          ],
-          "outputFiles": [
-            "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.bw",
-            "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.lam.txt",
-            "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.vecs.tsv",
-            "/71/3a28474603c946958e763a212df777/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_29",
-            "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP",
-          "id": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_36",
-          "children": [],
-          "inputFiles": [
-            "/99/ce07518ee82d12c9dffeb9cf4920b8/SRR4292758.1000_balanced.bedpe"
-          ],
-          "outputFiles": [
-            "/8f/8c4158367f3fcd00513ba97aa02485/SRR4292758.1000_balanced.txt",
-            "/8f/8c4158367f3fcd00513ba97aa02485/SRR4292758.1000_raw.txt",
-            "/8f/8c4158367f3fcd00513ba97aa02485/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_30"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP",
-          "id": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_37",
-          "children": [],
-          "inputFiles": [
-            "/96/eff5e1cc3b4d9c7f39a44240b97b03/SRR4292758.2000_balanced.bedpe"
-          ],
-          "outputFiles": [
-            "/8f/740708bf64996845ed92b2ae246d50/SRR4292758.2000_balanced.txt",
-            "/8f/740708bf64996845ed92b2ae246d50/SRR4292758.2000_raw.txt",
-            "/8f/740708bf64996845ed92b2ae246d50/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_34"
-          ]
-        },
-        {
-          "name": "NFCORE_HIC.HIC.CUSTOM_DUMPSOFTWAREVERSIONS",
-          "id": "NFCORE_HIC.HIC.CUSTOM_DUMPSOFTWAREVERSIONS_38",
-          "children": [],
-          "inputFiles": [
-            "/bb/d34d9288cab4d5301daf3247ca5302/collated_versions.yml"
-          ],
-          "outputFiles": [
-            "/4c/8ba455a29807f717f76feea2709e0b/software_versions.yml",
-            "/4c/8ba455a29807f717f76feea2709e0b/software_versions_mqc.yml",
-            "/4c/8ba455a29807f717f76feea2709e0b/versions.yml"
-          ],
-          "parents": []
+        "execution": {
+            "makespanInSeconds": 1507,
+            "executedAt": "2023-03-28T18:01:31-10:00",
+            "tasks": [
+                {
+                    "id": "NFCORE_HIC.HIC.INPUT_CHECK.SAMPLESHEET_CHECK_4",
+                    "runtimeInSeconds": 1.0,
+                    "command": {
+                        "program": "check_samplesheet.py \\\n        samplesheet.csv \\\n        samplesheet.valid.csv\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:INPUT_CHECK:SAMPLESHEET_CHECK\":\n        python: $(python --version | sed 's/Python //g')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 28.2,
+                    "readBytes": 919661,
+                    "writtenBytes": 580,
+                    "memoryInBytes": 2822144
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1",
+                    "runtimeInSeconds": 0.0,
+                    "command": {
+                        "program": "samtools faidx W303_SGD_2015_JRIU00000000.fsa\n    cut -f 1,2 W303_SGD_2015_JRIU00000000.fsa.fai > W303_SGD_2015_JRIU00000000.fsa.sizes\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:PREPARE_GENOME:CUSTOM_GETCHROMSIZES\":\n        getchromsizes: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 40.9,
+                    "readBytes": 11666952,
+                    "writtenBytes": 26069,
+                    "memoryInBytes": 3522560
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.PREPARE_GENOME.GET_RESTRICTION_FRAGMENTS_3",
+                    "runtimeInSeconds": 1.0,
+                    "command": {
+                        "program": "digest_genome.py -r A^AGCTT -o restriction_fragments.bed W303_SGD_2015_JRIU00000000.fsa\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:PREPARE_GENOME:GET_RESTRICTION_FRAGMENTS\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 90.3,
+                    "readBytes": 26991963,
+                    "writtenBytes": 399694,
+                    "memoryInBytes": 33959936
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD",
+                    "runtimeInSeconds": 20.0,
+                    "command": {
+                        "program": "mkdir bowtie2\n    bowtie2-build  --threads 1 W303_SGD_2015_JRIU00000000.fsa bowtie2/W303_SGD_2015_JRIU00000000\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:PREPARE_GENOME:BOWTIE2_BUILD\":\n        bowtie2: $(echo $(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*$//')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 88.9,
+                    "readBytes": 47699597,
+                    "writtenBytes": 24549507,
+                    "memoryInBytes": 59977728
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_6",
+                    "runtimeInSeconds": 3.9,
+                    "command": {
+                        "program": "cooler makebins \\\n         \\\n        W303_SGD_2015_JRIU00000000.fsa.sizes \\\n        1000 > cooler_bins_1000.bed\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_MAKEBINS\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 81.9,
+                    "readBytes": 19638526,
+                    "writtenBytes": 506357,
+                    "memoryInBytes": 84967424
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_5",
+                    "runtimeInSeconds": 3.914,
+                    "command": {
+                        "program": "cooler makebins \\\n         \\\n        W303_SGD_2015_JRIU00000000.fsa.sizes \\\n        2000 > cooler_bins_2000.bed\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_MAKEBINS\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 86.5,
+                    "readBytes": 19638526,
+                    "writtenBytes": 256204,
+                    "memoryInBytes": 82583552
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.FASTQC_7",
+                    "runtimeInSeconds": 25.0,
+                    "command": {
+                        "program": "printf \"%s %s\\n\" SRR4292758_00_R1.fastq.gz SRR4292758_1.gz SRR4292758_00_R2.fastq.gz SRR4292758_2.gz | while read old_name new_name; do\n        [ -f \"${new_name}\" ] || ln -s $old_name $new_name\n    done\n    fastqc  --threads 1 SRR4292758_1.gz SRR4292758_2.gz\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:FASTQC\":\n        fastqc: $( fastqc --version | sed -e \"s/FastQC v//g\" )\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 91.5,
+                    "readBytes": 73983920,
+                    "writtenBytes": 3525144,
+                    "memoryInBytes": 305795072
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_9",
+                    "runtimeInSeconds": 89.0,
+                    "command": {
+                        "program": "INDEX=`find -L ./ -name \"*.rev.1.bt2\" | sed \"s/\\.rev.1.bt2$//\"`\n    [ -z \"$INDEX\" ] && INDEX=`find -L ./ -name \"*.rev.1.bt2l\" | sed \"s/\\.rev.1.bt2l$//\"`\n    [ -z \"$INDEX\" ] && echo \"Bowtie2 index files not found\" 1>&2 && exit 1\n\n    bowtie2 \\\n        -x $INDEX \\\n        -U SRR4292758_00_R2.fastq.gz \\\n        --threads 1 \\\n        --un-gz SRR4292758_0_R2.unmapped.fastq.gz \\\n        --very-sensitive -L 30 --score-min L,-0.6,-0.2 --end-to-end --reorder \\\n        2> SRR4292758_0_R2.bowtie2.log \\\n        | samtools view -F 4 --threads 1 -o SRR4292758_0_R2.bam -\n\n    if [ -f SRR4292758_0_R2.unmapped.fastq.1.gz ]; then\n        mv SRR4292758_0_R2.unmapped.fastq.1.gz SRR4292758_0_R2.unmapped_1.fastq.gz\n    fi\n\n    if [ -f SRR4292758_0_R2.unmapped.fastq.2.gz ]; then\n        mv SRR4292758_0_R2.unmapped.fastq.2.gz SRR4292758_0_R2.unmapped_2.fastq.gz\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:BOWTIE2_ALIGN\":\n        bowtie2: $(echo $(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*$//')\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n        pigz: $( pigz --version 2>&1 | sed 's/pigz //g' )\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 91.4,
+                    "readBytes": 414966142,
+                    "writtenBytes": 391414350,
+                    "memoryInBytes": 54685696
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_8",
+                    "runtimeInSeconds": 86.0,
+                    "command": {
+                        "program": "INDEX=`find -L ./ -name \"*.rev.1.bt2\" | sed \"s/\\.rev.1.bt2$//\"`\n    [ -z \"$INDEX\" ] && INDEX=`find -L ./ -name \"*.rev.1.bt2l\" | sed \"s/\\.rev.1.bt2l$//\"`\n    [ -z \"$INDEX\" ] && echo \"Bowtie2 index files not found\" 1>&2 && exit 1\n\n    bowtie2 \\\n        -x $INDEX \\\n        -U SRR4292758_00_R1.fastq.gz \\\n        --threads 1 \\\n        --un-gz SRR4292758_0_R1.unmapped.fastq.gz \\\n        --very-sensitive -L 30 --score-min L,-0.6,-0.2 --end-to-end --reorder \\\n        2> SRR4292758_0_R1.bowtie2.log \\\n        | samtools view -F 4 --threads 1 -o SRR4292758_0_R1.bam -\n\n    if [ -f SRR4292758_0_R1.unmapped.fastq.1.gz ]; then\n        mv SRR4292758_0_R1.unmapped.fastq.1.gz SRR4292758_0_R1.unmapped_1.fastq.gz\n    fi\n\n    if [ -f SRR4292758_0_R1.unmapped.fastq.2.gz ]; then\n        mv SRR4292758_0_R1.unmapped.fastq.2.gz SRR4292758_0_R1.unmapped_2.fastq.gz\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:BOWTIE2_ALIGN\":\n        bowtie2: $(echo $(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*$//')\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n        pigz: $( pigz --version 2>&1 | sed 's/pigz //g' )\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 92.4,
+                    "readBytes": 414356078,
+                    "writtenBytes": 390705198,
+                    "memoryInBytes": 55005184
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_10",
+                    "runtimeInSeconds": 3.254,
+                    "command": {
+                        "program": "zcat SRR4292758_0_R2.unmapped.fastq.gz > tmp.fastq\n    cutsite_trimming --fastq tmp.fastq \\\n        --cutsite AAGCTAGCTT \\\n        --out SRR4292758_0_R2_trimmed.fastq\n    gzip SRR4292758_0_R2_trimmed.fastq\n    /bin/rm -f tmp.fastq\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:TRIM_READS\":\n        gzip: $(echo $(gzip --version 2>&1) | head -1 | cut -d\" \" -f2)\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 85.7,
+                    "readBytes": 54159949,
+                    "writtenBytes": 53321502,
+                    "memoryInBytes": 4857856
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_11",
+                    "runtimeInSeconds": 3.099,
+                    "command": {
+                        "program": "zcat SRR4292758_0_R1.unmapped.fastq.gz > tmp.fastq\n    cutsite_trimming --fastq tmp.fastq \\\n        --cutsite AAGCTAGCTT \\\n        --out SRR4292758_0_R1_trimmed.fastq\n    gzip SRR4292758_0_R1_trimmed.fastq\n    /bin/rm -f tmp.fastq\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:TRIM_READS\":\n        gzip: $(echo $(gzip --version 2>&1) | head -1 | cut -d\" \" -f2)\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 88.4,
+                    "readBytes": 51343587,
+                    "writtenBytes": 50525206,
+                    "memoryInBytes": 4763648
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_12",
+                    "runtimeInSeconds": 13.0,
+                    "command": {
+                        "program": "INDEX=`find -L ./ -name \"*.rev.1.bt2\" | sed \"s/\\.rev.1.bt2$//\"`\n    [ -z \"$INDEX\" ] && INDEX=`find -L ./ -name \"*.rev.1.bt2l\" | sed \"s/\\.rev.1.bt2l$//\"`\n    [ -z \"$INDEX\" ] && echo \"Bowtie2 index files not found\" 1>&2 && exit 1\n\n    bowtie2 \\\n        -x $INDEX \\\n        -U SRR4292758_0_R2_trimmed.fastq.gz \\\n        --threads 1 \\\n         \\\n        --very-sensitive -L 20 --score-min L,-0.6,-0.2 --end-to-end --reorder \\\n        2> SRR4292758_0_R2_trimmed.bowtie2.log \\\n        | samtools view  --threads 1 -o SRR4292758_0_R2_trimmed.bam -\n\n    if [ -f SRR4292758_0_R2_trimmed.unmapped.fastq.1.gz ]; then\n        mv SRR4292758_0_R2_trimmed.unmapped.fastq.1.gz SRR4292758_0_R2_trimmed.unmapped_1.fastq.gz\n    fi\n\n    if [ -f SRR4292758_0_R2_trimmed.unmapped.fastq.2.gz ]; then\n        mv SRR4292758_0_R2_trimmed.unmapped.fastq.2.gz SRR4292758_0_R2_trimmed.unmapped_2.fastq.gz\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:BOWTIE2_ALIGN_TRIMMED\":\n        bowtie2: $(echo $(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*$//')\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n        pigz: $( pigz --version 2>&1 | sed 's/pigz //g' )\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 84.1,
+                    "readBytes": 44912379,
+                    "writtenBytes": 21465475,
+                    "memoryInBytes": 49004544
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_13",
+                    "runtimeInSeconds": 12.0,
+                    "command": {
+                        "program": "INDEX=`find -L ./ -name \"*.rev.1.bt2\" | sed \"s/\\.rev.1.bt2$//\"`\n    [ -z \"$INDEX\" ] && INDEX=`find -L ./ -name \"*.rev.1.bt2l\" | sed \"s/\\.rev.1.bt2l$//\"`\n    [ -z \"$INDEX\" ] && echo \"Bowtie2 index files not found\" 1>&2 && exit 1\n\n    bowtie2 \\\n        -x $INDEX \\\n        -U SRR4292758_0_R1_trimmed.fastq.gz \\\n        --threads 1 \\\n         \\\n        --very-sensitive -L 20 --score-min L,-0.6,-0.2 --end-to-end --reorder \\\n        2> SRR4292758_0_R1_trimmed.bowtie2.log \\\n        | samtools view  --threads 1 -o SRR4292758_0_R1_trimmed.bam -\n\n    if [ -f SRR4292758_0_R1_trimmed.unmapped.fastq.1.gz ]; then\n        mv SRR4292758_0_R1_trimmed.unmapped.fastq.1.gz SRR4292758_0_R1_trimmed.unmapped_1.fastq.gz\n    fi\n\n    if [ -f SRR4292758_0_R1_trimmed.unmapped.fastq.2.gz ]; then\n        mv SRR4292758_0_R1_trimmed.unmapped.fastq.2.gz SRR4292758_0_R1_trimmed.unmapped_2.fastq.gz\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:BOWTIE2_ALIGN_TRIMMED\":\n        bowtie2: $(echo $(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*$//')\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n        pigz: $( pigz --version 2>&1 | sed 's/pigz //g' )\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 85.1,
+                    "readBytes": 43786190,
+                    "writtenBytes": 20400614,
+                    "memoryInBytes": 49143808
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14",
+                    "runtimeInSeconds": 12.0,
+                    "command": {
+                        "program": "samtools merge -@ 1 \\\n        -f SRR4292758_0_R2_bwt2merged.bam \\\n        SRR4292758_0_R2.bam SRR4292758_0_R2_trimmed.bam\n\n    samtools sort -@ 1 -m 800M \\\n        -n \\\n        -o SRR4292758_0_R2_bwt2merged.sorted.bam \\\n        SRR4292758_0_R2_bwt2merged.bam\n\n    mv SRR4292758_0_R2_bwt2merged.sorted.bam SRR4292758_0_R2_bwt2merged.bam\n\n    echo \"## SRR4292758_0_R2\" > SRR4292758_0_R2.mapstat\n    echo -n \"total_R2\t\" >> SRR4292758_0_R2.mapstat\n    samtools view -c SRR4292758_0_R2_bwt2merged.bam >> SRR4292758_0_R2.mapstat\n    echo -n \"mapped_R2\t\" >> SRR4292758_0_R2.mapstat\n    samtools view -c -F 4 SRR4292758_0_R2_bwt2merged.bam >> SRR4292758_0_R2.mapstat\n    echo -n \"global_R2\t\" >> SRR4292758_0_R2.mapstat\n    samtools view -c -F 4 SRR4292758_0_R2.bam >> SRR4292758_0_R2.mapstat\n    echo -n \"local_R2\t\"  >> SRR4292758_0_R2.mapstat\n    samtools view -c -F 4 SRR4292758_0_R2_trimmed.bam >> SRR4292758_0_R2.mapstat\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:MERGE_BOWTIE2\":\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 79.7,
+                    "readBytes": 121325397,
+                    "writtenBytes": 48662069,
+                    "memoryInBytes": 135028736
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15",
+                    "runtimeInSeconds": 11.0,
+                    "command": {
+                        "program": "samtools merge -@ 1 \\\n        -f SRR4292758_0_R1_bwt2merged.bam \\\n        SRR4292758_0_R1.bam SRR4292758_0_R1_trimmed.bam\n\n    samtools sort -@ 1 -m 800M \\\n        -n \\\n        -o SRR4292758_0_R1_bwt2merged.sorted.bam \\\n        SRR4292758_0_R1_bwt2merged.bam\n\n    mv SRR4292758_0_R1_bwt2merged.sorted.bam SRR4292758_0_R1_bwt2merged.bam\n\n    echo \"## SRR4292758_0_R1\" > SRR4292758_0_R1.mapstat\n    echo -n \"total_R1\t\" >> SRR4292758_0_R1.mapstat\n    samtools view -c SRR4292758_0_R1_bwt2merged.bam >> SRR4292758_0_R1.mapstat\n    echo -n \"mapped_R1\t\" >> SRR4292758_0_R1.mapstat\n    samtools view -c -F 4 SRR4292758_0_R1_bwt2merged.bam >> SRR4292758_0_R1.mapstat\n    echo -n \"global_R1\t\" >> SRR4292758_0_R1.mapstat\n    samtools view -c -F 4 SRR4292758_0_R1.bam >> SRR4292758_0_R1.mapstat\n    echo -n \"local_R1\t\"  >> SRR4292758_0_R1.mapstat\n    samtools view -c -F 4 SRR4292758_0_R1_trimmed.bam >> SRR4292758_0_R1.mapstat\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:MERGE_BOWTIE2\":\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 80.9,
+                    "readBytes": 120535042,
+                    "writtenBytes": 48344710,
+                    "memoryInBytes": 135204864
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_16",
+                    "runtimeInSeconds": 0.0,
+                    "command": {
+                        "program": "mkdir -p SRR4292758\n    merge_statfiles.py -f SRR4292758_0_R2.mapstat > SRR4292758.R2.mmapstat\n    cp *R2.mmapstat SRR4292758/\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:MERGE_STATS\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 32.3,
+                    "readBytes": 849155,
+                    "writtenBytes": 476,
+                    "memoryInBytes": 3133440
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17",
+                    "runtimeInSeconds": 16.0,
+                    "command": {
+                        "program": "mergeSAM.py -f SRR4292758_0_R2_bwt2merged.bam -r SRR4292758_0_R1_bwt2merged.bam -o SRR4292758_0_bwt2pairs.bam -t  -q 10\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:COMBINE_MATES\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 87.3,
+                    "readBytes": 49943706,
+                    "writtenBytes": 36532201,
+                    "memoryInBytes": 23412736
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_18",
+                    "runtimeInSeconds": 0.0,
+                    "command": {
+                        "program": "mkdir -p SRR4292758\n    merge_statfiles.py -f SRR4292758_0_R1.mapstat > SRR4292758.R1.mmapstat\n    cp *R1.mmapstat SRR4292758/\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:MERGE_STATS\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 56.1,
+                    "readBytes": 849174,
+                    "writtenBytes": 491,
+                    "memoryInBytes": 8683520
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_20",
+                    "runtimeInSeconds": 1.0,
+                    "command": {
+                        "program": "mkdir -p SRR4292758\n    merge_statfiles.py -f SRR4292758_0_bwt2pairs.pairstat > SRR4292758.mpairstat\n    cp *mpairstat SRR4292758/\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:MERGE_STATS\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 61.7,
+                    "readBytes": 849651,
+                    "writtenBytes": 986,
+                    "memoryInBytes": 9670656
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19",
+                    "runtimeInSeconds": 24.0,
+                    "command": {
+                        "program": "mapped_2hic_fragments.py \\\n        -f restriction_fragments.bed \\\n        -r SRR4292758_0_bwt2pairs.bam \\\n        --all \\\n        -s 100  -l 600  -t 100  -m 100000\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:GET_VALID_INTERACTION\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 94.2,
+                    "readBytes": 38019923,
+                    "writtenBytes": 64259480,
+                    "memoryInBytes": 25796608
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION_21",
+                    "runtimeInSeconds": 0.772,
+                    "command": {
+                        "program": "hicpro_merge_validpairs.sh -d -p SRR4292758 SRR4292758_0_bwt2pairs.validPairs\n\n    ## For MultiQC\n    mkdir -p SRR4292758\n    cp SRR4292758_allValidPairs.mergestat SRR4292758/\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:MERGE_VALID_INTERACTION\":\n        sort: $(echo $(sort --version 2>&1 | head -1 | awk '{print $NF}' 2>&1))\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 67.4,
+                    "readBytes": 43995581,
+                    "writtenBytes": 27378272,
+                    "memoryInBytes": 14200832
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_22",
+                    "runtimeInSeconds": 1.0,
+                    "command": {
+                        "program": "mkdir -p SRR4292758\n    merge_statfiles.py -f SRR4292758_0_bwt2pairs.RSstat > SRR4292758.mRSstat\n    cp *mRSstat SRR4292758/\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:MERGE_STATS\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 38.5,
+                    "readBytes": 849593,
+                    "writtenBytes": 922,
+                    "memoryInBytes": 6914048
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
+                    "runtimeInSeconds": 0.0,
+                    "command": {
+                        "program": "##columns: readID chr1 pos1 chr2 pos2 strand1 strand2\n    awk '{OFS=\"\t\";print $1,$2,$3,$5,$6,$4,$7}' SRR4292758.allValidPairs | bgzip -c > SRR4292758_contacts.pairs.gz\n    ##sort -k2,2 -k4,4 -k3,3n -k5,5n SRR4292758_contacts.pairs | bgzip -c > SRR4292758_contacts.pairs.gz\n    pairix -f SRR4292758_contacts.pairs.gz\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO2PAIRS\":\n        pairix: $(echo $(pairix 2>&1 | grep Version | sed -e 's/Version: //'))\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 81.0,
+                    "readBytes": 8872290,
+                    "writtenBytes": 3441855,
+                    "memoryInBytes": 6955008
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.MULTIQC_24",
+                    "runtimeInSeconds": 47.931,
+                    "command": {
+                        "program": "multiqc -f  .\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:MULTIQC\":\n        multiqc: $( multiqc --version | sed -e \"s/multiqc, version //g\" )\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 88.0,
+                    "readBytes": 534600493,
+                    "writtenBytes": 4763049,
+                    "memoryInBytes": 154882048
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26",
+                    "runtimeInSeconds": 5.206,
+                    "command": {
+                        "program": "cooler cload \\\n        pairs -c1 2 -p1 3 -c2 4 -p2 5 \\\n         \\\n        W303_SGD_2015_JRIU00000000.fsa.sizes:1000 \\\n        SRR4292758_contacts.pairs.gz \\\n        SRR4292758.1000.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_CLOAD\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 88.2,
+                    "readBytes": 22701426,
+                    "writtenBytes": 243892,
+                    "memoryInBytes": 95621120
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_25",
+                    "runtimeInSeconds": 5.342,
+                    "command": {
+                        "program": "cooler cload \\\n        pairs -c1 2 -p1 3 -c2 4 -p2 5 \\\n         \\\n        W303_SGD_2015_JRIU00000000.fsa.sizes:2000 \\\n        SRR4292758_contacts.pairs.gz \\\n        SRR4292758.2000.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_CLOAD\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 88.6,
+                    "readBytes": 22687654,
+                    "writtenBytes": 220908,
+                    "memoryInBytes": 95010816
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27",
+                    "runtimeInSeconds": 3.371,
+                    "command": {
+                        "program": "cp SRR4292758.1000.cool SRR4292758.1000_balanced.cool\n\n    cooler balance \\\n        --force \\\n        -p 1 \\\n        SRR4292758.1000_balanced.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_BALANCE\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 87.2,
+                    "readBytes": 21564086,
+                    "writtenBytes": 150076,
+                    "memoryInBytes": 79491072
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_ZOOMIFY_28",
+                    "runtimeInSeconds": 18.467,
+                    "command": {
+                        "program": "cooler zoomify \\\n        --balance \\\n        -n 1 \\\n        -o SRR4292758.mcool \\\n        SRR4292758.1000.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_ZOOMIFY\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 90.3,
+                    "readBytes": 39573460,
+                    "writtenBytes": 7870882,
+                    "memoryInBytes": 635326464
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_29",
+                    "runtimeInSeconds": 3.269,
+                    "command": {
+                        "program": "cp SRR4292758.2000.cool SRR4292758.2000_balanced.cool\n\n    cooler balance \\\n        --force \\\n        -p 1 \\\n        SRR4292758.2000_balanced.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_BALANCE\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 86.6,
+                    "readBytes": 21403719,
+                    "writtenBytes": 135819,
+                    "memoryInBytes": 82141184
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.TADS.HIC_FIND_TADS_33",
+                    "runtimeInSeconds": 22.0,
+                    "command": {
+                        "program": "hicFindTADs --matrix SRR4292758.1000_balanced.cool         --outPrefix SRR4292758.1000_balanced_hicfindtads         --correctForMultipleTesting fdr         --numberOfProcessors 1\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:TADS:HIC_FIND_TADS\":\n        hicexplorer: $(hicFindTADs --version 2>&1 | sed 's/hicFindTADs //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 94.5,
+                    "readBytes": 35560217,
+                    "writtenBytes": 294719,
+                    "memoryInBytes": 123752448
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.HIC_PLOT_DIST_VS_COUNTS_31",
+                    "runtimeInSeconds": 13.0,
+                    "command": {
+                        "program": "hicPlotDistVsCounts --matrices SRR4292758.1000_balanced.cool                         --plotFile SRR4292758_distcount.png                         --outFileData SRR4292758_distcount.txt\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HIC_PLOT_DIST_VS_COUNTS\":\n        hicexplorer: $(hicPlotDistVsCounts --version 2>&1 | sed 's/hicPlotDistVsCounts //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 91.1,
+                    "readBytes": 40284692,
+                    "writtenBytes": 34627,
+                    "memoryInBytes": 135925760
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.TADS.COOLTOOLS_INSULATION_32",
+                    "runtimeInSeconds": 88.0,
+                    "command": {
+                        "program": "cooltools insulation SRR4292758.1000_balanced.cool 15 25 50 --window-pixels > SRR4292758.1000_balanced_insulation.tsv\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:TADS:COOLTOOLS_INSULATION\":\n        cooltools: $(cooltools --version 2>&1 | sed 's/cooltools, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 97.4,
+                    "readBytes": 60906680,
+                    "writtenBytes": 1605054,
+                    "memoryInBytes": 256450560
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_30",
+                    "runtimeInSeconds": 5.209,
+                    "command": {
+                        "program": "cooler dump \\\n        --one-based-ids --balanced --na-rep 0 \\\n        -o SRR4292758.1000_balanced.bedpe \\\n        SRR4292758.1000_balanced.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_DUMP\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 59.2,
+                    "readBytes": 19788443,
+                    "writtenBytes": 525684,
+                    "memoryInBytes": 86978560
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_34",
+                    "runtimeInSeconds": 3.726,
+                    "command": {
+                        "program": "cooler dump \\\n        --one-based-ids --balanced --na-rep 0 \\\n        -o SRR4292758.2000_balanced.bedpe \\\n        SRR4292758.2000_balanced.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_DUMP\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 84.0,
+                    "readBytes": 19782624,
+                    "writtenBytes": 528810,
+                    "memoryInBytes": 63025152
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COMPARTMENTS.COOLTOOLS_EIGSCIS_35",
+                    "runtimeInSeconds": 34.0,
+                    "command": {
+                        "program": "cooltools genome binnify --all-names W303_SGD_2015_JRIU00000000.fsa.sizes 2000 > genome_bins.txt\n    cooltools genome gc genome_bins.txt W303_SGD_2015_JRIU00000000.fsa > genome_gc.txt\n    cooltools eigs-cis --bigwig -o SRR4292758.2000_compartments SRR4292758.2000_balanced.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COMPARTMENTS:COOLTOOLS_EIGSCIS\":\n        cooltools: $(cooltools --version 2>&1 | grep version | sed 's/cooltools, version //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 95.5,
+                    "readBytes": 163681937,
+                    "writtenBytes": 1457656,
+                    "memoryInBytes": 284004352
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_36",
+                    "runtimeInSeconds": 0.071,
+                    "command": {
+                        "program": "cat SRR4292758.1000_balanced.bedpe | awk '{OFS=\"\t\"; print $1,$2,$3}' > SRR4292758.1000_raw.txt\n    cat SRR4292758.1000_balanced.bedpe | awk '{OFS=\"\t\"; print $1,$2,$4}' > SRR4292758.1000_balanced.txt\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:SPLIT_COOLER_DUMP\":\n        cooler: $(awk --version | head -1 | cut -f1 -d, | sed -e 's/GNU Awk //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 41.0,
+                    "readBytes": 2210714,
+                    "writtenBytes": 1853705,
+                    "memoryInBytes": 0
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_37",
+                    "runtimeInSeconds": 0.185,
+                    "command": {
+                        "program": "cat SRR4292758.2000_balanced.bedpe | awk '{OFS=\"\t\"; print $1,$2,$3}' > SRR4292758.2000_raw.txt\n    cat SRR4292758.2000_balanced.bedpe | awk '{OFS=\"\t\"; print $1,$2,$4}' > SRR4292758.2000_balanced.txt\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:SPLIT_COOLER_DUMP\":\n        cooler: $(awk --version | head -1 | cut -f1 -d, | sed -e 's/GNU Awk //')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 40.6,
+                    "readBytes": 2223192,
+                    "writtenBytes": 1840275,
+                    "memoryInBytes": 2830336
+                },
+                {
+                    "id": "NFCORE_HIC.HIC.CUSTOM_DUMPSOFTWAREVERSIONS_38",
+                    "runtimeInSeconds": 0.383,
+                    "command": {
+                        "program": "def args = task.ext.args ?: ''\ntemplate 'dumpsoftwareversions.py'",
+                        "arguments": []
+                    },
+                    "avgCPU": 43.3,
+                    "readBytes": 862405,
+                    "writtenBytes": 6355,
+                    "memoryInBytes": 8187904
+                }
+            ],
+            "machines": [
+                {
+                    "nodeName": "dirt02",
+                    "system": "linux",
+                    "release": "5.15.0-48-generic",
+                    "architecture": "x86_64",
+                    "cpu": {
+                        "coreCount": 1,
+                        "speedInMHz": 2400
+                    }
+                }
+            ],
+            "metrics": {
+                "sumTaskRuntimesInSeconds": 577.0989999999998,
+                "totalNumBytesRead": 2617984724,
+                "totalNumBytesWritten": 1207248873
+            }
         }
-      ],
-      "files": [
-        {
-          "id": "/hic/assets/samplesheet.csv",
-          "sizeInBytes": 194
-        },
-        {
-          "id": "/85/87f3aa798384909507c3133e8e4b53/samplesheet.valid.csv",
-          "sizeInBytes": 213
-        },
-        {
-          "id": "/85/87f3aa798384909507c3133e8e4b53/versions.yml",
-          "sizeInBytes": 66
-        },
-        {
-          "id": "/nf-core/test-datasets/raw/hic/reference/W303_SGD_2015_JRIU00000000.fsa",
-          "sizeInBytes": 11542637
-        },
-        {
-          "id": "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.sizes",
-          "sizeInBytes": 8889
-        },
-        {
-          "id": "/97/a908a7b50657bf930ebe0f9ab3c820/W303_SGD_2015_JRIU00000000.fsa.fai",
-          "sizeInBytes": 12249
-        },
-        {
-          "id": "/97/a908a7b50657bf930ebe0f9ab3c820/versions.yml",
-          "sizeInBytes": 81
-        },
-        {
-          "id": "/0b/313dd189c0ce9ff0b943b5fa234f56/restriction_fragments.bed",
-          "sizeInBytes": 390905
-        },
-        {
-          "id": "/0b/313dd189c0ce9ff0b943b5fa234f56/versions.yml",
-          "sizeInBytes": 78
-        },
-        {
-          "id": "/91/fe0694b427ce8596a46dedbb80ef45/bowtie2",
-          "sizeInBytes": 24532794
-        },
-        {
-          "id": "/91/fe0694b427ce8596a46dedbb80ef45/versions.yml",
-          "sizeInBytes": 66
-        },
-        {
-          "id": "/c3/9d13c2126693b8724af96451d360fb/cooler_bins_1000.bed",
-          "sizeInBytes": 505925
-        },
-        {
-          "id": "/c3/9d13c2126693b8724af96451d360fb/versions.yml",
-          "sizeInBytes": 60
-        },
-        {
-          "id": "/da/cbe6b4cd9cc556da46f763d7a630f1/cooler_bins_2000.bed",
-          "sizeInBytes": 255773
-        },
-        {
-          "id": "/da/cbe6b4cd9cc556da46f763d7a630f1/versions.yml",
-          "sizeInBytes": 60
-        },
-        {
-          "id": "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R1.fastq.gz",
-          "sizeInBytes": 26066317
-        },
-        {
-          "id": "/nf-core/test-datasets/raw/hic/data/SRR4292758_00_R2.fastq.gz",
-          "sizeInBytes": 26201604
-        },
-        {
-          "id": "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_1_fastqc.html",
-          "sizeInBytes": 584447
-        },
-        {
-          "id": "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_2_fastqc.html",
-          "sizeInBytes": 583231
-        },
-        {
-          "id": "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_1_fastqc.zip",
-          "sizeInBytes": 306974
-        },
-        {
-          "id": "/48/cca69448ab94d6e6086249c75aee81/SRR4292758_2_fastqc.zip",
-          "sizeInBytes": 308165
-        },
-        {
-          "id": "/48/cca69448ab94d6e6086249c75aee81/versions.yml",
-          "sizeInBytes": 44
-        },
-        {
-          "id": "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.bam",
-          "sizeInBytes": 19374983
-        },
-        {
-          "id": "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.bowtie2.log",
-          "sizeInBytes": 211
-        },
-        {
-          "id": "/96/c0dee37e55a15a86730695f61755b9/SRR4292758_0_R2.unmapped.fastq.gz",
-          "sizeInBytes": 6031893
-        },
-        {
-          "id": "/96/c0dee37e55a15a86730695f61755b9/versions.yml",
-          "sizeInBytes": 109
-        },
-        {
-          "id": "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.bam",
-          "sizeInBytes": 19423555
-        },
-        {
-          "id": "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.bowtie2.log",
-          "sizeInBytes": 211
-        },
-        {
-          "id": "/8b/744c19cbad3dcde0256b6a9c6cf015/SRR4292758_0_R1.unmapped.fastq.gz",
-          "sizeInBytes": 5748941
-        },
-        {
-          "id": "/8b/744c19cbad3dcde0256b6a9c6cf015/versions.yml",
-          "sizeInBytes": 109
-        },
-        {
-          "id": "/84/5ea1584a885604a1b372b2e2ee65d0/SRR4292758_0_R2_trimmed.fastq.gz",
-          "sizeInBytes": 5300788
-        },
-        {
-          "id": "/84/5ea1584a885604a1b372b2e2ee65d0/versions.yml",
-          "sizeInBytes": 66
-        },
-        {
-          "id": "/22/a0bb25789655c145ba1424e6db0fca/SRR4292758_0_R1_trimmed.fastq.gz",
-          "sizeInBytes": 5037896
-        },
-        {
-          "id": "/22/a0bb25789655c145ba1424e6db0fca/versions.yml",
-          "sizeInBytes": 66
-        },
-        {
-          "id": "/fd/1a43062958c22f2d5a9375d7c32e0a/SRR4292758_0_R2_trimmed.bam",
-          "sizeInBytes": 4596947
-        },
-        {
-          "id": "/fd/1a43062958c22f2d5a9375d7c32e0a/SRR4292758_0_R2_trimmed.bowtie2.log",
-          "sizeInBytes": 2090
-        },
-        {
-          "id": "/fd/1a43062958c22f2d5a9375d7c32e0a/versions.yml",
-          "sizeInBytes": 117
-        },
-        {
-          "id": "/00/a0fb6c13a979fce6c31543d3047891/SRR4292758_0_R1_trimmed.bam",
-          "sizeInBytes": 4394835
-        },
-        {
-          "id": "/00/a0fb6c13a979fce6c31543d3047891/SRR4292758_0_R1_trimmed.bowtie2.log",
-          "sizeInBytes": 2638
-        },
-        {
-          "id": "/00/a0fb6c13a979fce6c31543d3047891/versions.yml",
-          "sizeInBytes": 117
-        },
-        {
-          "id": "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2_bwt2merged.bam",
-          "sizeInBytes": 24522069
-        },
-        {
-          "id": "/00/00bff8f14ad11ced396f3fe129d83a/SRR4292758_0_R2.mapstat",
-          "sizeInBytes": 83
-        },
-        {
-          "id": "/00/00bff8f14ad11ced396f3fe129d83a/versions.yml",
-          "sizeInBytes": 76
-        },
-        {
-          "id": "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1_bwt2merged.bam",
-          "sizeInBytes": 24356153
-        },
-        {
-          "id": "/e5/7ab5992e236515ce4850d01db96622/SRR4292758_0_R1.mapstat",
-          "sizeInBytes": 83
-        },
-        {
-          "id": "/e5/7ab5992e236515ce4850d01db96622/versions.yml",
-          "sizeInBytes": 76
-        },
-        {
-          "id": "/12/9956bb0568f5dbf4b42b2c3518e2d3/SRR4292758",
-          "sizeInBytes": 64
-        },
-        {
-          "id": "/12/9956bb0568f5dbf4b42b2c3518e2d3/SRR4292758.R2.mmapstat",
-          "sizeInBytes": 64
-        },
-        {
-          "id": "/12/9956bb0568f5dbf4b42b2c3518e2d3/versions.yml",
-          "sizeInBytes": 56
-        },
-        {
-          "id": "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.bam",
-          "sizeInBytes": 36531318
-        },
-        {
-          "id": "/2e/a0f98201feb0bf286fac085bfb48d1/SRR4292758_0_bwt2pairs.pairstat",
-          "sizeInBytes": 319
-        },
-        {
-          "id": "/2e/a0f98201feb0bf286fac085bfb48d1/versions.yml",
-          "sizeInBytes": 73
-        },
-        {
-          "id": "/f3/cec082c046449821fe9f8f3b759f68/SRR4292758",
-          "sizeInBytes": 64
-        },
-        {
-          "id": "/f3/cec082c046449821fe9f8f3b759f68/SRR4292758.R1.mmapstat",
-          "sizeInBytes": 64
-        },
-        {
-          "id": "/f3/cec082c046449821fe9f8f3b759f68/versions.yml",
-          "sizeInBytes": 56
-        },
-        {
-          "id": "/7a/297bd6d0b92ef8201f2b5b1a766645/SRR4292758",
-          "sizeInBytes": 319
-        },
-        {
-          "id": "/7a/297bd6d0b92ef8201f2b5b1a766645/SRR4292758.mpairstat",
-          "sizeInBytes": 319
-        },
-        {
-          "id": "/7a/297bd6d0b92ef8201f2b5b1a766645/versions.yml",
-          "sizeInBytes": 56
-        },
-        {
-          "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.validPairs",
-          "sizeInBytes": 5476826
-        },
-        {
-          "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.DEPairs",
-          "sizeInBytes": 45923673
-        },
-        {
-          "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.SCPairs",
-          "sizeInBytes": 427577
-        },
-        {
-          "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.REPairs",
-          "sizeInBytes": 2401429
-        },
-        {
-          "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.FiltPairs",
-          "sizeInBytes": 9597107
-        },
-        {
-          "id": "/57/cd5c942bc906ea3b03243472fb2ea6/SRR4292758_0_bwt2pairs.RSstat",
-          "sizeInBytes": 306
-        },
-        {
-          "id": "/57/cd5c942bc906ea3b03243472fb2ea6/versions.yml",
-          "sizeInBytes": 66
-        },
-        {
-          "id": "/05/2262a0e79af44115958cbc490251f8/SRR4292758.allValidPairs",
-          "sizeInBytes": 5473293
-        },
-        {
-          "id": "/05/2262a0e79af44115958cbc490251f8/SRR4292758",
-          "sizeInBytes": 138
-        },
-        {
-          "id": "/05/2262a0e79af44115958cbc490251f8/SRR4292758_allValidPairs.mergestat",
-          "sizeInBytes": 138
-        },
-        {
-          "id": "/05/2262a0e79af44115958cbc490251f8/versions.yml",
-          "sizeInBytes": 64
-        },
-        {
-          "id": "/ed/9d8267493435eacf5d17eac986a0e7/SRR4292758",
-          "sizeInBytes": 287
-        },
-        {
-          "id": "/ed/9d8267493435eacf5d17eac986a0e7/SRR4292758.mRSstat",
-          "sizeInBytes": 287
-        },
-        {
-          "id": "/ed/9d8267493435eacf5d17eac986a0e7/versions.yml",
-          "sizeInBytes": 56
-        },
-        {
-          "id": "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz",
-          "sizeInBytes": 442410
-        },
-        {
-          "id": "/d4/3ebf9d1d950031f974ef4cbee2e759/SRR4292758_contacts.pairs.gz.px2",
-          "sizeInBytes": 123774
-        },
-        {
-          "id": "/d4/3ebf9d1d950031f974ef4cbee2e759/versions.yml",
-          "sizeInBytes": 56
-        },
-        {
-          "id": "/hic/assets/multiqc_config.yml",
-          "sizeInBytes": 465
-        },
-        {
-          "id": "/8c/bf8fe43a321ab4bff83dc140188a4b/workflow_summary_mqc.yaml",
-          "sizeInBytes": 3800
-        },
-        {
-          "id": "/d3/646abb1be0e2962177ef0034460e23/multiqc_report.html",
-          "sizeInBytes": 1197397
-        },
-        {
-          "id": "/d3/646abb1be0e2962177ef0034460e23/multiqc_data",
-          "sizeInBytes": 161501
-        },
-        {
-          "id": "/d3/646abb1be0e2962177ef0034460e23/multiqc_plots",
-          "sizeInBytes": 1121675
-        },
-        {
-          "id": "/d3/646abb1be0e2962177ef0034460e23/versions.yml",
-          "sizeInBytes": 44
-        },
-        {
-          "id": "/19/6ffc7abe18cf5d3fb063dd31d15705/SRR4292758.1000.cool",
-          "sizeInBytes": 119521
-        },
-        {
-          "id": "/19/6ffc7abe18cf5d3fb063dd31d15705/versions.yml",
-          "sizeInBytes": 57
-        },
-        {
-          "id": "/f9/32da3ac4c6b0b7d2c2ed314fa583e2/SRR4292758.2000.cool",
-          "sizeInBytes": 108601
-        },
-        {
-          "id": "/f9/32da3ac4c6b0b7d2c2ed314fa583e2/versions.yml",
-          "sizeInBytes": 57
-        },
-        {
-          "id": "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/SRR4292758.1000_balanced.cool",
-          "sizeInBytes": 146949
-        },
-        {
-          "id": "/fc/3eb41e1efe98edf23f2b1fb9fe21f8/versions.yml",
-          "sizeInBytes": 59
-        },
-        {
-          "id": "/e3/60725657cb0c52a31ff0c49c4c1beb/SRR4292758.mcool",
-          "sizeInBytes": 673010
-        },
-        {
-          "id": "/e3/60725657cb0c52a31ff0c49c4c1beb/versions.yml",
-          "sizeInBytes": 59
-        },
-        {
-          "id": "/40/3e3f51ab09064c9a27881a3802419f/SRR4292758.2000_balanced.cool",
-          "sizeInBytes": 132689
-        },
-        {
-          "id": "/40/3e3f51ab09064c9a27881a3802419f/versions.yml",
-          "sizeInBytes": 59
-        },
-        {
-          "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_boundaries.bed",
-          "sizeInBytes": 0
-        },
-        {
-          "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_boundaries.gff",
-          "sizeInBytes": 0
-        },
-        {
-          "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_domains.bed",
-          "sizeInBytes": 0
-        },
-        {
-          "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_score.bedgraph",
-          "sizeInBytes": 17260
-        },
-        {
-          "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_tad_score.bm",
-          "sizeInBytes": 49364
-        },
-        {
-          "id": "/4b/7322bf8bcf7499071a33292208a0ca/SRR4292758.1000_balanced_hicfindtads_zscore_matrix.cool",
-          "sizeInBytes": 227065
-        },
-        {
-          "id": "/4b/7322bf8bcf7499071a33292208a0ca/versions.yml",
-          "sizeInBytes": 60
-        },
-        {
-          "id": "/dc/f4ca3bcf97071f9d320f38c8d20c4a/SRR4292758_distcount.png",
-          "sizeInBytes": 21281
-        },
-        {
-          "id": "/dc/f4ca3bcf97071f9d320f38c8d20c4a/SRR4292758_distcount.txt",
-          "sizeInBytes": 10588
-        },
-        {
-          "id": "/dc/f4ca3bcf97071f9d320f38c8d20c4a/versions.yml",
-          "sizeInBytes": 65
-        },
-        {
-          "id": "/66/1ed45ffebfb381765c449f1a7d6733/SRR4292758.1000_balanced_insulation.tsv",
-          "sizeInBytes": 1604534
-        },
-        {
-          "id": "/66/1ed45ffebfb381765c449f1a7d6733/versions.yml",
-          "sizeInBytes": 65
-        },
-        {
-          "id": "/99/ce07518ee82d12c9dffeb9cf4920b8/SRR4292758.1000_balanced.bedpe",
-          "sizeInBytes": 525245
-        },
-        {
-          "id": "/99/ce07518ee82d12c9dffeb9cf4920b8/versions.yml",
-          "sizeInBytes": 56
-        },
-        {
-          "id": "/96/eff5e1cc3b4d9c7f39a44240b97b03/SRR4292758.2000_balanced.bedpe",
-          "sizeInBytes": 528371
-        },
-        {
-          "id": "/96/eff5e1cc3b4d9c7f39a44240b97b03/versions.yml",
-          "sizeInBytes": 56
-        },
-        {
-          "id": "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.bw",
-          "sizeInBytes": 88499
-        },
-        {
-          "id": "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.lam.txt",
-          "sizeInBytes": 23855
-        },
-        {
-          "id": "/71/3a28474603c946958e763a212df777/SRR4292758.2000_compartments.cis.vecs.tsv",
-          "sizeInBytes": 452733
-        },
-        {
-          "id": "/71/3a28474603c946958e763a212df777/versions.yml",
-          "sizeInBytes": 70
-        },
-        {
-          "id": "/8f/8c4158367f3fcd00513ba97aa02485/SRR4292758.1000_balanced.txt",
-          "sizeInBytes": 470513
-        },
-        {
-          "id": "/8f/8c4158367f3fcd00513ba97aa02485/SRR4292758.1000_raw.txt",
-          "sizeInBytes": 332336
-        },
-        {
-          "id": "/8f/8c4158367f3fcd00513ba97aa02485/versions.yml",
-          "sizeInBytes": 56
-        },
-        {
-          "id": "/8f/740708bf64996845ed92b2ae246d50/SRR4292758.2000_balanced.txt",
-          "sizeInBytes": 475477
-        },
-        {
-          "id": "/8f/740708bf64996845ed92b2ae246d50/SRR4292758.2000_raw.txt",
-          "sizeInBytes": 307708
-        },
-        {
-          "id": "/8f/740708bf64996845ed92b2ae246d50/versions.yml",
-          "sizeInBytes": 56
-        },
-        {
-          "id": "/bb/d34d9288cab4d5301daf3247ca5302/collated_versions.yml",
-          "sizeInBytes": 2383
-        },
-        {
-          "id": "/4c/8ba455a29807f717f76feea2709e0b/software_versions.yml",
-          "sizeInBytes": 983
-        },
-        {
-          "id": "/4c/8ba455a29807f717f76feea2709e0b/software_versions_mqc.yml",
-          "sizeInBytes": 5078
-        },
-        {
-          "id": "/4c/8ba455a29807f717f76feea2709e0b/versions.yml",
-          "sizeInBytes": 75
-        }
-      ],
-      "metrics": {
-        "numberOfTasks": 38,
-        "numberOfFiles": 121,
-        "sumOfFileSizesInBytes": 325304918,
-        "numberOfLevels": 13,
-        "minimumWidth": 2,
-        "maximumWidth": 6
-      }
     },
-    "execution": {
-      "makespanInSeconds": 1507,
-      "executedAt": "2023-03-28T18:01:31-10:00",
-      "tasks": [
-        {
-          "id": "NFCORE_HIC.HIC.INPUT_CHECK.SAMPLESHEET_CHECK_4",
-          "runtimeInSeconds": 1.0,
-          "command": {
-            "program": "check_samplesheet.py \\\n        samplesheet.csv \\\n        samplesheet.valid.csv\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:INPUT_CHECK:SAMPLESHEET_CHECK\":\n        python: $(python --version | sed 's/Python //g')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 28.2,
-          "readBytes": 919661,
-          "writtenBytes": 580,
-          "memoryInBytes": 2822144
-        },
-        {
-          "id": "NFCORE_HIC.HIC.PREPARE_GENOME.CUSTOM_GETCHROMSIZES_1",
-          "runtimeInSeconds": 0.0,
-          "command": {
-            "program": "samtools faidx W303_SGD_2015_JRIU00000000.fsa\n    cut -f 1,2 W303_SGD_2015_JRIU00000000.fsa.fai > W303_SGD_2015_JRIU00000000.fsa.sizes\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:PREPARE_GENOME:CUSTOM_GETCHROMSIZES\":\n        getchromsizes: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 40.9,
-          "readBytes": 11666952,
-          "writtenBytes": 26069,
-          "memoryInBytes": 3522560
-        },
-        {
-          "id": "NFCORE_HIC.HIC.PREPARE_GENOME.GET_RESTRICTION_FRAGMENTS_3",
-          "runtimeInSeconds": 1.0,
-          "command": {
-            "program": "digest_genome.py -r A^AGCTT -o restriction_fragments.bed W303_SGD_2015_JRIU00000000.fsa\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:PREPARE_GENOME:GET_RESTRICTION_FRAGMENTS\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 90.3,
-          "readBytes": 26991963,
-          "writtenBytes": 399694,
-          "memoryInBytes": 33959936
-        },
-        {
-          "id": "NFCORE_HIC.HIC.PREPARE_GENOME.BOWTIE2_BUILD",
-          "runtimeInSeconds": 20.0,
-          "command": {
-            "program": "mkdir bowtie2\n    bowtie2-build  --threads 1 W303_SGD_2015_JRIU00000000.fsa bowtie2/W303_SGD_2015_JRIU00000000\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:PREPARE_GENOME:BOWTIE2_BUILD\":\n        bowtie2: $(echo $(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*$//')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 88.9,
-          "readBytes": 47699597,
-          "writtenBytes": 24549507,
-          "memoryInBytes": 59977728
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_6",
-          "runtimeInSeconds": 3.9,
-          "command": {
-            "program": "cooler makebins \\\n         \\\n        W303_SGD_2015_JRIU00000000.fsa.sizes \\\n        1000 > cooler_bins_1000.bed\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_MAKEBINS\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 81.9,
-          "readBytes": 19638526,
-          "writtenBytes": 506357,
-          "memoryInBytes": 84967424
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_MAKEBINS_5",
-          "runtimeInSeconds": 3.914,
-          "command": {
-            "program": "cooler makebins \\\n         \\\n        W303_SGD_2015_JRIU00000000.fsa.sizes \\\n        2000 > cooler_bins_2000.bed\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_MAKEBINS\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 86.5,
-          "readBytes": 19638526,
-          "writtenBytes": 256204,
-          "memoryInBytes": 82583552
-        },
-        {
-          "id": "NFCORE_HIC.HIC.FASTQC_7",
-          "runtimeInSeconds": 25.0,
-          "command": {
-            "program": "printf \"%s %s\\n\" SRR4292758_00_R1.fastq.gz SRR4292758_1.gz SRR4292758_00_R2.fastq.gz SRR4292758_2.gz | while read old_name new_name; do\n        [ -f \"${new_name}\" ] || ln -s $old_name $new_name\n    done\n    fastqc  --threads 1 SRR4292758_1.gz SRR4292758_2.gz\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:FASTQC\":\n        fastqc: $( fastqc --version | sed -e \"s/FastQC v//g\" )\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 91.5,
-          "readBytes": 73983920,
-          "writtenBytes": 3525144,
-          "memoryInBytes": 305795072
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_9",
-          "runtimeInSeconds": 89.0,
-          "command": {
-            "program": "INDEX=`find -L ./ -name \"*.rev.1.bt2\" | sed \"s/\\.rev.1.bt2$//\"`\n    [ -z \"$INDEX\" ] && INDEX=`find -L ./ -name \"*.rev.1.bt2l\" | sed \"s/\\.rev.1.bt2l$//\"`\n    [ -z \"$INDEX\" ] && echo \"Bowtie2 index files not found\" 1>&2 && exit 1\n\n    bowtie2 \\\n        -x $INDEX \\\n        -U SRR4292758_00_R2.fastq.gz \\\n        --threads 1 \\\n        --un-gz SRR4292758_0_R2.unmapped.fastq.gz \\\n        --very-sensitive -L 30 --score-min L,-0.6,-0.2 --end-to-end --reorder \\\n        2> SRR4292758_0_R2.bowtie2.log \\\n        | samtools view -F 4 --threads 1 -o SRR4292758_0_R2.bam -\n\n    if [ -f SRR4292758_0_R2.unmapped.fastq.1.gz ]; then\n        mv SRR4292758_0_R2.unmapped.fastq.1.gz SRR4292758_0_R2.unmapped_1.fastq.gz\n    fi\n\n    if [ -f SRR4292758_0_R2.unmapped.fastq.2.gz ]; then\n        mv SRR4292758_0_R2.unmapped.fastq.2.gz SRR4292758_0_R2.unmapped_2.fastq.gz\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:BOWTIE2_ALIGN\":\n        bowtie2: $(echo $(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*$//')\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n        pigz: $( pigz --version 2>&1 | sed 's/pigz //g' )\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 91.4,
-          "readBytes": 414966142,
-          "writtenBytes": 391414350,
-          "memoryInBytes": 54685696
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_8",
-          "runtimeInSeconds": 86.0,
-          "command": {
-            "program": "INDEX=`find -L ./ -name \"*.rev.1.bt2\" | sed \"s/\\.rev.1.bt2$//\"`\n    [ -z \"$INDEX\" ] && INDEX=`find -L ./ -name \"*.rev.1.bt2l\" | sed \"s/\\.rev.1.bt2l$//\"`\n    [ -z \"$INDEX\" ] && echo \"Bowtie2 index files not found\" 1>&2 && exit 1\n\n    bowtie2 \\\n        -x $INDEX \\\n        -U SRR4292758_00_R1.fastq.gz \\\n        --threads 1 \\\n        --un-gz SRR4292758_0_R1.unmapped.fastq.gz \\\n        --very-sensitive -L 30 --score-min L,-0.6,-0.2 --end-to-end --reorder \\\n        2> SRR4292758_0_R1.bowtie2.log \\\n        | samtools view -F 4 --threads 1 -o SRR4292758_0_R1.bam -\n\n    if [ -f SRR4292758_0_R1.unmapped.fastq.1.gz ]; then\n        mv SRR4292758_0_R1.unmapped.fastq.1.gz SRR4292758_0_R1.unmapped_1.fastq.gz\n    fi\n\n    if [ -f SRR4292758_0_R1.unmapped.fastq.2.gz ]; then\n        mv SRR4292758_0_R1.unmapped.fastq.2.gz SRR4292758_0_R1.unmapped_2.fastq.gz\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:BOWTIE2_ALIGN\":\n        bowtie2: $(echo $(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*$//')\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n        pigz: $( pigz --version 2>&1 | sed 's/pigz //g' )\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 92.4,
-          "readBytes": 414356078,
-          "writtenBytes": 390705198,
-          "memoryInBytes": 55005184
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_10",
-          "runtimeInSeconds": 3.254,
-          "command": {
-            "program": "zcat SRR4292758_0_R2.unmapped.fastq.gz > tmp.fastq\n    cutsite_trimming --fastq tmp.fastq \\\n        --cutsite AAGCTAGCTT \\\n        --out SRR4292758_0_R2_trimmed.fastq\n    gzip SRR4292758_0_R2_trimmed.fastq\n    /bin/rm -f tmp.fastq\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:TRIM_READS\":\n        gzip: $(echo $(gzip --version 2>&1) | head -1 | cut -d\" \" -f2)\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 85.7,
-          "readBytes": 54159949,
-          "writtenBytes": 53321502,
-          "memoryInBytes": 4857856
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.TRIM_READS_11",
-          "runtimeInSeconds": 3.099,
-          "command": {
-            "program": "zcat SRR4292758_0_R1.unmapped.fastq.gz > tmp.fastq\n    cutsite_trimming --fastq tmp.fastq \\\n        --cutsite AAGCTAGCTT \\\n        --out SRR4292758_0_R1_trimmed.fastq\n    gzip SRR4292758_0_R1_trimmed.fastq\n    /bin/rm -f tmp.fastq\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:TRIM_READS\":\n        gzip: $(echo $(gzip --version 2>&1) | head -1 | cut -d\" \" -f2)\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 88.4,
-          "readBytes": 51343587,
-          "writtenBytes": 50525206,
-          "memoryInBytes": 4763648
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_12",
-          "runtimeInSeconds": 13.0,
-          "command": {
-            "program": "INDEX=`find -L ./ -name \"*.rev.1.bt2\" | sed \"s/\\.rev.1.bt2$//\"`\n    [ -z \"$INDEX\" ] && INDEX=`find -L ./ -name \"*.rev.1.bt2l\" | sed \"s/\\.rev.1.bt2l$//\"`\n    [ -z \"$INDEX\" ] && echo \"Bowtie2 index files not found\" 1>&2 && exit 1\n\n    bowtie2 \\\n        -x $INDEX \\\n        -U SRR4292758_0_R2_trimmed.fastq.gz \\\n        --threads 1 \\\n         \\\n        --very-sensitive -L 20 --score-min L,-0.6,-0.2 --end-to-end --reorder \\\n        2> SRR4292758_0_R2_trimmed.bowtie2.log \\\n        | samtools view  --threads 1 -o SRR4292758_0_R2_trimmed.bam -\n\n    if [ -f SRR4292758_0_R2_trimmed.unmapped.fastq.1.gz ]; then\n        mv SRR4292758_0_R2_trimmed.unmapped.fastq.1.gz SRR4292758_0_R2_trimmed.unmapped_1.fastq.gz\n    fi\n\n    if [ -f SRR4292758_0_R2_trimmed.unmapped.fastq.2.gz ]; then\n        mv SRR4292758_0_R2_trimmed.unmapped.fastq.2.gz SRR4292758_0_R2_trimmed.unmapped_2.fastq.gz\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:BOWTIE2_ALIGN_TRIMMED\":\n        bowtie2: $(echo $(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*$//')\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n        pigz: $( pigz --version 2>&1 | sed 's/pigz //g' )\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 84.1,
-          "readBytes": 44912379,
-          "writtenBytes": 21465475,
-          "memoryInBytes": 49004544
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.BOWTIE2_ALIGN_TRIMMED_13",
-          "runtimeInSeconds": 12.0,
-          "command": {
-            "program": "INDEX=`find -L ./ -name \"*.rev.1.bt2\" | sed \"s/\\.rev.1.bt2$//\"`\n    [ -z \"$INDEX\" ] && INDEX=`find -L ./ -name \"*.rev.1.bt2l\" | sed \"s/\\.rev.1.bt2l$//\"`\n    [ -z \"$INDEX\" ] && echo \"Bowtie2 index files not found\" 1>&2 && exit 1\n\n    bowtie2 \\\n        -x $INDEX \\\n        -U SRR4292758_0_R1_trimmed.fastq.gz \\\n        --threads 1 \\\n         \\\n        --very-sensitive -L 20 --score-min L,-0.6,-0.2 --end-to-end --reorder \\\n        2> SRR4292758_0_R1_trimmed.bowtie2.log \\\n        | samtools view  --threads 1 -o SRR4292758_0_R1_trimmed.bam -\n\n    if [ -f SRR4292758_0_R1_trimmed.unmapped.fastq.1.gz ]; then\n        mv SRR4292758_0_R1_trimmed.unmapped.fastq.1.gz SRR4292758_0_R1_trimmed.unmapped_1.fastq.gz\n    fi\n\n    if [ -f SRR4292758_0_R1_trimmed.unmapped.fastq.2.gz ]; then\n        mv SRR4292758_0_R1_trimmed.unmapped.fastq.2.gz SRR4292758_0_R1_trimmed.unmapped_2.fastq.gz\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:BOWTIE2_ALIGN_TRIMMED\":\n        bowtie2: $(echo $(bowtie2 --version 2>&1) | sed 's/^.*bowtie2-align-s version //; s/ .*$//')\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n        pigz: $( pigz --version 2>&1 | sed 's/pigz //g' )\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 85.1,
-          "readBytes": 43786190,
-          "writtenBytes": 20400614,
-          "memoryInBytes": 49143808
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_14",
-          "runtimeInSeconds": 12.0,
-          "command": {
-            "program": "samtools merge -@ 1 \\\n        -f SRR4292758_0_R2_bwt2merged.bam \\\n        SRR4292758_0_R2.bam SRR4292758_0_R2_trimmed.bam\n\n    samtools sort -@ 1 -m 800M \\\n        -n \\\n        -o SRR4292758_0_R2_bwt2merged.sorted.bam \\\n        SRR4292758_0_R2_bwt2merged.bam\n\n    mv SRR4292758_0_R2_bwt2merged.sorted.bam SRR4292758_0_R2_bwt2merged.bam\n\n    echo \"## SRR4292758_0_R2\" > SRR4292758_0_R2.mapstat\n    echo -n \"total_R2\t\" >> SRR4292758_0_R2.mapstat\n    samtools view -c SRR4292758_0_R2_bwt2merged.bam >> SRR4292758_0_R2.mapstat\n    echo -n \"mapped_R2\t\" >> SRR4292758_0_R2.mapstat\n    samtools view -c -F 4 SRR4292758_0_R2_bwt2merged.bam >> SRR4292758_0_R2.mapstat\n    echo -n \"global_R2\t\" >> SRR4292758_0_R2.mapstat\n    samtools view -c -F 4 SRR4292758_0_R2.bam >> SRR4292758_0_R2.mapstat\n    echo -n \"local_R2\t\"  >> SRR4292758_0_R2.mapstat\n    samtools view -c -F 4 SRR4292758_0_R2_trimmed.bam >> SRR4292758_0_R2.mapstat\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:MERGE_BOWTIE2\":\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 79.7,
-          "readBytes": 121325397,
-          "writtenBytes": 48662069,
-          "memoryInBytes": 135028736
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.MERGE_BOWTIE2_15",
-          "runtimeInSeconds": 11.0,
-          "command": {
-            "program": "samtools merge -@ 1 \\\n        -f SRR4292758_0_R1_bwt2merged.bam \\\n        SRR4292758_0_R1.bam SRR4292758_0_R1_trimmed.bam\n\n    samtools sort -@ 1 -m 800M \\\n        -n \\\n        -o SRR4292758_0_R1_bwt2merged.sorted.bam \\\n        SRR4292758_0_R1_bwt2merged.bam\n\n    mv SRR4292758_0_R1_bwt2merged.sorted.bam SRR4292758_0_R1_bwt2merged.bam\n\n    echo \"## SRR4292758_0_R1\" > SRR4292758_0_R1.mapstat\n    echo -n \"total_R1\t\" >> SRR4292758_0_R1.mapstat\n    samtools view -c SRR4292758_0_R1_bwt2merged.bam >> SRR4292758_0_R1.mapstat\n    echo -n \"mapped_R1\t\" >> SRR4292758_0_R1.mapstat\n    samtools view -c -F 4 SRR4292758_0_R1_bwt2merged.bam >> SRR4292758_0_R1.mapstat\n    echo -n \"global_R1\t\" >> SRR4292758_0_R1.mapstat\n    samtools view -c -F 4 SRR4292758_0_R1.bam >> SRR4292758_0_R1.mapstat\n    echo -n \"local_R1\t\"  >> SRR4292758_0_R1.mapstat\n    samtools view -c -F 4 SRR4292758_0_R1_trimmed.bam >> SRR4292758_0_R1.mapstat\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:MERGE_BOWTIE2\":\n        samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 80.9,
-          "readBytes": 120535042,
-          "writtenBytes": 48344710,
-          "memoryInBytes": 135204864
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_16",
-          "runtimeInSeconds": 0.0,
-          "command": {
-            "program": "mkdir -p SRR4292758\n    merge_statfiles.py -f SRR4292758_0_R2.mapstat > SRR4292758.R2.mmapstat\n    cp *R2.mmapstat SRR4292758/\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:MERGE_STATS\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 32.3,
-          "readBytes": 849155,
-          "writtenBytes": 476,
-          "memoryInBytes": 3133440
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO_MAPPING.COMBINE_MATES_17",
-          "runtimeInSeconds": 16.0,
-          "command": {
-            "program": "mergeSAM.py -f SRR4292758_0_R2_bwt2merged.bam -r SRR4292758_0_R1_bwt2merged.bam -o SRR4292758_0_bwt2pairs.bam -t  -q 10\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO_MAPPING:COMBINE_MATES\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 87.3,
-          "readBytes": 49943706,
-          "writtenBytes": 36532201,
-          "memoryInBytes": 23412736
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_18",
-          "runtimeInSeconds": 0.0,
-          "command": {
-            "program": "mkdir -p SRR4292758\n    merge_statfiles.py -f SRR4292758_0_R1.mapstat > SRR4292758.R1.mmapstat\n    cp *R1.mmapstat SRR4292758/\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:MERGE_STATS\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 56.1,
-          "readBytes": 849174,
-          "writtenBytes": 491,
-          "memoryInBytes": 8683520
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_20",
-          "runtimeInSeconds": 1.0,
-          "command": {
-            "program": "mkdir -p SRR4292758\n    merge_statfiles.py -f SRR4292758_0_bwt2pairs.pairstat > SRR4292758.mpairstat\n    cp *mpairstat SRR4292758/\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:MERGE_STATS\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 61.7,
-          "readBytes": 849651,
-          "writtenBytes": 986,
-          "memoryInBytes": 9670656
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.GET_VALID_INTERACTION_19",
-          "runtimeInSeconds": 24.0,
-          "command": {
-            "program": "mapped_2hic_fragments.py \\\n        -f restriction_fragments.bed \\\n        -r SRR4292758_0_bwt2pairs.bam \\\n        --all \\\n        -s 100  -l 600  -t 100  -m 100000\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:GET_VALID_INTERACTION\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 94.2,
-          "readBytes": 38019923,
-          "writtenBytes": 64259480,
-          "memoryInBytes": 25796608
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.MERGE_VALID_INTERACTION_21",
-          "runtimeInSeconds": 0.772,
-          "command": {
-            "program": "hicpro_merge_validpairs.sh -d -p SRR4292758 SRR4292758_0_bwt2pairs.validPairs\n\n    ## For MultiQC\n    mkdir -p SRR4292758\n    cp SRR4292758_allValidPairs.mergestat SRR4292758/\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:MERGE_VALID_INTERACTION\":\n        sort: $(echo $(sort --version 2>&1 | head -1 | awk '{print $NF}' 2>&1))\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 67.4,
-          "readBytes": 43995581,
-          "writtenBytes": 27378272,
-          "memoryInBytes": 14200832
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.MERGE_STATS_22",
-          "runtimeInSeconds": 1.0,
-          "command": {
-            "program": "mkdir -p SRR4292758\n    merge_statfiles.py -f SRR4292758_0_bwt2pairs.RSstat > SRR4292758.mRSstat\n    cp *mRSstat SRR4292758/\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:MERGE_STATS\":\n        python: $(echo $(python --version 2>&1) | sed 's/Python //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 38.5,
-          "readBytes": 849593,
-          "writtenBytes": 922,
-          "memoryInBytes": 6914048
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HICPRO.HICPRO2PAIRS_23",
-          "runtimeInSeconds": 0.0,
-          "command": {
-            "program": "##columns: readID chr1 pos1 chr2 pos2 strand1 strand2\n    awk '{OFS=\"\t\";print $1,$2,$3,$5,$6,$4,$7}' SRR4292758.allValidPairs | bgzip -c > SRR4292758_contacts.pairs.gz\n    ##sort -k2,2 -k4,4 -k3,3n -k5,5n SRR4292758_contacts.pairs | bgzip -c > SRR4292758_contacts.pairs.gz\n    pairix -f SRR4292758_contacts.pairs.gz\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HICPRO:HICPRO2PAIRS\":\n        pairix: $(echo $(pairix 2>&1 | grep Version | sed -e 's/Version: //'))\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 81.0,
-          "readBytes": 8872290,
-          "writtenBytes": 3441855,
-          "memoryInBytes": 6955008
-        },
-        {
-          "id": "NFCORE_HIC.HIC.MULTIQC_24",
-          "runtimeInSeconds": 47.931,
-          "command": {
-            "program": "multiqc -f  .\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:MULTIQC\":\n        multiqc: $( multiqc --version | sed -e \"s/multiqc, version //g\" )\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 88.0,
-          "readBytes": 534600493,
-          "writtenBytes": 4763049,
-          "memoryInBytes": 154882048
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_26",
-          "runtimeInSeconds": 5.206,
-          "command": {
-            "program": "cooler cload \\\n        pairs -c1 2 -p1 3 -c2 4 -p2 5 \\\n         \\\n        W303_SGD_2015_JRIU00000000.fsa.sizes:1000 \\\n        SRR4292758_contacts.pairs.gz \\\n        SRR4292758.1000.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_CLOAD\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 88.2,
-          "readBytes": 22701426,
-          "writtenBytes": 243892,
-          "memoryInBytes": 95621120
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_CLOAD_25",
-          "runtimeInSeconds": 5.342,
-          "command": {
-            "program": "cooler cload \\\n        pairs -c1 2 -p1 3 -c2 4 -p2 5 \\\n         \\\n        W303_SGD_2015_JRIU00000000.fsa.sizes:2000 \\\n        SRR4292758_contacts.pairs.gz \\\n        SRR4292758.2000.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_CLOAD\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 88.6,
-          "readBytes": 22687654,
-          "writtenBytes": 220908,
-          "memoryInBytes": 95010816
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_27",
-          "runtimeInSeconds": 3.371,
-          "command": {
-            "program": "cp SRR4292758.1000.cool SRR4292758.1000_balanced.cool\n\n    cooler balance \\\n        --force \\\n        -p 1 \\\n        SRR4292758.1000_balanced.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_BALANCE\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 87.2,
-          "readBytes": 21564086,
-          "writtenBytes": 150076,
-          "memoryInBytes": 79491072
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_ZOOMIFY_28",
-          "runtimeInSeconds": 18.467,
-          "command": {
-            "program": "cooler zoomify \\\n        --balance \\\n        -n 1 \\\n        -o SRR4292758.mcool \\\n        SRR4292758.1000.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_ZOOMIFY\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 90.3,
-          "readBytes": 39573460,
-          "writtenBytes": 7870882,
-          "memoryInBytes": 635326464
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_BALANCE_29",
-          "runtimeInSeconds": 3.269,
-          "command": {
-            "program": "cp SRR4292758.2000.cool SRR4292758.2000_balanced.cool\n\n    cooler balance \\\n        --force \\\n        -p 1 \\\n        SRR4292758.2000_balanced.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_BALANCE\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 86.6,
-          "readBytes": 21403719,
-          "writtenBytes": 135819,
-          "memoryInBytes": 82141184
-        },
-        {
-          "id": "NFCORE_HIC.HIC.TADS.HIC_FIND_TADS_33",
-          "runtimeInSeconds": 22.0,
-          "command": {
-            "program": "hicFindTADs --matrix SRR4292758.1000_balanced.cool         --outPrefix SRR4292758.1000_balanced_hicfindtads         --correctForMultipleTesting fdr         --numberOfProcessors 1\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:TADS:HIC_FIND_TADS\":\n        hicexplorer: $(hicFindTADs --version 2>&1 | sed 's/hicFindTADs //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 94.5,
-          "readBytes": 35560217,
-          "writtenBytes": 294719,
-          "memoryInBytes": 123752448
-        },
-        {
-          "id": "NFCORE_HIC.HIC.HIC_PLOT_DIST_VS_COUNTS_31",
-          "runtimeInSeconds": 13.0,
-          "command": {
-            "program": "hicPlotDistVsCounts --matrices SRR4292758.1000_balanced.cool                         --plotFile SRR4292758_distcount.png                         --outFileData SRR4292758_distcount.txt\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:HIC_PLOT_DIST_VS_COUNTS\":\n        hicexplorer: $(hicPlotDistVsCounts --version 2>&1 | sed 's/hicPlotDistVsCounts //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 91.1,
-          "readBytes": 40284692,
-          "writtenBytes": 34627,
-          "memoryInBytes": 135925760
-        },
-        {
-          "id": "NFCORE_HIC.HIC.TADS.COOLTOOLS_INSULATION_32",
-          "runtimeInSeconds": 88.0,
-          "command": {
-            "program": "cooltools insulation SRR4292758.1000_balanced.cool 15 25 50 --window-pixels > SRR4292758.1000_balanced_insulation.tsv\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:TADS:COOLTOOLS_INSULATION\":\n        cooltools: $(cooltools --version 2>&1 | sed 's/cooltools, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 97.4,
-          "readBytes": 60906680,
-          "writtenBytes": 1605054,
-          "memoryInBytes": 256450560
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_30",
-          "runtimeInSeconds": 5.209,
-          "command": {
-            "program": "cooler dump \\\n        --one-based-ids --balanced --na-rep 0 \\\n        -o SRR4292758.1000_balanced.bedpe \\\n        SRR4292758.1000_balanced.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_DUMP\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 59.2,
-          "readBytes": 19788443,
-          "writtenBytes": 525684,
-          "memoryInBytes": 86978560
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.COOLER_DUMP_34",
-          "runtimeInSeconds": 3.726,
-          "command": {
-            "program": "cooler dump \\\n        --one-based-ids --balanced --na-rep 0 \\\n        -o SRR4292758.2000_balanced.bedpe \\\n        SRR4292758.2000_balanced.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:COOLER_DUMP\":\n        cooler: $(cooler --version 2>&1 | sed 's/cooler, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 84.0,
-          "readBytes": 19782624,
-          "writtenBytes": 528810,
-          "memoryInBytes": 63025152
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COMPARTMENTS.COOLTOOLS_EIGSCIS_35",
-          "runtimeInSeconds": 34.0,
-          "command": {
-            "program": "cooltools genome binnify --all-names W303_SGD_2015_JRIU00000000.fsa.sizes 2000 > genome_bins.txt\n    cooltools genome gc genome_bins.txt W303_SGD_2015_JRIU00000000.fsa > genome_gc.txt\n    cooltools eigs-cis --bigwig -o SRR4292758.2000_compartments SRR4292758.2000_balanced.cool\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COMPARTMENTS:COOLTOOLS_EIGSCIS\":\n        cooltools: $(cooltools --version 2>&1 | grep version | sed 's/cooltools, version //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 95.5,
-          "readBytes": 163681937,
-          "writtenBytes": 1457656,
-          "memoryInBytes": 284004352
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_36",
-          "runtimeInSeconds": 0.071,
-          "command": {
-            "program": "cat SRR4292758.1000_balanced.bedpe | awk '{OFS=\"\t\"; print $1,$2,$3}' > SRR4292758.1000_raw.txt\n    cat SRR4292758.1000_balanced.bedpe | awk '{OFS=\"\t\"; print $1,$2,$4}' > SRR4292758.1000_balanced.txt\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:SPLIT_COOLER_DUMP\":\n        cooler: $(awk --version | head -1 | cut -f1 -d, | sed -e 's/GNU Awk //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 41.0,
-          "readBytes": 2210714,
-          "writtenBytes": 1853705,
-          "memoryInBytes": 0
-        },
-        {
-          "id": "NFCORE_HIC.HIC.COOLER.SPLIT_COOLER_DUMP_37",
-          "runtimeInSeconds": 0.185,
-          "command": {
-            "program": "cat SRR4292758.2000_balanced.bedpe | awk '{OFS=\"\t\"; print $1,$2,$3}' > SRR4292758.2000_raw.txt\n    cat SRR4292758.2000_balanced.bedpe | awk '{OFS=\"\t\"; print $1,$2,$4}' > SRR4292758.2000_balanced.txt\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_HIC:HIC:COOLER:SPLIT_COOLER_DUMP\":\n        cooler: $(awk --version | head -1 | cut -f1 -d, | sed -e 's/GNU Awk //')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 40.6,
-          "readBytes": 2223192,
-          "writtenBytes": 1840275,
-          "memoryInBytes": 2830336
-        },
-        {
-          "id": "NFCORE_HIC.HIC.CUSTOM_DUMPSOFTWAREVERSIONS_38",
-          "runtimeInSeconds": 0.383,
-          "command": {
-            "program": "def args = task.ext.args ?: ''\ntemplate 'dumpsoftwareversions.py'",
-            "arguments": []
-          },
-          "avgCPU": 43.3,
-          "readBytes": 862405,
-          "writtenBytes": 6355,
-          "memoryInBytes": 8187904
-        }
-      ],
-      "machines": [
-        {
-          "nodeName": "dirt02",
-          "system": "linux",
-          "release": "5.15.0-48-generic",
-          "architecture": "x86_64",
-          "cpu": {
-            "coreCount": 1,
-            "speedInMHz": 2400
-          }
-        }
-      ],
-      "metrics": {
-        "sumTaskRuntimesInSeconds": 577.0989999999998,
-        "totalNumBytesRead": 2617984724,
-        "totalNumBytesWritten": 1207248873
-      }
+    "runtimeSystem": {
+        "name": "Nextflow",
+        "url": "https://www.nextflow.io/",
+        "version": "23.04.1"
     }
-  },
-  "runtimeSystem": {
-    "name": "Nextflow",
-    "url": "https://www.nextflow.io/",
-    "version": "23.04.1"
-  }
 }

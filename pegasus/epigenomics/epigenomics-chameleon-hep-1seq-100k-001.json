@@ -1,1751 +1,1751 @@
 {
-  "name": "genome-dax-0",
-  "description": "Trace generated with wrench-pegasus-parser.py from http://wrench-project.org",
-  "createdAt": "2020-04-08T12:58:46.286994Z",
-  "schemaVersion": "1.5",
-  "author": {
-    "name": "rafsilva",
-    "email": "support@wrench-project.org"
-  },
-  "workflow": {
-    "specification": {
-      "tasks": [
-        {
-          "name": "chr21_chr21_ID0000001",
-          "id": "chr21_chr21_ID0000001",
-          "children": [
-            "pileup_pileup_ID0000032"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests.nocontam.map"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests.nocontam.chr21.map"
-          ],
-          "parents": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_ID0000021"
-          ]
-        },
-        {
-          "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_1_ID0000002",
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_1_ID0000002",
-          "children": [
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_1_ID0000023"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.fq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.bfq"
-          ],
-          "parents": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_1_ID0000033"
-          ]
-        },
-        {
-          "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_2_ID0000003",
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_2_ID0000003",
-          "children": [
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_2_ID0000024"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.fq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.bfq"
-          ],
-          "parents": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_2_ID0000034"
-          ]
-        },
-        {
-          "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_3_ID0000004",
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_3_ID0000004",
-          "children": [
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_3_ID0000025"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.fq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.bfq"
-          ],
-          "parents": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_3_ID0000035"
-          ]
-        },
-        {
-          "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_4_ID0000005",
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_4_ID0000005",
-          "children": [
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_4_ID0000026"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.fq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.bfq"
-          ],
-          "parents": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_4_ID0000036"
-          ]
-        },
-        {
-          "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_5_ID0000006",
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_5_ID0000006",
-          "children": [
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_5_ID0000027"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.fq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.bfq"
-          ],
-          "parents": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_5_ID0000037"
-          ]
-        },
-        {
-          "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_6_ID0000007",
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_6_ID0000007",
-          "children": [
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_6_ID0000028"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.fq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.bfq"
-          ],
-          "parents": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_6_ID0000038"
-          ]
-        },
-        {
-          "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_7_ID0000008",
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_7_ID0000008",
-          "children": [
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_7_ID0000029"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.fq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.bfq"
-          ],
-          "parents": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_7_ID0000039"
-          ]
-        },
-        {
-          "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_8_ID0000009",
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_8_ID0000009",
-          "children": [
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_8_ID0000030"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.fq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.bfq"
-          ],
-          "parents": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_8_ID0000040"
-          ]
-        },
-        {
-          "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_9_ID0000010",
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_9_ID0000010",
-          "children": [
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_9_ID0000031"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.fq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.bfq"
-          ],
-          "parents": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_9_ID0000041"
-          ]
-        },
-        {
-          "name": "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011",
-          "id": "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011",
-          "children": [
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_1_ID0000012",
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_2_ID0000013",
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_3_ID0000014",
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_4_ID0000015",
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_5_ID0000016",
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_6_ID0000017",
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_7_ID0000018",
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_8_ID0000019",
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_9_ID0000020"
-          ],
-          "inputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.1.sfq",
-            "HEP2_MSP1_Digests_s_1_sequence.2.sfq",
-            "HEP2_MSP1_Digests_s_1_sequence.3.sfq",
-            "HEP2_MSP1_Digests_s_1_sequence.4.sfq",
-            "HEP2_MSP1_Digests_s_1_sequence.5.sfq",
-            "HEP2_MSP1_Digests_s_1_sequence.6.sfq",
-            "HEP2_MSP1_Digests_s_1_sequence.7.sfq",
-            "HEP2_MSP1_Digests_s_1_sequence.8.sfq",
-            "HEP2_MSP1_Digests_s_1_sequence.9.sfq"
-          ],
-          "parents": []
-        },
-        {
-          "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_1_ID0000012",
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_1_ID0000012",
-          "children": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_1_ID0000033"
-          ],
-          "inputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.1.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.sfq"
-          ],
-          "parents": [
-            "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
-          ]
-        },
-        {
-          "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_2_ID0000013",
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_2_ID0000013",
-          "children": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_2_ID0000034"
-          ],
-          "inputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.2.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.sfq"
-          ],
-          "parents": [
-            "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
-          ]
-        },
-        {
-          "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_3_ID0000014",
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_3_ID0000014",
-          "children": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_3_ID0000035"
-          ],
-          "inputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.3.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.sfq"
-          ],
-          "parents": [
-            "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
-          ]
-        },
-        {
-          "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_4_ID0000015",
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_4_ID0000015",
-          "children": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_4_ID0000036"
-          ],
-          "inputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.4.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.sfq"
-          ],
-          "parents": [
-            "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
-          ]
-        },
-        {
-          "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_5_ID0000016",
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_5_ID0000016",
-          "children": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_5_ID0000037"
-          ],
-          "inputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.5.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.sfq"
-          ],
-          "parents": [
-            "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
-          ]
-        },
-        {
-          "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_6_ID0000017",
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_6_ID0000017",
-          "children": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_6_ID0000038"
-          ],
-          "inputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.6.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.sfq"
-          ],
-          "parents": [
-            "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
-          ]
-        },
-        {
-          "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_7_ID0000018",
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_7_ID0000018",
-          "children": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_7_ID0000039"
-          ],
-          "inputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.7.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.sfq"
-          ],
-          "parents": [
-            "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
-          ]
-        },
-        {
-          "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_8_ID0000019",
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_8_ID0000019",
-          "children": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_8_ID0000040"
-          ],
-          "inputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.8.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.sfq"
-          ],
-          "parents": [
-            "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
-          ]
-        },
-        {
-          "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_9_ID0000020",
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_9_ID0000020",
-          "children": [
-            "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_9_ID0000041"
-          ],
-          "inputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.9.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.sfq"
-          ],
-          "parents": [
-            "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
-          ]
-        },
-        {
-          "name": "mapMerge_mapMerge_HEP2_MSP1_Digests_ID0000021",
-          "id": "mapMerge_mapMerge_HEP2_MSP1_Digests_ID0000021",
-          "children": [
-            "chr21_chr21_ID0000001"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.nocontam.map"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests.nocontam.map"
-          ],
-          "parents": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
-          ]
-        },
-        {
-          "name": "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022",
-          "id": "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022",
-          "children": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_ID0000021"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.map",
-            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.map",
-            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.map",
-            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.map",
-            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.map",
-            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.map",
-            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.map",
-            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.map",
-            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.map"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.nocontam.map"
-          ],
-          "parents": [
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_7_ID0000029",
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_6_ID0000028",
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_9_ID0000031",
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_8_ID0000030",
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_3_ID0000025",
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_2_ID0000024",
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_5_ID0000027",
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_4_ID0000026",
-            "map_map_HEP2_MSP1_Digests_s_1_sequence_1_ID0000023"
-          ]
-        },
-        {
-          "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_1_ID0000023",
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_1_ID0000023",
-          "children": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.bfq",
-            "chr21.BS.bfa"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.map"
-          ],
-          "parents": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_1_ID0000002"
-          ]
-        },
-        {
-          "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_2_ID0000024",
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_2_ID0000024",
-          "children": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.bfq",
-            "chr21.BS.bfa"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.map"
-          ],
-          "parents": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_2_ID0000003"
-          ]
-        },
-        {
-          "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_3_ID0000025",
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_3_ID0000025",
-          "children": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.bfq",
-            "chr21.BS.bfa"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.map"
-          ],
-          "parents": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_3_ID0000004"
-          ]
-        },
-        {
-          "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_4_ID0000026",
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_4_ID0000026",
-          "children": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.bfq",
-            "chr21.BS.bfa"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.map"
-          ],
-          "parents": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_4_ID0000005"
-          ]
-        },
-        {
-          "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_5_ID0000027",
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_5_ID0000027",
-          "children": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.bfq",
-            "chr21.BS.bfa"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.map"
-          ],
-          "parents": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_5_ID0000006"
-          ]
-        },
-        {
-          "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_6_ID0000028",
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_6_ID0000028",
-          "children": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.bfq",
-            "chr21.BS.bfa"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.map"
-          ],
-          "parents": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_6_ID0000007"
-          ]
-        },
-        {
-          "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_7_ID0000029",
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_7_ID0000029",
-          "children": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.bfq",
-            "chr21.BS.bfa"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.map"
-          ],
-          "parents": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_7_ID0000008"
-          ]
-        },
-        {
-          "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_8_ID0000030",
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_8_ID0000030",
-          "children": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.bfq",
-            "chr21.BS.bfa"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.map"
-          ],
-          "parents": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_8_ID0000009"
-          ]
-        },
-        {
-          "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_9_ID0000031",
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_9_ID0000031",
-          "children": [
-            "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.bfq",
-            "chr21.BS.bfa"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.map"
-          ],
-          "parents": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_9_ID0000010"
-          ]
-        },
-        {
-          "name": "pileup_pileup_ID0000032",
-          "id": "pileup_pileup_ID0000032",
-          "children": [],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests.nocontam.chr21.map",
-            "chr21.BSnull.bfa"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests.nocontam.pileup"
-          ],
-          "parents": [
-            "chr21_chr21_ID0000001"
-          ]
-        },
-        {
-          "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_1_ID0000033",
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_1_ID0000033",
-          "children": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_1_ID0000002"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.fq"
-          ],
-          "parents": [
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_1_ID0000012"
-          ]
-        },
-        {
-          "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_2_ID0000034",
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_2_ID0000034",
-          "children": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_2_ID0000003"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.fq"
-          ],
-          "parents": [
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_2_ID0000013"
-          ]
-        },
-        {
-          "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_3_ID0000035",
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_3_ID0000035",
-          "children": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_3_ID0000004"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.fq"
-          ],
-          "parents": [
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_3_ID0000014"
-          ]
-        },
-        {
-          "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_4_ID0000036",
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_4_ID0000036",
-          "children": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_4_ID0000005"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.fq"
-          ],
-          "parents": [
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_4_ID0000015"
-          ]
-        },
-        {
-          "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_5_ID0000037",
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_5_ID0000037",
-          "children": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_5_ID0000006"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.fq"
-          ],
-          "parents": [
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_5_ID0000016"
-          ]
-        },
-        {
-          "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_6_ID0000038",
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_6_ID0000038",
-          "children": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_6_ID0000007"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.fq"
-          ],
-          "parents": [
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_6_ID0000017"
-          ]
-        },
-        {
-          "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_7_ID0000039",
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_7_ID0000039",
-          "children": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_7_ID0000008"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.fq"
-          ],
-          "parents": [
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_7_ID0000018"
-          ]
-        },
-        {
-          "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_8_ID0000040",
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_8_ID0000040",
-          "children": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_8_ID0000009"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.fq"
-          ],
-          "parents": [
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_8_ID0000019"
-          ]
-        },
-        {
-          "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_9_ID0000041",
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_9_ID0000041",
-          "children": [
-            "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_9_ID0000010"
-          ],
-          "inputFiles": [
-            "maq",
-            "maqindex",
-            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.sfq"
-          ],
-          "outputFiles": [
-            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.fq"
-          ],
-          "parents": [
-            "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_9_ID0000020"
-          ]
-        }
-      ],
-      "files": [
-        {
-          "id": "maq",
-          "sizeInBytes": 171256
-        },
-        {
-          "id": "maqindex",
-          "sizeInBytes": 118456
-        },
-        {
-          "id": "HEP2_MSP1_Digests.nocontam.map",
-          "sizeInBytes": 8974436
-        },
-        {
-          "id": "HEP2_MSP1_Digests.nocontam.chr21.map",
-          "sizeInBytes": 8974436
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.fq",
-          "sizeInBytes": 9652233
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.bfq",
-          "sizeInBytes": 2377096
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.fq",
-          "sizeInBytes": 9701398
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.bfq",
-          "sizeInBytes": 2323926
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.fq",
-          "sizeInBytes": 9735565
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.bfq",
-          "sizeInBytes": 2277409
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.fq",
-          "sizeInBytes": 9901201
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.bfq",
-          "sizeInBytes": 2286437
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.fq",
-          "sizeInBytes": 9887845
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.bfq",
-          "sizeInBytes": 2353768
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.fq",
-          "sizeInBytes": 9878684
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.bfq",
-          "sizeInBytes": 2402011
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.fq",
-          "sizeInBytes": 9774849
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.bfq",
-          "sizeInBytes": 2284671
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.fq",
-          "sizeInBytes": 9772940
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.bfq",
-          "sizeInBytes": 2193189
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.fq",
-          "sizeInBytes": 3397227
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.bfq",
-          "sizeInBytes": 755757
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.sfq",
-          "sizeInBytes": 109431824
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.1.sfq",
-          "sizeInBytes": 12939188
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.2.sfq",
-          "sizeInBytes": 12988842
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.3.sfq",
-          "sizeInBytes": 13047226
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.4.sfq",
-          "sizeInBytes": 13174232
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.5.sfq",
-          "sizeInBytes": 13175800
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.6.sfq",
-          "sizeInBytes": 13175488
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.7.sfq",
-          "sizeInBytes": 13173552
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.8.sfq",
-          "sizeInBytes": 13172138
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.9.sfq",
-          "sizeInBytes": 4585358
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.sfq",
-          "sizeInBytes": 12527346
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.sfq",
-          "sizeInBytes": 12608036
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.sfq",
-          "sizeInBytes": 12672660
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.sfq",
-          "sizeInBytes": 12931412
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.sfq",
-          "sizeInBytes": 12914500
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.sfq",
-          "sizeInBytes": 12902408
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.sfq",
-          "sizeInBytes": 12766068
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.sfq",
-          "sizeInBytes": 12763090
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.sfq",
-          "sizeInBytes": 4436434
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.nocontam.map",
-          "sizeInBytes": 8974436
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.map",
-          "sizeInBytes": 1255491
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.map",
-          "sizeInBytes": 1170640
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.map",
-          "sizeInBytes": 1119402
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.map",
-          "sizeInBytes": 1082144
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.map",
-          "sizeInBytes": 1156862
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.map",
-          "sizeInBytes": 1236978
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.map",
-          "sizeInBytes": 1104747
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.map",
-          "sizeInBytes": 1009647
-        },
-        {
-          "id": "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.map",
-          "sizeInBytes": 354473
-        },
-        {
-          "id": "chr21.BS.bfa",
-          "sizeInBytes": 46944392
-        },
-        {
-          "id": "chr21.BSnull.bfa",
-          "sizeInBytes": 46944392
-        },
-        {
-          "id": "HEP2_MSP1_Digests.nocontam.pileup",
-          "sizeInBytes": 6924527
-        }
-      ],
-      "metrics": {
-        "numberOfTasks": 41,
-        "numberOfFiles": 54,
-        "sumOfFileSizesInBytes": 563858523,
-        "numberOfLevels": 9,
-        "minimumWidth": 1,
-        "maximumWidth": 9
-      }
+    "name": "genome-dax-0",
+    "description": "Trace generated with wrench-pegasus-parser.py from http://wrench-project.org",
+    "createdAt": "2020-04-08T12:58:46.286994Z",
+    "schemaVersion": "1.6",
+    "author": {
+        "name": "rafsilva",
+        "email": "support@wrench-project.org"
     },
-    "execution": {
-      "makespanInSeconds": 594.0,
-      "executedAt": "20200408T154143+0000",
-      "tasks": [
-        {
-          "id": "chr21_chr21_ID0000001",
-          "runtimeInSeconds": 2.774,
-          "command": {
-            "program": "chr21",
-            "arguments": [
-              "-b",
-              "HEP2_MSP1_Digests.nocontam.map",
-              "chr21",
-              "chr21.rev",
-              "HEP2_MSP1_Digests.nocontam.chr21.map"
-            ]
-          },
-          "avgCPU": 95.5299,
-          "priority": 90,
-          "machines": [
-            "compute-3"
-          ]
+    "workflow": {
+        "specification": {
+            "tasks": [
+                {
+                    "name": "chr21_chr21_ID0000001",
+                    "id": "chr21_chr21_ID0000001",
+                    "children": [
+                        "pileup_pileup_ID0000032"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests.nocontam.map"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests.nocontam.chr21.map"
+                    ],
+                    "parents": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_ID0000021"
+                    ]
+                },
+                {
+                    "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_1_ID0000002",
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_1_ID0000002",
+                    "children": [
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_1_ID0000023"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.fq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.bfq"
+                    ],
+                    "parents": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_1_ID0000033"
+                    ]
+                },
+                {
+                    "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_2_ID0000003",
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_2_ID0000003",
+                    "children": [
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_2_ID0000024"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.fq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.bfq"
+                    ],
+                    "parents": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_2_ID0000034"
+                    ]
+                },
+                {
+                    "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_3_ID0000004",
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_3_ID0000004",
+                    "children": [
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_3_ID0000025"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.fq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.bfq"
+                    ],
+                    "parents": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_3_ID0000035"
+                    ]
+                },
+                {
+                    "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_4_ID0000005",
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_4_ID0000005",
+                    "children": [
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_4_ID0000026"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.fq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.bfq"
+                    ],
+                    "parents": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_4_ID0000036"
+                    ]
+                },
+                {
+                    "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_5_ID0000006",
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_5_ID0000006",
+                    "children": [
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_5_ID0000027"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.fq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.bfq"
+                    ],
+                    "parents": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_5_ID0000037"
+                    ]
+                },
+                {
+                    "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_6_ID0000007",
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_6_ID0000007",
+                    "children": [
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_6_ID0000028"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.fq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.bfq"
+                    ],
+                    "parents": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_6_ID0000038"
+                    ]
+                },
+                {
+                    "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_7_ID0000008",
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_7_ID0000008",
+                    "children": [
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_7_ID0000029"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.fq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.bfq"
+                    ],
+                    "parents": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_7_ID0000039"
+                    ]
+                },
+                {
+                    "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_8_ID0000009",
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_8_ID0000009",
+                    "children": [
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_8_ID0000030"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.fq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.bfq"
+                    ],
+                    "parents": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_8_ID0000040"
+                    ]
+                },
+                {
+                    "name": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_9_ID0000010",
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_9_ID0000010",
+                    "children": [
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_9_ID0000031"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.fq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.bfq"
+                    ],
+                    "parents": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_9_ID0000041"
+                    ]
+                },
+                {
+                    "name": "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011",
+                    "id": "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011",
+                    "children": [
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_1_ID0000012",
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_2_ID0000013",
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_3_ID0000014",
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_4_ID0000015",
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_5_ID0000016",
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_6_ID0000017",
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_7_ID0000018",
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_8_ID0000019",
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_9_ID0000020"
+                    ],
+                    "inputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.1.sfq",
+                        "HEP2_MSP1_Digests_s_1_sequence.2.sfq",
+                        "HEP2_MSP1_Digests_s_1_sequence.3.sfq",
+                        "HEP2_MSP1_Digests_s_1_sequence.4.sfq",
+                        "HEP2_MSP1_Digests_s_1_sequence.5.sfq",
+                        "HEP2_MSP1_Digests_s_1_sequence.6.sfq",
+                        "HEP2_MSP1_Digests_s_1_sequence.7.sfq",
+                        "HEP2_MSP1_Digests_s_1_sequence.8.sfq",
+                        "HEP2_MSP1_Digests_s_1_sequence.9.sfq"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_1_ID0000012",
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_1_ID0000012",
+                    "children": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_1_ID0000033"
+                    ],
+                    "inputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.1.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.sfq"
+                    ],
+                    "parents": [
+                        "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
+                    ]
+                },
+                {
+                    "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_2_ID0000013",
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_2_ID0000013",
+                    "children": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_2_ID0000034"
+                    ],
+                    "inputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.2.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.sfq"
+                    ],
+                    "parents": [
+                        "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
+                    ]
+                },
+                {
+                    "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_3_ID0000014",
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_3_ID0000014",
+                    "children": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_3_ID0000035"
+                    ],
+                    "inputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.3.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.sfq"
+                    ],
+                    "parents": [
+                        "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
+                    ]
+                },
+                {
+                    "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_4_ID0000015",
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_4_ID0000015",
+                    "children": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_4_ID0000036"
+                    ],
+                    "inputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.4.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.sfq"
+                    ],
+                    "parents": [
+                        "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
+                    ]
+                },
+                {
+                    "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_5_ID0000016",
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_5_ID0000016",
+                    "children": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_5_ID0000037"
+                    ],
+                    "inputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.5.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.sfq"
+                    ],
+                    "parents": [
+                        "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
+                    ]
+                },
+                {
+                    "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_6_ID0000017",
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_6_ID0000017",
+                    "children": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_6_ID0000038"
+                    ],
+                    "inputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.6.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.sfq"
+                    ],
+                    "parents": [
+                        "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
+                    ]
+                },
+                {
+                    "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_7_ID0000018",
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_7_ID0000018",
+                    "children": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_7_ID0000039"
+                    ],
+                    "inputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.7.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.sfq"
+                    ],
+                    "parents": [
+                        "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
+                    ]
+                },
+                {
+                    "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_8_ID0000019",
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_8_ID0000019",
+                    "children": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_8_ID0000040"
+                    ],
+                    "inputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.8.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.sfq"
+                    ],
+                    "parents": [
+                        "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
+                    ]
+                },
+                {
+                    "name": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_9_ID0000020",
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_9_ID0000020",
+                    "children": [
+                        "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_9_ID0000041"
+                    ],
+                    "inputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.9.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.sfq"
+                    ],
+                    "parents": [
+                        "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011"
+                    ]
+                },
+                {
+                    "name": "mapMerge_mapMerge_HEP2_MSP1_Digests_ID0000021",
+                    "id": "mapMerge_mapMerge_HEP2_MSP1_Digests_ID0000021",
+                    "children": [
+                        "chr21_chr21_ID0000001"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.nocontam.map"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests.nocontam.map"
+                    ],
+                    "parents": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
+                    ]
+                },
+                {
+                    "name": "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022",
+                    "id": "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022",
+                    "children": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_ID0000021"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.map",
+                        "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.map",
+                        "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.map",
+                        "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.map",
+                        "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.map",
+                        "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.map",
+                        "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.map",
+                        "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.map",
+                        "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.map"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.nocontam.map"
+                    ],
+                    "parents": [
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_7_ID0000029",
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_6_ID0000028",
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_9_ID0000031",
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_8_ID0000030",
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_3_ID0000025",
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_2_ID0000024",
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_5_ID0000027",
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_4_ID0000026",
+                        "map_map_HEP2_MSP1_Digests_s_1_sequence_1_ID0000023"
+                    ]
+                },
+                {
+                    "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_1_ID0000023",
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_1_ID0000023",
+                    "children": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.bfq",
+                        "chr21.BS.bfa"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.map"
+                    ],
+                    "parents": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_1_ID0000002"
+                    ]
+                },
+                {
+                    "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_2_ID0000024",
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_2_ID0000024",
+                    "children": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.bfq",
+                        "chr21.BS.bfa"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.map"
+                    ],
+                    "parents": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_2_ID0000003"
+                    ]
+                },
+                {
+                    "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_3_ID0000025",
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_3_ID0000025",
+                    "children": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.bfq",
+                        "chr21.BS.bfa"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.map"
+                    ],
+                    "parents": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_3_ID0000004"
+                    ]
+                },
+                {
+                    "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_4_ID0000026",
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_4_ID0000026",
+                    "children": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.bfq",
+                        "chr21.BS.bfa"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.map"
+                    ],
+                    "parents": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_4_ID0000005"
+                    ]
+                },
+                {
+                    "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_5_ID0000027",
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_5_ID0000027",
+                    "children": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.bfq",
+                        "chr21.BS.bfa"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.map"
+                    ],
+                    "parents": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_5_ID0000006"
+                    ]
+                },
+                {
+                    "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_6_ID0000028",
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_6_ID0000028",
+                    "children": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.bfq",
+                        "chr21.BS.bfa"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.map"
+                    ],
+                    "parents": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_6_ID0000007"
+                    ]
+                },
+                {
+                    "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_7_ID0000029",
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_7_ID0000029",
+                    "children": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.bfq",
+                        "chr21.BS.bfa"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.map"
+                    ],
+                    "parents": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_7_ID0000008"
+                    ]
+                },
+                {
+                    "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_8_ID0000030",
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_8_ID0000030",
+                    "children": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.bfq",
+                        "chr21.BS.bfa"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.map"
+                    ],
+                    "parents": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_8_ID0000009"
+                    ]
+                },
+                {
+                    "name": "map_map_HEP2_MSP1_Digests_s_1_sequence_9_ID0000031",
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_9_ID0000031",
+                    "children": [
+                        "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.bfq",
+                        "chr21.BS.bfa"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.map"
+                    ],
+                    "parents": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_9_ID0000010"
+                    ]
+                },
+                {
+                    "name": "pileup_pileup_ID0000032",
+                    "id": "pileup_pileup_ID0000032",
+                    "children": [],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests.nocontam.chr21.map",
+                        "chr21.BSnull.bfa"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests.nocontam.pileup"
+                    ],
+                    "parents": [
+                        "chr21_chr21_ID0000001"
+                    ]
+                },
+                {
+                    "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_1_ID0000033",
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_1_ID0000033",
+                    "children": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_1_ID0000002"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.fq"
+                    ],
+                    "parents": [
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_1_ID0000012"
+                    ]
+                },
+                {
+                    "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_2_ID0000034",
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_2_ID0000034",
+                    "children": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_2_ID0000003"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.fq"
+                    ],
+                    "parents": [
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_2_ID0000013"
+                    ]
+                },
+                {
+                    "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_3_ID0000035",
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_3_ID0000035",
+                    "children": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_3_ID0000004"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.fq"
+                    ],
+                    "parents": [
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_3_ID0000014"
+                    ]
+                },
+                {
+                    "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_4_ID0000036",
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_4_ID0000036",
+                    "children": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_4_ID0000005"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.fq"
+                    ],
+                    "parents": [
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_4_ID0000015"
+                    ]
+                },
+                {
+                    "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_5_ID0000037",
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_5_ID0000037",
+                    "children": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_5_ID0000006"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.fq"
+                    ],
+                    "parents": [
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_5_ID0000016"
+                    ]
+                },
+                {
+                    "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_6_ID0000038",
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_6_ID0000038",
+                    "children": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_6_ID0000007"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.fq"
+                    ],
+                    "parents": [
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_6_ID0000017"
+                    ]
+                },
+                {
+                    "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_7_ID0000039",
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_7_ID0000039",
+                    "children": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_7_ID0000008"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.fq"
+                    ],
+                    "parents": [
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_7_ID0000018"
+                    ]
+                },
+                {
+                    "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_8_ID0000040",
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_8_ID0000040",
+                    "children": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_8_ID0000009"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.fq"
+                    ],
+                    "parents": [
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_8_ID0000019"
+                    ]
+                },
+                {
+                    "name": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_9_ID0000041",
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_9_ID0000041",
+                    "children": [
+                        "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_9_ID0000010"
+                    ],
+                    "inputFiles": [
+                        "maq",
+                        "maqindex",
+                        "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.sfq"
+                    ],
+                    "outputFiles": [
+                        "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.fq"
+                    ],
+                    "parents": [
+                        "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_9_ID0000020"
+                    ]
+                }
+            ],
+            "files": [
+                {
+                    "id": "maq",
+                    "sizeInBytes": 171256
+                },
+                {
+                    "id": "maqindex",
+                    "sizeInBytes": 118456
+                },
+                {
+                    "id": "HEP2_MSP1_Digests.nocontam.map",
+                    "sizeInBytes": 8974436
+                },
+                {
+                    "id": "HEP2_MSP1_Digests.nocontam.chr21.map",
+                    "sizeInBytes": 8974436
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.fq",
+                    "sizeInBytes": 9652233
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.bfq",
+                    "sizeInBytes": 2377096
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.fq",
+                    "sizeInBytes": 9701398
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.bfq",
+                    "sizeInBytes": 2323926
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.fq",
+                    "sizeInBytes": 9735565
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.bfq",
+                    "sizeInBytes": 2277409
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.fq",
+                    "sizeInBytes": 9901201
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.bfq",
+                    "sizeInBytes": 2286437
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.fq",
+                    "sizeInBytes": 9887845
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.bfq",
+                    "sizeInBytes": 2353768
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.fq",
+                    "sizeInBytes": 9878684
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.bfq",
+                    "sizeInBytes": 2402011
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.fq",
+                    "sizeInBytes": 9774849
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.bfq",
+                    "sizeInBytes": 2284671
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.fq",
+                    "sizeInBytes": 9772940
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.bfq",
+                    "sizeInBytes": 2193189
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.fq",
+                    "sizeInBytes": 3397227
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.bfq",
+                    "sizeInBytes": 755757
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.sfq",
+                    "sizeInBytes": 109431824
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.1.sfq",
+                    "sizeInBytes": 12939188
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.2.sfq",
+                    "sizeInBytes": 12988842
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.3.sfq",
+                    "sizeInBytes": 13047226
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.4.sfq",
+                    "sizeInBytes": 13174232
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.5.sfq",
+                    "sizeInBytes": 13175800
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.6.sfq",
+                    "sizeInBytes": 13175488
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.7.sfq",
+                    "sizeInBytes": 13173552
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.8.sfq",
+                    "sizeInBytes": 13172138
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.9.sfq",
+                    "sizeInBytes": 4585358
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.sfq",
+                    "sizeInBytes": 12527346
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.sfq",
+                    "sizeInBytes": 12608036
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.sfq",
+                    "sizeInBytes": 12672660
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.sfq",
+                    "sizeInBytes": 12931412
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.sfq",
+                    "sizeInBytes": 12914500
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.sfq",
+                    "sizeInBytes": 12902408
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.sfq",
+                    "sizeInBytes": 12766068
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.sfq",
+                    "sizeInBytes": 12763090
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.sfq",
+                    "sizeInBytes": 4436434
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.nocontam.map",
+                    "sizeInBytes": 8974436
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.map",
+                    "sizeInBytes": 1255491
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.map",
+                    "sizeInBytes": 1170640
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.map",
+                    "sizeInBytes": 1119402
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.map",
+                    "sizeInBytes": 1082144
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.map",
+                    "sizeInBytes": 1156862
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.map",
+                    "sizeInBytes": 1236978
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.map",
+                    "sizeInBytes": 1104747
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.map",
+                    "sizeInBytes": 1009647
+                },
+                {
+                    "id": "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.map",
+                    "sizeInBytes": 354473
+                },
+                {
+                    "id": "chr21.BS.bfa",
+                    "sizeInBytes": 46944392
+                },
+                {
+                    "id": "chr21.BSnull.bfa",
+                    "sizeInBytes": 46944392
+                },
+                {
+                    "id": "HEP2_MSP1_Digests.nocontam.pileup",
+                    "sizeInBytes": 6924527
+                }
+            ],
+            "metrics": {
+                "numberOfTasks": 41,
+                "numberOfFiles": 54,
+                "sumOfFileSizesInBytes": 563858523,
+                "numberOfLevels": 9,
+                "minimumWidth": 1,
+                "maximumWidth": 9
+            }
         },
-        {
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_1_ID0000002",
-          "runtimeInSeconds": 0.543,
-          "command": {
-            "program": "fast2bfq",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.fq",
-              "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 50,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_2_ID0000003",
-          "runtimeInSeconds": 0.545,
-          "command": {
-            "program": "fast2bfq",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.fq",
-              "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 96.3303,
-          "priority": 50,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_3_ID0000004",
-          "runtimeInSeconds": 0.687,
-          "command": {
-            "program": "fast2bfq",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.fq",
-              "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 78.1659,
-          "priority": 50,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_4_ID0000005",
-          "runtimeInSeconds": 0.621,
-          "command": {
-            "program": "fast2bfq",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.fq",
-              "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 86.4734,
-          "priority": 50,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_5_ID0000006",
-          "runtimeInSeconds": 0.612,
-          "command": {
-            "program": "fast2bfq",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.fq",
-              "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 91.6667,
-          "priority": 50,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_6_ID0000007",
-          "runtimeInSeconds": 0.538,
-          "command": {
-            "program": "fast2bfq",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.fq",
-              "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 50,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_7_ID0000008",
-          "runtimeInSeconds": 0.531,
-          "command": {
-            "program": "fast2bfq",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.fq",
-              "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 50,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_8_ID0000009",
-          "runtimeInSeconds": 0.841,
-          "command": {
-            "program": "fast2bfq",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.fq",
-              "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 66.7063,
-          "priority": 50,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_9_ID0000010",
-          "runtimeInSeconds": 0.237,
-          "command": {
-            "program": "fast2bfq",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.fq",
-              "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 50,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011",
-          "runtimeInSeconds": 1.345,
-          "command": {
-            "program": "fastqSplit",
-            "arguments": [
-              "100000",
-              "HEP2_MSP1_Digests_s_1_sequence.sfq"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 20,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_1_ID0000012",
-          "runtimeInSeconds": 0.691,
-          "command": {
-            "program": "filterContams",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.1.sfq"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 30,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_2_ID0000013",
-          "runtimeInSeconds": 0.688,
-          "command": {
-            "program": "filterContams",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.2.sfq"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 30,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_3_ID0000014",
-          "runtimeInSeconds": 0.702,
-          "command": {
-            "program": "filterContams",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.3.sfq"
-            ]
-          },
-          "avgCPU": 99.8575,
-          "priority": 30,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_4_ID0000015",
-          "runtimeInSeconds": 0.692,
-          "command": {
-            "program": "filterContams",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.4.sfq"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 30,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_5_ID0000016",
-          "runtimeInSeconds": 0.689,
-          "command": {
-            "program": "filterContams",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.5.sfq"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 30,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_6_ID0000017",
-          "runtimeInSeconds": 0.691,
-          "command": {
-            "program": "filterContams",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.6.sfq"
-            ]
-          },
-          "avgCPU": 99.8553,
-          "priority": 30,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_7_ID0000018",
-          "runtimeInSeconds": 0.691,
-          "command": {
-            "program": "filterContams",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.7.sfq"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 30,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_8_ID0000019",
-          "runtimeInSeconds": 1.136,
-          "command": {
-            "program": "filterContams",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.8.sfq"
-            ]
-          },
-          "avgCPU": 61.7958,
-          "priority": 30,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_9_ID0000020",
-          "runtimeInSeconds": 0.514,
-          "command": {
-            "program": "filterContams",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.9.sfq"
-            ]
-          },
-          "avgCPU": 57.9767,
-          "priority": 30,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "mapMerge_mapMerge_HEP2_MSP1_Digests_ID0000021",
-          "runtimeInSeconds": 3.202,
-          "command": {
-            "program": "mapMerge",
-            "arguments": [
-              "HEP2_MSP1_Digests.nocontam.map",
-              "HEP2_MSP1_Digests_s_1_sequence.nocontam.map"
-            ]
-          },
-          "avgCPU": 56.0899,
-          "priority": 80,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022",
-          "runtimeInSeconds": 5.637,
-          "command": {
-            "program": "mapMerge",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.nocontam.map",
-              "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.map",
-              "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.map",
-              "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.map",
-              "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.map",
-              "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.map",
-              "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.map",
-              "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.map",
-              "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.map",
-              "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.map"
-            ]
-          },
-          "avgCPU": 30.016,
-          "priority": 70,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_1_ID0000023",
-          "runtimeInSeconds": 59.718,
-          "command": {
-            "program": "map",
-            "arguments": [
-              "-n",
-              "2",
-              "-M",
-              "c",
-              "-1",
-              "32",
-              "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.map",
-              "chr21.BS.bfa",
-              "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 98.5867,
-          "priority": 60,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_2_ID0000024",
-          "runtimeInSeconds": 50.967,
-          "command": {
-            "program": "map",
-            "arguments": [
-              "-n",
-              "2",
-              "-M",
-              "c",
-              "-1",
-              "32",
-              "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.map",
-              "chr21.BS.bfa",
-              "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 99.1759,
-          "priority": 60,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_3_ID0000025",
-          "runtimeInSeconds": 54.815,
-          "command": {
-            "program": "map",
-            "arguments": [
-              "-n",
-              "2",
-              "-M",
-              "c",
-              "-1",
-              "32",
-              "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.map",
-              "chr21.BS.bfa",
-              "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 97.674,
-          "priority": 60,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_4_ID0000026",
-          "runtimeInSeconds": 58.22,
-          "command": {
-            "program": "map",
-            "arguments": [
-              "-n",
-              "2",
-              "-M",
-              "c",
-              "-1",
-              "32",
-              "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.map",
-              "chr21.BS.bfa",
-              "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 98.9729,
-          "priority": 60,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_5_ID0000027",
-          "runtimeInSeconds": 57.489,
-          "command": {
-            "program": "map",
-            "arguments": [
-              "-n",
-              "2",
-              "-M",
-              "c",
-              "-1",
-              "32",
-              "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.map",
-              "chr21.BS.bfa",
-              "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 98.9789,
-          "priority": 60,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_6_ID0000028",
-          "runtimeInSeconds": 57.029,
-          "command": {
-            "program": "map",
-            "arguments": [
-              "-n",
-              "2",
-              "-M",
-              "c",
-              "-1",
-              "32",
-              "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.map",
-              "chr21.BS.bfa",
-              "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 99.1127,
-          "priority": 60,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_7_ID0000029",
-          "runtimeInSeconds": 56.157,
-          "command": {
-            "program": "map",
-            "arguments": [
-              "-n",
-              "2",
-              "-M",
-              "c",
-              "-1",
-              "32",
-              "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.map",
-              "chr21.BS.bfa",
-              "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 99.0544,
-          "priority": 60,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_8_ID0000030",
-          "runtimeInSeconds": 52.271,
-          "command": {
-            "program": "map",
-            "arguments": [
-              "-n",
-              "2",
-              "-M",
-              "c",
-              "-1",
-              "32",
-              "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.map",
-              "chr21.BS.bfa",
-              "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 96.7975,
-          "priority": 60,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_9_ID0000031",
-          "runtimeInSeconds": 33.964,
-          "command": {
-            "program": "map",
-            "arguments": [
-              "-n",
-              "2",
-              "-M",
-              "c",
-              "-1",
-              "32",
-              "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.map",
-              "chr21.BS.bfa",
-              "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.bfq"
-            ]
-          },
-          "avgCPU": 98.7605,
-          "priority": 60,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "pileup_pileup_ID0000032",
-          "runtimeInSeconds": 30.52,
-          "command": {
-            "program": "pileup",
-            "arguments": [
-              "HEP2_MSP1_Digests.nocontam.pileup",
-              "-q",
-              "30",
-              "-P",
-              "chr21.BSnull.bfa",
-              "HEP2_MSP1_Digests.nocontam.chr21.map"
-            ]
-          },
-          "avgCPU": 180.5963,
-          "priority": 100,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_1_ID0000033",
-          "runtimeInSeconds": 0.392,
-          "command": {
-            "program": "sol2sanger",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.sfq",
-              "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.fq"
-            ]
-          },
-          "avgCPU": 40.8163,
-          "priority": 40,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_2_ID0000034",
-          "runtimeInSeconds": 0.515,
-          "command": {
-            "program": "sol2sanger",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.sfq",
-              "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.fq"
-            ]
-          },
-          "avgCPU": 29.1262,
-          "priority": 40,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_3_ID0000035",
-          "runtimeInSeconds": 0.305,
-          "command": {
-            "program": "sol2sanger",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.sfq",
-              "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.fq"
-            ]
-          },
-          "avgCPU": 48.8525,
-          "priority": 40,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_4_ID0000036",
-          "runtimeInSeconds": 0.642,
-          "command": {
-            "program": "sol2sanger",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.sfq",
-              "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.fq"
-            ]
-          },
-          "avgCPU": 25.8567,
-          "priority": 40,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_5_ID0000037",
-          "runtimeInSeconds": 0.277,
-          "command": {
-            "program": "sol2sanger",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.sfq",
-              "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.fq"
-            ]
-          },
-          "avgCPU": 43.3213,
-          "priority": 40,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_6_ID0000038",
-          "runtimeInSeconds": 0.152,
-          "command": {
-            "program": "sol2sanger",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.sfq",
-              "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.fq"
-            ]
-          },
-          "avgCPU": 100.6579,
-          "priority": 40,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_7_ID0000039",
-          "runtimeInSeconds": 0.469,
-          "command": {
-            "program": "sol2sanger",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.sfq",
-              "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.fq"
-            ]
-          },
-          "avgCPU": 32.4094,
-          "priority": 40,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_8_ID0000040",
-          "runtimeInSeconds": 0.598,
-          "command": {
-            "program": "sol2sanger",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.sfq",
-              "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.fq"
-            ]
-          },
-          "avgCPU": 19.398,
-          "priority": 40,
-          "machines": [
-            "compute-3"
-          ]
-        },
-        {
-          "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_9_ID0000041",
-          "runtimeInSeconds": 0.2,
-          "command": {
-            "program": "sol2sanger",
-            "arguments": [
-              "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.sfq",
-              "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.fq"
-            ]
-          },
-          "avgCPU": 31.5,
-          "priority": 40,
-          "machines": [
-            "compute-3"
-          ]
+        "execution": {
+            "makespanInSeconds": 594.0,
+            "executedAt": "20200408T154143+0000",
+            "tasks": [
+                {
+                    "id": "chr21_chr21_ID0000001",
+                    "runtimeInSeconds": 2.774,
+                    "command": {
+                        "program": "chr21",
+                        "arguments": [
+                            "-b",
+                            "HEP2_MSP1_Digests.nocontam.map",
+                            "chr21",
+                            "chr21.rev",
+                            "HEP2_MSP1_Digests.nocontam.chr21.map"
+                        ]
+                    },
+                    "avgCPU": 95.5299,
+                    "priority": 90,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_1_ID0000002",
+                    "runtimeInSeconds": 0.543,
+                    "command": {
+                        "program": "fast2bfq",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.fq",
+                            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 50,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_2_ID0000003",
+                    "runtimeInSeconds": 0.545,
+                    "command": {
+                        "program": "fast2bfq",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.fq",
+                            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 96.3303,
+                    "priority": 50,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_3_ID0000004",
+                    "runtimeInSeconds": 0.687,
+                    "command": {
+                        "program": "fast2bfq",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.fq",
+                            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 78.1659,
+                    "priority": 50,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_4_ID0000005",
+                    "runtimeInSeconds": 0.621,
+                    "command": {
+                        "program": "fast2bfq",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.fq",
+                            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 86.4734,
+                    "priority": 50,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_5_ID0000006",
+                    "runtimeInSeconds": 0.612,
+                    "command": {
+                        "program": "fast2bfq",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.fq",
+                            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 91.6667,
+                    "priority": 50,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_6_ID0000007",
+                    "runtimeInSeconds": 0.538,
+                    "command": {
+                        "program": "fast2bfq",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.fq",
+                            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 50,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_7_ID0000008",
+                    "runtimeInSeconds": 0.531,
+                    "command": {
+                        "program": "fast2bfq",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.fq",
+                            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 50,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_8_ID0000009",
+                    "runtimeInSeconds": 0.841,
+                    "command": {
+                        "program": "fast2bfq",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.fq",
+                            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 66.7063,
+                    "priority": 50,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "fast2bfq_fast2bfq_HEP2_MSP1_Digests_s_1_sequence_9_ID0000010",
+                    "runtimeInSeconds": 0.237,
+                    "command": {
+                        "program": "fast2bfq",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.fq",
+                            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 50,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "fastqSplit_fastqSplit_HEP2_MSP1_Digests_s_1_sequence_ID0000011",
+                    "runtimeInSeconds": 1.345,
+                    "command": {
+                        "program": "fastqSplit",
+                        "arguments": [
+                            "100000",
+                            "HEP2_MSP1_Digests_s_1_sequence.sfq"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 20,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_1_ID0000012",
+                    "runtimeInSeconds": 0.691,
+                    "command": {
+                        "program": "filterContams",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.1.sfq"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 30,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_2_ID0000013",
+                    "runtimeInSeconds": 0.688,
+                    "command": {
+                        "program": "filterContams",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.2.sfq"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 30,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_3_ID0000014",
+                    "runtimeInSeconds": 0.702,
+                    "command": {
+                        "program": "filterContams",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.3.sfq"
+                        ]
+                    },
+                    "avgCPU": 99.8575,
+                    "priority": 30,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_4_ID0000015",
+                    "runtimeInSeconds": 0.692,
+                    "command": {
+                        "program": "filterContams",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.4.sfq"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 30,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_5_ID0000016",
+                    "runtimeInSeconds": 0.689,
+                    "command": {
+                        "program": "filterContams",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.5.sfq"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 30,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_6_ID0000017",
+                    "runtimeInSeconds": 0.691,
+                    "command": {
+                        "program": "filterContams",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.6.sfq"
+                        ]
+                    },
+                    "avgCPU": 99.8553,
+                    "priority": 30,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_7_ID0000018",
+                    "runtimeInSeconds": 0.691,
+                    "command": {
+                        "program": "filterContams",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.7.sfq"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 30,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_8_ID0000019",
+                    "runtimeInSeconds": 1.136,
+                    "command": {
+                        "program": "filterContams",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.8.sfq"
+                        ]
+                    },
+                    "avgCPU": 61.7958,
+                    "priority": 30,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "filterContams_filterContams_HEP2_MSP1_Digests_s_1_sequence_9_ID0000020",
+                    "runtimeInSeconds": 0.514,
+                    "command": {
+                        "program": "filterContams",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.9.sfq"
+                        ]
+                    },
+                    "avgCPU": 57.9767,
+                    "priority": 30,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "mapMerge_mapMerge_HEP2_MSP1_Digests_ID0000021",
+                    "runtimeInSeconds": 3.202,
+                    "command": {
+                        "program": "mapMerge",
+                        "arguments": [
+                            "HEP2_MSP1_Digests.nocontam.map",
+                            "HEP2_MSP1_Digests_s_1_sequence.nocontam.map"
+                        ]
+                    },
+                    "avgCPU": 56.0899,
+                    "priority": 80,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "mapMerge_mapMerge_HEP2_MSP1_Digests_s_1_sequence_ID0000022",
+                    "runtimeInSeconds": 5.637,
+                    "command": {
+                        "program": "mapMerge",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.nocontam.map",
+                            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.map",
+                            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.map",
+                            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.map",
+                            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.map",
+                            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.map",
+                            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.map",
+                            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.map",
+                            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.map",
+                            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.map"
+                        ]
+                    },
+                    "avgCPU": 30.016,
+                    "priority": 70,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_1_ID0000023",
+                    "runtimeInSeconds": 59.718,
+                    "command": {
+                        "program": "map",
+                        "arguments": [
+                            "-n",
+                            "2",
+                            "-M",
+                            "c",
+                            "-1",
+                            "32",
+                            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.map",
+                            "chr21.BS.bfa",
+                            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 98.5867,
+                    "priority": 60,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_2_ID0000024",
+                    "runtimeInSeconds": 50.967,
+                    "command": {
+                        "program": "map",
+                        "arguments": [
+                            "-n",
+                            "2",
+                            "-M",
+                            "c",
+                            "-1",
+                            "32",
+                            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.map",
+                            "chr21.BS.bfa",
+                            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 99.1759,
+                    "priority": 60,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_3_ID0000025",
+                    "runtimeInSeconds": 54.815,
+                    "command": {
+                        "program": "map",
+                        "arguments": [
+                            "-n",
+                            "2",
+                            "-M",
+                            "c",
+                            "-1",
+                            "32",
+                            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.map",
+                            "chr21.BS.bfa",
+                            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 97.674,
+                    "priority": 60,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_4_ID0000026",
+                    "runtimeInSeconds": 58.22,
+                    "command": {
+                        "program": "map",
+                        "arguments": [
+                            "-n",
+                            "2",
+                            "-M",
+                            "c",
+                            "-1",
+                            "32",
+                            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.map",
+                            "chr21.BS.bfa",
+                            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 98.9729,
+                    "priority": 60,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_5_ID0000027",
+                    "runtimeInSeconds": 57.489,
+                    "command": {
+                        "program": "map",
+                        "arguments": [
+                            "-n",
+                            "2",
+                            "-M",
+                            "c",
+                            "-1",
+                            "32",
+                            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.map",
+                            "chr21.BS.bfa",
+                            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 98.9789,
+                    "priority": 60,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_6_ID0000028",
+                    "runtimeInSeconds": 57.029,
+                    "command": {
+                        "program": "map",
+                        "arguments": [
+                            "-n",
+                            "2",
+                            "-M",
+                            "c",
+                            "-1",
+                            "32",
+                            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.map",
+                            "chr21.BS.bfa",
+                            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 99.1127,
+                    "priority": 60,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_7_ID0000029",
+                    "runtimeInSeconds": 56.157,
+                    "command": {
+                        "program": "map",
+                        "arguments": [
+                            "-n",
+                            "2",
+                            "-M",
+                            "c",
+                            "-1",
+                            "32",
+                            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.map",
+                            "chr21.BS.bfa",
+                            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 99.0544,
+                    "priority": 60,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_8_ID0000030",
+                    "runtimeInSeconds": 52.271,
+                    "command": {
+                        "program": "map",
+                        "arguments": [
+                            "-n",
+                            "2",
+                            "-M",
+                            "c",
+                            "-1",
+                            "32",
+                            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.map",
+                            "chr21.BS.bfa",
+                            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 96.7975,
+                    "priority": 60,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "map_map_HEP2_MSP1_Digests_s_1_sequence_9_ID0000031",
+                    "runtimeInSeconds": 33.964,
+                    "command": {
+                        "program": "map",
+                        "arguments": [
+                            "-n",
+                            "2",
+                            "-M",
+                            "c",
+                            "-1",
+                            "32",
+                            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.map",
+                            "chr21.BS.bfa",
+                            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.bfq"
+                        ]
+                    },
+                    "avgCPU": 98.7605,
+                    "priority": 60,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "pileup_pileup_ID0000032",
+                    "runtimeInSeconds": 30.52,
+                    "command": {
+                        "program": "pileup",
+                        "arguments": [
+                            "HEP2_MSP1_Digests.nocontam.pileup",
+                            "-q",
+                            "30",
+                            "-P",
+                            "chr21.BSnull.bfa",
+                            "HEP2_MSP1_Digests.nocontam.chr21.map"
+                        ]
+                    },
+                    "avgCPU": 180.5963,
+                    "priority": 100,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_1_ID0000033",
+                    "runtimeInSeconds": 0.392,
+                    "command": {
+                        "program": "sol2sanger",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.sfq",
+                            "HEP2_MSP1_Digests_s_1_sequence.1.nocontam.fq"
+                        ]
+                    },
+                    "avgCPU": 40.8163,
+                    "priority": 40,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_2_ID0000034",
+                    "runtimeInSeconds": 0.515,
+                    "command": {
+                        "program": "sol2sanger",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.sfq",
+                            "HEP2_MSP1_Digests_s_1_sequence.2.nocontam.fq"
+                        ]
+                    },
+                    "avgCPU": 29.1262,
+                    "priority": 40,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_3_ID0000035",
+                    "runtimeInSeconds": 0.305,
+                    "command": {
+                        "program": "sol2sanger",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.sfq",
+                            "HEP2_MSP1_Digests_s_1_sequence.3.nocontam.fq"
+                        ]
+                    },
+                    "avgCPU": 48.8525,
+                    "priority": 40,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_4_ID0000036",
+                    "runtimeInSeconds": 0.642,
+                    "command": {
+                        "program": "sol2sanger",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.sfq",
+                            "HEP2_MSP1_Digests_s_1_sequence.4.nocontam.fq"
+                        ]
+                    },
+                    "avgCPU": 25.8567,
+                    "priority": 40,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_5_ID0000037",
+                    "runtimeInSeconds": 0.277,
+                    "command": {
+                        "program": "sol2sanger",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.sfq",
+                            "HEP2_MSP1_Digests_s_1_sequence.5.nocontam.fq"
+                        ]
+                    },
+                    "avgCPU": 43.3213,
+                    "priority": 40,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_6_ID0000038",
+                    "runtimeInSeconds": 0.152,
+                    "command": {
+                        "program": "sol2sanger",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.sfq",
+                            "HEP2_MSP1_Digests_s_1_sequence.6.nocontam.fq"
+                        ]
+                    },
+                    "avgCPU": 100.6579,
+                    "priority": 40,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_7_ID0000039",
+                    "runtimeInSeconds": 0.469,
+                    "command": {
+                        "program": "sol2sanger",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.sfq",
+                            "HEP2_MSP1_Digests_s_1_sequence.7.nocontam.fq"
+                        ]
+                    },
+                    "avgCPU": 32.4094,
+                    "priority": 40,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_8_ID0000040",
+                    "runtimeInSeconds": 0.598,
+                    "command": {
+                        "program": "sol2sanger",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.sfq",
+                            "HEP2_MSP1_Digests_s_1_sequence.8.nocontam.fq"
+                        ]
+                    },
+                    "avgCPU": 19.398,
+                    "priority": 40,
+                    "machines": [
+                        "compute-3"
+                    ]
+                },
+                {
+                    "id": "sol2sanger_sol2sanger_HEP2_MSP1_Digests_s_1_sequence_9_ID0000041",
+                    "runtimeInSeconds": 0.2,
+                    "command": {
+                        "program": "sol2sanger",
+                        "arguments": [
+                            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.sfq",
+                            "HEP2_MSP1_Digests_s_1_sequence.9.nocontam.fq"
+                        ]
+                    },
+                    "avgCPU": 31.5,
+                    "priority": 40,
+                    "machines": [
+                        "compute-3"
+                    ]
+                }
+            ],
+            "machines": [
+                {
+                    "nodeName": "compute-3",
+                    "system": "linux",
+                    "architecture": "x86_64",
+                    "release": "4.15.0-91-generic",
+                    "cpu": {
+                        "vendor": "GenuineIntel",
+                        "coreCount": 48,
+                        "speedInMHz": 1202
+                    },
+                    "memoryInBytes": 131795984000
+                }
+            ],
+            "metrics": {
+                "sumTaskRuntimesInSeconds": 539.3070000000001
+            }
         }
-      ],
-      "machines": [
-        {
-          "nodeName": "compute-3",
-          "system": "linux",
-          "architecture": "x86_64",
-          "release": "4.15.0-91-generic",
-          "cpu": {
-            "vendor": "GenuineIntel",
-            "coreCount": 48,
-            "speedInMHz": 1202
-          },
-          "memoryInBytes": 131795984000
-        }
-      ],
-      "metrics": {
-        "sumTaskRuntimesInSeconds": 539.3070000000001
-      }
+    },
+    "runtimeSystem": {
+        "url": "http://pegasus.isi.edu",
+        "version": "4.9.3",
+        "name": "Pegasus"
     }
-  },
-  "runtimeSystem": {
-    "url": "http://pegasus.isi.edu",
-    "version": "4.9.3",
-    "name": "Pegasus"
-  }
 }

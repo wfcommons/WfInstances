@@ -1,989 +1,989 @@
 {
-  "name": "big_streamflow_workflow",
-  "description": "Instance generated with WfCommons - https://wfcommons.org",
-  "createdAt": "2026-05-05T19:12:07.090941-07:00",
-  "schemaVersion": "1.5",
-  "author": {
-    "name": "root",
-    "email": "support@wfcommons.org"
-  },
-  "workflow": {
-    "specification": {
-      "tasks": [
-        {
-          "name": "main.cwl#chromosome/run/get_chromosome",
-          "id": "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-          "parents": [],
-          "children": [
-            "main.cwl#chromosome/run/individuals_#41eb8530-ab9d-4c2d-9e68-0c9570c3a34a",
-            "main.cwl#chromosome/run/individuals_#4696e734-53ba-4546-bf26-86d0caca6e8b",
-            "main.cwl#chromosome/run/individuals_#fd1273b4-6110-4509-adfb-714001bf9ff8",
-            "main.cwl#chromosome/run/individuals_#a3222717-79a3-499f-9cc6-f27a8415eee0",
-            "main.cwl#chromosome/run/individuals_#64c8bb15-af98-4eb5-9dc1-dccd4f3ed5bd",
-            "main.cwl#chromosome/run/individuals_#cf5678c8-e150-439a-ac81-454c02c9ef06",
-            "main.cwl#chromosome/run/individuals_#4d885d4d-0660-494a-acab-f5b34beb7b49",
-            "main.cwl#chromosome/run/individuals_#b296ce9f-c8e5-4e49-aa73-ef267c2d6578",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29",
-            "main.cwl#chromosome/run/mutation_overlap_#06af7751-267f-4fd7-8219-e860e9047ff6",
-            "main.cwl#chromosome/run/mutation_overlap_#ab63c49d-a270-4774-a0e0-ac295137995d",
-            "main.cwl#chromosome/run/mutation_overlap_#7954223e-7c94-4c30-b5d6-aa17c69bc9fb",
-            "main.cwl#chromosome/run/mutation_overlap_#71d32be9-8fe5-4124-8443-3fb90c049a76",
-            "main.cwl#chromosome/run/mutation_overlap_#2806a488-4d0b-48b9-b9dd-9809bffa7524",
-            "main.cwl#chromosome/run/mutation_overlap_#b764ce11-ab66-4680-a238-7ec2b387de2a",
-            "main.cwl#chromosome/run/mutation_overlap_#d6e81c74-a7b6-47d4-8cd9-3afacb288faa",
-            "main.cwl#chromosome/run/frequency_#c54e5e96-fb99-4920-8671-468b0e5786d2",
-            "main.cwl#chromosome/run/frequency_#a786815a-7298-4bb8-863b-9282eef9d1bd",
-            "main.cwl#chromosome/run/frequency_#dd830a32-30b5-46ae-ae1c-e29388deee24",
-            "main.cwl#chromosome/run/frequency_#551f2fe1-99cd-4f8e-bb79-5e52db296177",
-            "main.cwl#chromosome/run/frequency_#9818e487-cfbb-4ad8-bac9-8dfb7ff54ae1",
-            "main.cwl#chromosome/run/frequency_#53abfbed-f50c-4e74-89c1-a34c9e1b81f1",
-            "main.cwl#chromosome/run/frequency_#51ef3c0c-d215-420b-bf5d-4b401ce8c2cd"
-          ],
-          "inputFiles": [
-            "ALL.chr1.250000.vcf"
-          ],
-          "outputFiles": []
-        },
-        {
-          "name": "main.cwl#chromosome/run/get_intervals",
-          "id": "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0",
-          "parents": [],
-          "children": [
-            "main.cwl#chromosome/run/individuals_#41eb8530-ab9d-4c2d-9e68-0c9570c3a34a",
-            "main.cwl#chromosome/run/individuals_#4696e734-53ba-4546-bf26-86d0caca6e8b",
-            "main.cwl#chromosome/run/individuals_#fd1273b4-6110-4509-adfb-714001bf9ff8",
-            "main.cwl#chromosome/run/individuals_#a3222717-79a3-499f-9cc6-f27a8415eee0",
-            "main.cwl#chromosome/run/individuals_#64c8bb15-af98-4eb5-9dc1-dccd4f3ed5bd",
-            "main.cwl#chromosome/run/individuals_#cf5678c8-e150-439a-ac81-454c02c9ef06",
-            "main.cwl#chromosome/run/individuals_#4d885d4d-0660-494a-acab-f5b34beb7b49",
-            "main.cwl#chromosome/run/individuals_#b296ce9f-c8e5-4e49-aa73-ef267c2d6578"
-          ],
-          "inputFiles": [],
-          "outputFiles": []
-        },
-        {
-          "name": "main.cwl#chromosome/run/individuals",
-          "id": "main.cwl#chromosome/run/individuals_#41eb8530-ab9d-4c2d-9e68-0c9570c3a34a",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
-          ],
-          "children": [
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
-          ],
-          "inputFiles": [
-            "columns.txt",
-            "ALL.chr1.250000.vcf",
-            "individuals"
-          ],
-          "outputFiles": [
-            "chr1n-1-31250.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/individuals",
-          "id": "main.cwl#chromosome/run/individuals_#4696e734-53ba-4546-bf26-86d0caca6e8b",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
-          ],
-          "children": [
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
-          ],
-          "inputFiles": [
-            "columns.txt",
-            "ALL.chr1.250000.vcf",
-            "individuals"
-          ],
-          "outputFiles": [
-            "chr1n-31251-62500.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/individuals",
-          "id": "main.cwl#chromosome/run/individuals_#fd1273b4-6110-4509-adfb-714001bf9ff8",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
-          ],
-          "children": [
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
-          ],
-          "inputFiles": [
-            "columns.txt",
-            "ALL.chr1.250000.vcf",
-            "individuals"
-          ],
-          "outputFiles": [
-            "chr1n-62501-93750.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/individuals",
-          "id": "main.cwl#chromosome/run/individuals_#a3222717-79a3-499f-9cc6-f27a8415eee0",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
-          ],
-          "children": [
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
-          ],
-          "inputFiles": [
-            "columns.txt",
-            "ALL.chr1.250000.vcf",
-            "individuals"
-          ],
-          "outputFiles": [
-            "chr1n-93751-125000.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/individuals",
-          "id": "main.cwl#chromosome/run/individuals_#64c8bb15-af98-4eb5-9dc1-dccd4f3ed5bd",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
-          ],
-          "children": [
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
-          ],
-          "inputFiles": [
-            "columns.txt",
-            "ALL.chr1.250000.vcf",
-            "individuals"
-          ],
-          "outputFiles": [
-            "chr1n-125001-156250.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/individuals",
-          "id": "main.cwl#chromosome/run/individuals_#cf5678c8-e150-439a-ac81-454c02c9ef06",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
-          ],
-          "children": [
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
-          ],
-          "inputFiles": [
-            "columns.txt",
-            "ALL.chr1.250000.vcf",
-            "individuals"
-          ],
-          "outputFiles": [
-            "chr1n-156251-187500.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/individuals",
-          "id": "main.cwl#chromosome/run/individuals_#4d885d4d-0660-494a-acab-f5b34beb7b49",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
-          ],
-          "children": [
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
-          ],
-          "inputFiles": [
-            "columns.txt",
-            "ALL.chr1.250000.vcf",
-            "individuals"
-          ],
-          "outputFiles": [
-            "chr1n-187501-218750.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/individuals",
-          "id": "main.cwl#chromosome/run/individuals_#b296ce9f-c8e5-4e49-aa73-ef267c2d6578",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
-          ],
-          "children": [
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
-          ],
-          "inputFiles": [
-            "columns.txt",
-            "ALL.chr1.250000.vcf",
-            "individuals"
-          ],
-          "outputFiles": [
-            "chr1n-218751-250000.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/individuals_merge",
-          "id": "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_#41eb8530-ab9d-4c2d-9e68-0c9570c3a34a",
-            "main.cwl#chromosome/run/individuals_#4696e734-53ba-4546-bf26-86d0caca6e8b",
-            "main.cwl#chromosome/run/individuals_#fd1273b4-6110-4509-adfb-714001bf9ff8",
-            "main.cwl#chromosome/run/individuals_#a3222717-79a3-499f-9cc6-f27a8415eee0",
-            "main.cwl#chromosome/run/individuals_#64c8bb15-af98-4eb5-9dc1-dccd4f3ed5bd",
-            "main.cwl#chromosome/run/individuals_#cf5678c8-e150-439a-ac81-454c02c9ef06",
-            "main.cwl#chromosome/run/individuals_#4d885d4d-0660-494a-acab-f5b34beb7b49",
-            "main.cwl#chromosome/run/individuals_#b296ce9f-c8e5-4e49-aa73-ef267c2d6578"
-          ],
-          "children": [
-            "main.cwl#chromosome/run/mutation_overlap_#06af7751-267f-4fd7-8219-e860e9047ff6",
-            "main.cwl#chromosome/run/mutation_overlap_#ab63c49d-a270-4774-a0e0-ac295137995d",
-            "main.cwl#chromosome/run/mutation_overlap_#7954223e-7c94-4c30-b5d6-aa17c69bc9fb",
-            "main.cwl#chromosome/run/mutation_overlap_#71d32be9-8fe5-4124-8443-3fb90c049a76",
-            "main.cwl#chromosome/run/mutation_overlap_#2806a488-4d0b-48b9-b9dd-9809bffa7524",
-            "main.cwl#chromosome/run/mutation_overlap_#b764ce11-ab66-4680-a238-7ec2b387de2a",
-            "main.cwl#chromosome/run/mutation_overlap_#d6e81c74-a7b6-47d4-8cd9-3afacb288faa",
-            "main.cwl#chromosome/run/frequency_#c54e5e96-fb99-4920-8671-468b0e5786d2",
-            "main.cwl#chromosome/run/frequency_#a786815a-7298-4bb8-863b-9282eef9d1bd",
-            "main.cwl#chromosome/run/frequency_#dd830a32-30b5-46ae-ae1c-e29388deee24",
-            "main.cwl#chromosome/run/frequency_#551f2fe1-99cd-4f8e-bb79-5e52db296177",
-            "main.cwl#chromosome/run/frequency_#9818e487-cfbb-4ad8-bac9-8dfb7ff54ae1",
-            "main.cwl#chromosome/run/frequency_#53abfbed-f50c-4e74-89c1-a34c9e1b81f1",
-            "main.cwl#chromosome/run/frequency_#51ef3c0c-d215-420b-bf5d-4b401ce8c2cd"
-          ],
-          "inputFiles": [
-            "chr1n-1-31250.tar.gz",
-            "chr1n-62501-93750.tar.gz",
-            "individuals_merge",
-            "chr1n-93751-125000.tar.gz",
-            "chr1n-218751-250000.tar.gz",
-            "chr1n-187501-218750.tar.gz",
-            "chr1n-31251-62500.tar.gz",
-            "chr1n-125001-156250.tar.gz",
-            "chr1n-156251-187500.tar.gz"
-          ],
-          "outputFiles": [
-            "chr1n.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/sifting",
-          "id": "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07"
-          ],
-          "children": [
-            "main.cwl#chromosome/run/mutation_overlap_#06af7751-267f-4fd7-8219-e860e9047ff6",
-            "main.cwl#chromosome/run/mutation_overlap_#ab63c49d-a270-4774-a0e0-ac295137995d",
-            "main.cwl#chromosome/run/mutation_overlap_#7954223e-7c94-4c30-b5d6-aa17c69bc9fb",
-            "main.cwl#chromosome/run/mutation_overlap_#71d32be9-8fe5-4124-8443-3fb90c049a76",
-            "main.cwl#chromosome/run/mutation_overlap_#2806a488-4d0b-48b9-b9dd-9809bffa7524",
-            "main.cwl#chromosome/run/mutation_overlap_#b764ce11-ab66-4680-a238-7ec2b387de2a",
-            "main.cwl#chromosome/run/mutation_overlap_#d6e81c74-a7b6-47d4-8cd9-3afacb288faa",
-            "main.cwl#chromosome/run/frequency_#c54e5e96-fb99-4920-8671-468b0e5786d2",
-            "main.cwl#chromosome/run/frequency_#a786815a-7298-4bb8-863b-9282eef9d1bd",
-            "main.cwl#chromosome/run/frequency_#dd830a32-30b5-46ae-ae1c-e29388deee24",
-            "main.cwl#chromosome/run/frequency_#551f2fe1-99cd-4f8e-bb79-5e52db296177",
-            "main.cwl#chromosome/run/frequency_#9818e487-cfbb-4ad8-bac9-8dfb7ff54ae1",
-            "main.cwl#chromosome/run/frequency_#53abfbed-f50c-4e74-89c1-a34c9e1b81f1",
-            "main.cwl#chromosome/run/frequency_#51ef3c0c-d215-420b-bf5d-4b401ce8c2cd"
-          ],
-          "inputFiles": [
-            "sifting",
-            "ALL.chr1.phase3_shapeit2_mvncall_integrated_v5.20130502.sites.annotation.vcf"
-          ],
-          "outputFiles": [
-            "sifted.SIFT.chr1.txt"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/mutation_overlap",
-          "id": "main.cwl#chromosome/run/mutation_overlap_#06af7751-267f-4fd7-8219-e860e9047ff6",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "mutation_overlap.py",
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "AFR"
-          ],
-          "outputFiles": [
-            "chr1-AFR.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/mutation_overlap",
-          "id": "main.cwl#chromosome/run/mutation_overlap_#ab63c49d-a270-4774-a0e0-ac295137995d",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "mutation_overlap.py",
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "ALL"
-          ],
-          "outputFiles": [
-            "chr1-ALL.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/mutation_overlap",
-          "id": "main.cwl#chromosome/run/mutation_overlap_#7954223e-7c94-4c30-b5d6-aa17c69bc9fb",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "mutation_overlap.py",
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "AMR"
-          ],
-          "outputFiles": [
-            "chr1-AMR.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/mutation_overlap",
-          "id": "main.cwl#chromosome/run/mutation_overlap_#71d32be9-8fe5-4124-8443-3fb90c049a76",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "mutation_overlap.py",
-            "EAS",
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz"
-          ],
-          "outputFiles": [
-            "chr1-EAS.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/mutation_overlap",
-          "id": "main.cwl#chromosome/run/mutation_overlap_#2806a488-4d0b-48b9-b9dd-9809bffa7524",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "mutation_overlap.py",
-            "columns.txt",
-            "EUR",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz"
-          ],
-          "outputFiles": [
-            "chr1-EUR.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/mutation_overlap",
-          "id": "main.cwl#chromosome/run/mutation_overlap_#b764ce11-ab66-4680-a238-7ec2b387de2a",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "mutation_overlap.py",
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "GBR"
-          ],
-          "outputFiles": [
-            "chr1-GBR.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/mutation_overlap",
-          "id": "main.cwl#chromosome/run/mutation_overlap_#d6e81c74-a7b6-47d4-8cd9-3afacb288faa",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "mutation_overlap.py",
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "SAS"
-          ],
-          "outputFiles": [
-            "chr1-SAS.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/frequency",
-          "id": "main.cwl#chromosome/run/frequency_#c54e5e96-fb99-4920-8671-468b0e5786d2",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "frequency.py",
-            "AFR"
-          ],
-          "outputFiles": [
-            "chr1-AFR-freq.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/frequency",
-          "id": "main.cwl#chromosome/run/frequency_#a786815a-7298-4bb8-863b-9282eef9d1bd",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "frequency.py",
-            "ALL"
-          ],
-          "outputFiles": [
-            "chr1-ALL-freq.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/frequency",
-          "id": "main.cwl#chromosome/run/frequency_#dd830a32-30b5-46ae-ae1c-e29388deee24",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "frequency.py",
-            "AMR"
-          ],
-          "outputFiles": [
-            "chr1-AMR-freq.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/frequency",
-          "id": "main.cwl#chromosome/run/frequency_#551f2fe1-99cd-4f8e-bb79-5e52db296177",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "columns.txt",
-            "EAS",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "frequency.py"
-          ],
-          "outputFiles": [
-            "chr1-EAS-freq.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/frequency",
-          "id": "main.cwl#chromosome/run/frequency_#9818e487-cfbb-4ad8-bac9-8dfb7ff54ae1",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "columns.txt",
-            "EUR",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "frequency.py"
-          ],
-          "outputFiles": [
-            "chr1-EUR-freq.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/frequency",
-          "id": "main.cwl#chromosome/run/frequency_#53abfbed-f50c-4e74-89c1-a34c9e1b81f1",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "frequency.py",
-            "GBR"
-          ],
-          "outputFiles": [
-            "chr1-GBR-freq.tar.gz"
-          ]
-        },
-        {
-          "name": "main.cwl#chromosome/run/frequency",
-          "id": "main.cwl#chromosome/run/frequency_#51ef3c0c-d215-420b-bf5d-4b401ce8c2cd",
-          "parents": [
-            "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-            "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-            "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
-          ],
-          "children": [],
-          "inputFiles": [
-            "columns.txt",
-            "sifted.SIFT.chr1.txt",
-            "chr1n.tar.gz",
-            "frequency.py",
-            "SAS"
-          ],
-          "outputFiles": [
-            "chr1-SAS-freq.tar.gz"
-          ]
-        }
-      ],
-      "files": [
-        {
-          "id": "chr1n.tar.gz",
-          "sizeInBytes": 218416
-        },
-        {
-          "id": "chr1-ALL.tar.gz",
-          "sizeInBytes": 142767
-        },
-        {
-          "id": "chr1n-93751-125000.tar.gz",
-          "sizeInBytes": 27975
-        },
-        {
-          "id": "chr1-EUR.tar.gz",
-          "sizeInBytes": 118168
-        },
-        {
-          "id": "GBR",
-          "sizeInBytes": 856
-        },
-        {
-          "id": "ALL",
-          "sizeInBytes": 28000
-        },
-        {
-          "id": "chr1-EUR-freq.tar.gz",
-          "sizeInBytes": 255030
-        },
-        {
-          "id": "chr1n-125001-156250.tar.gz",
-          "sizeInBytes": 27995
-        },
-        {
-          "id": "chr1-SAS-freq.tar.gz",
-          "sizeInBytes": 252644
-        },
-        {
-          "id": "columns.txt",
-          "sizeInBytes": 20078
-        },
-        {
-          "id": "mutation_overlap.py",
-          "sizeInBytes": 16226
-        },
-        {
-          "id": "ALL.chr1.250000.vcf",
-          "sizeInBytes": 2539456345
-        },
-        {
-          "id": "chr1n-1-31250.tar.gz",
-          "sizeInBytes": 28007
-        },
-        {
-          "id": "chr1-AFR-freq.tar.gz",
-          "sizeInBytes": 261321
-        },
-        {
-          "id": "frequency.py",
-          "sizeInBytes": 10980
-        },
-        {
-          "id": "chr1-EAS.tar.gz",
-          "sizeInBytes": 119167
-        },
-        {
-          "id": "chr1-AFR.tar.gz",
-          "sizeInBytes": 121097
-        },
-        {
-          "id": "AFR",
-          "sizeInBytes": 8088
-        },
-        {
-          "id": "individuals_merge",
-          "sizeInBytes": 1097
-        },
-        {
-          "id": "chr1n-31251-62500.tar.gz",
-          "sizeInBytes": 27942
-        },
-        {
-          "id": "ALL.chr1.phase3_shapeit2_mvncall_integrated_v5.20130502.sites.annotation.vcf",
-          "sizeInBytes": 1580478841
-        },
-        {
-          "id": "individuals",
-          "sizeInBytes": 2476
-        },
-        {
-          "id": "chr1n-62501-93750.tar.gz",
-          "sizeInBytes": 28000
-        },
-        {
-          "id": "chr1-GBR-freq.tar.gz",
-          "sizeInBytes": 209894
-        },
-        {
-          "id": "chr1-GBR.tar.gz",
-          "sizeInBytes": 113322
-        },
-        {
-          "id": "chr1n-187501-218750.tar.gz",
-          "sizeInBytes": 27958
-        },
-        {
-          "id": "EAS",
-          "sizeInBytes": 4896
-        },
-        {
-          "id": "chr1n-218751-250000.tar.gz",
-          "sizeInBytes": 28020
-        },
-        {
-          "id": "chr1-EAS-freq.tar.gz",
-          "sizeInBytes": 254045
-        },
-        {
-          "id": "sifting",
-          "sizeInBytes": 1573
-        },
-        {
-          "id": "EUR",
-          "sizeInBytes": 5312
-        },
-        {
-          "id": "chr1-SAS.tar.gz",
-          "sizeInBytes": 119873
-        },
-        {
-          "id": "AMR",
-          "sizeInBytes": 4248
-        },
-        {
-          "id": "sifted.SIFT.chr1.txt",
-          "sizeInBytes": 0
-        },
-        {
-          "id": "chr1-AMR.tar.gz",
-          "sizeInBytes": 118982
-        },
-        {
-          "id": "chr1-AMR-freq.tar.gz",
-          "sizeInBytes": 247876
-        },
-        {
-          "id": "chr1-ALL-freq.tar.gz",
-          "sizeInBytes": 278372
-        },
-        {
-          "id": "SAS",
-          "sizeInBytes": 5248
-        },
-        {
-          "id": "chr1n-156251-187500.tar.gz",
-          "sizeInBytes": 27975
-        }
-      ],
-      "metrics": {
-        "numberOfTasks": 26,
-        "numberOfFiles": 39,
-        "sumOfFileSizesInBytes": 4123099110,
-        "numberOfLevels": 4,
-        "minimumWidth": 1,
-        "maximumWidth": 14
-      }
+    "name": "big_streamflow_workflow",
+    "description": "Instance generated with WfCommons - https://wfcommons.org",
+    "createdAt": "2026-05-05T19:12:07.090941-07:00",
+    "schemaVersion": "1.6",
+    "author": {
+        "name": "root",
+        "email": "support@wfcommons.org"
     },
-    "execution": {
-      "makespanInSeconds": 255.622014,
-      "executedAt": "2025-10-29T15:14:13.715458+00:00",
-      "tasks": [
-        {
-          "id": "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
-          "runtimeInSeconds": 0.001837,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:20.093384+00:00"
+    "workflow": {
+        "specification": {
+            "tasks": [
+                {
+                    "name": "main.cwl#chromosome/run/get_chromosome",
+                    "id": "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                    "parents": [],
+                    "children": [
+                        "main.cwl#chromosome/run/individuals_#41eb8530-ab9d-4c2d-9e68-0c9570c3a34a",
+                        "main.cwl#chromosome/run/individuals_#4696e734-53ba-4546-bf26-86d0caca6e8b",
+                        "main.cwl#chromosome/run/individuals_#fd1273b4-6110-4509-adfb-714001bf9ff8",
+                        "main.cwl#chromosome/run/individuals_#a3222717-79a3-499f-9cc6-f27a8415eee0",
+                        "main.cwl#chromosome/run/individuals_#64c8bb15-af98-4eb5-9dc1-dccd4f3ed5bd",
+                        "main.cwl#chromosome/run/individuals_#cf5678c8-e150-439a-ac81-454c02c9ef06",
+                        "main.cwl#chromosome/run/individuals_#4d885d4d-0660-494a-acab-f5b34beb7b49",
+                        "main.cwl#chromosome/run/individuals_#b296ce9f-c8e5-4e49-aa73-ef267c2d6578",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29",
+                        "main.cwl#chromosome/run/mutation_overlap_#06af7751-267f-4fd7-8219-e860e9047ff6",
+                        "main.cwl#chromosome/run/mutation_overlap_#ab63c49d-a270-4774-a0e0-ac295137995d",
+                        "main.cwl#chromosome/run/mutation_overlap_#7954223e-7c94-4c30-b5d6-aa17c69bc9fb",
+                        "main.cwl#chromosome/run/mutation_overlap_#71d32be9-8fe5-4124-8443-3fb90c049a76",
+                        "main.cwl#chromosome/run/mutation_overlap_#2806a488-4d0b-48b9-b9dd-9809bffa7524",
+                        "main.cwl#chromosome/run/mutation_overlap_#b764ce11-ab66-4680-a238-7ec2b387de2a",
+                        "main.cwl#chromosome/run/mutation_overlap_#d6e81c74-a7b6-47d4-8cd9-3afacb288faa",
+                        "main.cwl#chromosome/run/frequency_#c54e5e96-fb99-4920-8671-468b0e5786d2",
+                        "main.cwl#chromosome/run/frequency_#a786815a-7298-4bb8-863b-9282eef9d1bd",
+                        "main.cwl#chromosome/run/frequency_#dd830a32-30b5-46ae-ae1c-e29388deee24",
+                        "main.cwl#chromosome/run/frequency_#551f2fe1-99cd-4f8e-bb79-5e52db296177",
+                        "main.cwl#chromosome/run/frequency_#9818e487-cfbb-4ad8-bac9-8dfb7ff54ae1",
+                        "main.cwl#chromosome/run/frequency_#53abfbed-f50c-4e74-89c1-a34c9e1b81f1",
+                        "main.cwl#chromosome/run/frequency_#51ef3c0c-d215-420b-bf5d-4b401ce8c2cd"
+                    ],
+                    "inputFiles": [
+                        "ALL.chr1.250000.vcf"
+                    ],
+                    "outputFiles": []
+                },
+                {
+                    "name": "main.cwl#chromosome/run/get_intervals",
+                    "id": "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0",
+                    "parents": [],
+                    "children": [
+                        "main.cwl#chromosome/run/individuals_#41eb8530-ab9d-4c2d-9e68-0c9570c3a34a",
+                        "main.cwl#chromosome/run/individuals_#4696e734-53ba-4546-bf26-86d0caca6e8b",
+                        "main.cwl#chromosome/run/individuals_#fd1273b4-6110-4509-adfb-714001bf9ff8",
+                        "main.cwl#chromosome/run/individuals_#a3222717-79a3-499f-9cc6-f27a8415eee0",
+                        "main.cwl#chromosome/run/individuals_#64c8bb15-af98-4eb5-9dc1-dccd4f3ed5bd",
+                        "main.cwl#chromosome/run/individuals_#cf5678c8-e150-439a-ac81-454c02c9ef06",
+                        "main.cwl#chromosome/run/individuals_#4d885d4d-0660-494a-acab-f5b34beb7b49",
+                        "main.cwl#chromosome/run/individuals_#b296ce9f-c8e5-4e49-aa73-ef267c2d6578"
+                    ],
+                    "inputFiles": [],
+                    "outputFiles": []
+                },
+                {
+                    "name": "main.cwl#chromosome/run/individuals",
+                    "id": "main.cwl#chromosome/run/individuals_#41eb8530-ab9d-4c2d-9e68-0c9570c3a34a",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
+                    ],
+                    "children": [
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
+                    ],
+                    "inputFiles": [
+                        "columns.txt",
+                        "ALL.chr1.250000.vcf",
+                        "individuals"
+                    ],
+                    "outputFiles": [
+                        "chr1n-1-31250.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/individuals",
+                    "id": "main.cwl#chromosome/run/individuals_#4696e734-53ba-4546-bf26-86d0caca6e8b",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
+                    ],
+                    "children": [
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
+                    ],
+                    "inputFiles": [
+                        "columns.txt",
+                        "ALL.chr1.250000.vcf",
+                        "individuals"
+                    ],
+                    "outputFiles": [
+                        "chr1n-31251-62500.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/individuals",
+                    "id": "main.cwl#chromosome/run/individuals_#fd1273b4-6110-4509-adfb-714001bf9ff8",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
+                    ],
+                    "children": [
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
+                    ],
+                    "inputFiles": [
+                        "columns.txt",
+                        "ALL.chr1.250000.vcf",
+                        "individuals"
+                    ],
+                    "outputFiles": [
+                        "chr1n-62501-93750.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/individuals",
+                    "id": "main.cwl#chromosome/run/individuals_#a3222717-79a3-499f-9cc6-f27a8415eee0",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
+                    ],
+                    "children": [
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
+                    ],
+                    "inputFiles": [
+                        "columns.txt",
+                        "ALL.chr1.250000.vcf",
+                        "individuals"
+                    ],
+                    "outputFiles": [
+                        "chr1n-93751-125000.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/individuals",
+                    "id": "main.cwl#chromosome/run/individuals_#64c8bb15-af98-4eb5-9dc1-dccd4f3ed5bd",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
+                    ],
+                    "children": [
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
+                    ],
+                    "inputFiles": [
+                        "columns.txt",
+                        "ALL.chr1.250000.vcf",
+                        "individuals"
+                    ],
+                    "outputFiles": [
+                        "chr1n-125001-156250.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/individuals",
+                    "id": "main.cwl#chromosome/run/individuals_#cf5678c8-e150-439a-ac81-454c02c9ef06",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
+                    ],
+                    "children": [
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
+                    ],
+                    "inputFiles": [
+                        "columns.txt",
+                        "ALL.chr1.250000.vcf",
+                        "individuals"
+                    ],
+                    "outputFiles": [
+                        "chr1n-156251-187500.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/individuals",
+                    "id": "main.cwl#chromosome/run/individuals_#4d885d4d-0660-494a-acab-f5b34beb7b49",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
+                    ],
+                    "children": [
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
+                    ],
+                    "inputFiles": [
+                        "columns.txt",
+                        "ALL.chr1.250000.vcf",
+                        "individuals"
+                    ],
+                    "outputFiles": [
+                        "chr1n-187501-218750.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/individuals",
+                    "id": "main.cwl#chromosome/run/individuals_#b296ce9f-c8e5-4e49-aa73-ef267c2d6578",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0"
+                    ],
+                    "children": [
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76"
+                    ],
+                    "inputFiles": [
+                        "columns.txt",
+                        "ALL.chr1.250000.vcf",
+                        "individuals"
+                    ],
+                    "outputFiles": [
+                        "chr1n-218751-250000.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/individuals_merge",
+                    "id": "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_#41eb8530-ab9d-4c2d-9e68-0c9570c3a34a",
+                        "main.cwl#chromosome/run/individuals_#4696e734-53ba-4546-bf26-86d0caca6e8b",
+                        "main.cwl#chromosome/run/individuals_#fd1273b4-6110-4509-adfb-714001bf9ff8",
+                        "main.cwl#chromosome/run/individuals_#a3222717-79a3-499f-9cc6-f27a8415eee0",
+                        "main.cwl#chromosome/run/individuals_#64c8bb15-af98-4eb5-9dc1-dccd4f3ed5bd",
+                        "main.cwl#chromosome/run/individuals_#cf5678c8-e150-439a-ac81-454c02c9ef06",
+                        "main.cwl#chromosome/run/individuals_#4d885d4d-0660-494a-acab-f5b34beb7b49",
+                        "main.cwl#chromosome/run/individuals_#b296ce9f-c8e5-4e49-aa73-ef267c2d6578"
+                    ],
+                    "children": [
+                        "main.cwl#chromosome/run/mutation_overlap_#06af7751-267f-4fd7-8219-e860e9047ff6",
+                        "main.cwl#chromosome/run/mutation_overlap_#ab63c49d-a270-4774-a0e0-ac295137995d",
+                        "main.cwl#chromosome/run/mutation_overlap_#7954223e-7c94-4c30-b5d6-aa17c69bc9fb",
+                        "main.cwl#chromosome/run/mutation_overlap_#71d32be9-8fe5-4124-8443-3fb90c049a76",
+                        "main.cwl#chromosome/run/mutation_overlap_#2806a488-4d0b-48b9-b9dd-9809bffa7524",
+                        "main.cwl#chromosome/run/mutation_overlap_#b764ce11-ab66-4680-a238-7ec2b387de2a",
+                        "main.cwl#chromosome/run/mutation_overlap_#d6e81c74-a7b6-47d4-8cd9-3afacb288faa",
+                        "main.cwl#chromosome/run/frequency_#c54e5e96-fb99-4920-8671-468b0e5786d2",
+                        "main.cwl#chromosome/run/frequency_#a786815a-7298-4bb8-863b-9282eef9d1bd",
+                        "main.cwl#chromosome/run/frequency_#dd830a32-30b5-46ae-ae1c-e29388deee24",
+                        "main.cwl#chromosome/run/frequency_#551f2fe1-99cd-4f8e-bb79-5e52db296177",
+                        "main.cwl#chromosome/run/frequency_#9818e487-cfbb-4ad8-bac9-8dfb7ff54ae1",
+                        "main.cwl#chromosome/run/frequency_#53abfbed-f50c-4e74-89c1-a34c9e1b81f1",
+                        "main.cwl#chromosome/run/frequency_#51ef3c0c-d215-420b-bf5d-4b401ce8c2cd"
+                    ],
+                    "inputFiles": [
+                        "chr1n-1-31250.tar.gz",
+                        "chr1n-62501-93750.tar.gz",
+                        "individuals_merge",
+                        "chr1n-93751-125000.tar.gz",
+                        "chr1n-218751-250000.tar.gz",
+                        "chr1n-187501-218750.tar.gz",
+                        "chr1n-31251-62500.tar.gz",
+                        "chr1n-125001-156250.tar.gz",
+                        "chr1n-156251-187500.tar.gz"
+                    ],
+                    "outputFiles": [
+                        "chr1n.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/sifting",
+                    "id": "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07"
+                    ],
+                    "children": [
+                        "main.cwl#chromosome/run/mutation_overlap_#06af7751-267f-4fd7-8219-e860e9047ff6",
+                        "main.cwl#chromosome/run/mutation_overlap_#ab63c49d-a270-4774-a0e0-ac295137995d",
+                        "main.cwl#chromosome/run/mutation_overlap_#7954223e-7c94-4c30-b5d6-aa17c69bc9fb",
+                        "main.cwl#chromosome/run/mutation_overlap_#71d32be9-8fe5-4124-8443-3fb90c049a76",
+                        "main.cwl#chromosome/run/mutation_overlap_#2806a488-4d0b-48b9-b9dd-9809bffa7524",
+                        "main.cwl#chromosome/run/mutation_overlap_#b764ce11-ab66-4680-a238-7ec2b387de2a",
+                        "main.cwl#chromosome/run/mutation_overlap_#d6e81c74-a7b6-47d4-8cd9-3afacb288faa",
+                        "main.cwl#chromosome/run/frequency_#c54e5e96-fb99-4920-8671-468b0e5786d2",
+                        "main.cwl#chromosome/run/frequency_#a786815a-7298-4bb8-863b-9282eef9d1bd",
+                        "main.cwl#chromosome/run/frequency_#dd830a32-30b5-46ae-ae1c-e29388deee24",
+                        "main.cwl#chromosome/run/frequency_#551f2fe1-99cd-4f8e-bb79-5e52db296177",
+                        "main.cwl#chromosome/run/frequency_#9818e487-cfbb-4ad8-bac9-8dfb7ff54ae1",
+                        "main.cwl#chromosome/run/frequency_#53abfbed-f50c-4e74-89c1-a34c9e1b81f1",
+                        "main.cwl#chromosome/run/frequency_#51ef3c0c-d215-420b-bf5d-4b401ce8c2cd"
+                    ],
+                    "inputFiles": [
+                        "sifting",
+                        "ALL.chr1.phase3_shapeit2_mvncall_integrated_v5.20130502.sites.annotation.vcf"
+                    ],
+                    "outputFiles": [
+                        "sifted.SIFT.chr1.txt"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/mutation_overlap",
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#06af7751-267f-4fd7-8219-e860e9047ff6",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "mutation_overlap.py",
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "AFR"
+                    ],
+                    "outputFiles": [
+                        "chr1-AFR.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/mutation_overlap",
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#ab63c49d-a270-4774-a0e0-ac295137995d",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "mutation_overlap.py",
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "ALL"
+                    ],
+                    "outputFiles": [
+                        "chr1-ALL.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/mutation_overlap",
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#7954223e-7c94-4c30-b5d6-aa17c69bc9fb",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "mutation_overlap.py",
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "AMR"
+                    ],
+                    "outputFiles": [
+                        "chr1-AMR.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/mutation_overlap",
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#71d32be9-8fe5-4124-8443-3fb90c049a76",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "mutation_overlap.py",
+                        "EAS",
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz"
+                    ],
+                    "outputFiles": [
+                        "chr1-EAS.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/mutation_overlap",
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#2806a488-4d0b-48b9-b9dd-9809bffa7524",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "mutation_overlap.py",
+                        "columns.txt",
+                        "EUR",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz"
+                    ],
+                    "outputFiles": [
+                        "chr1-EUR.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/mutation_overlap",
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#b764ce11-ab66-4680-a238-7ec2b387de2a",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "mutation_overlap.py",
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "GBR"
+                    ],
+                    "outputFiles": [
+                        "chr1-GBR.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/mutation_overlap",
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#d6e81c74-a7b6-47d4-8cd9-3afacb288faa",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "mutation_overlap.py",
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "SAS"
+                    ],
+                    "outputFiles": [
+                        "chr1-SAS.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/frequency",
+                    "id": "main.cwl#chromosome/run/frequency_#c54e5e96-fb99-4920-8671-468b0e5786d2",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "frequency.py",
+                        "AFR"
+                    ],
+                    "outputFiles": [
+                        "chr1-AFR-freq.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/frequency",
+                    "id": "main.cwl#chromosome/run/frequency_#a786815a-7298-4bb8-863b-9282eef9d1bd",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "frequency.py",
+                        "ALL"
+                    ],
+                    "outputFiles": [
+                        "chr1-ALL-freq.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/frequency",
+                    "id": "main.cwl#chromosome/run/frequency_#dd830a32-30b5-46ae-ae1c-e29388deee24",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "frequency.py",
+                        "AMR"
+                    ],
+                    "outputFiles": [
+                        "chr1-AMR-freq.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/frequency",
+                    "id": "main.cwl#chromosome/run/frequency_#551f2fe1-99cd-4f8e-bb79-5e52db296177",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "columns.txt",
+                        "EAS",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "frequency.py"
+                    ],
+                    "outputFiles": [
+                        "chr1-EAS-freq.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/frequency",
+                    "id": "main.cwl#chromosome/run/frequency_#9818e487-cfbb-4ad8-bac9-8dfb7ff54ae1",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "columns.txt",
+                        "EUR",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "frequency.py"
+                    ],
+                    "outputFiles": [
+                        "chr1-EUR-freq.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/frequency",
+                    "id": "main.cwl#chromosome/run/frequency_#53abfbed-f50c-4e74-89c1-a34c9e1b81f1",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "frequency.py",
+                        "GBR"
+                    ],
+                    "outputFiles": [
+                        "chr1-GBR-freq.tar.gz"
+                    ]
+                },
+                {
+                    "name": "main.cwl#chromosome/run/frequency",
+                    "id": "main.cwl#chromosome/run/frequency_#51ef3c0c-d215-420b-bf5d-4b401ce8c2cd",
+                    "parents": [
+                        "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                        "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                        "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "columns.txt",
+                        "sifted.SIFT.chr1.txt",
+                        "chr1n.tar.gz",
+                        "frequency.py",
+                        "SAS"
+                    ],
+                    "outputFiles": [
+                        "chr1-SAS-freq.tar.gz"
+                    ]
+                }
+            ],
+            "files": [
+                {
+                    "id": "chr1n.tar.gz",
+                    "sizeInBytes": 218416
+                },
+                {
+                    "id": "chr1-ALL.tar.gz",
+                    "sizeInBytes": 142767
+                },
+                {
+                    "id": "chr1n-93751-125000.tar.gz",
+                    "sizeInBytes": 27975
+                },
+                {
+                    "id": "chr1-EUR.tar.gz",
+                    "sizeInBytes": 118168
+                },
+                {
+                    "id": "GBR",
+                    "sizeInBytes": 856
+                },
+                {
+                    "id": "ALL",
+                    "sizeInBytes": 28000
+                },
+                {
+                    "id": "chr1-EUR-freq.tar.gz",
+                    "sizeInBytes": 255030
+                },
+                {
+                    "id": "chr1n-125001-156250.tar.gz",
+                    "sizeInBytes": 27995
+                },
+                {
+                    "id": "chr1-SAS-freq.tar.gz",
+                    "sizeInBytes": 252644
+                },
+                {
+                    "id": "columns.txt",
+                    "sizeInBytes": 20078
+                },
+                {
+                    "id": "mutation_overlap.py",
+                    "sizeInBytes": 16226
+                },
+                {
+                    "id": "ALL.chr1.250000.vcf",
+                    "sizeInBytes": 2539456345
+                },
+                {
+                    "id": "chr1n-1-31250.tar.gz",
+                    "sizeInBytes": 28007
+                },
+                {
+                    "id": "chr1-AFR-freq.tar.gz",
+                    "sizeInBytes": 261321
+                },
+                {
+                    "id": "frequency.py",
+                    "sizeInBytes": 10980
+                },
+                {
+                    "id": "chr1-EAS.tar.gz",
+                    "sizeInBytes": 119167
+                },
+                {
+                    "id": "chr1-AFR.tar.gz",
+                    "sizeInBytes": 121097
+                },
+                {
+                    "id": "AFR",
+                    "sizeInBytes": 8088
+                },
+                {
+                    "id": "individuals_merge",
+                    "sizeInBytes": 1097
+                },
+                {
+                    "id": "chr1n-31251-62500.tar.gz",
+                    "sizeInBytes": 27942
+                },
+                {
+                    "id": "ALL.chr1.phase3_shapeit2_mvncall_integrated_v5.20130502.sites.annotation.vcf",
+                    "sizeInBytes": 1580478841
+                },
+                {
+                    "id": "individuals",
+                    "sizeInBytes": 2476
+                },
+                {
+                    "id": "chr1n-62501-93750.tar.gz",
+                    "sizeInBytes": 28000
+                },
+                {
+                    "id": "chr1-GBR-freq.tar.gz",
+                    "sizeInBytes": 209894
+                },
+                {
+                    "id": "chr1-GBR.tar.gz",
+                    "sizeInBytes": 113322
+                },
+                {
+                    "id": "chr1n-187501-218750.tar.gz",
+                    "sizeInBytes": 27958
+                },
+                {
+                    "id": "EAS",
+                    "sizeInBytes": 4896
+                },
+                {
+                    "id": "chr1n-218751-250000.tar.gz",
+                    "sizeInBytes": 28020
+                },
+                {
+                    "id": "chr1-EAS-freq.tar.gz",
+                    "sizeInBytes": 254045
+                },
+                {
+                    "id": "sifting",
+                    "sizeInBytes": 1573
+                },
+                {
+                    "id": "EUR",
+                    "sizeInBytes": 5312
+                },
+                {
+                    "id": "chr1-SAS.tar.gz",
+                    "sizeInBytes": 119873
+                },
+                {
+                    "id": "AMR",
+                    "sizeInBytes": 4248
+                },
+                {
+                    "id": "sifted.SIFT.chr1.txt",
+                    "sizeInBytes": 0
+                },
+                {
+                    "id": "chr1-AMR.tar.gz",
+                    "sizeInBytes": 118982
+                },
+                {
+                    "id": "chr1-AMR-freq.tar.gz",
+                    "sizeInBytes": 247876
+                },
+                {
+                    "id": "chr1-ALL-freq.tar.gz",
+                    "sizeInBytes": 278372
+                },
+                {
+                    "id": "SAS",
+                    "sizeInBytes": 5248
+                },
+                {
+                    "id": "chr1n-156251-187500.tar.gz",
+                    "sizeInBytes": 27975
+                }
+            ],
+            "metrics": {
+                "numberOfTasks": 26,
+                "numberOfFiles": 39,
+                "sumOfFileSizesInBytes": 4123099110,
+                "numberOfLevels": 4,
+                "minimumWidth": 1,
+                "maximumWidth": 14
+            }
         },
-        {
-          "id": "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0",
-          "runtimeInSeconds": 0.8761,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:19.141728+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/individuals_#41eb8530-ab9d-4c2d-9e68-0c9570c3a34a",
-          "runtimeInSeconds": 84.852195,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:27.380046+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/individuals_#4696e734-53ba-4546-bf26-86d0caca6e8b",
-          "runtimeInSeconds": 84.972558,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:27.543062+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/individuals_#fd1273b4-6110-4509-adfb-714001bf9ff8",
-          "runtimeInSeconds": 84.3174,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:27.621679+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/individuals_#a3222717-79a3-499f-9cc6-f27a8415eee0",
-          "runtimeInSeconds": 84.389011,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:27.794933+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/individuals_#64c8bb15-af98-4eb5-9dc1-dccd4f3ed5bd",
-          "runtimeInSeconds": 84.84842,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:27.939094+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/individuals_#cf5678c8-e150-439a-ac81-454c02c9ef06",
-          "runtimeInSeconds": 84.482733,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:28.027263+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/individuals_#4d885d4d-0660-494a-acab-f5b34beb7b49",
-          "runtimeInSeconds": 84.502357,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:28.135992+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/individuals_#b296ce9f-c8e5-4e49-aa73-ef267c2d6578",
-          "runtimeInSeconds": 84.622485,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:28.281028+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
-          "runtimeInSeconds": 61.894851,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:15:53.124538+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29",
-          "runtimeInSeconds": 0.086625,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:14:20.194962+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/mutation_overlap_#06af7751-267f-4fd7-8219-e860e9047ff6",
-          "runtimeInSeconds": 16.389196,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:55.309123+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/mutation_overlap_#ab63c49d-a270-4774-a0e0-ac295137995d",
-          "runtimeInSeconds": 19.569962,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:55.617029+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/mutation_overlap_#7954223e-7c94-4c30-b5d6-aa17c69bc9fb",
-          "runtimeInSeconds": 7.544677,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:55.954341+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/mutation_overlap_#71d32be9-8fe5-4124-8443-3fb90c049a76",
-          "runtimeInSeconds": 8.306347,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:56.256754+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/mutation_overlap_#2806a488-4d0b-48b9-b9dd-9809bffa7524",
-          "runtimeInSeconds": 9.01826,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:56.655232+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/mutation_overlap_#b764ce11-ab66-4680-a238-7ec2b387de2a",
-          "runtimeInSeconds": 7.585819,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:56.976878+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/mutation_overlap_#d6e81c74-a7b6-47d4-8cd9-3afacb288faa",
-          "runtimeInSeconds": 8.367256,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:57.306630+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/frequency_#c54e5e96-fb99-4920-8671-468b0e5786d2",
-          "runtimeInSeconds": 84.377047,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:55.357236+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/frequency_#a786815a-7298-4bb8-863b-9282eef9d1bd",
-          "runtimeInSeconds": 84.07804,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:55.663038+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/frequency_#dd830a32-30b5-46ae-ae1c-e29388deee24",
-          "runtimeInSeconds": 83.724378,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:56.014248+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/frequency_#551f2fe1-99cd-4f8e-bb79-5e52db296177",
-          "runtimeInSeconds": 66.863034,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:56.331506+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/frequency_#9818e487-cfbb-4ad8-bac9-8dfb7ff54ae1",
-          "runtimeInSeconds": 76.030192,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:56.696330+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/frequency_#53abfbed-f50c-4e74-89c1-a34c9e1b81f1",
-          "runtimeInSeconds": 80.295072,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:57.014697+00:00"
-        },
-        {
-          "id": "main.cwl#chromosome/run/frequency_#51ef3c0c-d215-420b-bf5d-4b401ce8c2cd",
-          "runtimeInSeconds": 87.155218,
-          "command": {
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2025-10-29T15:16:57.315643+00:00"
+        "execution": {
+            "makespanInSeconds": 255.622014,
+            "executedAt": "2025-10-29T15:14:13.715458+00:00",
+            "tasks": [
+                {
+                    "id": "main.cwl#chromosome/run/get_chromosome_#830e8726-c7a7-4f64-a61d-4cc889f76c07",
+                    "runtimeInSeconds": 0.001837,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:20.093384+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/get_intervals_#efb4c078-8104-42b9-9f18-b1948b9a37d0",
+                    "runtimeInSeconds": 0.8761,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:19.141728+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/individuals_#41eb8530-ab9d-4c2d-9e68-0c9570c3a34a",
+                    "runtimeInSeconds": 84.852195,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:27.380046+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/individuals_#4696e734-53ba-4546-bf26-86d0caca6e8b",
+                    "runtimeInSeconds": 84.972558,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:27.543062+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/individuals_#fd1273b4-6110-4509-adfb-714001bf9ff8",
+                    "runtimeInSeconds": 84.3174,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:27.621679+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/individuals_#a3222717-79a3-499f-9cc6-f27a8415eee0",
+                    "runtimeInSeconds": 84.389011,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:27.794933+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/individuals_#64c8bb15-af98-4eb5-9dc1-dccd4f3ed5bd",
+                    "runtimeInSeconds": 84.84842,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:27.939094+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/individuals_#cf5678c8-e150-439a-ac81-454c02c9ef06",
+                    "runtimeInSeconds": 84.482733,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:28.027263+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/individuals_#4d885d4d-0660-494a-acab-f5b34beb7b49",
+                    "runtimeInSeconds": 84.502357,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:28.135992+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/individuals_#b296ce9f-c8e5-4e49-aa73-ef267c2d6578",
+                    "runtimeInSeconds": 84.622485,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:28.281028+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/individuals_merge_#de612f4c-e6e3-43a6-ac51-38c7b9ea3e76",
+                    "runtimeInSeconds": 61.894851,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:15:53.124538+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/sifting_#d6279b85-dd38-4a2a-be62-962835829e29",
+                    "runtimeInSeconds": 0.086625,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:14:20.194962+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#06af7751-267f-4fd7-8219-e860e9047ff6",
+                    "runtimeInSeconds": 16.389196,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:55.309123+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#ab63c49d-a270-4774-a0e0-ac295137995d",
+                    "runtimeInSeconds": 19.569962,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:55.617029+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#7954223e-7c94-4c30-b5d6-aa17c69bc9fb",
+                    "runtimeInSeconds": 7.544677,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:55.954341+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#71d32be9-8fe5-4124-8443-3fb90c049a76",
+                    "runtimeInSeconds": 8.306347,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:56.256754+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#2806a488-4d0b-48b9-b9dd-9809bffa7524",
+                    "runtimeInSeconds": 9.01826,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:56.655232+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#b764ce11-ab66-4680-a238-7ec2b387de2a",
+                    "runtimeInSeconds": 7.585819,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:56.976878+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/mutation_overlap_#d6e81c74-a7b6-47d4-8cd9-3afacb288faa",
+                    "runtimeInSeconds": 8.367256,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:57.306630+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/frequency_#c54e5e96-fb99-4920-8671-468b0e5786d2",
+                    "runtimeInSeconds": 84.377047,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:55.357236+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/frequency_#a786815a-7298-4bb8-863b-9282eef9d1bd",
+                    "runtimeInSeconds": 84.07804,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:55.663038+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/frequency_#dd830a32-30b5-46ae-ae1c-e29388deee24",
+                    "runtimeInSeconds": 83.724378,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:56.014248+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/frequency_#551f2fe1-99cd-4f8e-bb79-5e52db296177",
+                    "runtimeInSeconds": 66.863034,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:56.331506+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/frequency_#9818e487-cfbb-4ad8-bac9-8dfb7ff54ae1",
+                    "runtimeInSeconds": 76.030192,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:56.696330+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/frequency_#53abfbed-f50c-4e74-89c1-a34c9e1b81f1",
+                    "runtimeInSeconds": 80.295072,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:57.014697+00:00"
+                },
+                {
+                    "id": "main.cwl#chromosome/run/frequency_#51ef3c0c-d215-420b-bf5d-4b401ce8c2cd",
+                    "runtimeInSeconds": 87.155218,
+                    "command": {
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2025-10-29T15:16:57.315643+00:00"
+                }
+            ],
+            "metrics": {
+                "sumTaskRuntimesInSeconds": 1379.1510700000001
+            }
         }
-      ],
-      "metrics": {
-        "sumTaskRuntimesInSeconds": 1379.1510700000001
-      }
+    },
+    "runtimeSystem": {
+        "name": "Streamflow-ROCrate",
+        "version": "1.5-dev",
+        "url": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
     }
-  },
-  "runtimeSystem": {
-    "name": "Streamflow-ROCrate",
-    "version": "1.5-dev",
-    "url": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
-  }
 }

@@ -1,925 +1,925 @@
 {
-  "name": "reconstructed_workflow",
-  "description": "Instance generated with WfCommons - https://wfcommons.org",
-  "createdAt": "2026-05-08T05:11:50.916109+00:00",
-  "schemaVersion": "1.5",
-  "author": {
-    "name": "henric",
-    "email": "support@wfcommons.org"
-  },
-  "workflow": {
-    "specification": {
-      "tasks": [
-        {
-          "name": "getReads_ID0000001",
-          "id": "getReads_ID0000001",
-          "parents": [],
-          "children": [
-            "quantify_ID0000009"
-          ],
-          "inputFiles": [],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_reverse_read.fastq.gz"
-          ]
-        },
-        {
-          "name": "getReads_ID0000002",
-          "id": "getReads_ID0000002",
-          "parents": [],
-          "children": [
-            "quantify_ID0000006"
-          ],
-          "inputFiles": [],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_reverse_read.fastq.gz"
-          ]
-        },
-        {
-          "name": "getReads_ID0000003",
-          "id": "getReads_ID0000003",
-          "parents": [],
-          "children": [
-            "quantify_ID0000007"
-          ],
-          "inputFiles": [],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_reverse_read.fastq.gz"
-          ]
-        },
-        {
-          "name": "getReads_ID0000004",
-          "id": "getReads_ID0000004",
-          "parents": [],
-          "children": [
-            "quantify_ID0000008"
-          ],
-          "inputFiles": [],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_reverse_read.fastq.gz"
-          ]
-        },
-        {
-          "name": "indexTrans_ID0000005",
-          "id": "indexTrans_ID0000005",
-          "parents": [],
-          "children": [
-            "quantify_ID0000006",
-            "quantify_ID0000007",
-            "quantify_ID0000008",
-            "quantify_ID0000009",
-            "quantify_ID0000011",
-            "quantify_ID0000013",
-            "quantify_ID0000015",
-            "quantify_ID0000017"
-          ],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/example/ref/transcriptome/Homo_sapiens.GRCh38.cdna.all.fa.gz"
-          ],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
-          ]
-        },
-        {
-          "name": "quantify_ID0000006",
-          "id": "quantify_ID0000006",
-          "parents": [
-            "getReads_ID0000002",
-            "indexTrans_ID0000005"
-          ],
-          "children": [
-            "summaryReport_ID0000018"
-          ],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_reverse_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
-          ],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512_r001",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039512_r001_tpm.tsv"
-          ]
-        },
-        {
-          "name": "quantify_ID0000007",
-          "id": "quantify_ID0000007",
-          "parents": [
-            "getReads_ID0000003",
-            "indexTrans_ID0000005"
-          ],
-          "children": [
-            "summaryReport_ID0000018"
-          ],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_reverse_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
-          ],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508_r001",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039508_r001_tpm.tsv"
-          ]
-        },
-        {
-          "name": "quantify_ID0000008",
-          "id": "quantify_ID0000008",
-          "parents": [
-            "getReads_ID0000004",
-            "indexTrans_ID0000005"
-          ],
-          "children": [
-            "summaryReport_ID0000018"
-          ],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_reverse_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
-          ],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039512_tpm.tsv"
-          ]
-        },
-        {
-          "name": "quantify_ID0000009",
-          "id": "quantify_ID0000009",
-          "parents": [
-            "getReads_ID0000001",
-            "indexTrans_ID0000005"
-          ],
-          "children": [
-            "summaryReport_ID0000018"
-          ],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_reverse_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
-          ],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039508_tpm.tsv"
-          ]
-        },
-        {
-          "name": "getReads_ID0000010",
-          "id": "getReads_ID0000010",
-          "parents": [],
-          "children": [
-            "quantify_ID0000011"
-          ],
-          "inputFiles": [],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_reverse_read.fastq.gz"
-          ]
-        },
-        {
-          "name": "quantify_ID0000011",
-          "id": "quantify_ID0000011",
-          "parents": [
-            "indexTrans_ID0000005",
-            "getReads_ID0000010"
-          ],
-          "children": [
-            "summaryReport_ID0000018"
-          ],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_reverse_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
-          ],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513_r001",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039513_r001_tpm.tsv"
-          ]
-        },
-        {
-          "name": "getReads_ID0000012",
-          "id": "getReads_ID0000012",
-          "parents": [],
-          "children": [
-            "quantify_ID0000013"
-          ],
-          "inputFiles": [],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_reverse_read.fastq.gz"
-          ]
-        },
-        {
-          "name": "quantify_ID0000013",
-          "id": "quantify_ID0000013",
-          "parents": [
-            "indexTrans_ID0000005",
-            "getReads_ID0000012"
-          ],
-          "children": [
-            "summaryReport_ID0000018"
-          ],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_reverse_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
-          ],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509_r001",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039509_r001_tpm.tsv"
-          ]
-        },
-        {
-          "name": "getReads_ID0000014",
-          "id": "getReads_ID0000014",
-          "parents": [],
-          "children": [
-            "quantify_ID0000015"
-          ],
-          "inputFiles": [],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_reverse_read.fastq.gz"
-          ]
-        },
-        {
-          "name": "quantify_ID0000015",
-          "id": "quantify_ID0000015",
-          "parents": [
-            "indexTrans_ID0000005",
-            "getReads_ID0000014"
-          ],
-          "children": [
-            "summaryReport_ID0000018"
-          ],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_reverse_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
-          ],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039509_tpm.tsv"
-          ]
-        },
-        {
-          "name": "getReads_ID0000016",
-          "id": "getReads_ID0000016",
-          "parents": [],
-          "children": [
-            "quantify_ID0000017"
-          ],
-          "inputFiles": [],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_reverse_read.fastq.gz"
-          ]
-        },
-        {
-          "name": "quantify_ID0000017",
-          "id": "quantify_ID0000017",
-          "parents": [
-            "indexTrans_ID0000005",
-            "getReads_ID0000016"
-          ],
-          "children": [
-            "summaryReport_ID0000018"
-          ],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_forward_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_reverse_read.fastq.gz",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
-          ],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039513_tpm.tsv"
-          ]
-        },
-        {
-          "name": "summaryReport_ID0000018",
-          "id": "summaryReport_ID0000018",
-          "parents": [
-            "quantify_ID0000006",
-            "quantify_ID0000007",
-            "quantify_ID0000008",
-            "quantify_ID0000009",
-            "quantify_ID0000011",
-            "quantify_ID0000013",
-            "quantify_ID0000015",
-            "quantify_ID0000017"
-          ],
-          "children": [
-            "end_ID0000019"
-          ],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508_r001",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509_r001",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512_r001",
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513_r001"
-          ],
-          "outputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/report_quantify.html"
-          ]
-        },
-        {
-          "name": "end_ID0000019",
-          "id": "end_ID0000019",
-          "parents": [
-            "summaryReport_ID0000018"
-          ],
-          "children": [],
-          "inputFiles": [
-            "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/report_quantify.html"
-          ],
-          "outputFiles": []
-        }
-      ],
-      "files": [
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_forward_read.fastq.gz",
-          "sizeInBytes": 2715646
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/report_quantify.html",
-          "sizeInBytes": 2193774
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_reverse_read.fastq.gz",
-          "sizeInBytes": 3027685
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_forward_read.fastq.gz",
-          "sizeInBytes": 2869460
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509",
-          "sizeInBytes": 4096
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_reverse_read.fastq.gz",
-          "sizeInBytes": 2727325
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_forward_read.fastq.gz",
-          "sizeInBytes": 3037678
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039512_r001_tpm.tsv",
-          "sizeInBytes": 5247599
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_reverse_read.fastq.gz",
-          "sizeInBytes": 2846016
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039512_tpm.tsv",
-          "sizeInBytes": 5247599
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039513_tpm.tsv",
-          "sizeInBytes": 5248380
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039508_tpm.tsv",
-          "sizeInBytes": 5248269
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_reverse_read.fastq.gz",
-          "sizeInBytes": 2895490
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_reverse_read.fastq.gz",
-          "sizeInBytes": 2727325
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_forward_read.fastq.gz",
-          "sizeInBytes": 2715646
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508",
-          "sizeInBytes": 4096
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512_r001",
-          "sizeInBytes": 4096
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index",
-          "sizeInBytes": 4096
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_forward_read.fastq.gz",
-          "sizeInBytes": 2869460
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_reverse_read.fastq.gz",
-          "sizeInBytes": 2846016
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_reverse_read.fastq.gz",
-          "sizeInBytes": 3027685
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039509_r001_tpm.tsv",
-          "sizeInBytes": 5248128
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039508_r001_tpm.tsv",
-          "sizeInBytes": 5248271
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039509_tpm.tsv",
-          "sizeInBytes": 5248125
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039513_r001_tpm.tsv",
-          "sizeInBytes": 5248380
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513_r001",
-          "sizeInBytes": 4096
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_reverse_read.fastq.gz",
-          "sizeInBytes": 2895490
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513",
-          "sizeInBytes": 4096
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_forward_read.fastq.gz",
-          "sizeInBytes": 2876703
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508_r001",
-          "sizeInBytes": 4096
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_forward_read.fastq.gz",
-          "sizeInBytes": 2876703
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509_r001",
-          "sizeInBytes": 4096
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_forward_read.fastq.gz",
-          "sizeInBytes": 3037678
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/example/ref/transcriptome/Homo_sapiens.GRCh38.cdna.all.fa.gz",
-          "sizeInBytes": 79685174
-        },
-        {
-          "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512",
-          "sizeInBytes": 4096
-        }
-      ],
-      "metrics": {
-        "numberOfTasks": 19,
-        "numberOfFiles": 35,
-        "sumOfFileSizesInBytes": 169892569,
-        "numberOfLevels": 4,
-        "minimumWidth": 1,
-        "maximumWidth": 9
-      }
+    "name": "reconstructed_workflow",
+    "description": "Instance generated with WfCommons - https://wfcommons.org",
+    "createdAt": "2026-05-08T05:11:50.916109+00:00",
+    "schemaVersion": "1.6",
+    "author": {
+        "name": "henric",
+        "email": "support@wfcommons.org"
     },
-    "execution": {
-      "makespanInSeconds": 498.4683291912079,
-      "executedAt": "2026-05-08T05:11:50.916152+00:00",
-      "tasks": [
-        {
-          "id": "getReads_ID0000001",
-          "runtimeInSeconds": 3.641883,
-          "command": {
-            "program": "n/a",
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:51:43.352872"
+    "workflow": {
+        "specification": {
+            "tasks": [
+                {
+                    "name": "getReads_ID0000001",
+                    "id": "getReads_ID0000001",
+                    "parents": [],
+                    "children": [
+                        "quantify_ID0000009"
+                    ],
+                    "inputFiles": [],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_reverse_read.fastq.gz"
+                    ]
+                },
+                {
+                    "name": "getReads_ID0000002",
+                    "id": "getReads_ID0000002",
+                    "parents": [],
+                    "children": [
+                        "quantify_ID0000006"
+                    ],
+                    "inputFiles": [],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_reverse_read.fastq.gz"
+                    ]
+                },
+                {
+                    "name": "getReads_ID0000003",
+                    "id": "getReads_ID0000003",
+                    "parents": [],
+                    "children": [
+                        "quantify_ID0000007"
+                    ],
+                    "inputFiles": [],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_reverse_read.fastq.gz"
+                    ]
+                },
+                {
+                    "name": "getReads_ID0000004",
+                    "id": "getReads_ID0000004",
+                    "parents": [],
+                    "children": [
+                        "quantify_ID0000008"
+                    ],
+                    "inputFiles": [],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_reverse_read.fastq.gz"
+                    ]
+                },
+                {
+                    "name": "indexTrans_ID0000005",
+                    "id": "indexTrans_ID0000005",
+                    "parents": [],
+                    "children": [
+                        "quantify_ID0000006",
+                        "quantify_ID0000007",
+                        "quantify_ID0000008",
+                        "quantify_ID0000009",
+                        "quantify_ID0000011",
+                        "quantify_ID0000013",
+                        "quantify_ID0000015",
+                        "quantify_ID0000017"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/example/ref/transcriptome/Homo_sapiens.GRCh38.cdna.all.fa.gz"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
+                    ]
+                },
+                {
+                    "name": "quantify_ID0000006",
+                    "id": "quantify_ID0000006",
+                    "parents": [
+                        "getReads_ID0000002",
+                        "indexTrans_ID0000005"
+                    ],
+                    "children": [
+                        "summaryReport_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_reverse_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512_r001",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039512_r001_tpm.tsv"
+                    ]
+                },
+                {
+                    "name": "quantify_ID0000007",
+                    "id": "quantify_ID0000007",
+                    "parents": [
+                        "getReads_ID0000003",
+                        "indexTrans_ID0000005"
+                    ],
+                    "children": [
+                        "summaryReport_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_reverse_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508_r001",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039508_r001_tpm.tsv"
+                    ]
+                },
+                {
+                    "name": "quantify_ID0000008",
+                    "id": "quantify_ID0000008",
+                    "parents": [
+                        "getReads_ID0000004",
+                        "indexTrans_ID0000005"
+                    ],
+                    "children": [
+                        "summaryReport_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_reverse_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039512_tpm.tsv"
+                    ]
+                },
+                {
+                    "name": "quantify_ID0000009",
+                    "id": "quantify_ID0000009",
+                    "parents": [
+                        "getReads_ID0000001",
+                        "indexTrans_ID0000005"
+                    ],
+                    "children": [
+                        "summaryReport_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_reverse_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039508_tpm.tsv"
+                    ]
+                },
+                {
+                    "name": "getReads_ID0000010",
+                    "id": "getReads_ID0000010",
+                    "parents": [],
+                    "children": [
+                        "quantify_ID0000011"
+                    ],
+                    "inputFiles": [],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_reverse_read.fastq.gz"
+                    ]
+                },
+                {
+                    "name": "quantify_ID0000011",
+                    "id": "quantify_ID0000011",
+                    "parents": [
+                        "indexTrans_ID0000005",
+                        "getReads_ID0000010"
+                    ],
+                    "children": [
+                        "summaryReport_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_reverse_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513_r001",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039513_r001_tpm.tsv"
+                    ]
+                },
+                {
+                    "name": "getReads_ID0000012",
+                    "id": "getReads_ID0000012",
+                    "parents": [],
+                    "children": [
+                        "quantify_ID0000013"
+                    ],
+                    "inputFiles": [],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_reverse_read.fastq.gz"
+                    ]
+                },
+                {
+                    "name": "quantify_ID0000013",
+                    "id": "quantify_ID0000013",
+                    "parents": [
+                        "indexTrans_ID0000005",
+                        "getReads_ID0000012"
+                    ],
+                    "children": [
+                        "summaryReport_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_reverse_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509_r001",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039509_r001_tpm.tsv"
+                    ]
+                },
+                {
+                    "name": "getReads_ID0000014",
+                    "id": "getReads_ID0000014",
+                    "parents": [],
+                    "children": [
+                        "quantify_ID0000015"
+                    ],
+                    "inputFiles": [],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_reverse_read.fastq.gz"
+                    ]
+                },
+                {
+                    "name": "quantify_ID0000015",
+                    "id": "quantify_ID0000015",
+                    "parents": [
+                        "indexTrans_ID0000005",
+                        "getReads_ID0000014"
+                    ],
+                    "children": [
+                        "summaryReport_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_reverse_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039509_tpm.tsv"
+                    ]
+                },
+                {
+                    "name": "getReads_ID0000016",
+                    "id": "getReads_ID0000016",
+                    "parents": [],
+                    "children": [
+                        "quantify_ID0000017"
+                    ],
+                    "inputFiles": [],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_reverse_read.fastq.gz"
+                    ]
+                },
+                {
+                    "name": "quantify_ID0000017",
+                    "id": "quantify_ID0000017",
+                    "parents": [
+                        "indexTrans_ID0000005",
+                        "getReads_ID0000016"
+                    ],
+                    "children": [
+                        "summaryReport_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_forward_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_reverse_read.fastq.gz",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039513_tpm.tsv"
+                    ]
+                },
+                {
+                    "name": "summaryReport_ID0000018",
+                    "id": "summaryReport_ID0000018",
+                    "parents": [
+                        "quantify_ID0000006",
+                        "quantify_ID0000007",
+                        "quantify_ID0000008",
+                        "quantify_ID0000009",
+                        "quantify_ID0000011",
+                        "quantify_ID0000013",
+                        "quantify_ID0000015",
+                        "quantify_ID0000017"
+                    ],
+                    "children": [
+                        "end_ID0000019"
+                    ],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508_r001",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509_r001",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512_r001",
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513_r001"
+                    ],
+                    "outputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/report_quantify.html"
+                    ]
+                },
+                {
+                    "name": "end_ID0000019",
+                    "id": "end_ID0000019",
+                    "parents": [
+                        "summaryReport_ID0000018"
+                    ],
+                    "children": [],
+                    "inputFiles": [
+                        "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/report_quantify.html"
+                    ],
+                    "outputFiles": []
+                }
+            ],
+            "files": [
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_forward_read.fastq.gz",
+                    "sizeInBytes": 2715646
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/report_quantify.html",
+                    "sizeInBytes": 2193774
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_reverse_read.fastq.gz",
+                    "sizeInBytes": 3027685
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_forward_read.fastq.gz",
+                    "sizeInBytes": 2869460
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509",
+                    "sizeInBytes": 4096
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_reverse_read.fastq.gz",
+                    "sizeInBytes": 2727325
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_forward_read.fastq.gz",
+                    "sizeInBytes": 3037678
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039512_r001_tpm.tsv",
+                    "sizeInBytes": 5247599
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_reverse_read.fastq.gz",
+                    "sizeInBytes": 2846016
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039512_tpm.tsv",
+                    "sizeInBytes": 5247599
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039513_tpm.tsv",
+                    "sizeInBytes": 5248380
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039508_tpm.tsv",
+                    "sizeInBytes": 5248269
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_reverse_read.fastq.gz",
+                    "sizeInBytes": 2895490
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_reverse_read.fastq.gz",
+                    "sizeInBytes": 2727325
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039513_r001_forward_read.fastq.gz",
+                    "sizeInBytes": 2715646
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508",
+                    "sizeInBytes": 4096
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512_r001",
+                    "sizeInBytes": 4096
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/transcripts_index",
+                    "sizeInBytes": 4096
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_forward_read.fastq.gz",
+                    "sizeInBytes": 2869460
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039508_r001_reverse_read.fastq.gz",
+                    "sizeInBytes": 2846016
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_r001_reverse_read.fastq.gz",
+                    "sizeInBytes": 3027685
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039509_r001_tpm.tsv",
+                    "sizeInBytes": 5248128
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039508_r001_tpm.tsv",
+                    "sizeInBytes": 5248271
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039509_tpm.tsv",
+                    "sizeInBytes": 5248125
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/tpmFile/SRR1039513_r001_tpm.tsv",
+                    "sizeInBytes": 5248380
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513_r001",
+                    "sizeInBytes": 4096
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_reverse_read.fastq.gz",
+                    "sizeInBytes": 2895490
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039513",
+                    "sizeInBytes": 4096
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_forward_read.fastq.gz",
+                    "sizeInBytes": 2876703
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039508_r001",
+                    "sizeInBytes": 4096
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039509_r001_forward_read.fastq.gz",
+                    "sizeInBytes": 2876703
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039509_r001",
+                    "sizeInBytes": 4096
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/output/test/trans/reads/SRR1039512_forward_read.fastq.gz",
+                    "sizeInBytes": 3037678
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/data/example/ref/transcriptome/Homo_sapiens.GRCh38.cdna.all.fa.gz",
+                    "sizeInBytes": 79685174
+                },
+                {
+                    "id": "/home/henric/SNAKEMAKE_WORKFLOW/CLAUDE_GENERATED_BENCHMARKS/benchmarks/n019/output/test/trans/quant/SRR1039512",
+                    "sizeInBytes": 4096
+                }
+            ],
+            "metrics": {
+                "numberOfTasks": 19,
+                "numberOfFiles": 35,
+                "sumOfFileSizesInBytes": 169892569,
+                "numberOfLevels": 4,
+                "minimumWidth": 1,
+                "maximumWidth": 9
+            }
         },
-        {
-          "id": "getReads_ID0000002",
-          "runtimeInSeconds": 3.543681,
-          "command": {
-            "program": "n/a",
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:51:47.068641"
-        },
-        {
-          "id": "getReads_ID0000003",
-          "runtimeInSeconds": 3.498084,
-          "command": {
-            "program": "n/a",
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:51:50.684805"
-        },
-        {
-          "id": "getReads_ID0000004",
-          "runtimeInSeconds": 3.664176,
-          "command": {
-            "program": "n/a",
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:51:54.229658"
-        },
-        {
-          "id": "indexTrans_ID0000005",
-          "runtimeInSeconds": 391.080488,
-          "command": {
-            "program": "salmon",
-            "arguments": [
-              "salmon",
-              "index",
-              "-t",
-              "data/example/ref/transcriptome/Homo_sapiens.GRCh38.cdna.all.fa.gz",
-              "-i",
-              "data/output/test/trans/transcripts_index",
-              "-k",
-              "31",
-              "-p",
-              "30"
-            ]
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:51:58.025720"
-        },
-        {
-          "id": "quantify_ID0000006",
-          "runtimeInSeconds": 8.23543,
-          "command": {
-            "program": "salmon",
-            "arguments": [
-              "salmon",
-              "quant",
-              "-i",
-              "data/output/test/trans/transcripts_index",
-              "-l",
-              "A",
-              "-1",
-              "data/output/test/trans/reads/SRR1039512_r001_forward_read.fastq.gz",
-              "-2",
-              "data/output/test/trans/reads/SRR1039512_r001_reverse_read.fastq.gz",
-              "-o",
-              "output/test/trans/quant/SRR1039512_r001",
-              "-p",
-              "30",
-              "--seqBias",
-              "--useVBOpt",
-              "--validateMappings;",
-              "awk",
-              "'NR==1{next}{print",
-              "$1\"\\t\"$4}'",
-              "output/test/trans/quant/SRR1039512_r001/quant.sf",
-              ">",
-              "output/test/trans/tpmFile/SRR1039512_r001_tpm.tsv"
-            ]
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:58:29.185777"
-        },
-        {
-          "id": "quantify_ID0000007",
-          "runtimeInSeconds": 10.725065,
-          "command": {
-            "program": "salmon",
-            "arguments": [
-              "salmon",
-              "quant",
-              "-i",
-              "data/output/test/trans/transcripts_index",
-              "-l",
-              "A",
-              "-1",
-              "data/output/test/trans/reads/SRR1039508_r001_forward_read.fastq.gz",
-              "-2",
-              "data/output/test/trans/reads/SRR1039508_r001_reverse_read.fastq.gz",
-              "-o",
-              "output/test/trans/quant/SRR1039508_r001",
-              "-p",
-              "30",
-              "--seqBias",
-              "--useVBOpt",
-              "--validateMappings;",
-              "awk",
-              "'NR==1{next}{print",
-              "$1\"\\t\"$4}'",
-              "output/test/trans/quant/SRR1039508_r001/quant.sf",
-              ">",
-              "output/test/trans/tpmFile/SRR1039508_r001_tpm.tsv"
-            ]
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:58:37.919304"
-        },
-        {
-          "id": "quantify_ID0000008",
-          "runtimeInSeconds": 7.474681,
-          "command": {
-            "program": "salmon",
-            "arguments": [
-              "salmon",
-              "quant",
-              "-i",
-              "data/output/test/trans/transcripts_index",
-              "-l",
-              "A",
-              "-1",
-              "data/output/test/trans/reads/SRR1039512_forward_read.fastq.gz",
-              "-2",
-              "data/output/test/trans/reads/SRR1039512_reverse_read.fastq.gz",
-              "-o",
-              "output/test/trans/quant/SRR1039512",
-              "-p",
-              "30",
-              "--seqBias",
-              "--useVBOpt",
-              "--validateMappings;",
-              "awk",
-              "'NR==1{next}{print",
-              "$1\"\\t\"$4}'",
-              "output/test/trans/quant/SRR1039512/quant.sf",
-              ">",
-              "output/test/trans/tpmFile/SRR1039512_tpm.tsv"
-            ]
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:58:48.717222"
-        },
-        {
-          "id": "quantify_ID0000009",
-          "runtimeInSeconds": 9.37005,
-          "command": {
-            "program": "salmon",
-            "arguments": [
-              "salmon",
-              "quant",
-              "-i",
-              "data/output/test/trans/transcripts_index",
-              "-l",
-              "A",
-              "-1",
-              "data/output/test/trans/reads/SRR1039508_forward_read.fastq.gz",
-              "-2",
-              "data/output/test/trans/reads/SRR1039508_reverse_read.fastq.gz",
-              "-o",
-              "output/test/trans/quant/SRR1039508",
-              "-p",
-              "30",
-              "--seqBias",
-              "--useVBOpt",
-              "--validateMappings;",
-              "awk",
-              "'NR==1{next}{print",
-              "$1\"\\t\"$4}'",
-              "output/test/trans/quant/SRR1039508/quant.sf",
-              ">",
-              "output/test/trans/tpmFile/SRR1039508_tpm.tsv"
-            ]
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:58:56.240056"
-        },
-        {
-          "id": "getReads_ID0000010",
-          "runtimeInSeconds": 3.533667,
-          "command": {
-            "program": "n/a",
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:59:05.653229"
-        },
-        {
-          "id": "quantify_ID0000011",
-          "runtimeInSeconds": 8.202961,
-          "command": {
-            "program": "salmon",
-            "arguments": [
-              "salmon",
-              "quant",
-              "-i",
-              "data/output/test/trans/transcripts_index",
-              "-l",
-              "A",
-              "-1",
-              "data/output/test/trans/reads/SRR1039513_r001_forward_read.fastq.gz",
-              "-2",
-              "data/output/test/trans/reads/SRR1039513_r001_reverse_read.fastq.gz",
-              "-o",
-              "output/test/trans/quant/SRR1039513_r001",
-              "-p",
-              "30",
-              "--seqBias",
-              "--useVBOpt",
-              "--validateMappings;",
-              "awk",
-              "'NR==1{next}{print",
-              "$1\"\\t\"$4}'",
-              "output/test/trans/quant/SRR1039513_r001/quant.sf",
-              ">",
-              "output/test/trans/tpmFile/SRR1039513_r001_tpm.tsv"
-            ]
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:59:09.235237"
-        },
-        {
-          "id": "getReads_ID0000012",
-          "runtimeInSeconds": 3.611025,
-          "command": {
-            "program": "n/a",
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:59:17.514910"
-        },
-        {
-          "id": "quantify_ID0000013",
-          "runtimeInSeconds": 8.845311,
-          "command": {
-            "program": "salmon",
-            "arguments": [
-              "salmon",
-              "quant",
-              "-i",
-              "data/output/test/trans/transcripts_index",
-              "-l",
-              "A",
-              "-1",
-              "data/output/test/trans/reads/SRR1039509_r001_forward_read.fastq.gz",
-              "-2",
-              "data/output/test/trans/reads/SRR1039509_r001_reverse_read.fastq.gz",
-              "-o",
-              "output/test/trans/quant/SRR1039509_r001",
-              "-p",
-              "30",
-              "--seqBias",
-              "--useVBOpt",
-              "--validateMappings;",
-              "awk",
-              "'NR==1{next}{print",
-              "$1\"\\t\"$4}'",
-              "output/test/trans/quant/SRR1039509_r001/quant.sf",
-              ">",
-              "output/test/trans/tpmFile/SRR1039509_r001_tpm.tsv"
-            ]
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:59:21.211527"
-        },
-        {
-          "id": "getReads_ID0000014",
-          "runtimeInSeconds": 3.552007,
-          "command": {
-            "program": "n/a",
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:59:30.142200"
-        },
-        {
-          "id": "quantify_ID0000015",
-          "runtimeInSeconds": 9.412601,
-          "command": {
-            "program": "salmon",
-            "arguments": [
-              "salmon",
-              "quant",
-              "-i",
-              "data/output/test/trans/transcripts_index",
-              "-l",
-              "A",
-              "-1",
-              "data/output/test/trans/reads/SRR1039509_forward_read.fastq.gz",
-              "-2",
-              "data/output/test/trans/reads/SRR1039509_reverse_read.fastq.gz",
-              "-o",
-              "output/test/trans/quant/SRR1039509",
-              "-p",
-              "30",
-              "--seqBias",
-              "--useVBOpt",
-              "--validateMappings;",
-              "awk",
-              "'NR==1{next}{print",
-              "$1\"\\t\"$4}'",
-              "output/test/trans/quant/SRR1039509/quant.sf",
-              ">",
-              "output/test/trans/tpmFile/SRR1039509_tpm.tsv"
-            ]
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:59:33.746174"
-        },
-        {
-          "id": "getReads_ID0000016",
-          "runtimeInSeconds": 3.70322,
-          "command": {
-            "program": "n/a",
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:59:43.214012"
-        },
-        {
-          "id": "quantify_ID0000017",
-          "runtimeInSeconds": 8.591365,
-          "command": {
-            "program": "salmon",
-            "arguments": [
-              "salmon",
-              "quant",
-              "-i",
-              "data/output/test/trans/transcripts_index",
-              "-l",
-              "A",
-              "-1",
-              "data/output/test/trans/reads/SRR1039513_forward_read.fastq.gz",
-              "-2",
-              "data/output/test/trans/reads/SRR1039513_reverse_read.fastq.gz",
-              "-o",
-              "output/test/trans/quant/SRR1039513",
-              "-p",
-              "30",
-              "--seqBias",
-              "--useVBOpt",
-              "--validateMappings;",
-              "awk",
-              "'NR==1{next}{print",
-              "$1\"\\t\"$4}'",
-              "output/test/trans/quant/SRR1039513/quant.sf",
-              ">",
-              "output/test/trans/tpmFile/SRR1039513_tpm.tsv"
-            ]
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:59:46.986998"
-        },
-        {
-          "id": "summaryReport_ID0000018",
-          "runtimeInSeconds": 6.074241,
-          "command": {
-            "program": "multiqc",
-            "arguments": [
-              "multiqc",
-              "output/test/trans/quant/SRR1039508",
-              "output/test/trans/quant/SRR1039509",
-              "output/test/trans/quant/SRR1039512",
-              "output/test/trans/quant/SRR1039513",
-              "output/test/trans/quant/SRR1039508_r001",
-              "output/test/trans/quant/SRR1039509_r001",
-              "output/test/trans/quant/SRR1039512_r001",
-              "output/test/trans/quant/SRR1039513_r001",
-              "--filename",
-              "output/test/trans/report_quantify.html",
-              "--force"
-            ]
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 02:59:55.645674"
-        },
-        {
-          "id": "end_ID0000019",
-          "runtimeInSeconds": 0.046009,
-          "command": {
-            "program": "n/a",
-            "arguments": []
-          },
-          "coreCount": 1.0,
-          "executedAt": "2026-05-08 03:00:01.775192"
+        "execution": {
+            "makespanInSeconds": 498.4683291912079,
+            "executedAt": "2026-05-08T05:11:50.916152+00:00",
+            "tasks": [
+                {
+                    "id": "getReads_ID0000001",
+                    "runtimeInSeconds": 3.641883,
+                    "command": {
+                        "program": "n/a",
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:51:43.352872"
+                },
+                {
+                    "id": "getReads_ID0000002",
+                    "runtimeInSeconds": 3.543681,
+                    "command": {
+                        "program": "n/a",
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:51:47.068641"
+                },
+                {
+                    "id": "getReads_ID0000003",
+                    "runtimeInSeconds": 3.498084,
+                    "command": {
+                        "program": "n/a",
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:51:50.684805"
+                },
+                {
+                    "id": "getReads_ID0000004",
+                    "runtimeInSeconds": 3.664176,
+                    "command": {
+                        "program": "n/a",
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:51:54.229658"
+                },
+                {
+                    "id": "indexTrans_ID0000005",
+                    "runtimeInSeconds": 391.080488,
+                    "command": {
+                        "program": "salmon",
+                        "arguments": [
+                            "salmon",
+                            "index",
+                            "-t",
+                            "data/example/ref/transcriptome/Homo_sapiens.GRCh38.cdna.all.fa.gz",
+                            "-i",
+                            "data/output/test/trans/transcripts_index",
+                            "-k",
+                            "31",
+                            "-p",
+                            "30"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:51:58.025720"
+                },
+                {
+                    "id": "quantify_ID0000006",
+                    "runtimeInSeconds": 8.23543,
+                    "command": {
+                        "program": "salmon",
+                        "arguments": [
+                            "salmon",
+                            "quant",
+                            "-i",
+                            "data/output/test/trans/transcripts_index",
+                            "-l",
+                            "A",
+                            "-1",
+                            "data/output/test/trans/reads/SRR1039512_r001_forward_read.fastq.gz",
+                            "-2",
+                            "data/output/test/trans/reads/SRR1039512_r001_reverse_read.fastq.gz",
+                            "-o",
+                            "output/test/trans/quant/SRR1039512_r001",
+                            "-p",
+                            "30",
+                            "--seqBias",
+                            "--useVBOpt",
+                            "--validateMappings;",
+                            "awk",
+                            "'NR==1{next}{print",
+                            "$1\"\\t\"$4}'",
+                            "output/test/trans/quant/SRR1039512_r001/quant.sf",
+                            ">",
+                            "output/test/trans/tpmFile/SRR1039512_r001_tpm.tsv"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:58:29.185777"
+                },
+                {
+                    "id": "quantify_ID0000007",
+                    "runtimeInSeconds": 10.725065,
+                    "command": {
+                        "program": "salmon",
+                        "arguments": [
+                            "salmon",
+                            "quant",
+                            "-i",
+                            "data/output/test/trans/transcripts_index",
+                            "-l",
+                            "A",
+                            "-1",
+                            "data/output/test/trans/reads/SRR1039508_r001_forward_read.fastq.gz",
+                            "-2",
+                            "data/output/test/trans/reads/SRR1039508_r001_reverse_read.fastq.gz",
+                            "-o",
+                            "output/test/trans/quant/SRR1039508_r001",
+                            "-p",
+                            "30",
+                            "--seqBias",
+                            "--useVBOpt",
+                            "--validateMappings;",
+                            "awk",
+                            "'NR==1{next}{print",
+                            "$1\"\\t\"$4}'",
+                            "output/test/trans/quant/SRR1039508_r001/quant.sf",
+                            ">",
+                            "output/test/trans/tpmFile/SRR1039508_r001_tpm.tsv"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:58:37.919304"
+                },
+                {
+                    "id": "quantify_ID0000008",
+                    "runtimeInSeconds": 7.474681,
+                    "command": {
+                        "program": "salmon",
+                        "arguments": [
+                            "salmon",
+                            "quant",
+                            "-i",
+                            "data/output/test/trans/transcripts_index",
+                            "-l",
+                            "A",
+                            "-1",
+                            "data/output/test/trans/reads/SRR1039512_forward_read.fastq.gz",
+                            "-2",
+                            "data/output/test/trans/reads/SRR1039512_reverse_read.fastq.gz",
+                            "-o",
+                            "output/test/trans/quant/SRR1039512",
+                            "-p",
+                            "30",
+                            "--seqBias",
+                            "--useVBOpt",
+                            "--validateMappings;",
+                            "awk",
+                            "'NR==1{next}{print",
+                            "$1\"\\t\"$4}'",
+                            "output/test/trans/quant/SRR1039512/quant.sf",
+                            ">",
+                            "output/test/trans/tpmFile/SRR1039512_tpm.tsv"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:58:48.717222"
+                },
+                {
+                    "id": "quantify_ID0000009",
+                    "runtimeInSeconds": 9.37005,
+                    "command": {
+                        "program": "salmon",
+                        "arguments": [
+                            "salmon",
+                            "quant",
+                            "-i",
+                            "data/output/test/trans/transcripts_index",
+                            "-l",
+                            "A",
+                            "-1",
+                            "data/output/test/trans/reads/SRR1039508_forward_read.fastq.gz",
+                            "-2",
+                            "data/output/test/trans/reads/SRR1039508_reverse_read.fastq.gz",
+                            "-o",
+                            "output/test/trans/quant/SRR1039508",
+                            "-p",
+                            "30",
+                            "--seqBias",
+                            "--useVBOpt",
+                            "--validateMappings;",
+                            "awk",
+                            "'NR==1{next}{print",
+                            "$1\"\\t\"$4}'",
+                            "output/test/trans/quant/SRR1039508/quant.sf",
+                            ">",
+                            "output/test/trans/tpmFile/SRR1039508_tpm.tsv"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:58:56.240056"
+                },
+                {
+                    "id": "getReads_ID0000010",
+                    "runtimeInSeconds": 3.533667,
+                    "command": {
+                        "program": "n/a",
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:59:05.653229"
+                },
+                {
+                    "id": "quantify_ID0000011",
+                    "runtimeInSeconds": 8.202961,
+                    "command": {
+                        "program": "salmon",
+                        "arguments": [
+                            "salmon",
+                            "quant",
+                            "-i",
+                            "data/output/test/trans/transcripts_index",
+                            "-l",
+                            "A",
+                            "-1",
+                            "data/output/test/trans/reads/SRR1039513_r001_forward_read.fastq.gz",
+                            "-2",
+                            "data/output/test/trans/reads/SRR1039513_r001_reverse_read.fastq.gz",
+                            "-o",
+                            "output/test/trans/quant/SRR1039513_r001",
+                            "-p",
+                            "30",
+                            "--seqBias",
+                            "--useVBOpt",
+                            "--validateMappings;",
+                            "awk",
+                            "'NR==1{next}{print",
+                            "$1\"\\t\"$4}'",
+                            "output/test/trans/quant/SRR1039513_r001/quant.sf",
+                            ">",
+                            "output/test/trans/tpmFile/SRR1039513_r001_tpm.tsv"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:59:09.235237"
+                },
+                {
+                    "id": "getReads_ID0000012",
+                    "runtimeInSeconds": 3.611025,
+                    "command": {
+                        "program": "n/a",
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:59:17.514910"
+                },
+                {
+                    "id": "quantify_ID0000013",
+                    "runtimeInSeconds": 8.845311,
+                    "command": {
+                        "program": "salmon",
+                        "arguments": [
+                            "salmon",
+                            "quant",
+                            "-i",
+                            "data/output/test/trans/transcripts_index",
+                            "-l",
+                            "A",
+                            "-1",
+                            "data/output/test/trans/reads/SRR1039509_r001_forward_read.fastq.gz",
+                            "-2",
+                            "data/output/test/trans/reads/SRR1039509_r001_reverse_read.fastq.gz",
+                            "-o",
+                            "output/test/trans/quant/SRR1039509_r001",
+                            "-p",
+                            "30",
+                            "--seqBias",
+                            "--useVBOpt",
+                            "--validateMappings;",
+                            "awk",
+                            "'NR==1{next}{print",
+                            "$1\"\\t\"$4}'",
+                            "output/test/trans/quant/SRR1039509_r001/quant.sf",
+                            ">",
+                            "output/test/trans/tpmFile/SRR1039509_r001_tpm.tsv"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:59:21.211527"
+                },
+                {
+                    "id": "getReads_ID0000014",
+                    "runtimeInSeconds": 3.552007,
+                    "command": {
+                        "program": "n/a",
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:59:30.142200"
+                },
+                {
+                    "id": "quantify_ID0000015",
+                    "runtimeInSeconds": 9.412601,
+                    "command": {
+                        "program": "salmon",
+                        "arguments": [
+                            "salmon",
+                            "quant",
+                            "-i",
+                            "data/output/test/trans/transcripts_index",
+                            "-l",
+                            "A",
+                            "-1",
+                            "data/output/test/trans/reads/SRR1039509_forward_read.fastq.gz",
+                            "-2",
+                            "data/output/test/trans/reads/SRR1039509_reverse_read.fastq.gz",
+                            "-o",
+                            "output/test/trans/quant/SRR1039509",
+                            "-p",
+                            "30",
+                            "--seqBias",
+                            "--useVBOpt",
+                            "--validateMappings;",
+                            "awk",
+                            "'NR==1{next}{print",
+                            "$1\"\\t\"$4}'",
+                            "output/test/trans/quant/SRR1039509/quant.sf",
+                            ">",
+                            "output/test/trans/tpmFile/SRR1039509_tpm.tsv"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:59:33.746174"
+                },
+                {
+                    "id": "getReads_ID0000016",
+                    "runtimeInSeconds": 3.70322,
+                    "command": {
+                        "program": "n/a",
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:59:43.214012"
+                },
+                {
+                    "id": "quantify_ID0000017",
+                    "runtimeInSeconds": 8.591365,
+                    "command": {
+                        "program": "salmon",
+                        "arguments": [
+                            "salmon",
+                            "quant",
+                            "-i",
+                            "data/output/test/trans/transcripts_index",
+                            "-l",
+                            "A",
+                            "-1",
+                            "data/output/test/trans/reads/SRR1039513_forward_read.fastq.gz",
+                            "-2",
+                            "data/output/test/trans/reads/SRR1039513_reverse_read.fastq.gz",
+                            "-o",
+                            "output/test/trans/quant/SRR1039513",
+                            "-p",
+                            "30",
+                            "--seqBias",
+                            "--useVBOpt",
+                            "--validateMappings;",
+                            "awk",
+                            "'NR==1{next}{print",
+                            "$1\"\\t\"$4}'",
+                            "output/test/trans/quant/SRR1039513/quant.sf",
+                            ">",
+                            "output/test/trans/tpmFile/SRR1039513_tpm.tsv"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:59:46.986998"
+                },
+                {
+                    "id": "summaryReport_ID0000018",
+                    "runtimeInSeconds": 6.074241,
+                    "command": {
+                        "program": "multiqc",
+                        "arguments": [
+                            "multiqc",
+                            "output/test/trans/quant/SRR1039508",
+                            "output/test/trans/quant/SRR1039509",
+                            "output/test/trans/quant/SRR1039512",
+                            "output/test/trans/quant/SRR1039513",
+                            "output/test/trans/quant/SRR1039508_r001",
+                            "output/test/trans/quant/SRR1039509_r001",
+                            "output/test/trans/quant/SRR1039512_r001",
+                            "output/test/trans/quant/SRR1039513_r001",
+                            "--filename",
+                            "output/test/trans/report_quantify.html",
+                            "--force"
+                        ]
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 02:59:55.645674"
+                },
+                {
+                    "id": "end_ID0000019",
+                    "runtimeInSeconds": 0.046009,
+                    "command": {
+                        "program": "n/a",
+                        "arguments": []
+                    },
+                    "coreCount": 1.0,
+                    "executedAt": "2026-05-08 03:00:01.775192"
+                }
+            ],
+            "machines": [
+                {
+                    "nodeName": "dirt02",
+                    "system": "linux",
+                    "release": "5.15.0-48-generic",
+                    "architecture": "x86_64",
+                    "cpu": {
+                        "coreCount": 1,
+                        "speedInMHz": 2400
+                    }
+                }
+            ],
+            "metrics": {
+                "sumTaskRuntimesInSeconds": 496.80594499999995
+            }
         }
-      ],
-      "machines": [
-        {
-          "nodeName": "dirt02",
-          "system": "linux",
-          "release": "5.15.0-48-generic",
-          "architecture": "x86_64",
-          "cpu": {
-            "coreCount": 1,
-            "speedInMHz": 2400
-          }
-        }
-      ],
-      "metrics": {
-        "sumTaskRuntimesInSeconds": 496.80594499999995
-      }
+    },
+    "runtimeSystem": {
+        "name": "Snakemake",
+        "version": "9.20.0",
+        "url": "https://snakemake.readthedocs.io/"
     }
-  },
-  "runtimeSystem": {
-    "name": "Snakemake",
-    "version": "9.20.0",
-    "url": "https://snakemake.readthedocs.io/"
-  }
 }

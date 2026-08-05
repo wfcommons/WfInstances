@@ -1,792 +1,792 @@
 {
-  "name": "scrnaseq",
-  "description": "Trace generated from Nextflow (via https://github.com/wfcommons/nextflow_workflow_tracer)",
-  "createdAt": "2023-03-28T07:24:05.561277+00:00",
-  "schemaVersion": "1.5",
-  "workflow": {
-    "repo": "https://github.com/nf-core/scrnaseq",
-    "runName": "fervent_lattes",
-    "specification": {
-      "tasks": [
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.INPUT_CHECK.SAMPLESHEET_CHECK",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.INPUT_CHECK.SAMPLESHEET_CHECK_2",
-          "children": [],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/scrnaseq/samplesheet-2-0.csv"
-          ],
-          "outputFiles": [
-            "/11/8233f4bf9453431be241ff4a240c4a/samplesheet.valid.csv",
-            "/11/8233f4bf9453431be241ff4a240c4a/versions.yml"
-          ],
-          "parents": []
+    "name": "scrnaseq",
+    "description": "Trace generated from Nextflow (via https://github.com/wfcommons/nextflow_workflow_tracer)",
+    "createdAt": "2023-03-28T07:24:05.561277+00:00",
+    "schemaVersion": "1.6",
+    "workflow": {
+        "repo": "https://github.com/nf-core/scrnaseq",
+        "runName": "fervent_lattes",
+        "specification": {
+            "tasks": [
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.INPUT_CHECK.SAMPLESHEET_CHECK",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.INPUT_CHECK.SAMPLESHEET_CHECK_2",
+                    "children": [],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/scrnaseq/samplesheet-2-0.csv"
+                    ],
+                    "outputFiles": [
+                        "/11/8233f4bf9453431be241ff4a240c4a/samplesheet.valid.csv",
+                        "/11/8233f4bf9453431be241ff4a240c4a/versions.yml"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER_1",
+                    "children": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/scrnaseq/reference/GRCm38.p6.genome.chr19.fa",
+                        "/nf-core/test-datasets/raw/scrnaseq/reference/gencode.vM19.annotation.chr19.gtf"
+                    ],
+                    "outputFiles": [
+                        "/6f/9c8353cf67bf1c1c3a2063ab01feee/GRCm38.p6.genome.chr19_genes.gtf",
+                        "/6f/9c8353cf67bf1c1c3a2063ab01feee/versions.yml"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5",
+                    "children": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_9",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_10"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/raw/scrnaseq/reference/GRCm38.p6.genome.chr19.fa",
+                        "/6f/9c8353cf67bf1c1c3a2063ab01feee/GRCm38.p6.genome.chr19_genes.gtf"
+                    ],
+                    "outputFiles": [
+                        "/39/87cc00e7b6777b129afd5249a721e0/star",
+                        "/39/87cc00e7b6777b129afd5249a721e0/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER_1"
+                    ]
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_3",
+                    "children": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R1_001.fastq.gz",
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R2_001.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_1_fastqc.html",
+                        "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_2_fastqc.html",
+                        "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_1_fastqc.zip",
+                        "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_2_fastqc.zip",
+                        "/cb/ba1676bb9477ce934fb901ca805a28/versions.yml"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_4",
+                    "children": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R1_001.fastq.gz",
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R2_001.fastq.gz",
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R1_001.fastq.gz",
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R2_001.fastq.gz"
+                    ],
+                    "outputFiles": [
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_1_fastqc.html",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_2_fastqc.html",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_3_fastqc.html",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_4_fastqc.html",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_1_fastqc.zip",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_2_fastqc.zip",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_3_fastqc.zip",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_4_fastqc.zip",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/versions.yml"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6",
+                    "children": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_8",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_9"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R1_001.fastq.gz",
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R2_001.fastq.gz",
+                        "/39/87cc00e7b6777b129afd5249a721e0/star",
+                        "/6f/9c8353cf67bf1c1c3a2063ab01feee/GRCm38.p6.genome.chr19_genes.gtf",
+                        "/assets/whitelist/10x_V2_barcode_whitelist.txt.gz"
+                    ],
+                    "outputFiles": [
+                        "/34/70728da3904d6e998a35b67037b43b/Sample_X.Aligned.sortedByCoord.out.bam",
+                        "/34/70728da3904d6e998a35b67037b43b/Sample_X.Solo.out",
+                        "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.final.out",
+                        "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.out",
+                        "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.progress.out",
+                        "/34/70728da3904d6e998a35b67037b43b/versions.yml",
+                        "/34/70728da3904d6e998a35b67037b43b/Sample_X.SJ.out.tab"
+                    ],
+                    "parents": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER_1"
+                    ]
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7",
+                    "children": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_11",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_10",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14"
+                    ],
+                    "inputFiles": [
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R1_001.fastq.gz",
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R2_001.fastq.gz",
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R1_001.fastq.gz",
+                        "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R2_001.fastq.gz",
+                        "/39/87cc00e7b6777b129afd5249a721e0/star",
+                        "/6f/9c8353cf67bf1c1c3a2063ab01feee/GRCm38.p6.genome.chr19_genes.gtf",
+                        "/assets/whitelist/10x_V2_barcode_whitelist.txt.gz"
+                    ],
+                    "outputFiles": [
+                        "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Aligned.sortedByCoord.out.bam",
+                        "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Solo.out",
+                        "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.final.out",
+                        "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.out",
+                        "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.progress.out",
+                        "/b4/a10fe2c8497160a04e25e58348dcac/versions.yml",
+                        "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.SJ.out.tab"
+                    ],
+                    "parents": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER_1"
+                    ]
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_8",
+                    "children": [],
+                    "inputFiles": [
+                        "/34/70728da3904d6e998a35b67037b43b/Sample_X.Solo.out"
+                    ],
+                    "outputFiles": [
+                        "/fa00207e5792e4a4e9ff6d39349b41/Sample_X/Sample_X_matrix.rds",
+                        "/0c/fa00207e5792e4a4e9ff6d39349b41/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6"
+                    ]
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_9",
+                    "children": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.CONCAT_H5AD_13"
+                    ],
+                    "inputFiles": [
+                        "/34/70728da3904d6e998a35b67037b43b/Sample_X.Solo.out",
+                        "/39/87cc00e7b6777b129afd5249a721e0/star"
+                    ],
+                    "outputFiles": [
+                        "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/Sample_X_matrix.h5ad",
+                        "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/barcodes.tsv",
+                        "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/features.tsv",
+                        "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/matrix.mtx",
+                        "/80/88cdbaa494a09ba62447cf2a82c8fe/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5"
+                    ]
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_11",
+                    "children": [],
+                    "inputFiles": [
+                        "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Solo.out"
+                    ],
+                    "outputFiles": [
+                        "/4227fbef4ddaefca8ecbae2f807c13/Sample_Y/Sample_Y_matrix.rds",
+                        "/77/4227fbef4ddaefca8ecbae2f807c13/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7"
+                    ]
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_10",
+                    "children": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.CONCAT_H5AD_13"
+                    ],
+                    "inputFiles": [
+                        "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Solo.out",
+                        "/39/87cc00e7b6777b129afd5249a721e0/star"
+                    ],
+                    "outputFiles": [
+                        "/3f90605073080dd6f79265cdfac8f1/Sample_Y/Sample_Y_matrix.h5ad",
+                        "/3f90605073080dd6f79265cdfac8f1/Sample_Y/barcodes.tsv",
+                        "/3f90605073080dd6f79265cdfac8f1/Sample_Y/features.tsv",
+                        "/3f90605073080dd6f79265cdfac8f1/Sample_Y/matrix.mtx",
+                        "/6e/3f90605073080dd6f79265cdfac8f1/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5"
+                    ]
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.CUSTOM_DUMPSOFTWAREVERSIONS",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.CUSTOM_DUMPSOFTWAREVERSIONS_12",
+                    "children": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14"
+                    ],
+                    "inputFiles": [
+                        "/5d/57f6ea0be4d7dc405f65b8f307aecd/collated_versions.yml"
+                    ],
+                    "outputFiles": [
+                        "/f8/9b326a7a0f87d149fdcb6ca0d4092e/software_versions.yml",
+                        "/f8/9b326a7a0f87d149fdcb6ca0d4092e/software_versions_mqc.yml",
+                        "/f8/9b326a7a0f87d149fdcb6ca0d4092e/versions.yml"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.CONCAT_H5AD",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.CONCAT_H5AD_13",
+                    "children": [],
+                    "inputFiles": [
+                        "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/Sample_X_matrix.h5ad",
+                        "/3f90605073080dd6f79265cdfac8f1/Sample_Y/Sample_Y_matrix.h5ad",
+                        "/nf-core/test-datasets/raw/scrnaseq/samplesheet-2-0.csv"
+                    ],
+                    "outputFiles": [
+                        "/4b/83d885f127330f384a135643a15721/combined_matrix.h5ad"
+                    ],
+                    "parents": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_9",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_10"
+                    ]
+                },
+                {
+                    "name": "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC",
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14",
+                    "children": [],
+                    "inputFiles": [
+                        "/84/5dfbcc8a230526d4d8863173658d45/methods_description_mqc.yaml",
+                        "/eb/c26f145981db3f7cf2d52d68d758d0/workflow_summary_mqc.yaml",
+                        "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_1_fastqc.zip",
+                        "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_2_fastqc.zip",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_1_fastqc.zip",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_2_fastqc.zip",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_3_fastqc.zip",
+                        "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_4_fastqc.zip",
+                        "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.final.out",
+                        "/f8/9b326a7a0f87d149fdcb6ca0d4092e/software_versions_mqc.yml",
+                        "/scrnaseq/assets/multiqc_config.yml"
+                    ],
+                    "outputFiles": [
+                        "/89/f99c10e23e999efb6270da0381217d/multiqc_report.html",
+                        "/89/f99c10e23e999efb6270da0381217d/multiqc_data",
+                        "/89/f99c10e23e999efb6270da0381217d/multiqc_plots",
+                        "/89/f99c10e23e999efb6270da0381217d/versions.yml"
+                    ],
+                    "parents": [
+                        "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_3",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_4",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7",
+                        "NFCORE_SCRNASEQ.SCRNASEQ.CUSTOM_DUMPSOFTWAREVERSIONS_12"
+                    ]
+                }
+            ],
+            "files": [
+                {
+                    "id": "/nf-core/test-datasets/raw/scrnaseq/samplesheet-2-0.csv",
+                    "sizeInBytes": 854
+                },
+                {
+                    "id": "/11/8233f4bf9453431be241ff4a240c4a/samplesheet.valid.csv",
+                    "sizeInBytes": 860
+                },
+                {
+                    "id": "/11/8233f4bf9453431be241ff4a240c4a/versions.yml",
+                    "sizeInBytes": 76
+                },
+                {
+                    "id": "/nf-core/test-datasets/raw/scrnaseq/reference/GRCm38.p6.genome.chr19.fa",
+                    "sizeInBytes": 62455433
+                },
+                {
+                    "id": "/nf-core/test-datasets/raw/scrnaseq/reference/gencode.vM19.annotation.chr19.gtf",
+                    "sizeInBytes": 20994920
+                },
+                {
+                    "id": "/6f/9c8353cf67bf1c1c3a2063ab01feee/GRCm38.p6.genome.chr19_genes.gtf",
+                    "sizeInBytes": 20994920
+                },
+                {
+                    "id": "/6f/9c8353cf67bf1c1c3a2063ab01feee/versions.yml",
+                    "sizeInBytes": 62
+                },
+                {
+                    "id": "/39/87cc00e7b6777b129afd5249a721e0/star",
+                    "sizeInBytes": 656330974
+                },
+                {
+                    "id": "/39/87cc00e7b6777b129afd5249a721e0/versions.yml",
+                    "sizeInBytes": 112
+                },
+                {
+                    "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R1_001.fastq.gz",
+                    "sizeInBytes": 1727503
+                },
+                {
+                    "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R2_001.fastq.gz",
+                    "sizeInBytes": 4259756
+                },
+                {
+                    "id": "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_1_fastqc.html",
+                    "sizeInBytes": 494553
+                },
+                {
+                    "id": "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_2_fastqc.html",
+                    "sizeInBytes": 599715
+                },
+                {
+                    "id": "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_1_fastqc.zip",
+                    "sizeInBytes": 307494
+                },
+                {
+                    "id": "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_2_fastqc.zip",
+                    "sizeInBytes": 347596
+                },
+                {
+                    "id": "/cb/ba1676bb9477ce934fb901ca805a28/versions.yml",
+                    "sizeInBytes": 67
+                },
+                {
+                    "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R1_001.fastq.gz",
+                    "sizeInBytes": 1727503
+                },
+                {
+                    "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R2_001.fastq.gz",
+                    "sizeInBytes": 4259756
+                },
+                {
+                    "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R1_001.fastq.gz",
+                    "sizeInBytes": 737653
+                },
+                {
+                    "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R2_001.fastq.gz",
+                    "sizeInBytes": 1981608
+                },
+                {
+                    "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_1_fastqc.html",
+                    "sizeInBytes": 494553
+                },
+                {
+                    "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_2_fastqc.html",
+                    "sizeInBytes": 599715
+                },
+                {
+                    "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_3_fastqc.html",
+                    "sizeInBytes": 496207
+                },
+                {
+                    "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_4_fastqc.html",
+                    "sizeInBytes": 595808
+                },
+                {
+                    "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_1_fastqc.zip",
+                    "sizeInBytes": 307496
+                },
+                {
+                    "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_2_fastqc.zip",
+                    "sizeInBytes": 347598
+                },
+                {
+                    "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_3_fastqc.zip",
+                    "sizeInBytes": 310419
+                },
+                {
+                    "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_4_fastqc.zip",
+                    "sizeInBytes": 365294
+                },
+                {
+                    "id": "/87/3e985bf93f62b7c53d20e4043ba52c/versions.yml",
+                    "sizeInBytes": 67
+                },
+                {
+                    "id": "/assets/whitelist/10x_V2_barcode_whitelist.txt.gz",
+                    "sizeInBytes": 2238617
+                },
+                {
+                    "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.Aligned.sortedByCoord.out.bam",
+                    "sizeInBytes": 923543
+                },
+                {
+                    "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.Solo.out",
+                    "sizeInBytes": 2334256
+                },
+                {
+                    "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.final.out",
+                    "sizeInBytes": 1995
+                },
+                {
+                    "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.out",
+                    "sizeInBytes": 11325
+                },
+                {
+                    "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.progress.out",
+                    "sizeInBytes": 801
+                },
+                {
+                    "id": "/34/70728da3904d6e998a35b67037b43b/versions.yml",
+                    "sizeInBytes": 66
+                },
+                {
+                    "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.SJ.out.tab",
+                    "sizeInBytes": 10069
+                },
+                {
+                    "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Aligned.sortedByCoord.out.bam",
+                    "sizeInBytes": 1143152
+                },
+                {
+                    "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Solo.out",
+                    "sizeInBytes": 2343561
+                },
+                {
+                    "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.final.out",
+                    "sizeInBytes": 1996
+                },
+                {
+                    "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.out",
+                    "sizeInBytes": 12391
+                },
+                {
+                    "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.progress.out",
+                    "sizeInBytes": 801
+                },
+                {
+                    "id": "/b4/a10fe2c8497160a04e25e58348dcac/versions.yml",
+                    "sizeInBytes": 66
+                },
+                {
+                    "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.SJ.out.tab",
+                    "sizeInBytes": 11499
+                },
+                {
+                    "id": "/fa00207e5792e4a4e9ff6d39349b41/Sample_X/Sample_X_matrix.rds",
+                    "sizeInBytes": 157440
+                },
+                {
+                    "id": "/0c/fa00207e5792e4a4e9ff6d39349b41/versions.yml",
+                    "sizeInBytes": 31
+                },
+                {
+                    "id": "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/Sample_X_matrix.h5ad",
+                    "sizeInBytes": 259571
+                },
+                {
+                    "id": "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/barcodes.tsv",
+                    "sizeInBytes": 67949
+                },
+                {
+                    "id": "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/features.tsv",
+                    "sizeInBytes": 31754
+                },
+                {
+                    "id": "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/matrix.mtx",
+                    "sizeInBytes": 70885
+                },
+                {
+                    "id": "/80/88cdbaa494a09ba62447cf2a82c8fe/versions.yml",
+                    "sizeInBytes": 1404
+                },
+                {
+                    "id": "/4227fbef4ddaefca8ecbae2f807c13/Sample_Y/Sample_Y_matrix.rds",
+                    "sizeInBytes": 177750
+                },
+                {
+                    "id": "/77/4227fbef4ddaefca8ecbae2f807c13/versions.yml",
+                    "sizeInBytes": 31
+                },
+                {
+                    "id": "/3f90605073080dd6f79265cdfac8f1/Sample_Y/Sample_Y_matrix.h5ad",
+                    "sizeInBytes": 287373
+                },
+                {
+                    "id": "/3f90605073080dd6f79265cdfac8f1/Sample_Y/barcodes.tsv",
+                    "sizeInBytes": 79475
+                },
+                {
+                    "id": "/3f90605073080dd6f79265cdfac8f1/Sample_Y/features.tsv",
+                    "sizeInBytes": 31754
+                },
+                {
+                    "id": "/3f90605073080dd6f79265cdfac8f1/Sample_Y/matrix.mtx",
+                    "sizeInBytes": 78908
+                },
+                {
+                    "id": "/6e/3f90605073080dd6f79265cdfac8f1/versions.yml",
+                    "sizeInBytes": 1404
+                },
+                {
+                    "id": "/5d/57f6ea0be4d7dc405f65b8f307aecd/collated_versions.yml",
+                    "sizeInBytes": 454
+                },
+                {
+                    "id": "/f8/9b326a7a0f87d149fdcb6ca0d4092e/software_versions.yml",
+                    "sizeInBytes": 273
+                },
+                {
+                    "id": "/f8/9b326a7a0f87d149fdcb6ca0d4092e/software_versions_mqc.yml",
+                    "sizeInBytes": 1942
+                },
+                {
+                    "id": "/f8/9b326a7a0f87d149fdcb6ca0d4092e/versions.yml",
+                    "sizeInBytes": 85
+                },
+                {
+                    "id": "/4b/83d885f127330f384a135643a15721/combined_matrix.h5ad",
+                    "sizeInBytes": 594550
+                },
+                {
+                    "id": "/84/5dfbcc8a230526d4d8863173658d45/methods_description_mqc.yaml",
+                    "sizeInBytes": 3950
+                },
+                {
+                    "id": "/eb/c26f145981db3f7cf2d52d68d758d0/workflow_summary_mqc.yaml",
+                    "sizeInBytes": 2879
+                },
+                {
+                    "id": "/scrnaseq/assets/multiqc_config.yml",
+                    "sizeInBytes": 490
+                },
+                {
+                    "id": "/89/f99c10e23e999efb6270da0381217d/multiqc_report.html",
+                    "sizeInBytes": 1213029
+                },
+                {
+                    "id": "/89/f99c10e23e999efb6270da0381217d/multiqc_data",
+                    "sizeInBytes": 343050
+                },
+                {
+                    "id": "/89/f99c10e23e999efb6270da0381217d/multiqc_plots",
+                    "sizeInBytes": 791522
+                },
+                {
+                    "id": "/89/f99c10e23e999efb6270da0381217d/versions.yml",
+                    "sizeInBytes": 54
+                }
+            ],
+            "metrics": {
+                "numberOfTasks": 14,
+                "numberOfFiles": 70,
+                "sumOfFileSizesInBytes": 793970717,
+                "numberOfLevels": 5,
+                "minimumWidth": 1,
+                "maximumWidth": 5
+            }
         },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER_1",
-          "children": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5",
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6",
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/scrnaseq/reference/GRCm38.p6.genome.chr19.fa",
-            "/nf-core/test-datasets/raw/scrnaseq/reference/gencode.vM19.annotation.chr19.gtf"
-          ],
-          "outputFiles": [
-            "/6f/9c8353cf67bf1c1c3a2063ab01feee/GRCm38.p6.genome.chr19_genes.gtf",
-            "/6f/9c8353cf67bf1c1c3a2063ab01feee/versions.yml"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5",
-          "children": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6",
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7",
-            "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_9",
-            "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_10"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/raw/scrnaseq/reference/GRCm38.p6.genome.chr19.fa",
-            "/6f/9c8353cf67bf1c1c3a2063ab01feee/GRCm38.p6.genome.chr19_genes.gtf"
-          ],
-          "outputFiles": [
-            "/39/87cc00e7b6777b129afd5249a721e0/star",
-            "/39/87cc00e7b6777b129afd5249a721e0/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER_1"
-          ]
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_3",
-          "children": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R1_001.fastq.gz",
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R2_001.fastq.gz"
-          ],
-          "outputFiles": [
-            "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_1_fastqc.html",
-            "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_2_fastqc.html",
-            "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_1_fastqc.zip",
-            "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_2_fastqc.zip",
-            "/cb/ba1676bb9477ce934fb901ca805a28/versions.yml"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_4",
-          "children": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R1_001.fastq.gz",
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R2_001.fastq.gz",
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R1_001.fastq.gz",
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R2_001.fastq.gz"
-          ],
-          "outputFiles": [
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_1_fastqc.html",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_2_fastqc.html",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_3_fastqc.html",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_4_fastqc.html",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_1_fastqc.zip",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_2_fastqc.zip",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_3_fastqc.zip",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_4_fastqc.zip",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/versions.yml"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6",
-          "children": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_8",
-            "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_9"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R1_001.fastq.gz",
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R2_001.fastq.gz",
-            "/39/87cc00e7b6777b129afd5249a721e0/star",
-            "/6f/9c8353cf67bf1c1c3a2063ab01feee/GRCm38.p6.genome.chr19_genes.gtf",
-            "/assets/whitelist/10x_V2_barcode_whitelist.txt.gz"
-          ],
-          "outputFiles": [
-            "/34/70728da3904d6e998a35b67037b43b/Sample_X.Aligned.sortedByCoord.out.bam",
-            "/34/70728da3904d6e998a35b67037b43b/Sample_X.Solo.out",
-            "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.final.out",
-            "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.out",
-            "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.progress.out",
-            "/34/70728da3904d6e998a35b67037b43b/versions.yml",
-            "/34/70728da3904d6e998a35b67037b43b/Sample_X.SJ.out.tab"
-          ],
-          "parents": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5",
-            "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER_1"
-          ]
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7",
-          "children": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_11",
-            "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_10",
-            "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14"
-          ],
-          "inputFiles": [
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R1_001.fastq.gz",
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R2_001.fastq.gz",
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R1_001.fastq.gz",
-            "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R2_001.fastq.gz",
-            "/39/87cc00e7b6777b129afd5249a721e0/star",
-            "/6f/9c8353cf67bf1c1c3a2063ab01feee/GRCm38.p6.genome.chr19_genes.gtf",
-            "/assets/whitelist/10x_V2_barcode_whitelist.txt.gz"
-          ],
-          "outputFiles": [
-            "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Aligned.sortedByCoord.out.bam",
-            "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Solo.out",
-            "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.final.out",
-            "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.out",
-            "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.progress.out",
-            "/b4/a10fe2c8497160a04e25e58348dcac/versions.yml",
-            "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.SJ.out.tab"
-          ],
-          "parents": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5",
-            "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER_1"
-          ]
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_8",
-          "children": [],
-          "inputFiles": [
-            "/34/70728da3904d6e998a35b67037b43b/Sample_X.Solo.out"
-          ],
-          "outputFiles": [
-            "/fa00207e5792e4a4e9ff6d39349b41/Sample_X/Sample_X_matrix.rds",
-            "/0c/fa00207e5792e4a4e9ff6d39349b41/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6"
-          ]
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_9",
-          "children": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.CONCAT_H5AD_13"
-          ],
-          "inputFiles": [
-            "/34/70728da3904d6e998a35b67037b43b/Sample_X.Solo.out",
-            "/39/87cc00e7b6777b129afd5249a721e0/star"
-          ],
-          "outputFiles": [
-            "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/Sample_X_matrix.h5ad",
-            "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/barcodes.tsv",
-            "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/features.tsv",
-            "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/matrix.mtx",
-            "/80/88cdbaa494a09ba62447cf2a82c8fe/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6",
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5"
-          ]
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_11",
-          "children": [],
-          "inputFiles": [
-            "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Solo.out"
-          ],
-          "outputFiles": [
-            "/4227fbef4ddaefca8ecbae2f807c13/Sample_Y/Sample_Y_matrix.rds",
-            "/77/4227fbef4ddaefca8ecbae2f807c13/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7"
-          ]
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_10",
-          "children": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.CONCAT_H5AD_13"
-          ],
-          "inputFiles": [
-            "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Solo.out",
-            "/39/87cc00e7b6777b129afd5249a721e0/star"
-          ],
-          "outputFiles": [
-            "/3f90605073080dd6f79265cdfac8f1/Sample_Y/Sample_Y_matrix.h5ad",
-            "/3f90605073080dd6f79265cdfac8f1/Sample_Y/barcodes.tsv",
-            "/3f90605073080dd6f79265cdfac8f1/Sample_Y/features.tsv",
-            "/3f90605073080dd6f79265cdfac8f1/Sample_Y/matrix.mtx",
-            "/6e/3f90605073080dd6f79265cdfac8f1/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7",
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5"
-          ]
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.CUSTOM_DUMPSOFTWAREVERSIONS",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.CUSTOM_DUMPSOFTWAREVERSIONS_12",
-          "children": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14"
-          ],
-          "inputFiles": [
-            "/5d/57f6ea0be4d7dc405f65b8f307aecd/collated_versions.yml"
-          ],
-          "outputFiles": [
-            "/f8/9b326a7a0f87d149fdcb6ca0d4092e/software_versions.yml",
-            "/f8/9b326a7a0f87d149fdcb6ca0d4092e/software_versions_mqc.yml",
-            "/f8/9b326a7a0f87d149fdcb6ca0d4092e/versions.yml"
-          ],
-          "parents": []
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.CONCAT_H5AD",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.CONCAT_H5AD_13",
-          "children": [],
-          "inputFiles": [
-            "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/Sample_X_matrix.h5ad",
-            "/3f90605073080dd6f79265cdfac8f1/Sample_Y/Sample_Y_matrix.h5ad",
-            "/nf-core/test-datasets/raw/scrnaseq/samplesheet-2-0.csv"
-          ],
-          "outputFiles": [
-            "/4b/83d885f127330f384a135643a15721/combined_matrix.h5ad"
-          ],
-          "parents": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_9",
-            "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_10"
-          ]
-        },
-        {
-          "name": "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC",
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14",
-          "children": [],
-          "inputFiles": [
-            "/84/5dfbcc8a230526d4d8863173658d45/methods_description_mqc.yaml",
-            "/eb/c26f145981db3f7cf2d52d68d758d0/workflow_summary_mqc.yaml",
-            "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_1_fastqc.zip",
-            "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_2_fastqc.zip",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_1_fastqc.zip",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_2_fastqc.zip",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_3_fastqc.zip",
-            "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_4_fastqc.zip",
-            "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.final.out",
-            "/f8/9b326a7a0f87d149fdcb6ca0d4092e/software_versions_mqc.yml",
-            "/scrnaseq/assets/multiqc_config.yml"
-          ],
-          "outputFiles": [
-            "/89/f99c10e23e999efb6270da0381217d/multiqc_report.html",
-            "/89/f99c10e23e999efb6270da0381217d/multiqc_data",
-            "/89/f99c10e23e999efb6270da0381217d/multiqc_plots",
-            "/89/f99c10e23e999efb6270da0381217d/versions.yml"
-          ],
-          "parents": [
-            "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_3",
-            "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_4",
-            "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7",
-            "NFCORE_SCRNASEQ.SCRNASEQ.CUSTOM_DUMPSOFTWAREVERSIONS_12"
-          ]
+        "execution": {
+            "makespanInSeconds": 2126,
+            "executedAt": "2023-03-27T21:24:00-10:00",
+            "tasks": [
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.INPUT_CHECK.SAMPLESHEET_CHECK_2",
+                    "runtimeInSeconds": 0.0,
+                    "command": {
+                        "program": "check_samplesheet.py \\\n        samplesheet-2-0.csv \\\n        samplesheet.valid.csv\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:INPUT_CHECK:SAMPLESHEET_CHECK\":\n        python: $(python --version | sed 's/Python //g')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 76.2,
+                    "readBytes": 919736,
+                    "writtenBytes": 1247,
+                    "memoryInBytes": 2895872
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER_1",
+                    "runtimeInSeconds": 1.0,
+                    "command": {
+                        "program": "filter_gtf_for_genes_in_genome.py \\\n        --gtf gencode.vM19.annotation.chr19.gtf \\\n        --fasta GRCm38.p6.genome.chr19.fa \\\n        -o GRCm38.p6.genome.chr19_genes.gtf\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:GTF_GENE_FILTER\":\n        python: $(python --version | sed 's/Python //g')\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 59.8,
+                    "readBytes": 84294634,
+                    "writtenBytes": 20996166,
+                    "memoryInBytes": 3194880
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5",
+                    "runtimeInSeconds": 128.0,
+                    "command": {
+                        "program": "samtools faidx GRCm38.p6.genome.chr19.fa\n        NUM_BASES=`gawk '{sum = sum + $2}END{if ((log(sum)/log(2))/2 - 1 > 14) {printf \"%.0f\", 14} else {printf \"%.0f\", (log(sum)/log(2))/2 - 1}}' GRCm38.p6.genome.chr19.fa.fai`\n\n        mkdir star\n        STAR \\\n            --runMode genomeGenerate \\\n            --genomeDir star/ \\\n            --genomeFastaFiles GRCm38.p6.genome.chr19.fa \\\n            --sjdbGTFfile GRCm38.p6.genome.chr19_genes.gtf \\\n            --runThreadN 1 \\\n            --genomeSAindexNbases $NUM_BASES \\\n            --limitGenomeGenerateRAM 6342450944 \\\n            \n\n        cat <<-END_VERSIONS > versions.yml\n        \"NFCORE_SCRNASEQ:SCRNASEQ:STARSOLO:STAR_GENOMEGENERATE\":\n            star: $(STAR --version | sed -e \"s/STAR_//g\")\n            samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n            gawk: $(echo $(gawk --version 2>&1) | sed 's/^.*GNU Awk //; s/, .*$//')\n        END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 97.4,
+                    "readBytes": 1160784025,
+                    "writtenBytes": 1587632378,
+                    "memoryInBytes": 1778008064
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_3",
+                    "runtimeInSeconds": 22.0,
+                    "command": {
+                        "program": "printf \"%s %s\\n\" Sample_X_S1_L001_R1_001.fastq.gz Sample_X_1.gz Sample_X_S1_L001_R2_001.fastq.gz Sample_X_2.gz | while read old_name new_name; do\n        [ -f \"${new_name}\" ] || ln -s $old_name $new_name\n    done\n    fastqc  --threads 1 Sample_X_1.gz Sample_X_2.gz\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:FASTQC_CHECK:FASTQC\":\n        fastqc: $( fastqc --version | sed -e \"s/FastQC v//g\" )\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 86.0,
+                    "readBytes": 27614706,
+                    "writtenBytes": 3381179,
+                    "memoryInBytes": 240242688
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_4",
+                    "runtimeInSeconds": 29.0,
+                    "command": {
+                        "program": "printf \"%s %s\\n\" Sample_Y_S1_L001_R1_001.fastq.gz Sample_Y_1.gz Sample_Y_S1_L001_R2_001.fastq.gz Sample_Y_2.gz Sample_Y_S1_L002_R1_001.fastq.gz Sample_Y_3.gz Sample_Y_S1_L002_R2_001.fastq.gz Sample_Y_4.gz | while read old_name new_name; do\n        [ -f \"${new_name}\" ] || ln -s $old_name $new_name\n    done\n    fastqc  --threads 1 Sample_Y_1.gz Sample_Y_2.gz Sample_Y_3.gz Sample_Y_4.gz\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:FASTQC_CHECK:FASTQC\":\n        fastqc: $( fastqc --version | sed -e \"s/FastQC v//g\" )\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 92.4,
+                    "readBytes": 32064709,
+                    "writtenBytes": 6775446,
+                    "memoryInBytes": 314175488
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6",
+                    "runtimeInSeconds": 491.0,
+                    "command": {
+                        "program": "STAR \\\n        --genomeDir star \\\n        --readFilesIn Sample_X_S1_L001_R2_001.fastq.gz Sample_X_S1_L001_R1_001.fastq.gz \\\n        --runThreadN 1 \\\n        --outFileNamePrefix Sample_X. \\\n        --soloCBwhitelist <(gzip -cdf 10x_V2_barcode_whitelist.txt.gz) \\\n        --soloType CB_UMI_Simple \\\n        --soloFeatures Gene \\\n        --soloUMIlen 10 \\\n         \\\n        --sjdbGTFfile GRCm38.p6.genome.chr19_genes.gtf \\\n        --outSAMattrRGline ID:Sample_X 'CN:Broad_Institute' 'SM:Sample_X' \\\n        --soloCellFilter CellRanger2.2 5000 0.99 10 \\\n        --readFilesCommand zcat --runDirPerm All_RWX --outWigType bedGraph --twopassMode Basic --outSAMtype BAM SortedByCoordinate \\\n\n    \n\n    if [ -f Sample_X.Unmapped.out.mate1 ]; then\n        mv Sample_X.Unmapped.out.mate1 Sample_X.unmapped_1.fastq\n        gzip Sample_X.unmapped_1.fastq\n    fi\n    if [ -f Sample_X.Unmapped.out.mate2 ]; then\n        mv Sample_X.Unmapped.out.mate2 Sample_X.unmapped_2.fastq\n        gzip Sample_X.unmapped_2.fastq\n    fi\n\n    if [ -d Sample_X.Solo.out ]; then\n        # Backslashes still need to be escaped (https://github.com/nextflow-io/nextflow/issues/67)\n        find Sample_X.Solo.out \\( -name \"*.tsv\" -o -name \"*.mtx\" \\) -exec gzip {} \\;\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:STARSOLO:STAR_ALIGN\":\n        star: $(STAR --version | sed -e \"s/STAR_//g\")\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 93.3,
+                    "readBytes": 803823153,
+                    "writtenBytes": 38155447,
+                    "memoryInBytes": 2315010048
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7",
+                    "runtimeInSeconds": 637.0,
+                    "command": {
+                        "program": "STAR \\\n        --genomeDir star \\\n        --readFilesIn Sample_Y_S1_L001_R2_001.fastq.gz,Sample_Y_S1_L002_R2_001.fastq.gz Sample_Y_S1_L001_R1_001.fastq.gz,Sample_Y_S1_L002_R1_001.fastq.gz \\\n        --runThreadN 1 \\\n        --outFileNamePrefix Sample_Y. \\\n        --soloCBwhitelist <(gzip -cdf 10x_V2_barcode_whitelist.txt.gz) \\\n        --soloType CB_UMI_Simple \\\n        --soloFeatures Gene \\\n        --soloUMIlen 10 \\\n         \\\n        --sjdbGTFfile GRCm38.p6.genome.chr19_genes.gtf \\\n        --outSAMattrRGline ID:Sample_Y 'CN:CRG_Barcelona' 'SM:Sample_Y' \\\n        --soloCellFilter CellRanger2.2 5000 0.99 10 \\\n        --readFilesCommand zcat --runDirPerm All_RWX --outWigType bedGraph --twopassMode Basic --outSAMtype BAM SortedByCoordinate \\\n\n    \n\n    if [ -f Sample_Y.Unmapped.out.mate1 ]; then\n        mv Sample_Y.Unmapped.out.mate1 Sample_Y.unmapped_1.fastq\n        gzip Sample_Y.unmapped_1.fastq\n    fi\n    if [ -f Sample_Y.Unmapped.out.mate2 ]; then\n        mv Sample_Y.Unmapped.out.mate2 Sample_Y.unmapped_2.fastq\n        gzip Sample_Y.unmapped_2.fastq\n    fi\n\n    if [ -d Sample_Y.Solo.out ]; then\n        # Backslashes still need to be escaped (https://github.com/nextflow-io/nextflow/issues/67)\n        find Sample_Y.Solo.out \\( -name \"*.tsv\" -o -name \"*.mtx\" \\) -exec gzip {} \\;\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:STARSOLO:STAR_ALIGN\":\n        star: $(STAR --version | sed -e \"s/STAR_//g\")\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 94.1,
+                    "readBytes": 830783900,
+                    "writtenBytes": 39380835,
+                    "memoryInBytes": 1936621568
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_8",
+                    "runtimeInSeconds": 9.439,
+                    "command": {
+                        "program": "mtx_to_seurat.R \\\n        *.Solo.out/Gene*/filtered/matrix.mtx.gz \\\n        *.Solo.out/Gene*/filtered/barcodes.tsv.gz \\\n        *.Solo.out/Gene*/filtered/features.tsv.gz \\\n        Sample_X/Sample_X_matrix.rds \\\n        star",
+                        "arguments": []
+                    },
+                    "avgCPU": 88.9,
+                    "readBytes": 37899037,
+                    "writtenBytes": 158056,
+                    "memoryInBytes": 375816192
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_9",
+                    "runtimeInSeconds": 4.0,
+                    "command": {
+                        "program": "# convert file types\n    mtx_to_h5ad.py \\\n        --task_process NFCORE_SCRNASEQ:SCRNASEQ:MTX_CONVERSION:MTX_TO_H5AD \\\n        --aligner star \\\n        --sample Sample_X \\\n        --input *.Solo.out/Gene*/filtered/matrix.mtx.gz \\\n        --barcode *.Solo.out/Gene*/filtered/barcodes.tsv.gz \\\n        --feature *.Solo.out/Gene*/filtered/features.tsv.gz \\\n        --txp2gene  \\\n        --star_index star \\\n        --out Sample_X/Sample_X_matrix.h5ad",
+                        "arguments": []
+                    },
+                    "avgCPU": 87.2,
+                    "readBytes": 25180836,
+                    "writtenBytes": 431328,
+                    "memoryInBytes": 197947392
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_11",
+                    "runtimeInSeconds": 10.838,
+                    "command": {
+                        "program": "mtx_to_seurat.R \\\n        *.Solo.out/Gene*/filtered/matrix.mtx.gz \\\n        *.Solo.out/Gene*/filtered/barcodes.tsv.gz \\\n        *.Solo.out/Gene*/filtered/features.tsv.gz \\\n        Sample_Y/Sample_Y_matrix.rds \\\n        star",
+                        "arguments": []
+                    },
+                    "avgCPU": 85.2,
+                    "readBytes": 37903987,
+                    "writtenBytes": 178363,
+                    "memoryInBytes": 379764736
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_10",
+                    "runtimeInSeconds": 4.0,
+                    "command": {
+                        "program": "# convert file types\n    mtx_to_h5ad.py \\\n        --task_process NFCORE_SCRNASEQ:SCRNASEQ:MTX_CONVERSION:MTX_TO_H5AD \\\n        --aligner star \\\n        --sample Sample_Y \\\n        --input *.Solo.out/Gene*/filtered/matrix.mtx.gz \\\n        --barcode *.Solo.out/Gene*/filtered/barcodes.tsv.gz \\\n        --feature *.Solo.out/Gene*/filtered/features.tsv.gz \\\n        --txp2gene  \\\n        --star_index star \\\n        --out Sample_Y/Sample_Y_matrix.h5ad",
+                        "arguments": []
+                    },
+                    "avgCPU": 90.0,
+                    "readBytes": 25185790,
+                    "writtenBytes": 478745,
+                    "memoryInBytes": 199163904
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.CUSTOM_DUMPSOFTWAREVERSIONS_12",
+                    "runtimeInSeconds": 0.199,
+                    "command": {
+                        "program": "def args = task.ext.args ?: ''\ntemplate 'dumpsoftwareversions.py'",
+                        "arguments": []
+                    },
+                    "avgCPU": 64.8,
+                    "readBytes": 860548,
+                    "writtenBytes": 2516,
+                    "memoryInBytes": 9052160
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.CONCAT_H5AD_13",
+                    "runtimeInSeconds": 4.0,
+                    "command": {
+                        "program": "concat_h5ad.py \\\n        --input samplesheet-2-0.csv \\\n        --out combined_matrix.h5ad \\\n        --suffix \"_matrix.h5ad\"",
+                        "arguments": []
+                    },
+                    "avgCPU": 91.1,
+                    "readBytes": 25440751,
+                    "writtenBytes": 595105,
+                    "memoryInBytes": 207249408
+                },
+                {
+                    "id": "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14",
+                    "runtimeInSeconds": 33.868,
+                    "command": {
+                        "program": "multiqc \\\n        --force \\\n         \\\n        --config multiqc_config.yml \\\n         \\\n        .\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:MULTIQC\":\n        multiqc: $( multiqc --version | sed -e \"s/multiqc, version //g\" )\n    END_VERSIONS",
+                        "arguments": []
+                    },
+                    "avgCPU": 87.4,
+                    "readBytes": 346742028,
+                    "writtenBytes": 4481751,
+                    "memoryInBytes": 153034752
+                }
+            ],
+            "machines": [
+                {
+                    "nodeName": "dirt02",
+                    "system": "linux",
+                    "release": "5.15.0-48-generic",
+                    "architecture": "x86_64",
+                    "cpu": {
+                        "coreCount": 1,
+                        "speedInMHz": 2400
+                    }
+                }
+            ],
+            "metrics": {
+                "sumTaskRuntimesInSeconds": 1374.344,
+                "totalNumBytesRead": 3439497840,
+                "totalNumBytesWritten": 1702648562
+            }
         }
-      ],
-      "files": [
-        {
-          "id": "/nf-core/test-datasets/raw/scrnaseq/samplesheet-2-0.csv",
-          "sizeInBytes": 854
-        },
-        {
-          "id": "/11/8233f4bf9453431be241ff4a240c4a/samplesheet.valid.csv",
-          "sizeInBytes": 860
-        },
-        {
-          "id": "/11/8233f4bf9453431be241ff4a240c4a/versions.yml",
-          "sizeInBytes": 76
-        },
-        {
-          "id": "/nf-core/test-datasets/raw/scrnaseq/reference/GRCm38.p6.genome.chr19.fa",
-          "sizeInBytes": 62455433
-        },
-        {
-          "id": "/nf-core/test-datasets/raw/scrnaseq/reference/gencode.vM19.annotation.chr19.gtf",
-          "sizeInBytes": 20994920
-        },
-        {
-          "id": "/6f/9c8353cf67bf1c1c3a2063ab01feee/GRCm38.p6.genome.chr19_genes.gtf",
-          "sizeInBytes": 20994920
-        },
-        {
-          "id": "/6f/9c8353cf67bf1c1c3a2063ab01feee/versions.yml",
-          "sizeInBytes": 62
-        },
-        {
-          "id": "/39/87cc00e7b6777b129afd5249a721e0/star",
-          "sizeInBytes": 656330974
-        },
-        {
-          "id": "/39/87cc00e7b6777b129afd5249a721e0/versions.yml",
-          "sizeInBytes": 112
-        },
-        {
-          "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R1_001.fastq.gz",
-          "sizeInBytes": 1727503
-        },
-        {
-          "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_X_S1_L001_R2_001.fastq.gz",
-          "sizeInBytes": 4259756
-        },
-        {
-          "id": "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_1_fastqc.html",
-          "sizeInBytes": 494553
-        },
-        {
-          "id": "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_2_fastqc.html",
-          "sizeInBytes": 599715
-        },
-        {
-          "id": "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_1_fastqc.zip",
-          "sizeInBytes": 307494
-        },
-        {
-          "id": "/cb/ba1676bb9477ce934fb901ca805a28/Sample_X_2_fastqc.zip",
-          "sizeInBytes": 347596
-        },
-        {
-          "id": "/cb/ba1676bb9477ce934fb901ca805a28/versions.yml",
-          "sizeInBytes": 67
-        },
-        {
-          "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R1_001.fastq.gz",
-          "sizeInBytes": 1727503
-        },
-        {
-          "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L001_R2_001.fastq.gz",
-          "sizeInBytes": 4259756
-        },
-        {
-          "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R1_001.fastq.gz",
-          "sizeInBytes": 737653
-        },
-        {
-          "id": "/nf-core/test-datasets/scrnaseq/testdata/cellranger/Sample_Y_S1_L002_R2_001.fastq.gz",
-          "sizeInBytes": 1981608
-        },
-        {
-          "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_1_fastqc.html",
-          "sizeInBytes": 494553
-        },
-        {
-          "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_2_fastqc.html",
-          "sizeInBytes": 599715
-        },
-        {
-          "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_3_fastqc.html",
-          "sizeInBytes": 496207
-        },
-        {
-          "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_4_fastqc.html",
-          "sizeInBytes": 595808
-        },
-        {
-          "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_1_fastqc.zip",
-          "sizeInBytes": 307496
-        },
-        {
-          "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_2_fastqc.zip",
-          "sizeInBytes": 347598
-        },
-        {
-          "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_3_fastqc.zip",
-          "sizeInBytes": 310419
-        },
-        {
-          "id": "/87/3e985bf93f62b7c53d20e4043ba52c/Sample_Y_4_fastqc.zip",
-          "sizeInBytes": 365294
-        },
-        {
-          "id": "/87/3e985bf93f62b7c53d20e4043ba52c/versions.yml",
-          "sizeInBytes": 67
-        },
-        {
-          "id": "/assets/whitelist/10x_V2_barcode_whitelist.txt.gz",
-          "sizeInBytes": 2238617
-        },
-        {
-          "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.Aligned.sortedByCoord.out.bam",
-          "sizeInBytes": 923543
-        },
-        {
-          "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.Solo.out",
-          "sizeInBytes": 2334256
-        },
-        {
-          "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.final.out",
-          "sizeInBytes": 1995
-        },
-        {
-          "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.out",
-          "sizeInBytes": 11325
-        },
-        {
-          "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.Log.progress.out",
-          "sizeInBytes": 801
-        },
-        {
-          "id": "/34/70728da3904d6e998a35b67037b43b/versions.yml",
-          "sizeInBytes": 66
-        },
-        {
-          "id": "/34/70728da3904d6e998a35b67037b43b/Sample_X.SJ.out.tab",
-          "sizeInBytes": 10069
-        },
-        {
-          "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Aligned.sortedByCoord.out.bam",
-          "sizeInBytes": 1143152
-        },
-        {
-          "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Solo.out",
-          "sizeInBytes": 2343561
-        },
-        {
-          "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.final.out",
-          "sizeInBytes": 1996
-        },
-        {
-          "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.out",
-          "sizeInBytes": 12391
-        },
-        {
-          "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.Log.progress.out",
-          "sizeInBytes": 801
-        },
-        {
-          "id": "/b4/a10fe2c8497160a04e25e58348dcac/versions.yml",
-          "sizeInBytes": 66
-        },
-        {
-          "id": "/b4/a10fe2c8497160a04e25e58348dcac/Sample_Y.SJ.out.tab",
-          "sizeInBytes": 11499
-        },
-        {
-          "id": "/fa00207e5792e4a4e9ff6d39349b41/Sample_X/Sample_X_matrix.rds",
-          "sizeInBytes": 157440
-        },
-        {
-          "id": "/0c/fa00207e5792e4a4e9ff6d39349b41/versions.yml",
-          "sizeInBytes": 31
-        },
-        {
-          "id": "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/Sample_X_matrix.h5ad",
-          "sizeInBytes": 259571
-        },
-        {
-          "id": "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/barcodes.tsv",
-          "sizeInBytes": 67949
-        },
-        {
-          "id": "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/features.tsv",
-          "sizeInBytes": 31754
-        },
-        {
-          "id": "/88cdbaa494a09ba62447cf2a82c8fe/Sample_X/matrix.mtx",
-          "sizeInBytes": 70885
-        },
-        {
-          "id": "/80/88cdbaa494a09ba62447cf2a82c8fe/versions.yml",
-          "sizeInBytes": 1404
-        },
-        {
-          "id": "/4227fbef4ddaefca8ecbae2f807c13/Sample_Y/Sample_Y_matrix.rds",
-          "sizeInBytes": 177750
-        },
-        {
-          "id": "/77/4227fbef4ddaefca8ecbae2f807c13/versions.yml",
-          "sizeInBytes": 31
-        },
-        {
-          "id": "/3f90605073080dd6f79265cdfac8f1/Sample_Y/Sample_Y_matrix.h5ad",
-          "sizeInBytes": 287373
-        },
-        {
-          "id": "/3f90605073080dd6f79265cdfac8f1/Sample_Y/barcodes.tsv",
-          "sizeInBytes": 79475
-        },
-        {
-          "id": "/3f90605073080dd6f79265cdfac8f1/Sample_Y/features.tsv",
-          "sizeInBytes": 31754
-        },
-        {
-          "id": "/3f90605073080dd6f79265cdfac8f1/Sample_Y/matrix.mtx",
-          "sizeInBytes": 78908
-        },
-        {
-          "id": "/6e/3f90605073080dd6f79265cdfac8f1/versions.yml",
-          "sizeInBytes": 1404
-        },
-        {
-          "id": "/5d/57f6ea0be4d7dc405f65b8f307aecd/collated_versions.yml",
-          "sizeInBytes": 454
-        },
-        {
-          "id": "/f8/9b326a7a0f87d149fdcb6ca0d4092e/software_versions.yml",
-          "sizeInBytes": 273
-        },
-        {
-          "id": "/f8/9b326a7a0f87d149fdcb6ca0d4092e/software_versions_mqc.yml",
-          "sizeInBytes": 1942
-        },
-        {
-          "id": "/f8/9b326a7a0f87d149fdcb6ca0d4092e/versions.yml",
-          "sizeInBytes": 85
-        },
-        {
-          "id": "/4b/83d885f127330f384a135643a15721/combined_matrix.h5ad",
-          "sizeInBytes": 594550
-        },
-        {
-          "id": "/84/5dfbcc8a230526d4d8863173658d45/methods_description_mqc.yaml",
-          "sizeInBytes": 3950
-        },
-        {
-          "id": "/eb/c26f145981db3f7cf2d52d68d758d0/workflow_summary_mqc.yaml",
-          "sizeInBytes": 2879
-        },
-        {
-          "id": "/scrnaseq/assets/multiqc_config.yml",
-          "sizeInBytes": 490
-        },
-        {
-          "id": "/89/f99c10e23e999efb6270da0381217d/multiqc_report.html",
-          "sizeInBytes": 1213029
-        },
-        {
-          "id": "/89/f99c10e23e999efb6270da0381217d/multiqc_data",
-          "sizeInBytes": 343050
-        },
-        {
-          "id": "/89/f99c10e23e999efb6270da0381217d/multiqc_plots",
-          "sizeInBytes": 791522
-        },
-        {
-          "id": "/89/f99c10e23e999efb6270da0381217d/versions.yml",
-          "sizeInBytes": 54
-        }
-      ],
-      "metrics": {
-        "numberOfTasks": 14,
-        "numberOfFiles": 70,
-        "sumOfFileSizesInBytes": 793970717,
-        "numberOfLevels": 5,
-        "minimumWidth": 1,
-        "maximumWidth": 5
-      }
     },
-    "execution": {
-      "makespanInSeconds": 2126,
-      "executedAt": "2023-03-27T21:24:00-10:00",
-      "tasks": [
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.INPUT_CHECK.SAMPLESHEET_CHECK_2",
-          "runtimeInSeconds": 0.0,
-          "command": {
-            "program": "check_samplesheet.py \\\n        samplesheet-2-0.csv \\\n        samplesheet.valid.csv\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:INPUT_CHECK:SAMPLESHEET_CHECK\":\n        python: $(python --version | sed 's/Python //g')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 76.2,
-          "readBytes": 919736,
-          "writtenBytes": 1247,
-          "memoryInBytes": 2895872
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.GTF_GENE_FILTER_1",
-          "runtimeInSeconds": 1.0,
-          "command": {
-            "program": "filter_gtf_for_genes_in_genome.py \\\n        --gtf gencode.vM19.annotation.chr19.gtf \\\n        --fasta GRCm38.p6.genome.chr19.fa \\\n        -o GRCm38.p6.genome.chr19_genes.gtf\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:GTF_GENE_FILTER\":\n        python: $(python --version | sed 's/Python //g')\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 59.8,
-          "readBytes": 84294634,
-          "writtenBytes": 20996166,
-          "memoryInBytes": 3194880
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_GENOMEGENERATE_5",
-          "runtimeInSeconds": 128.0,
-          "command": {
-            "program": "samtools faidx GRCm38.p6.genome.chr19.fa\n        NUM_BASES=`gawk '{sum = sum + $2}END{if ((log(sum)/log(2))/2 - 1 > 14) {printf \"%.0f\", 14} else {printf \"%.0f\", (log(sum)/log(2))/2 - 1}}' GRCm38.p6.genome.chr19.fa.fai`\n\n        mkdir star\n        STAR \\\n            --runMode genomeGenerate \\\n            --genomeDir star/ \\\n            --genomeFastaFiles GRCm38.p6.genome.chr19.fa \\\n            --sjdbGTFfile GRCm38.p6.genome.chr19_genes.gtf \\\n            --runThreadN 1 \\\n            --genomeSAindexNbases $NUM_BASES \\\n            --limitGenomeGenerateRAM 6342450944 \\\n            \n\n        cat <<-END_VERSIONS > versions.yml\n        \"NFCORE_SCRNASEQ:SCRNASEQ:STARSOLO:STAR_GENOMEGENERATE\":\n            star: $(STAR --version | sed -e \"s/STAR_//g\")\n            samtools: $(echo $(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*$//')\n            gawk: $(echo $(gawk --version 2>&1) | sed 's/^.*GNU Awk //; s/, .*$//')\n        END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 97.4,
-          "readBytes": 1160784025,
-          "writtenBytes": 1587632378,
-          "memoryInBytes": 1778008064
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_3",
-          "runtimeInSeconds": 22.0,
-          "command": {
-            "program": "printf \"%s %s\\n\" Sample_X_S1_L001_R1_001.fastq.gz Sample_X_1.gz Sample_X_S1_L001_R2_001.fastq.gz Sample_X_2.gz | while read old_name new_name; do\n        [ -f \"${new_name}\" ] || ln -s $old_name $new_name\n    done\n    fastqc  --threads 1 Sample_X_1.gz Sample_X_2.gz\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:FASTQC_CHECK:FASTQC\":\n        fastqc: $( fastqc --version | sed -e \"s/FastQC v//g\" )\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 86.0,
-          "readBytes": 27614706,
-          "writtenBytes": 3381179,
-          "memoryInBytes": 240242688
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.FASTQC_CHECK.FASTQC_4",
-          "runtimeInSeconds": 29.0,
-          "command": {
-            "program": "printf \"%s %s\\n\" Sample_Y_S1_L001_R1_001.fastq.gz Sample_Y_1.gz Sample_Y_S1_L001_R2_001.fastq.gz Sample_Y_2.gz Sample_Y_S1_L002_R1_001.fastq.gz Sample_Y_3.gz Sample_Y_S1_L002_R2_001.fastq.gz Sample_Y_4.gz | while read old_name new_name; do\n        [ -f \"${new_name}\" ] || ln -s $old_name $new_name\n    done\n    fastqc  --threads 1 Sample_Y_1.gz Sample_Y_2.gz Sample_Y_3.gz Sample_Y_4.gz\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:FASTQC_CHECK:FASTQC\":\n        fastqc: $( fastqc --version | sed -e \"s/FastQC v//g\" )\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 92.4,
-          "readBytes": 32064709,
-          "writtenBytes": 6775446,
-          "memoryInBytes": 314175488
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_6",
-          "runtimeInSeconds": 491.0,
-          "command": {
-            "program": "STAR \\\n        --genomeDir star \\\n        --readFilesIn Sample_X_S1_L001_R2_001.fastq.gz Sample_X_S1_L001_R1_001.fastq.gz \\\n        --runThreadN 1 \\\n        --outFileNamePrefix Sample_X. \\\n        --soloCBwhitelist <(gzip -cdf 10x_V2_barcode_whitelist.txt.gz) \\\n        --soloType CB_UMI_Simple \\\n        --soloFeatures Gene \\\n        --soloUMIlen 10 \\\n         \\\n        --sjdbGTFfile GRCm38.p6.genome.chr19_genes.gtf \\\n        --outSAMattrRGline ID:Sample_X 'CN:Broad_Institute' 'SM:Sample_X' \\\n        --soloCellFilter CellRanger2.2 5000 0.99 10 \\\n        --readFilesCommand zcat --runDirPerm All_RWX --outWigType bedGraph --twopassMode Basic --outSAMtype BAM SortedByCoordinate \\\n\n    \n\n    if [ -f Sample_X.Unmapped.out.mate1 ]; then\n        mv Sample_X.Unmapped.out.mate1 Sample_X.unmapped_1.fastq\n        gzip Sample_X.unmapped_1.fastq\n    fi\n    if [ -f Sample_X.Unmapped.out.mate2 ]; then\n        mv Sample_X.Unmapped.out.mate2 Sample_X.unmapped_2.fastq\n        gzip Sample_X.unmapped_2.fastq\n    fi\n\n    if [ -d Sample_X.Solo.out ]; then\n        # Backslashes still need to be escaped (https://github.com/nextflow-io/nextflow/issues/67)\n        find Sample_X.Solo.out \\( -name \"*.tsv\" -o -name \"*.mtx\" \\) -exec gzip {} \\;\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:STARSOLO:STAR_ALIGN\":\n        star: $(STAR --version | sed -e \"s/STAR_//g\")\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 93.3,
-          "readBytes": 803823153,
-          "writtenBytes": 38155447,
-          "memoryInBytes": 2315010048
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.STARSOLO.STAR_ALIGN_7",
-          "runtimeInSeconds": 637.0,
-          "command": {
-            "program": "STAR \\\n        --genomeDir star \\\n        --readFilesIn Sample_Y_S1_L001_R2_001.fastq.gz,Sample_Y_S1_L002_R2_001.fastq.gz Sample_Y_S1_L001_R1_001.fastq.gz,Sample_Y_S1_L002_R1_001.fastq.gz \\\n        --runThreadN 1 \\\n        --outFileNamePrefix Sample_Y. \\\n        --soloCBwhitelist <(gzip -cdf 10x_V2_barcode_whitelist.txt.gz) \\\n        --soloType CB_UMI_Simple \\\n        --soloFeatures Gene \\\n        --soloUMIlen 10 \\\n         \\\n        --sjdbGTFfile GRCm38.p6.genome.chr19_genes.gtf \\\n        --outSAMattrRGline ID:Sample_Y 'CN:CRG_Barcelona' 'SM:Sample_Y' \\\n        --soloCellFilter CellRanger2.2 5000 0.99 10 \\\n        --readFilesCommand zcat --runDirPerm All_RWX --outWigType bedGraph --twopassMode Basic --outSAMtype BAM SortedByCoordinate \\\n\n    \n\n    if [ -f Sample_Y.Unmapped.out.mate1 ]; then\n        mv Sample_Y.Unmapped.out.mate1 Sample_Y.unmapped_1.fastq\n        gzip Sample_Y.unmapped_1.fastq\n    fi\n    if [ -f Sample_Y.Unmapped.out.mate2 ]; then\n        mv Sample_Y.Unmapped.out.mate2 Sample_Y.unmapped_2.fastq\n        gzip Sample_Y.unmapped_2.fastq\n    fi\n\n    if [ -d Sample_Y.Solo.out ]; then\n        # Backslashes still need to be escaped (https://github.com/nextflow-io/nextflow/issues/67)\n        find Sample_Y.Solo.out \\( -name \"*.tsv\" -o -name \"*.mtx\" \\) -exec gzip {} \\;\n    fi\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:STARSOLO:STAR_ALIGN\":\n        star: $(STAR --version | sed -e \"s/STAR_//g\")\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 94.1,
-          "readBytes": 830783900,
-          "writtenBytes": 39380835,
-          "memoryInBytes": 1936621568
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_8",
-          "runtimeInSeconds": 9.439,
-          "command": {
-            "program": "mtx_to_seurat.R \\\n        *.Solo.out/Gene*/filtered/matrix.mtx.gz \\\n        *.Solo.out/Gene*/filtered/barcodes.tsv.gz \\\n        *.Solo.out/Gene*/filtered/features.tsv.gz \\\n        Sample_X/Sample_X_matrix.rds \\\n        star",
-            "arguments": []
-          },
-          "avgCPU": 88.9,
-          "readBytes": 37899037,
-          "writtenBytes": 158056,
-          "memoryInBytes": 375816192
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_9",
-          "runtimeInSeconds": 4.0,
-          "command": {
-            "program": "# convert file types\n    mtx_to_h5ad.py \\\n        --task_process NFCORE_SCRNASEQ:SCRNASEQ:MTX_CONVERSION:MTX_TO_H5AD \\\n        --aligner star \\\n        --sample Sample_X \\\n        --input *.Solo.out/Gene*/filtered/matrix.mtx.gz \\\n        --barcode *.Solo.out/Gene*/filtered/barcodes.tsv.gz \\\n        --feature *.Solo.out/Gene*/filtered/features.tsv.gz \\\n        --txp2gene  \\\n        --star_index star \\\n        --out Sample_X/Sample_X_matrix.h5ad",
-            "arguments": []
-          },
-          "avgCPU": 87.2,
-          "readBytes": 25180836,
-          "writtenBytes": 431328,
-          "memoryInBytes": 197947392
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_SEURAT_11",
-          "runtimeInSeconds": 10.838,
-          "command": {
-            "program": "mtx_to_seurat.R \\\n        *.Solo.out/Gene*/filtered/matrix.mtx.gz \\\n        *.Solo.out/Gene*/filtered/barcodes.tsv.gz \\\n        *.Solo.out/Gene*/filtered/features.tsv.gz \\\n        Sample_Y/Sample_Y_matrix.rds \\\n        star",
-            "arguments": []
-          },
-          "avgCPU": 85.2,
-          "readBytes": 37903987,
-          "writtenBytes": 178363,
-          "memoryInBytes": 379764736
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.MTX_TO_H5AD_10",
-          "runtimeInSeconds": 4.0,
-          "command": {
-            "program": "# convert file types\n    mtx_to_h5ad.py \\\n        --task_process NFCORE_SCRNASEQ:SCRNASEQ:MTX_CONVERSION:MTX_TO_H5AD \\\n        --aligner star \\\n        --sample Sample_Y \\\n        --input *.Solo.out/Gene*/filtered/matrix.mtx.gz \\\n        --barcode *.Solo.out/Gene*/filtered/barcodes.tsv.gz \\\n        --feature *.Solo.out/Gene*/filtered/features.tsv.gz \\\n        --txp2gene  \\\n        --star_index star \\\n        --out Sample_Y/Sample_Y_matrix.h5ad",
-            "arguments": []
-          },
-          "avgCPU": 90.0,
-          "readBytes": 25185790,
-          "writtenBytes": 478745,
-          "memoryInBytes": 199163904
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.CUSTOM_DUMPSOFTWAREVERSIONS_12",
-          "runtimeInSeconds": 0.199,
-          "command": {
-            "program": "def args = task.ext.args ?: ''\ntemplate 'dumpsoftwareversions.py'",
-            "arguments": []
-          },
-          "avgCPU": 64.8,
-          "readBytes": 860548,
-          "writtenBytes": 2516,
-          "memoryInBytes": 9052160
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MTX_CONVERSION.CONCAT_H5AD_13",
-          "runtimeInSeconds": 4.0,
-          "command": {
-            "program": "concat_h5ad.py \\\n        --input samplesheet-2-0.csv \\\n        --out combined_matrix.h5ad \\\n        --suffix \"_matrix.h5ad\"",
-            "arguments": []
-          },
-          "avgCPU": 91.1,
-          "readBytes": 25440751,
-          "writtenBytes": 595105,
-          "memoryInBytes": 207249408
-        },
-        {
-          "id": "NFCORE_SCRNASEQ.SCRNASEQ.MULTIQC_14",
-          "runtimeInSeconds": 33.868,
-          "command": {
-            "program": "multiqc \\\n        --force \\\n         \\\n        --config multiqc_config.yml \\\n         \\\n        .\n\n    cat <<-END_VERSIONS > versions.yml\n    \"NFCORE_SCRNASEQ:SCRNASEQ:MULTIQC\":\n        multiqc: $( multiqc --version | sed -e \"s/multiqc, version //g\" )\n    END_VERSIONS",
-            "arguments": []
-          },
-          "avgCPU": 87.4,
-          "readBytes": 346742028,
-          "writtenBytes": 4481751,
-          "memoryInBytes": 153034752
-        }
-      ],
-      "machines": [
-        {
-          "nodeName": "dirt02",
-          "system": "linux",
-          "release": "5.15.0-48-generic",
-          "architecture": "x86_64",
-          "cpu": {
-            "coreCount": 1,
-            "speedInMHz": 2400
-          }
-        }
-      ],
-      "metrics": {
-        "sumTaskRuntimesInSeconds": 1374.344,
-        "totalNumBytesRead": 3439497840,
-        "totalNumBytesWritten": 1702648562
-      }
+    "runtimeSystem": {
+        "name": "Nextflow",
+        "url": "https://www.nextflow.io/",
+        "version": "23.04.1"
     }
-  },
-  "runtimeSystem": {
-    "name": "Nextflow",
-    "url": "https://www.nextflow.io/",
-    "version": "23.04.1"
-  }
 }

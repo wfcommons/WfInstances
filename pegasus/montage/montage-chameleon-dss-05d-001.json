@@ -1,2869 +1,2869 @@
 {
-  "name": "montage-0",
-  "description": "Trace generated with wrench-pegasus-parser.py from http://wrench-project.org",
-  "createdAt": "2020-04-03T19:59:42.124208Z",
-  "schemaVersion": "1.5",
-  "author": {
-    "name": "rafsilva",
-    "email": "support@wrench-project.org"
-  },
-  "workflow": {
-    "specification": {
-      "tasks": [
-        {
-          "name": "mProject_ID0000001",
-          "id": "mProject_ID0000001",
-          "children": [
-            "mDiffFit_ID0000005",
-            "mDiffFit_ID0000006",
-            "mDiffFit_ID0000007",
-            "mBackground_ID0000013"
-          ],
-          "inputFiles": [
-            "poss2ukstu_blue_001_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_blue_001_001.fits",
-            "pposs2ukstu_blue_001_001_area.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mProject_ID0000002",
-          "id": "mProject_ID0000002",
-          "children": [
-            "mDiffFit_ID0000005",
-            "mDiffFit_ID0000008",
-            "mDiffFit_ID0000009",
-            "mBackground_ID0000014"
-          ],
-          "inputFiles": [
-            "poss2ukstu_blue_001_002.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_blue_001_002.fits",
-            "pposs2ukstu_blue_001_002_area.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mProject_ID0000003",
-          "id": "mProject_ID0000003",
-          "children": [
-            "mDiffFit_ID0000006",
-            "mDiffFit_ID0000008",
-            "mDiffFit_ID0000010",
-            "mBackground_ID0000015"
-          ],
-          "inputFiles": [
-            "poss2ukstu_blue_002_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_blue_002_001_area.fits",
-            "pposs2ukstu_blue_002_001.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mProject_ID0000004",
-          "id": "mProject_ID0000004",
-          "children": [
-            "mDiffFit_ID0000007",
-            "mDiffFit_ID0000009",
-            "mDiffFit_ID0000010",
-            "mBackground_ID0000016"
-          ],
-          "inputFiles": [
-            "poss2ukstu_blue_002_002.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_blue_002_002_area.fits",
-            "pposs2ukstu_blue_002_002.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mDiffFit_ID0000005",
-          "id": "mDiffFit_ID0000005",
-          "children": [
-            "mConcatFit_ID0000011"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_blue_001_001.fits",
-            "pposs2ukstu_blue_001_001_area.fits",
-            "pposs2ukstu_blue_001_002.fits",
-            "pposs2ukstu_blue_001_002_area.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "1-fit.000001.000002.txt"
-          ],
-          "parents": [
-            "mProject_ID0000001",
-            "mProject_ID0000002"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000006",
-          "id": "mDiffFit_ID0000006",
-          "children": [
-            "mConcatFit_ID0000011"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_blue_002_001_area.fits",
-            "pposs2ukstu_blue_001_001.fits",
-            "pposs2ukstu_blue_002_001.fits",
-            "pposs2ukstu_blue_001_001_area.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "1-fit.000001.000003.txt"
-          ],
-          "parents": [
-            "mProject_ID0000001",
-            "mProject_ID0000003"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000007",
-          "id": "mDiffFit_ID0000007",
-          "children": [
-            "mConcatFit_ID0000011"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_blue_001_001.fits",
-            "pposs2ukstu_blue_001_001_area.fits",
-            "pposs2ukstu_blue_002_002_area.fits",
-            "pposs2ukstu_blue_002_002.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "1-fit.000001.000004.txt"
-          ],
-          "parents": [
-            "mProject_ID0000001",
-            "mProject_ID0000004"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000008",
-          "id": "mDiffFit_ID0000008",
-          "children": [
-            "mConcatFit_ID0000011"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_blue_002_001_area.fits",
-            "pposs2ukstu_blue_002_001.fits",
-            "pposs2ukstu_blue_001_002.fits",
-            "pposs2ukstu_blue_001_002_area.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "1-fit.000002.000003.txt"
-          ],
-          "parents": [
-            "mProject_ID0000002",
-            "mProject_ID0000003"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000009",
-          "id": "mDiffFit_ID0000009",
-          "children": [
-            "mConcatFit_ID0000011"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_blue_002_002.fits",
-            "pposs2ukstu_blue_001_002.fits",
-            "pposs2ukstu_blue_002_002_area.fits",
-            "pposs2ukstu_blue_001_002_area.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "1-fit.000002.000004.txt"
-          ],
-          "parents": [
-            "mProject_ID0000002",
-            "mProject_ID0000004"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000010",
-          "id": "mDiffFit_ID0000010",
-          "children": [
-            "mConcatFit_ID0000011"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_blue_002_001_area.fits",
-            "pposs2ukstu_blue_002_001.fits",
-            "pposs2ukstu_blue_002_002_area.fits",
-            "pposs2ukstu_blue_002_002.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "1-fit.000003.000004.txt"
-          ],
-          "parents": [
-            "mProject_ID0000003",
-            "mProject_ID0000004"
-          ]
-        },
-        {
-          "name": "mConcatFit_ID0000011",
-          "id": "mConcatFit_ID0000011",
-          "children": [
-            "mBgModel_ID0000012"
-          ],
-          "inputFiles": [
-            "1-stat.tbl",
-            "1-fit.000002.000003.txt",
-            "1-fit.000001.000004.txt",
-            "1-fit.000001.000003.txt",
-            "1-fit.000002.000004.txt",
-            "1-fit.000003.000004.txt",
-            "1-fit.000001.000002.txt"
-          ],
-          "outputFiles": [
-            "1-fits.tbl"
-          ],
-          "parents": [
-            "mDiffFit_ID0000009",
-            "mDiffFit_ID0000008",
-            "mDiffFit_ID0000007",
-            "mDiffFit_ID0000006",
-            "mDiffFit_ID0000005",
-            "mDiffFit_ID0000010"
-          ]
-        },
-        {
-          "name": "mBgModel_ID0000012",
-          "id": "mBgModel_ID0000012",
-          "children": [
-            "mBackground_ID0000013",
-            "mBackground_ID0000014",
-            "mBackground_ID0000015",
-            "mBackground_ID0000016"
-          ],
-          "inputFiles": [
-            "1-fits.tbl",
-            "1-images.tbl"
-          ],
-          "outputFiles": [
-            "1-corrections.tbl"
-          ],
-          "parents": [
-            "mConcatFit_ID0000011"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000013",
-          "id": "mBackground_ID0000013",
-          "children": [
-            "mImgtbl_ID0000017",
-            "mAdd_ID0000018"
-          ],
-          "inputFiles": [
-            "1-projected.tbl",
-            "pposs2ukstu_blue_001_001.fits",
-            "pposs2ukstu_blue_001_001_area.fits",
-            "1-corrections.tbl"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_blue_001_001_area.fits",
-            "cposs2ukstu_blue_001_001.fits"
-          ],
-          "parents": [
-            "mProject_ID0000001",
-            "mBgModel_ID0000012"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000014",
-          "id": "mBackground_ID0000014",
-          "children": [
-            "mImgtbl_ID0000017",
-            "mAdd_ID0000018"
-          ],
-          "inputFiles": [
-            "1-projected.tbl",
-            "pposs2ukstu_blue_001_002.fits",
-            "1-corrections.tbl",
-            "pposs2ukstu_blue_001_002_area.fits"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_blue_001_002.fits",
-            "cposs2ukstu_blue_001_002_area.fits"
-          ],
-          "parents": [
-            "mBgModel_ID0000012",
-            "mProject_ID0000002"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000015",
-          "id": "mBackground_ID0000015",
-          "children": [
-            "mImgtbl_ID0000017",
-            "mAdd_ID0000018"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_blue_002_001_area.fits",
-            "1-projected.tbl",
-            "pposs2ukstu_blue_002_001.fits",
-            "1-corrections.tbl"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_blue_002_001.fits",
-            "cposs2ukstu_blue_002_001_area.fits"
-          ],
-          "parents": [
-            "mBgModel_ID0000012",
-            "mProject_ID0000003"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000016",
-          "id": "mBackground_ID0000016",
-          "children": [
-            "mImgtbl_ID0000017",
-            "mAdd_ID0000018"
-          ],
-          "inputFiles": [
-            "1-projected.tbl",
-            "pposs2ukstu_blue_002_002_area.fits",
-            "1-corrections.tbl",
-            "pposs2ukstu_blue_002_002.fits"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_blue_002_002_area.fits",
-            "cposs2ukstu_blue_002_002.fits"
-          ],
-          "parents": [
-            "mBgModel_ID0000012",
-            "mProject_ID0000004"
-          ]
-        },
-        {
-          "name": "mImgtbl_ID0000017",
-          "id": "mImgtbl_ID0000017",
-          "children": [
-            "mAdd_ID0000018"
-          ],
-          "inputFiles": [
-            "cposs2ukstu_blue_002_001.fits",
-            "1-corrected.tbl",
-            "cposs2ukstu_blue_001_001.fits",
-            "cposs2ukstu_blue_001_002.fits",
-            "cposs2ukstu_blue_002_002.fits"
-          ],
-          "outputFiles": [
-            "1-updated-corrected.tbl"
-          ],
-          "parents": [
-            "mBackground_ID0000013",
-            "mBackground_ID0000016",
-            "mBackground_ID0000015",
-            "mBackground_ID0000014"
-          ]
-        },
-        {
-          "name": "mAdd_ID0000018",
-          "id": "mAdd_ID0000018",
-          "children": [
-            "mViewer_ID0000019",
-            "mViewer_ID0000058"
-          ],
-          "inputFiles": [
-            "region.hdr",
-            "cposs2ukstu_blue_002_001.fits",
-            "cposs2ukstu_blue_001_001_area.fits",
-            "cposs2ukstu_blue_001_002_area.fits",
-            "cposs2ukstu_blue_002_002_area.fits",
-            "cposs2ukstu_blue_001_001.fits",
-            "cposs2ukstu_blue_002_001_area.fits",
-            "cposs2ukstu_blue_001_002.fits",
-            "1-updated-corrected.tbl",
-            "cposs2ukstu_blue_002_002.fits"
-          ],
-          "outputFiles": [
-            "1-mosaic.fits",
-            "1-mosaic_area.fits"
-          ],
-          "parents": [
-            "mBackground_ID0000013",
-            "mBackground_ID0000016",
-            "mBackground_ID0000015",
-            "mBackground_ID0000014",
-            "mImgtbl_ID0000017"
-          ]
-        },
-        {
-          "name": "mViewer_ID0000019",
-          "id": "mViewer_ID0000019",
-          "children": [],
-          "inputFiles": [
-            "1-mosaic.fits"
-          ],
-          "outputFiles": [
-            "1-mosaic.jpg"
-          ],
-          "parents": [
-            "mAdd_ID0000018"
-          ]
-        },
-        {
-          "name": "mProject_ID0000020",
-          "id": "mProject_ID0000020",
-          "children": [
-            "mDiffFit_ID0000024",
-            "mDiffFit_ID0000025",
-            "mDiffFit_ID0000026",
-            "mBackground_ID0000032"
-          ],
-          "inputFiles": [
-            "poss2ukstu_red_001_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_red_001_001_area.fits",
-            "pposs2ukstu_red_001_001.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mProject_ID0000021",
-          "id": "mProject_ID0000021",
-          "children": [
-            "mDiffFit_ID0000024",
-            "mDiffFit_ID0000027",
-            "mDiffFit_ID0000028",
-            "mBackground_ID0000033"
-          ],
-          "inputFiles": [
-            "poss2ukstu_red_001_002.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_red_001_002_area.fits",
-            "pposs2ukstu_red_001_002.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mProject_ID0000022",
-          "id": "mProject_ID0000022",
-          "children": [
-            "mDiffFit_ID0000025",
-            "mDiffFit_ID0000027",
-            "mDiffFit_ID0000029",
-            "mBackground_ID0000034"
-          ],
-          "inputFiles": [
-            "poss2ukstu_red_002_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_red_002_001.fits",
-            "pposs2ukstu_red_002_001_area.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mProject_ID0000023",
-          "id": "mProject_ID0000023",
-          "children": [
-            "mDiffFit_ID0000026",
-            "mDiffFit_ID0000028",
-            "mDiffFit_ID0000029",
-            "mBackground_ID0000035"
-          ],
-          "inputFiles": [
-            "poss2ukstu_red_002_002.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_red_002_002.fits",
-            "pposs2ukstu_red_002_002_area.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mDiffFit_ID0000024",
-          "id": "mDiffFit_ID0000024",
-          "children": [
-            "mConcatFit_ID0000030"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_red_001_002.fits",
-            "pposs2ukstu_red_001_001_area.fits",
-            "pposs2ukstu_red_001_002_area.fits",
-            "pposs2ukstu_red_001_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "2-fit.000001.000002.txt"
-          ],
-          "parents": [
-            "mProject_ID0000020",
-            "mProject_ID0000021"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000025",
-          "id": "mDiffFit_ID0000025",
-          "children": [
-            "mConcatFit_ID0000030"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_red_001_001_area.fits",
-            "pposs2ukstu_red_002_001_area.fits",
-            "pposs2ukstu_red_002_001.fits",
-            "pposs2ukstu_red_001_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "2-fit.000001.000003.txt"
-          ],
-          "parents": [
-            "mProject_ID0000020",
-            "mProject_ID0000022"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000026",
-          "id": "mDiffFit_ID0000026",
-          "children": [
-            "mConcatFit_ID0000030"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_red_002_002_area.fits",
-            "pposs2ukstu_red_001_001_area.fits",
-            "pposs2ukstu_red_002_002.fits",
-            "pposs2ukstu_red_001_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "2-fit.000001.000004.txt"
-          ],
-          "parents": [
-            "mProject_ID0000020",
-            "mProject_ID0000023"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000027",
-          "id": "mDiffFit_ID0000027",
-          "children": [
-            "mConcatFit_ID0000030"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_red_001_002.fits",
-            "pposs2ukstu_red_001_002_area.fits",
-            "pposs2ukstu_red_002_001_area.fits",
-            "pposs2ukstu_red_002_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "2-fit.000002.000003.txt"
-          ],
-          "parents": [
-            "mProject_ID0000021",
-            "mProject_ID0000022"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000028",
-          "id": "mDiffFit_ID0000028",
-          "children": [
-            "mConcatFit_ID0000030"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_red_002_002_area.fits",
-            "pposs2ukstu_red_001_002.fits",
-            "pposs2ukstu_red_002_002.fits",
-            "pposs2ukstu_red_001_002_area.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "2-fit.000002.000004.txt"
-          ],
-          "parents": [
-            "mProject_ID0000021",
-            "mProject_ID0000023"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000029",
-          "id": "mDiffFit_ID0000029",
-          "children": [
-            "mConcatFit_ID0000030"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_red_002_002_area.fits",
-            "pposs2ukstu_red_002_002.fits",
-            "pposs2ukstu_red_002_001_area.fits",
-            "pposs2ukstu_red_002_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "2-fit.000003.000004.txt"
-          ],
-          "parents": [
-            "mProject_ID0000022",
-            "mProject_ID0000023"
-          ]
-        },
-        {
-          "name": "mConcatFit_ID0000030",
-          "id": "mConcatFit_ID0000030",
-          "children": [
-            "mBgModel_ID0000031"
-          ],
-          "inputFiles": [
-            "2-fit.000001.000002.txt",
-            "2-fit.000003.000004.txt",
-            "2-fit.000001.000003.txt",
-            "2-fit.000002.000003.txt",
-            "2-fit.000002.000004.txt",
-            "2-fit.000001.000004.txt",
-            "2-stat.tbl"
-          ],
-          "outputFiles": [
-            "2-fits.tbl"
-          ],
-          "parents": [
-            "mDiffFit_ID0000029",
-            "mDiffFit_ID0000028",
-            "mDiffFit_ID0000027",
-            "mDiffFit_ID0000026",
-            "mDiffFit_ID0000025",
-            "mDiffFit_ID0000024"
-          ]
-        },
-        {
-          "name": "mBgModel_ID0000031",
-          "id": "mBgModel_ID0000031",
-          "children": [
-            "mBackground_ID0000032",
-            "mBackground_ID0000033",
-            "mBackground_ID0000034",
-            "mBackground_ID0000035"
-          ],
-          "inputFiles": [
-            "2-images.tbl",
-            "2-fits.tbl"
-          ],
-          "outputFiles": [
-            "2-corrections.tbl"
-          ],
-          "parents": [
-            "mConcatFit_ID0000030"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000032",
-          "id": "mBackground_ID0000032",
-          "children": [
-            "mImgtbl_ID0000036",
-            "mAdd_ID0000037"
-          ],
-          "inputFiles": [
-            "2-projected.tbl",
-            "2-corrections.tbl",
-            "pposs2ukstu_red_001_001_area.fits",
-            "pposs2ukstu_red_001_001.fits"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_red_001_001_area.fits",
-            "cposs2ukstu_red_001_001.fits"
-          ],
-          "parents": [
-            "mBgModel_ID0000031",
-            "mProject_ID0000020"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000033",
-          "id": "mBackground_ID0000033",
-          "children": [
-            "mImgtbl_ID0000036",
-            "mAdd_ID0000037"
-          ],
-          "inputFiles": [
-            "2-projected.tbl",
-            "pposs2ukstu_red_001_002.fits",
-            "2-corrections.tbl",
-            "pposs2ukstu_red_001_002_area.fits"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_red_001_002_area.fits",
-            "cposs2ukstu_red_001_002.fits"
-          ],
-          "parents": [
-            "mBgModel_ID0000031",
-            "mProject_ID0000021"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000034",
-          "id": "mBackground_ID0000034",
-          "children": [
-            "mImgtbl_ID0000036",
-            "mAdd_ID0000037"
-          ],
-          "inputFiles": [
-            "2-projected.tbl",
-            "2-corrections.tbl",
-            "pposs2ukstu_red_002_001_area.fits",
-            "pposs2ukstu_red_002_001.fits"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_red_002_001.fits",
-            "cposs2ukstu_red_002_001_area.fits"
-          ],
-          "parents": [
-            "mBgModel_ID0000031",
-            "mProject_ID0000022"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000035",
-          "id": "mBackground_ID0000035",
-          "children": [
-            "mImgtbl_ID0000036",
-            "mAdd_ID0000037"
-          ],
-          "inputFiles": [
-            "2-projected.tbl",
-            "pposs2ukstu_red_002_002_area.fits",
-            "2-corrections.tbl",
-            "pposs2ukstu_red_002_002.fits"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_red_002_002.fits",
-            "cposs2ukstu_red_002_002_area.fits"
-          ],
-          "parents": [
-            "mBgModel_ID0000031",
-            "mProject_ID0000023"
-          ]
-        },
-        {
-          "name": "mImgtbl_ID0000036",
-          "id": "mImgtbl_ID0000036",
-          "children": [
-            "mAdd_ID0000037"
-          ],
-          "inputFiles": [
-            "cposs2ukstu_red_002_001.fits",
-            "cposs2ukstu_red_001_002.fits",
-            "cposs2ukstu_red_002_002.fits",
-            "2-corrected.tbl",
-            "cposs2ukstu_red_001_001.fits"
-          ],
-          "outputFiles": [
-            "2-updated-corrected.tbl"
-          ],
-          "parents": [
-            "mBackground_ID0000035",
-            "mBackground_ID0000034",
-            "mBackground_ID0000033",
-            "mBackground_ID0000032"
-          ]
-        },
-        {
-          "name": "mAdd_ID0000037",
-          "id": "mAdd_ID0000037",
-          "children": [
-            "mViewer_ID0000038",
-            "mViewer_ID0000058"
-          ],
-          "inputFiles": [
-            "region.hdr",
-            "cposs2ukstu_red_001_001_area.fits",
-            "cposs2ukstu_red_001_002_area.fits",
-            "cposs2ukstu_red_002_001.fits",
-            "cposs2ukstu_red_002_001_area.fits",
-            "cposs2ukstu_red_001_002.fits",
-            "2-updated-corrected.tbl",
-            "cposs2ukstu_red_002_002.fits",
-            "cposs2ukstu_red_001_001.fits",
-            "cposs2ukstu_red_002_002_area.fits"
-          ],
-          "outputFiles": [
-            "2-mosaic.fits",
-            "2-mosaic_area.fits"
-          ],
-          "parents": [
-            "mBackground_ID0000035",
-            "mBackground_ID0000034",
-            "mBackground_ID0000033",
-            "mBackground_ID0000032",
-            "mImgtbl_ID0000036"
-          ]
-        },
-        {
-          "name": "mViewer_ID0000038",
-          "id": "mViewer_ID0000038",
-          "children": [],
-          "inputFiles": [
-            "2-mosaic.fits"
-          ],
-          "outputFiles": [
-            "2-mosaic.jpg"
-          ],
-          "parents": [
-            "mAdd_ID0000037"
-          ]
-        },
-        {
-          "name": "mProject_ID0000039",
-          "id": "mProject_ID0000039",
-          "children": [
-            "mDiffFit_ID0000043",
-            "mDiffFit_ID0000044",
-            "mDiffFit_ID0000045",
-            "mBackground_ID0000051"
-          ],
-          "inputFiles": [
-            "poss2ukstu_ir_001_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_ir_001_001_area.fits",
-            "pposs2ukstu_ir_001_001.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mProject_ID0000040",
-          "id": "mProject_ID0000040",
-          "children": [
-            "mDiffFit_ID0000043",
-            "mDiffFit_ID0000046",
-            "mDiffFit_ID0000047",
-            "mBackground_ID0000052"
-          ],
-          "inputFiles": [
-            "poss2ukstu_ir_001_002.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_ir_001_002_area.fits",
-            "pposs2ukstu_ir_001_002.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mProject_ID0000041",
-          "id": "mProject_ID0000041",
-          "children": [
-            "mDiffFit_ID0000044",
-            "mDiffFit_ID0000046",
-            "mDiffFit_ID0000048",
-            "mBackground_ID0000053"
-          ],
-          "inputFiles": [
-            "poss2ukstu_ir_002_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_ir_002_001.fits",
-            "pposs2ukstu_ir_002_001_area.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mProject_ID0000042",
-          "id": "mProject_ID0000042",
-          "children": [
-            "mDiffFit_ID0000045",
-            "mDiffFit_ID0000047",
-            "mDiffFit_ID0000048",
-            "mBackground_ID0000054"
-          ],
-          "inputFiles": [
-            "poss2ukstu_ir_002_002.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "pposs2ukstu_ir_002_002_area.fits",
-            "pposs2ukstu_ir_002_002.fits"
-          ],
-          "parents": []
-        },
-        {
-          "name": "mDiffFit_ID0000043",
-          "id": "mDiffFit_ID0000043",
-          "children": [
-            "mConcatFit_ID0000049"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_ir_001_002.fits",
-            "pposs2ukstu_ir_001_002_area.fits",
-            "pposs2ukstu_ir_001_001_area.fits",
-            "pposs2ukstu_ir_001_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "3-fit.000001.000002.txt"
-          ],
-          "parents": [
-            "mProject_ID0000039",
-            "mProject_ID0000040"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000044",
-          "id": "mDiffFit_ID0000044",
-          "children": [
-            "mConcatFit_ID0000049"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_ir_002_001.fits",
-            "pposs2ukstu_ir_002_001_area.fits",
-            "pposs2ukstu_ir_001_001_area.fits",
-            "pposs2ukstu_ir_001_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "3-fit.000001.000003.txt"
-          ],
-          "parents": [
-            "mProject_ID0000039",
-            "mProject_ID0000041"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000045",
-          "id": "mDiffFit_ID0000045",
-          "children": [
-            "mConcatFit_ID0000049"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_ir_002_002.fits",
-            "pposs2ukstu_ir_001_001_area.fits",
-            "pposs2ukstu_ir_001_001.fits",
-            "pposs2ukstu_ir_002_002_area.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "3-fit.000001.000004.txt"
-          ],
-          "parents": [
-            "mProject_ID0000039",
-            "mProject_ID0000042"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000046",
-          "id": "mDiffFit_ID0000046",
-          "children": [
-            "mConcatFit_ID0000049"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_ir_001_002.fits",
-            "pposs2ukstu_ir_001_002_area.fits",
-            "pposs2ukstu_ir_002_001_area.fits",
-            "pposs2ukstu_ir_002_001.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "3-fit.000002.000003.txt"
-          ],
-          "parents": [
-            "mProject_ID0000040",
-            "mProject_ID0000041"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000047",
-          "id": "mDiffFit_ID0000047",
-          "children": [
-            "mConcatFit_ID0000049"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_ir_001_002.fits",
-            "pposs2ukstu_ir_001_002_area.fits",
-            "pposs2ukstu_ir_002_002.fits",
-            "pposs2ukstu_ir_002_002_area.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "3-fit.000002.000004.txt"
-          ],
-          "parents": [
-            "mProject_ID0000040",
-            "mProject_ID0000042"
-          ]
-        },
-        {
-          "name": "mDiffFit_ID0000048",
-          "id": "mDiffFit_ID0000048",
-          "children": [
-            "mConcatFit_ID0000049"
-          ],
-          "inputFiles": [
-            "pposs2ukstu_ir_002_002.fits",
-            "pposs2ukstu_ir_002_001_area.fits",
-            "pposs2ukstu_ir_002_001.fits",
-            "pposs2ukstu_ir_002_002_area.fits",
-            "region-oversized.hdr"
-          ],
-          "outputFiles": [
-            "3-fit.000003.000004.txt"
-          ],
-          "parents": [
-            "mProject_ID0000041",
-            "mProject_ID0000042"
-          ]
-        },
-        {
-          "name": "mConcatFit_ID0000049",
-          "id": "mConcatFit_ID0000049",
-          "children": [
-            "mBgModel_ID0000050"
-          ],
-          "inputFiles": [
-            "3-fit.000003.000004.txt",
-            "3-stat.tbl",
-            "3-fit.000002.000003.txt",
-            "3-fit.000001.000003.txt",
-            "3-fit.000001.000004.txt",
-            "3-fit.000002.000004.txt",
-            "3-fit.000001.000002.txt"
-          ],
-          "outputFiles": [
-            "3-fits.tbl"
-          ],
-          "parents": [
-            "mDiffFit_ID0000048",
-            "mDiffFit_ID0000047",
-            "mDiffFit_ID0000046",
-            "mDiffFit_ID0000045",
-            "mDiffFit_ID0000044",
-            "mDiffFit_ID0000043"
-          ]
-        },
-        {
-          "name": "mBgModel_ID0000050",
-          "id": "mBgModel_ID0000050",
-          "children": [
-            "mBackground_ID0000051",
-            "mBackground_ID0000052",
-            "mBackground_ID0000053",
-            "mBackground_ID0000054"
-          ],
-          "inputFiles": [
-            "3-images.tbl",
-            "3-fits.tbl"
-          ],
-          "outputFiles": [
-            "3-corrections.tbl"
-          ],
-          "parents": [
-            "mConcatFit_ID0000049"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000051",
-          "id": "mBackground_ID0000051",
-          "children": [
-            "mImgtbl_ID0000055",
-            "mAdd_ID0000056"
-          ],
-          "inputFiles": [
-            "3-projected.tbl",
-            "3-corrections.tbl",
-            "pposs2ukstu_ir_001_001_area.fits",
-            "pposs2ukstu_ir_001_001.fits"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_ir_001_001_area.fits",
-            "cposs2ukstu_ir_001_001.fits"
-          ],
-          "parents": [
-            "mProject_ID0000039",
-            "mBgModel_ID0000050"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000052",
-          "id": "mBackground_ID0000052",
-          "children": [
-            "mImgtbl_ID0000055",
-            "mAdd_ID0000056"
-          ],
-          "inputFiles": [
-            "3-projected.tbl",
-            "pposs2ukstu_ir_001_002.fits",
-            "3-corrections.tbl",
-            "pposs2ukstu_ir_001_002_area.fits"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_ir_001_002_area.fits",
-            "cposs2ukstu_ir_001_002.fits"
-          ],
-          "parents": [
-            "mProject_ID0000040",
-            "mBgModel_ID0000050"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000053",
-          "id": "mBackground_ID0000053",
-          "children": [
-            "mImgtbl_ID0000055",
-            "mAdd_ID0000056"
-          ],
-          "inputFiles": [
-            "3-projected.tbl",
-            "3-corrections.tbl",
-            "pposs2ukstu_ir_002_001_area.fits",
-            "pposs2ukstu_ir_002_001.fits"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_ir_002_001.fits",
-            "cposs2ukstu_ir_002_001_area.fits"
-          ],
-          "parents": [
-            "mProject_ID0000041",
-            "mBgModel_ID0000050"
-          ]
-        },
-        {
-          "name": "mBackground_ID0000054",
-          "id": "mBackground_ID0000054",
-          "children": [
-            "mImgtbl_ID0000055",
-            "mAdd_ID0000056"
-          ],
-          "inputFiles": [
-            "3-projected.tbl",
-            "3-corrections.tbl",
-            "pposs2ukstu_ir_002_002.fits",
-            "pposs2ukstu_ir_002_002_area.fits"
-          ],
-          "outputFiles": [
-            "cposs2ukstu_ir_002_002_area.fits",
-            "cposs2ukstu_ir_002_002.fits"
-          ],
-          "parents": [
-            "mProject_ID0000042",
-            "mBgModel_ID0000050"
-          ]
-        },
-        {
-          "name": "mImgtbl_ID0000055",
-          "id": "mImgtbl_ID0000055",
-          "children": [
-            "mAdd_ID0000056"
-          ],
-          "inputFiles": [
-            "3-corrected.tbl",
-            "cposs2ukstu_ir_002_001.fits",
-            "cposs2ukstu_ir_001_002.fits",
-            "cposs2ukstu_ir_002_002.fits",
-            "cposs2ukstu_ir_001_001.fits"
-          ],
-          "outputFiles": [
-            "3-updated-corrected.tbl"
-          ],
-          "parents": [
-            "mBackground_ID0000054",
-            "mBackground_ID0000053",
-            "mBackground_ID0000052",
-            "mBackground_ID0000051"
-          ]
-        },
-        {
-          "name": "mAdd_ID0000056",
-          "id": "mAdd_ID0000056",
-          "children": [
-            "mViewer_ID0000057",
-            "mViewer_ID0000058"
-          ],
-          "inputFiles": [
-            "region.hdr",
-            "cposs2ukstu_ir_002_001.fits",
-            "cposs2ukstu_ir_001_002_area.fits",
-            "cposs2ukstu_ir_001_002.fits",
-            "cposs2ukstu_ir_002_001_area.fits",
-            "3-updated-corrected.tbl",
-            "cposs2ukstu_ir_002_002_area.fits",
-            "cposs2ukstu_ir_002_002.fits",
-            "cposs2ukstu_ir_001_001_area.fits",
-            "cposs2ukstu_ir_001_001.fits"
-          ],
-          "outputFiles": [
-            "3-mosaic_area.fits",
-            "3-mosaic.fits"
-          ],
-          "parents": [
-            "mImgtbl_ID0000055",
-            "mBackground_ID0000054",
-            "mBackground_ID0000053",
-            "mBackground_ID0000052",
-            "mBackground_ID0000051"
-          ]
-        },
-        {
-          "name": "mViewer_ID0000057",
-          "id": "mViewer_ID0000057",
-          "children": [],
-          "inputFiles": [
-            "3-mosaic.fits"
-          ],
-          "outputFiles": [
-            "3-mosaic.jpg"
-          ],
-          "parents": [
-            "mAdd_ID0000056"
-          ]
-        },
-        {
-          "name": "mViewer_ID0000058",
-          "id": "mViewer_ID0000058",
-          "children": [],
-          "inputFiles": [
-            "3-mosaic.fits",
-            "2-mosaic.fits",
-            "1-mosaic.fits"
-          ],
-          "outputFiles": [
-            "mosaic-color.jpg"
-          ],
-          "parents": [
-            "mAdd_ID0000056",
-            "mAdd_ID0000037",
-            "mAdd_ID0000018"
-          ]
-        }
-      ],
-      "files": [
-        {
-          "id": "poss2ukstu_blue_001_001.fits",
-          "sizeInBytes": 9655399
-        },
-        {
-          "id": "region-oversized.hdr",
-          "sizeInBytes": 277
-        },
-        {
-          "id": "pposs2ukstu_blue_001_001.fits",
-          "sizeInBytes": 53193600
-        },
-        {
-          "id": "pposs2ukstu_blue_001_001_area.fits",
-          "sizeInBytes": 53193600
-        },
-        {
-          "id": "poss2ukstu_blue_001_002.fits",
-          "sizeInBytes": 8587351
-        },
-        {
-          "id": "pposs2ukstu_blue_001_002.fits",
-          "sizeInBytes": 53173440
-        },
-        {
-          "id": "pposs2ukstu_blue_001_002_area.fits",
-          "sizeInBytes": 53173440
-        },
-        {
-          "id": "poss2ukstu_blue_002_001.fits",
-          "sizeInBytes": 8814261
-        },
-        {
-          "id": "pposs2ukstu_blue_002_001_area.fits",
-          "sizeInBytes": 53153280
-        },
-        {
-          "id": "pposs2ukstu_blue_002_001.fits",
-          "sizeInBytes": 53153280
-        },
-        {
-          "id": "poss2ukstu_blue_002_002.fits",
-          "sizeInBytes": 8238778
-        },
-        {
-          "id": "pposs2ukstu_blue_002_002_area.fits",
-          "sizeInBytes": 53173440
-        },
-        {
-          "id": "pposs2ukstu_blue_002_002.fits",
-          "sizeInBytes": 53173440
-        },
-        {
-          "id": "1-fit.000001.000002.txt",
-          "sizeInBytes": 286
-        },
-        {
-          "id": "1-fit.000001.000003.txt",
-          "sizeInBytes": 291
-        },
-        {
-          "id": "1-fit.000001.000004.txt",
-          "sizeInBytes": 285
-        },
-        {
-          "id": "1-fit.000002.000003.txt",
-          "sizeInBytes": 283
-        },
-        {
-          "id": "1-fit.000002.000004.txt",
-          "sizeInBytes": 284
-        },
-        {
-          "id": "1-fit.000003.000004.txt",
-          "sizeInBytes": 285
-        },
-        {
-          "id": "1-stat.tbl",
-          "sizeInBytes": 1200
-        },
-        {
-          "id": "1-fits.tbl",
-          "sizeInBytes": 1457
-        },
-        {
-          "id": "1-images.tbl",
-          "sizeInBytes": 2246
-        },
-        {
-          "id": "1-corrections.tbl",
-          "sizeInBytes": 276
-        },
-        {
-          "id": "1-projected.tbl",
-          "sizeInBytes": 952
-        },
-        {
-          "id": "cposs2ukstu_blue_001_001_area.fits",
-          "sizeInBytes": 53193600
-        },
-        {
-          "id": "cposs2ukstu_blue_001_001.fits",
-          "sizeInBytes": 53193600
-        },
-        {
-          "id": "cposs2ukstu_blue_001_002.fits",
-          "sizeInBytes": 53173440
-        },
-        {
-          "id": "cposs2ukstu_blue_001_002_area.fits",
-          "sizeInBytes": 53173440
-        },
-        {
-          "id": "cposs2ukstu_blue_002_001.fits",
-          "sizeInBytes": 53153280
-        },
-        {
-          "id": "cposs2ukstu_blue_002_001_area.fits",
-          "sizeInBytes": 53153280
-        },
-        {
-          "id": "cposs2ukstu_blue_002_002_area.fits",
-          "sizeInBytes": 53173440
-        },
-        {
-          "id": "cposs2ukstu_blue_002_002.fits",
-          "sizeInBytes": 53173440
-        },
-        {
-          "id": "1-corrected.tbl",
-          "sizeInBytes": 952
-        },
-        {
-          "id": "1-updated-corrected.tbl",
-          "sizeInBytes": 2606
-        },
-        {
-          "id": "region.hdr",
-          "sizeInBytes": 275
-        },
-        {
-          "id": "1-mosaic.fits",
-          "sizeInBytes": 25922880
-        },
-        {
-          "id": "1-mosaic_area.fits",
-          "sizeInBytes": 25922880
-        },
-        {
-          "id": "1-mosaic.jpg",
-          "sizeInBytes": 983389
-        },
-        {
-          "id": "poss2ukstu_red_001_001.fits",
-          "sizeInBytes": 6900714
-        },
-        {
-          "id": "pposs2ukstu_red_001_001_area.fits",
-          "sizeInBytes": 52536960
-        },
-        {
-          "id": "pposs2ukstu_red_001_001.fits",
-          "sizeInBytes": 52536960
-        },
-        {
-          "id": "poss2ukstu_red_001_002.fits",
-          "sizeInBytes": 6494409
-        },
-        {
-          "id": "pposs2ukstu_red_001_002_area.fits",
-          "sizeInBytes": 52557120
-        },
-        {
-          "id": "pposs2ukstu_red_001_002.fits",
-          "sizeInBytes": 52557120
-        },
-        {
-          "id": "poss2ukstu_red_002_001.fits",
-          "sizeInBytes": 6570387
-        },
-        {
-          "id": "pposs2ukstu_red_002_001.fits",
-          "sizeInBytes": 52513920
-        },
-        {
-          "id": "pposs2ukstu_red_002_001_area.fits",
-          "sizeInBytes": 52513920
-        },
-        {
-          "id": "poss2ukstu_red_002_002.fits",
-          "sizeInBytes": 6376872
-        },
-        {
-          "id": "pposs2ukstu_red_002_002.fits",
-          "sizeInBytes": 52536960
-        },
-        {
-          "id": "pposs2ukstu_red_002_002_area.fits",
-          "sizeInBytes": 52536960
-        },
-        {
-          "id": "2-fit.000001.000002.txt",
-          "sizeInBytes": 289
-        },
-        {
-          "id": "2-fit.000001.000003.txt",
-          "sizeInBytes": 287
-        },
-        {
-          "id": "2-fit.000001.000004.txt",
-          "sizeInBytes": 281
-        },
-        {
-          "id": "2-fit.000002.000003.txt",
-          "sizeInBytes": 282
-        },
-        {
-          "id": "2-fit.000002.000004.txt",
-          "sizeInBytes": 284
-        },
-        {
-          "id": "2-fit.000003.000004.txt",
-          "sizeInBytes": 283
-        },
-        {
-          "id": "2-stat.tbl",
-          "sizeInBytes": 1180
-        },
-        {
-          "id": "2-fits.tbl",
-          "sizeInBytes": 1457
-        },
-        {
-          "id": "2-images.tbl",
-          "sizeInBytes": 2246
-        },
-        {
-          "id": "2-corrections.tbl",
-          "sizeInBytes": 276
-        },
-        {
-          "id": "2-projected.tbl",
-          "sizeInBytes": 946
-        },
-        {
-          "id": "cposs2ukstu_red_001_001_area.fits",
-          "sizeInBytes": 52536960
-        },
-        {
-          "id": "cposs2ukstu_red_001_001.fits",
-          "sizeInBytes": 52536960
-        },
-        {
-          "id": "cposs2ukstu_red_001_002_area.fits",
-          "sizeInBytes": 52557120
-        },
-        {
-          "id": "cposs2ukstu_red_001_002.fits",
-          "sizeInBytes": 52557120
-        },
-        {
-          "id": "cposs2ukstu_red_002_001.fits",
-          "sizeInBytes": 52513920
-        },
-        {
-          "id": "cposs2ukstu_red_002_001_area.fits",
-          "sizeInBytes": 52513920
-        },
-        {
-          "id": "cposs2ukstu_red_002_002.fits",
-          "sizeInBytes": 52536960
-        },
-        {
-          "id": "cposs2ukstu_red_002_002_area.fits",
-          "sizeInBytes": 52536960
-        },
-        {
-          "id": "2-corrected.tbl",
-          "sizeInBytes": 946
-        },
-        {
-          "id": "2-updated-corrected.tbl",
-          "sizeInBytes": 2600
-        },
-        {
-          "id": "2-mosaic.fits",
-          "sizeInBytes": 25922880
-        },
-        {
-          "id": "2-mosaic_area.fits",
-          "sizeInBytes": 25922880
-        },
-        {
-          "id": "2-mosaic.jpg",
-          "sizeInBytes": 1141747
-        },
-        {
-          "id": "poss2ukstu_ir_001_001.fits",
-          "sizeInBytes": 7327978
-        },
-        {
-          "id": "pposs2ukstu_ir_001_001_area.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "pposs2ukstu_ir_001_001.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "poss2ukstu_ir_001_002.fits",
-          "sizeInBytes": 7167257
-        },
-        {
-          "id": "pposs2ukstu_ir_001_002_area.fits",
-          "sizeInBytes": 53029440
-        },
-        {
-          "id": "pposs2ukstu_ir_001_002.fits",
-          "sizeInBytes": 53029440
-        },
-        {
-          "id": "poss2ukstu_ir_002_001.fits",
-          "sizeInBytes": 7217492
-        },
-        {
-          "id": "pposs2ukstu_ir_002_001.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "pposs2ukstu_ir_002_001_area.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "poss2ukstu_ir_002_002.fits",
-          "sizeInBytes": 7120723
-        },
-        {
-          "id": "pposs2ukstu_ir_002_002_area.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "pposs2ukstu_ir_002_002.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "3-fit.000001.000002.txt",
-          "sizeInBytes": 287
-        },
-        {
-          "id": "3-fit.000001.000003.txt",
-          "sizeInBytes": 290
-        },
-        {
-          "id": "3-fit.000001.000004.txt",
-          "sizeInBytes": 282
-        },
-        {
-          "id": "3-fit.000002.000003.txt",
-          "sizeInBytes": 280
-        },
-        {
-          "id": "3-fit.000002.000004.txt",
-          "sizeInBytes": 286
-        },
-        {
-          "id": "3-fit.000003.000004.txt",
-          "sizeInBytes": 285
-        },
-        {
-          "id": "3-stat.tbl",
-          "sizeInBytes": 1160
-        },
-        {
-          "id": "3-fits.tbl",
-          "sizeInBytes": 1457
-        },
-        {
-          "id": "3-images.tbl",
-          "sizeInBytes": 2246
-        },
-        {
-          "id": "3-corrections.tbl",
-          "sizeInBytes": 276
-        },
-        {
-          "id": "3-projected.tbl",
-          "sizeInBytes": 940
-        },
-        {
-          "id": "cposs2ukstu_ir_001_001_area.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "cposs2ukstu_ir_001_001.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "cposs2ukstu_ir_001_002_area.fits",
-          "sizeInBytes": 53029440
-        },
-        {
-          "id": "cposs2ukstu_ir_001_002.fits",
-          "sizeInBytes": 53029440
-        },
-        {
-          "id": "cposs2ukstu_ir_002_001.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "cposs2ukstu_ir_002_001_area.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "cposs2ukstu_ir_002_002_area.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "cposs2ukstu_ir_002_002.fits",
-          "sizeInBytes": 53009280
-        },
-        {
-          "id": "3-corrected.tbl",
-          "sizeInBytes": 940
-        },
-        {
-          "id": "3-updated-corrected.tbl",
-          "sizeInBytes": 2594
-        },
-        {
-          "id": "3-mosaic_area.fits",
-          "sizeInBytes": 25922880
-        },
-        {
-          "id": "3-mosaic.fits",
-          "sizeInBytes": 25922880
-        },
-        {
-          "id": "3-mosaic.jpg",
-          "sizeInBytes": 1691841
-        },
-        {
-          "id": "mosaic-color.jpg",
-          "sizeInBytes": 5698193
-        }
-      ],
-      "metrics": {
-        "numberOfTasks": 58,
-        "numberOfFiles": 111,
-        "sumOfFileSizesInBytes": 2795142706,
-        "numberOfLevels": 8,
-        "minimumWidth": 3,
-        "maximumWidth": 18
-      }
+    "name": "montage-0",
+    "description": "Trace generated with wrench-pegasus-parser.py from http://wrench-project.org",
+    "createdAt": "2020-04-03T19:59:42.124208Z",
+    "schemaVersion": "1.6",
+    "author": {
+        "name": "rafsilva",
+        "email": "support@wrench-project.org"
     },
-    "execution": {
-      "makespanInSeconds": 870.0,
-      "executedAt": "20200403T232446+0000",
-      "tasks": [
-        {
-          "id": "mProject_ID0000001",
-          "runtimeInSeconds": 534.058,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_blue_001_001.fits",
-              "pposs2ukstu_blue_001_001.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 97.1885,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
+    "workflow": {
+        "specification": {
+            "tasks": [
+                {
+                    "name": "mProject_ID0000001",
+                    "id": "mProject_ID0000001",
+                    "children": [
+                        "mDiffFit_ID0000005",
+                        "mDiffFit_ID0000006",
+                        "mDiffFit_ID0000007",
+                        "mBackground_ID0000013"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_blue_001_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_blue_001_001.fits",
+                        "pposs2ukstu_blue_001_001_area.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mProject_ID0000002",
+                    "id": "mProject_ID0000002",
+                    "children": [
+                        "mDiffFit_ID0000005",
+                        "mDiffFit_ID0000008",
+                        "mDiffFit_ID0000009",
+                        "mBackground_ID0000014"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_blue_001_002.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_blue_001_002.fits",
+                        "pposs2ukstu_blue_001_002_area.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mProject_ID0000003",
+                    "id": "mProject_ID0000003",
+                    "children": [
+                        "mDiffFit_ID0000006",
+                        "mDiffFit_ID0000008",
+                        "mDiffFit_ID0000010",
+                        "mBackground_ID0000015"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_blue_002_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_blue_002_001_area.fits",
+                        "pposs2ukstu_blue_002_001.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mProject_ID0000004",
+                    "id": "mProject_ID0000004",
+                    "children": [
+                        "mDiffFit_ID0000007",
+                        "mDiffFit_ID0000009",
+                        "mDiffFit_ID0000010",
+                        "mBackground_ID0000016"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_blue_002_002.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_blue_002_002_area.fits",
+                        "pposs2ukstu_blue_002_002.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mDiffFit_ID0000005",
+                    "id": "mDiffFit_ID0000005",
+                    "children": [
+                        "mConcatFit_ID0000011"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_blue_001_001.fits",
+                        "pposs2ukstu_blue_001_001_area.fits",
+                        "pposs2ukstu_blue_001_002.fits",
+                        "pposs2ukstu_blue_001_002_area.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "1-fit.000001.000002.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000001",
+                        "mProject_ID0000002"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000006",
+                    "id": "mDiffFit_ID0000006",
+                    "children": [
+                        "mConcatFit_ID0000011"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_blue_002_001_area.fits",
+                        "pposs2ukstu_blue_001_001.fits",
+                        "pposs2ukstu_blue_002_001.fits",
+                        "pposs2ukstu_blue_001_001_area.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "1-fit.000001.000003.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000001",
+                        "mProject_ID0000003"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000007",
+                    "id": "mDiffFit_ID0000007",
+                    "children": [
+                        "mConcatFit_ID0000011"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_blue_001_001.fits",
+                        "pposs2ukstu_blue_001_001_area.fits",
+                        "pposs2ukstu_blue_002_002_area.fits",
+                        "pposs2ukstu_blue_002_002.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "1-fit.000001.000004.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000001",
+                        "mProject_ID0000004"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000008",
+                    "id": "mDiffFit_ID0000008",
+                    "children": [
+                        "mConcatFit_ID0000011"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_blue_002_001_area.fits",
+                        "pposs2ukstu_blue_002_001.fits",
+                        "pposs2ukstu_blue_001_002.fits",
+                        "pposs2ukstu_blue_001_002_area.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "1-fit.000002.000003.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000002",
+                        "mProject_ID0000003"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000009",
+                    "id": "mDiffFit_ID0000009",
+                    "children": [
+                        "mConcatFit_ID0000011"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_blue_002_002.fits",
+                        "pposs2ukstu_blue_001_002.fits",
+                        "pposs2ukstu_blue_002_002_area.fits",
+                        "pposs2ukstu_blue_001_002_area.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "1-fit.000002.000004.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000002",
+                        "mProject_ID0000004"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000010",
+                    "id": "mDiffFit_ID0000010",
+                    "children": [
+                        "mConcatFit_ID0000011"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_blue_002_001_area.fits",
+                        "pposs2ukstu_blue_002_001.fits",
+                        "pposs2ukstu_blue_002_002_area.fits",
+                        "pposs2ukstu_blue_002_002.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "1-fit.000003.000004.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000003",
+                        "mProject_ID0000004"
+                    ]
+                },
+                {
+                    "name": "mConcatFit_ID0000011",
+                    "id": "mConcatFit_ID0000011",
+                    "children": [
+                        "mBgModel_ID0000012"
+                    ],
+                    "inputFiles": [
+                        "1-stat.tbl",
+                        "1-fit.000002.000003.txt",
+                        "1-fit.000001.000004.txt",
+                        "1-fit.000001.000003.txt",
+                        "1-fit.000002.000004.txt",
+                        "1-fit.000003.000004.txt",
+                        "1-fit.000001.000002.txt"
+                    ],
+                    "outputFiles": [
+                        "1-fits.tbl"
+                    ],
+                    "parents": [
+                        "mDiffFit_ID0000009",
+                        "mDiffFit_ID0000008",
+                        "mDiffFit_ID0000007",
+                        "mDiffFit_ID0000006",
+                        "mDiffFit_ID0000005",
+                        "mDiffFit_ID0000010"
+                    ]
+                },
+                {
+                    "name": "mBgModel_ID0000012",
+                    "id": "mBgModel_ID0000012",
+                    "children": [
+                        "mBackground_ID0000013",
+                        "mBackground_ID0000014",
+                        "mBackground_ID0000015",
+                        "mBackground_ID0000016"
+                    ],
+                    "inputFiles": [
+                        "1-fits.tbl",
+                        "1-images.tbl"
+                    ],
+                    "outputFiles": [
+                        "1-corrections.tbl"
+                    ],
+                    "parents": [
+                        "mConcatFit_ID0000011"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000013",
+                    "id": "mBackground_ID0000013",
+                    "children": [
+                        "mImgtbl_ID0000017",
+                        "mAdd_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "1-projected.tbl",
+                        "pposs2ukstu_blue_001_001.fits",
+                        "pposs2ukstu_blue_001_001_area.fits",
+                        "1-corrections.tbl"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_blue_001_001_area.fits",
+                        "cposs2ukstu_blue_001_001.fits"
+                    ],
+                    "parents": [
+                        "mProject_ID0000001",
+                        "mBgModel_ID0000012"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000014",
+                    "id": "mBackground_ID0000014",
+                    "children": [
+                        "mImgtbl_ID0000017",
+                        "mAdd_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "1-projected.tbl",
+                        "pposs2ukstu_blue_001_002.fits",
+                        "1-corrections.tbl",
+                        "pposs2ukstu_blue_001_002_area.fits"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_blue_001_002.fits",
+                        "cposs2ukstu_blue_001_002_area.fits"
+                    ],
+                    "parents": [
+                        "mBgModel_ID0000012",
+                        "mProject_ID0000002"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000015",
+                    "id": "mBackground_ID0000015",
+                    "children": [
+                        "mImgtbl_ID0000017",
+                        "mAdd_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_blue_002_001_area.fits",
+                        "1-projected.tbl",
+                        "pposs2ukstu_blue_002_001.fits",
+                        "1-corrections.tbl"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_blue_002_001.fits",
+                        "cposs2ukstu_blue_002_001_area.fits"
+                    ],
+                    "parents": [
+                        "mBgModel_ID0000012",
+                        "mProject_ID0000003"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000016",
+                    "id": "mBackground_ID0000016",
+                    "children": [
+                        "mImgtbl_ID0000017",
+                        "mAdd_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "1-projected.tbl",
+                        "pposs2ukstu_blue_002_002_area.fits",
+                        "1-corrections.tbl",
+                        "pposs2ukstu_blue_002_002.fits"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_blue_002_002_area.fits",
+                        "cposs2ukstu_blue_002_002.fits"
+                    ],
+                    "parents": [
+                        "mBgModel_ID0000012",
+                        "mProject_ID0000004"
+                    ]
+                },
+                {
+                    "name": "mImgtbl_ID0000017",
+                    "id": "mImgtbl_ID0000017",
+                    "children": [
+                        "mAdd_ID0000018"
+                    ],
+                    "inputFiles": [
+                        "cposs2ukstu_blue_002_001.fits",
+                        "1-corrected.tbl",
+                        "cposs2ukstu_blue_001_001.fits",
+                        "cposs2ukstu_blue_001_002.fits",
+                        "cposs2ukstu_blue_002_002.fits"
+                    ],
+                    "outputFiles": [
+                        "1-updated-corrected.tbl"
+                    ],
+                    "parents": [
+                        "mBackground_ID0000013",
+                        "mBackground_ID0000016",
+                        "mBackground_ID0000015",
+                        "mBackground_ID0000014"
+                    ]
+                },
+                {
+                    "name": "mAdd_ID0000018",
+                    "id": "mAdd_ID0000018",
+                    "children": [
+                        "mViewer_ID0000019",
+                        "mViewer_ID0000058"
+                    ],
+                    "inputFiles": [
+                        "region.hdr",
+                        "cposs2ukstu_blue_002_001.fits",
+                        "cposs2ukstu_blue_001_001_area.fits",
+                        "cposs2ukstu_blue_001_002_area.fits",
+                        "cposs2ukstu_blue_002_002_area.fits",
+                        "cposs2ukstu_blue_001_001.fits",
+                        "cposs2ukstu_blue_002_001_area.fits",
+                        "cposs2ukstu_blue_001_002.fits",
+                        "1-updated-corrected.tbl",
+                        "cposs2ukstu_blue_002_002.fits"
+                    ],
+                    "outputFiles": [
+                        "1-mosaic.fits",
+                        "1-mosaic_area.fits"
+                    ],
+                    "parents": [
+                        "mBackground_ID0000013",
+                        "mBackground_ID0000016",
+                        "mBackground_ID0000015",
+                        "mBackground_ID0000014",
+                        "mImgtbl_ID0000017"
+                    ]
+                },
+                {
+                    "name": "mViewer_ID0000019",
+                    "id": "mViewer_ID0000019",
+                    "children": [],
+                    "inputFiles": [
+                        "1-mosaic.fits"
+                    ],
+                    "outputFiles": [
+                        "1-mosaic.jpg"
+                    ],
+                    "parents": [
+                        "mAdd_ID0000018"
+                    ]
+                },
+                {
+                    "name": "mProject_ID0000020",
+                    "id": "mProject_ID0000020",
+                    "children": [
+                        "mDiffFit_ID0000024",
+                        "mDiffFit_ID0000025",
+                        "mDiffFit_ID0000026",
+                        "mBackground_ID0000032"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_red_001_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_red_001_001_area.fits",
+                        "pposs2ukstu_red_001_001.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mProject_ID0000021",
+                    "id": "mProject_ID0000021",
+                    "children": [
+                        "mDiffFit_ID0000024",
+                        "mDiffFit_ID0000027",
+                        "mDiffFit_ID0000028",
+                        "mBackground_ID0000033"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_red_001_002.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_red_001_002_area.fits",
+                        "pposs2ukstu_red_001_002.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mProject_ID0000022",
+                    "id": "mProject_ID0000022",
+                    "children": [
+                        "mDiffFit_ID0000025",
+                        "mDiffFit_ID0000027",
+                        "mDiffFit_ID0000029",
+                        "mBackground_ID0000034"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_red_002_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_red_002_001.fits",
+                        "pposs2ukstu_red_002_001_area.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mProject_ID0000023",
+                    "id": "mProject_ID0000023",
+                    "children": [
+                        "mDiffFit_ID0000026",
+                        "mDiffFit_ID0000028",
+                        "mDiffFit_ID0000029",
+                        "mBackground_ID0000035"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_red_002_002.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_red_002_002.fits",
+                        "pposs2ukstu_red_002_002_area.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mDiffFit_ID0000024",
+                    "id": "mDiffFit_ID0000024",
+                    "children": [
+                        "mConcatFit_ID0000030"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_red_001_002.fits",
+                        "pposs2ukstu_red_001_001_area.fits",
+                        "pposs2ukstu_red_001_002_area.fits",
+                        "pposs2ukstu_red_001_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "2-fit.000001.000002.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000020",
+                        "mProject_ID0000021"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000025",
+                    "id": "mDiffFit_ID0000025",
+                    "children": [
+                        "mConcatFit_ID0000030"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_red_001_001_area.fits",
+                        "pposs2ukstu_red_002_001_area.fits",
+                        "pposs2ukstu_red_002_001.fits",
+                        "pposs2ukstu_red_001_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "2-fit.000001.000003.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000020",
+                        "mProject_ID0000022"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000026",
+                    "id": "mDiffFit_ID0000026",
+                    "children": [
+                        "mConcatFit_ID0000030"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_red_002_002_area.fits",
+                        "pposs2ukstu_red_001_001_area.fits",
+                        "pposs2ukstu_red_002_002.fits",
+                        "pposs2ukstu_red_001_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "2-fit.000001.000004.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000020",
+                        "mProject_ID0000023"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000027",
+                    "id": "mDiffFit_ID0000027",
+                    "children": [
+                        "mConcatFit_ID0000030"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_red_001_002.fits",
+                        "pposs2ukstu_red_001_002_area.fits",
+                        "pposs2ukstu_red_002_001_area.fits",
+                        "pposs2ukstu_red_002_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "2-fit.000002.000003.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000021",
+                        "mProject_ID0000022"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000028",
+                    "id": "mDiffFit_ID0000028",
+                    "children": [
+                        "mConcatFit_ID0000030"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_red_002_002_area.fits",
+                        "pposs2ukstu_red_001_002.fits",
+                        "pposs2ukstu_red_002_002.fits",
+                        "pposs2ukstu_red_001_002_area.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "2-fit.000002.000004.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000021",
+                        "mProject_ID0000023"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000029",
+                    "id": "mDiffFit_ID0000029",
+                    "children": [
+                        "mConcatFit_ID0000030"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_red_002_002_area.fits",
+                        "pposs2ukstu_red_002_002.fits",
+                        "pposs2ukstu_red_002_001_area.fits",
+                        "pposs2ukstu_red_002_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "2-fit.000003.000004.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000022",
+                        "mProject_ID0000023"
+                    ]
+                },
+                {
+                    "name": "mConcatFit_ID0000030",
+                    "id": "mConcatFit_ID0000030",
+                    "children": [
+                        "mBgModel_ID0000031"
+                    ],
+                    "inputFiles": [
+                        "2-fit.000001.000002.txt",
+                        "2-fit.000003.000004.txt",
+                        "2-fit.000001.000003.txt",
+                        "2-fit.000002.000003.txt",
+                        "2-fit.000002.000004.txt",
+                        "2-fit.000001.000004.txt",
+                        "2-stat.tbl"
+                    ],
+                    "outputFiles": [
+                        "2-fits.tbl"
+                    ],
+                    "parents": [
+                        "mDiffFit_ID0000029",
+                        "mDiffFit_ID0000028",
+                        "mDiffFit_ID0000027",
+                        "mDiffFit_ID0000026",
+                        "mDiffFit_ID0000025",
+                        "mDiffFit_ID0000024"
+                    ]
+                },
+                {
+                    "name": "mBgModel_ID0000031",
+                    "id": "mBgModel_ID0000031",
+                    "children": [
+                        "mBackground_ID0000032",
+                        "mBackground_ID0000033",
+                        "mBackground_ID0000034",
+                        "mBackground_ID0000035"
+                    ],
+                    "inputFiles": [
+                        "2-images.tbl",
+                        "2-fits.tbl"
+                    ],
+                    "outputFiles": [
+                        "2-corrections.tbl"
+                    ],
+                    "parents": [
+                        "mConcatFit_ID0000030"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000032",
+                    "id": "mBackground_ID0000032",
+                    "children": [
+                        "mImgtbl_ID0000036",
+                        "mAdd_ID0000037"
+                    ],
+                    "inputFiles": [
+                        "2-projected.tbl",
+                        "2-corrections.tbl",
+                        "pposs2ukstu_red_001_001_area.fits",
+                        "pposs2ukstu_red_001_001.fits"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_red_001_001_area.fits",
+                        "cposs2ukstu_red_001_001.fits"
+                    ],
+                    "parents": [
+                        "mBgModel_ID0000031",
+                        "mProject_ID0000020"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000033",
+                    "id": "mBackground_ID0000033",
+                    "children": [
+                        "mImgtbl_ID0000036",
+                        "mAdd_ID0000037"
+                    ],
+                    "inputFiles": [
+                        "2-projected.tbl",
+                        "pposs2ukstu_red_001_002.fits",
+                        "2-corrections.tbl",
+                        "pposs2ukstu_red_001_002_area.fits"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_red_001_002_area.fits",
+                        "cposs2ukstu_red_001_002.fits"
+                    ],
+                    "parents": [
+                        "mBgModel_ID0000031",
+                        "mProject_ID0000021"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000034",
+                    "id": "mBackground_ID0000034",
+                    "children": [
+                        "mImgtbl_ID0000036",
+                        "mAdd_ID0000037"
+                    ],
+                    "inputFiles": [
+                        "2-projected.tbl",
+                        "2-corrections.tbl",
+                        "pposs2ukstu_red_002_001_area.fits",
+                        "pposs2ukstu_red_002_001.fits"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_red_002_001.fits",
+                        "cposs2ukstu_red_002_001_area.fits"
+                    ],
+                    "parents": [
+                        "mBgModel_ID0000031",
+                        "mProject_ID0000022"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000035",
+                    "id": "mBackground_ID0000035",
+                    "children": [
+                        "mImgtbl_ID0000036",
+                        "mAdd_ID0000037"
+                    ],
+                    "inputFiles": [
+                        "2-projected.tbl",
+                        "pposs2ukstu_red_002_002_area.fits",
+                        "2-corrections.tbl",
+                        "pposs2ukstu_red_002_002.fits"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_red_002_002.fits",
+                        "cposs2ukstu_red_002_002_area.fits"
+                    ],
+                    "parents": [
+                        "mBgModel_ID0000031",
+                        "mProject_ID0000023"
+                    ]
+                },
+                {
+                    "name": "mImgtbl_ID0000036",
+                    "id": "mImgtbl_ID0000036",
+                    "children": [
+                        "mAdd_ID0000037"
+                    ],
+                    "inputFiles": [
+                        "cposs2ukstu_red_002_001.fits",
+                        "cposs2ukstu_red_001_002.fits",
+                        "cposs2ukstu_red_002_002.fits",
+                        "2-corrected.tbl",
+                        "cposs2ukstu_red_001_001.fits"
+                    ],
+                    "outputFiles": [
+                        "2-updated-corrected.tbl"
+                    ],
+                    "parents": [
+                        "mBackground_ID0000035",
+                        "mBackground_ID0000034",
+                        "mBackground_ID0000033",
+                        "mBackground_ID0000032"
+                    ]
+                },
+                {
+                    "name": "mAdd_ID0000037",
+                    "id": "mAdd_ID0000037",
+                    "children": [
+                        "mViewer_ID0000038",
+                        "mViewer_ID0000058"
+                    ],
+                    "inputFiles": [
+                        "region.hdr",
+                        "cposs2ukstu_red_001_001_area.fits",
+                        "cposs2ukstu_red_001_002_area.fits",
+                        "cposs2ukstu_red_002_001.fits",
+                        "cposs2ukstu_red_002_001_area.fits",
+                        "cposs2ukstu_red_001_002.fits",
+                        "2-updated-corrected.tbl",
+                        "cposs2ukstu_red_002_002.fits",
+                        "cposs2ukstu_red_001_001.fits",
+                        "cposs2ukstu_red_002_002_area.fits"
+                    ],
+                    "outputFiles": [
+                        "2-mosaic.fits",
+                        "2-mosaic_area.fits"
+                    ],
+                    "parents": [
+                        "mBackground_ID0000035",
+                        "mBackground_ID0000034",
+                        "mBackground_ID0000033",
+                        "mBackground_ID0000032",
+                        "mImgtbl_ID0000036"
+                    ]
+                },
+                {
+                    "name": "mViewer_ID0000038",
+                    "id": "mViewer_ID0000038",
+                    "children": [],
+                    "inputFiles": [
+                        "2-mosaic.fits"
+                    ],
+                    "outputFiles": [
+                        "2-mosaic.jpg"
+                    ],
+                    "parents": [
+                        "mAdd_ID0000037"
+                    ]
+                },
+                {
+                    "name": "mProject_ID0000039",
+                    "id": "mProject_ID0000039",
+                    "children": [
+                        "mDiffFit_ID0000043",
+                        "mDiffFit_ID0000044",
+                        "mDiffFit_ID0000045",
+                        "mBackground_ID0000051"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_ir_001_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_ir_001_001_area.fits",
+                        "pposs2ukstu_ir_001_001.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mProject_ID0000040",
+                    "id": "mProject_ID0000040",
+                    "children": [
+                        "mDiffFit_ID0000043",
+                        "mDiffFit_ID0000046",
+                        "mDiffFit_ID0000047",
+                        "mBackground_ID0000052"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_ir_001_002.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_ir_001_002_area.fits",
+                        "pposs2ukstu_ir_001_002.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mProject_ID0000041",
+                    "id": "mProject_ID0000041",
+                    "children": [
+                        "mDiffFit_ID0000044",
+                        "mDiffFit_ID0000046",
+                        "mDiffFit_ID0000048",
+                        "mBackground_ID0000053"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_ir_002_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_ir_002_001.fits",
+                        "pposs2ukstu_ir_002_001_area.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mProject_ID0000042",
+                    "id": "mProject_ID0000042",
+                    "children": [
+                        "mDiffFit_ID0000045",
+                        "mDiffFit_ID0000047",
+                        "mDiffFit_ID0000048",
+                        "mBackground_ID0000054"
+                    ],
+                    "inputFiles": [
+                        "poss2ukstu_ir_002_002.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "pposs2ukstu_ir_002_002_area.fits",
+                        "pposs2ukstu_ir_002_002.fits"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "mDiffFit_ID0000043",
+                    "id": "mDiffFit_ID0000043",
+                    "children": [
+                        "mConcatFit_ID0000049"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_ir_001_002.fits",
+                        "pposs2ukstu_ir_001_002_area.fits",
+                        "pposs2ukstu_ir_001_001_area.fits",
+                        "pposs2ukstu_ir_001_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "3-fit.000001.000002.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000039",
+                        "mProject_ID0000040"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000044",
+                    "id": "mDiffFit_ID0000044",
+                    "children": [
+                        "mConcatFit_ID0000049"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_ir_002_001.fits",
+                        "pposs2ukstu_ir_002_001_area.fits",
+                        "pposs2ukstu_ir_001_001_area.fits",
+                        "pposs2ukstu_ir_001_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "3-fit.000001.000003.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000039",
+                        "mProject_ID0000041"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000045",
+                    "id": "mDiffFit_ID0000045",
+                    "children": [
+                        "mConcatFit_ID0000049"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_ir_002_002.fits",
+                        "pposs2ukstu_ir_001_001_area.fits",
+                        "pposs2ukstu_ir_001_001.fits",
+                        "pposs2ukstu_ir_002_002_area.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "3-fit.000001.000004.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000039",
+                        "mProject_ID0000042"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000046",
+                    "id": "mDiffFit_ID0000046",
+                    "children": [
+                        "mConcatFit_ID0000049"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_ir_001_002.fits",
+                        "pposs2ukstu_ir_001_002_area.fits",
+                        "pposs2ukstu_ir_002_001_area.fits",
+                        "pposs2ukstu_ir_002_001.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "3-fit.000002.000003.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000040",
+                        "mProject_ID0000041"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000047",
+                    "id": "mDiffFit_ID0000047",
+                    "children": [
+                        "mConcatFit_ID0000049"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_ir_001_002.fits",
+                        "pposs2ukstu_ir_001_002_area.fits",
+                        "pposs2ukstu_ir_002_002.fits",
+                        "pposs2ukstu_ir_002_002_area.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "3-fit.000002.000004.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000040",
+                        "mProject_ID0000042"
+                    ]
+                },
+                {
+                    "name": "mDiffFit_ID0000048",
+                    "id": "mDiffFit_ID0000048",
+                    "children": [
+                        "mConcatFit_ID0000049"
+                    ],
+                    "inputFiles": [
+                        "pposs2ukstu_ir_002_002.fits",
+                        "pposs2ukstu_ir_002_001_area.fits",
+                        "pposs2ukstu_ir_002_001.fits",
+                        "pposs2ukstu_ir_002_002_area.fits",
+                        "region-oversized.hdr"
+                    ],
+                    "outputFiles": [
+                        "3-fit.000003.000004.txt"
+                    ],
+                    "parents": [
+                        "mProject_ID0000041",
+                        "mProject_ID0000042"
+                    ]
+                },
+                {
+                    "name": "mConcatFit_ID0000049",
+                    "id": "mConcatFit_ID0000049",
+                    "children": [
+                        "mBgModel_ID0000050"
+                    ],
+                    "inputFiles": [
+                        "3-fit.000003.000004.txt",
+                        "3-stat.tbl",
+                        "3-fit.000002.000003.txt",
+                        "3-fit.000001.000003.txt",
+                        "3-fit.000001.000004.txt",
+                        "3-fit.000002.000004.txt",
+                        "3-fit.000001.000002.txt"
+                    ],
+                    "outputFiles": [
+                        "3-fits.tbl"
+                    ],
+                    "parents": [
+                        "mDiffFit_ID0000048",
+                        "mDiffFit_ID0000047",
+                        "mDiffFit_ID0000046",
+                        "mDiffFit_ID0000045",
+                        "mDiffFit_ID0000044",
+                        "mDiffFit_ID0000043"
+                    ]
+                },
+                {
+                    "name": "mBgModel_ID0000050",
+                    "id": "mBgModel_ID0000050",
+                    "children": [
+                        "mBackground_ID0000051",
+                        "mBackground_ID0000052",
+                        "mBackground_ID0000053",
+                        "mBackground_ID0000054"
+                    ],
+                    "inputFiles": [
+                        "3-images.tbl",
+                        "3-fits.tbl"
+                    ],
+                    "outputFiles": [
+                        "3-corrections.tbl"
+                    ],
+                    "parents": [
+                        "mConcatFit_ID0000049"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000051",
+                    "id": "mBackground_ID0000051",
+                    "children": [
+                        "mImgtbl_ID0000055",
+                        "mAdd_ID0000056"
+                    ],
+                    "inputFiles": [
+                        "3-projected.tbl",
+                        "3-corrections.tbl",
+                        "pposs2ukstu_ir_001_001_area.fits",
+                        "pposs2ukstu_ir_001_001.fits"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_ir_001_001_area.fits",
+                        "cposs2ukstu_ir_001_001.fits"
+                    ],
+                    "parents": [
+                        "mProject_ID0000039",
+                        "mBgModel_ID0000050"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000052",
+                    "id": "mBackground_ID0000052",
+                    "children": [
+                        "mImgtbl_ID0000055",
+                        "mAdd_ID0000056"
+                    ],
+                    "inputFiles": [
+                        "3-projected.tbl",
+                        "pposs2ukstu_ir_001_002.fits",
+                        "3-corrections.tbl",
+                        "pposs2ukstu_ir_001_002_area.fits"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_ir_001_002_area.fits",
+                        "cposs2ukstu_ir_001_002.fits"
+                    ],
+                    "parents": [
+                        "mProject_ID0000040",
+                        "mBgModel_ID0000050"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000053",
+                    "id": "mBackground_ID0000053",
+                    "children": [
+                        "mImgtbl_ID0000055",
+                        "mAdd_ID0000056"
+                    ],
+                    "inputFiles": [
+                        "3-projected.tbl",
+                        "3-corrections.tbl",
+                        "pposs2ukstu_ir_002_001_area.fits",
+                        "pposs2ukstu_ir_002_001.fits"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_ir_002_001.fits",
+                        "cposs2ukstu_ir_002_001_area.fits"
+                    ],
+                    "parents": [
+                        "mProject_ID0000041",
+                        "mBgModel_ID0000050"
+                    ]
+                },
+                {
+                    "name": "mBackground_ID0000054",
+                    "id": "mBackground_ID0000054",
+                    "children": [
+                        "mImgtbl_ID0000055",
+                        "mAdd_ID0000056"
+                    ],
+                    "inputFiles": [
+                        "3-projected.tbl",
+                        "3-corrections.tbl",
+                        "pposs2ukstu_ir_002_002.fits",
+                        "pposs2ukstu_ir_002_002_area.fits"
+                    ],
+                    "outputFiles": [
+                        "cposs2ukstu_ir_002_002_area.fits",
+                        "cposs2ukstu_ir_002_002.fits"
+                    ],
+                    "parents": [
+                        "mProject_ID0000042",
+                        "mBgModel_ID0000050"
+                    ]
+                },
+                {
+                    "name": "mImgtbl_ID0000055",
+                    "id": "mImgtbl_ID0000055",
+                    "children": [
+                        "mAdd_ID0000056"
+                    ],
+                    "inputFiles": [
+                        "3-corrected.tbl",
+                        "cposs2ukstu_ir_002_001.fits",
+                        "cposs2ukstu_ir_001_002.fits",
+                        "cposs2ukstu_ir_002_002.fits",
+                        "cposs2ukstu_ir_001_001.fits"
+                    ],
+                    "outputFiles": [
+                        "3-updated-corrected.tbl"
+                    ],
+                    "parents": [
+                        "mBackground_ID0000054",
+                        "mBackground_ID0000053",
+                        "mBackground_ID0000052",
+                        "mBackground_ID0000051"
+                    ]
+                },
+                {
+                    "name": "mAdd_ID0000056",
+                    "id": "mAdd_ID0000056",
+                    "children": [
+                        "mViewer_ID0000057",
+                        "mViewer_ID0000058"
+                    ],
+                    "inputFiles": [
+                        "region.hdr",
+                        "cposs2ukstu_ir_002_001.fits",
+                        "cposs2ukstu_ir_001_002_area.fits",
+                        "cposs2ukstu_ir_001_002.fits",
+                        "cposs2ukstu_ir_002_001_area.fits",
+                        "3-updated-corrected.tbl",
+                        "cposs2ukstu_ir_002_002_area.fits",
+                        "cposs2ukstu_ir_002_002.fits",
+                        "cposs2ukstu_ir_001_001_area.fits",
+                        "cposs2ukstu_ir_001_001.fits"
+                    ],
+                    "outputFiles": [
+                        "3-mosaic_area.fits",
+                        "3-mosaic.fits"
+                    ],
+                    "parents": [
+                        "mImgtbl_ID0000055",
+                        "mBackground_ID0000054",
+                        "mBackground_ID0000053",
+                        "mBackground_ID0000052",
+                        "mBackground_ID0000051"
+                    ]
+                },
+                {
+                    "name": "mViewer_ID0000057",
+                    "id": "mViewer_ID0000057",
+                    "children": [],
+                    "inputFiles": [
+                        "3-mosaic.fits"
+                    ],
+                    "outputFiles": [
+                        "3-mosaic.jpg"
+                    ],
+                    "parents": [
+                        "mAdd_ID0000056"
+                    ]
+                },
+                {
+                    "name": "mViewer_ID0000058",
+                    "id": "mViewer_ID0000058",
+                    "children": [],
+                    "inputFiles": [
+                        "3-mosaic.fits",
+                        "2-mosaic.fits",
+                        "1-mosaic.fits"
+                    ],
+                    "outputFiles": [
+                        "mosaic-color.jpg"
+                    ],
+                    "parents": [
+                        "mAdd_ID0000056",
+                        "mAdd_ID0000037",
+                        "mAdd_ID0000018"
+                    ]
+                }
+            ],
+            "files": [
+                {
+                    "id": "poss2ukstu_blue_001_001.fits",
+                    "sizeInBytes": 9655399
+                },
+                {
+                    "id": "region-oversized.hdr",
+                    "sizeInBytes": 277
+                },
+                {
+                    "id": "pposs2ukstu_blue_001_001.fits",
+                    "sizeInBytes": 53193600
+                },
+                {
+                    "id": "pposs2ukstu_blue_001_001_area.fits",
+                    "sizeInBytes": 53193600
+                },
+                {
+                    "id": "poss2ukstu_blue_001_002.fits",
+                    "sizeInBytes": 8587351
+                },
+                {
+                    "id": "pposs2ukstu_blue_001_002.fits",
+                    "sizeInBytes": 53173440
+                },
+                {
+                    "id": "pposs2ukstu_blue_001_002_area.fits",
+                    "sizeInBytes": 53173440
+                },
+                {
+                    "id": "poss2ukstu_blue_002_001.fits",
+                    "sizeInBytes": 8814261
+                },
+                {
+                    "id": "pposs2ukstu_blue_002_001_area.fits",
+                    "sizeInBytes": 53153280
+                },
+                {
+                    "id": "pposs2ukstu_blue_002_001.fits",
+                    "sizeInBytes": 53153280
+                },
+                {
+                    "id": "poss2ukstu_blue_002_002.fits",
+                    "sizeInBytes": 8238778
+                },
+                {
+                    "id": "pposs2ukstu_blue_002_002_area.fits",
+                    "sizeInBytes": 53173440
+                },
+                {
+                    "id": "pposs2ukstu_blue_002_002.fits",
+                    "sizeInBytes": 53173440
+                },
+                {
+                    "id": "1-fit.000001.000002.txt",
+                    "sizeInBytes": 286
+                },
+                {
+                    "id": "1-fit.000001.000003.txt",
+                    "sizeInBytes": 291
+                },
+                {
+                    "id": "1-fit.000001.000004.txt",
+                    "sizeInBytes": 285
+                },
+                {
+                    "id": "1-fit.000002.000003.txt",
+                    "sizeInBytes": 283
+                },
+                {
+                    "id": "1-fit.000002.000004.txt",
+                    "sizeInBytes": 284
+                },
+                {
+                    "id": "1-fit.000003.000004.txt",
+                    "sizeInBytes": 285
+                },
+                {
+                    "id": "1-stat.tbl",
+                    "sizeInBytes": 1200
+                },
+                {
+                    "id": "1-fits.tbl",
+                    "sizeInBytes": 1457
+                },
+                {
+                    "id": "1-images.tbl",
+                    "sizeInBytes": 2246
+                },
+                {
+                    "id": "1-corrections.tbl",
+                    "sizeInBytes": 276
+                },
+                {
+                    "id": "1-projected.tbl",
+                    "sizeInBytes": 952
+                },
+                {
+                    "id": "cposs2ukstu_blue_001_001_area.fits",
+                    "sizeInBytes": 53193600
+                },
+                {
+                    "id": "cposs2ukstu_blue_001_001.fits",
+                    "sizeInBytes": 53193600
+                },
+                {
+                    "id": "cposs2ukstu_blue_001_002.fits",
+                    "sizeInBytes": 53173440
+                },
+                {
+                    "id": "cposs2ukstu_blue_001_002_area.fits",
+                    "sizeInBytes": 53173440
+                },
+                {
+                    "id": "cposs2ukstu_blue_002_001.fits",
+                    "sizeInBytes": 53153280
+                },
+                {
+                    "id": "cposs2ukstu_blue_002_001_area.fits",
+                    "sizeInBytes": 53153280
+                },
+                {
+                    "id": "cposs2ukstu_blue_002_002_area.fits",
+                    "sizeInBytes": 53173440
+                },
+                {
+                    "id": "cposs2ukstu_blue_002_002.fits",
+                    "sizeInBytes": 53173440
+                },
+                {
+                    "id": "1-corrected.tbl",
+                    "sizeInBytes": 952
+                },
+                {
+                    "id": "1-updated-corrected.tbl",
+                    "sizeInBytes": 2606
+                },
+                {
+                    "id": "region.hdr",
+                    "sizeInBytes": 275
+                },
+                {
+                    "id": "1-mosaic.fits",
+                    "sizeInBytes": 25922880
+                },
+                {
+                    "id": "1-mosaic_area.fits",
+                    "sizeInBytes": 25922880
+                },
+                {
+                    "id": "1-mosaic.jpg",
+                    "sizeInBytes": 983389
+                },
+                {
+                    "id": "poss2ukstu_red_001_001.fits",
+                    "sizeInBytes": 6900714
+                },
+                {
+                    "id": "pposs2ukstu_red_001_001_area.fits",
+                    "sizeInBytes": 52536960
+                },
+                {
+                    "id": "pposs2ukstu_red_001_001.fits",
+                    "sizeInBytes": 52536960
+                },
+                {
+                    "id": "poss2ukstu_red_001_002.fits",
+                    "sizeInBytes": 6494409
+                },
+                {
+                    "id": "pposs2ukstu_red_001_002_area.fits",
+                    "sizeInBytes": 52557120
+                },
+                {
+                    "id": "pposs2ukstu_red_001_002.fits",
+                    "sizeInBytes": 52557120
+                },
+                {
+                    "id": "poss2ukstu_red_002_001.fits",
+                    "sizeInBytes": 6570387
+                },
+                {
+                    "id": "pposs2ukstu_red_002_001.fits",
+                    "sizeInBytes": 52513920
+                },
+                {
+                    "id": "pposs2ukstu_red_002_001_area.fits",
+                    "sizeInBytes": 52513920
+                },
+                {
+                    "id": "poss2ukstu_red_002_002.fits",
+                    "sizeInBytes": 6376872
+                },
+                {
+                    "id": "pposs2ukstu_red_002_002.fits",
+                    "sizeInBytes": 52536960
+                },
+                {
+                    "id": "pposs2ukstu_red_002_002_area.fits",
+                    "sizeInBytes": 52536960
+                },
+                {
+                    "id": "2-fit.000001.000002.txt",
+                    "sizeInBytes": 289
+                },
+                {
+                    "id": "2-fit.000001.000003.txt",
+                    "sizeInBytes": 287
+                },
+                {
+                    "id": "2-fit.000001.000004.txt",
+                    "sizeInBytes": 281
+                },
+                {
+                    "id": "2-fit.000002.000003.txt",
+                    "sizeInBytes": 282
+                },
+                {
+                    "id": "2-fit.000002.000004.txt",
+                    "sizeInBytes": 284
+                },
+                {
+                    "id": "2-fit.000003.000004.txt",
+                    "sizeInBytes": 283
+                },
+                {
+                    "id": "2-stat.tbl",
+                    "sizeInBytes": 1180
+                },
+                {
+                    "id": "2-fits.tbl",
+                    "sizeInBytes": 1457
+                },
+                {
+                    "id": "2-images.tbl",
+                    "sizeInBytes": 2246
+                },
+                {
+                    "id": "2-corrections.tbl",
+                    "sizeInBytes": 276
+                },
+                {
+                    "id": "2-projected.tbl",
+                    "sizeInBytes": 946
+                },
+                {
+                    "id": "cposs2ukstu_red_001_001_area.fits",
+                    "sizeInBytes": 52536960
+                },
+                {
+                    "id": "cposs2ukstu_red_001_001.fits",
+                    "sizeInBytes": 52536960
+                },
+                {
+                    "id": "cposs2ukstu_red_001_002_area.fits",
+                    "sizeInBytes": 52557120
+                },
+                {
+                    "id": "cposs2ukstu_red_001_002.fits",
+                    "sizeInBytes": 52557120
+                },
+                {
+                    "id": "cposs2ukstu_red_002_001.fits",
+                    "sizeInBytes": 52513920
+                },
+                {
+                    "id": "cposs2ukstu_red_002_001_area.fits",
+                    "sizeInBytes": 52513920
+                },
+                {
+                    "id": "cposs2ukstu_red_002_002.fits",
+                    "sizeInBytes": 52536960
+                },
+                {
+                    "id": "cposs2ukstu_red_002_002_area.fits",
+                    "sizeInBytes": 52536960
+                },
+                {
+                    "id": "2-corrected.tbl",
+                    "sizeInBytes": 946
+                },
+                {
+                    "id": "2-updated-corrected.tbl",
+                    "sizeInBytes": 2600
+                },
+                {
+                    "id": "2-mosaic.fits",
+                    "sizeInBytes": 25922880
+                },
+                {
+                    "id": "2-mosaic_area.fits",
+                    "sizeInBytes": 25922880
+                },
+                {
+                    "id": "2-mosaic.jpg",
+                    "sizeInBytes": 1141747
+                },
+                {
+                    "id": "poss2ukstu_ir_001_001.fits",
+                    "sizeInBytes": 7327978
+                },
+                {
+                    "id": "pposs2ukstu_ir_001_001_area.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "pposs2ukstu_ir_001_001.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "poss2ukstu_ir_001_002.fits",
+                    "sizeInBytes": 7167257
+                },
+                {
+                    "id": "pposs2ukstu_ir_001_002_area.fits",
+                    "sizeInBytes": 53029440
+                },
+                {
+                    "id": "pposs2ukstu_ir_001_002.fits",
+                    "sizeInBytes": 53029440
+                },
+                {
+                    "id": "poss2ukstu_ir_002_001.fits",
+                    "sizeInBytes": 7217492
+                },
+                {
+                    "id": "pposs2ukstu_ir_002_001.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "pposs2ukstu_ir_002_001_area.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "poss2ukstu_ir_002_002.fits",
+                    "sizeInBytes": 7120723
+                },
+                {
+                    "id": "pposs2ukstu_ir_002_002_area.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "pposs2ukstu_ir_002_002.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "3-fit.000001.000002.txt",
+                    "sizeInBytes": 287
+                },
+                {
+                    "id": "3-fit.000001.000003.txt",
+                    "sizeInBytes": 290
+                },
+                {
+                    "id": "3-fit.000001.000004.txt",
+                    "sizeInBytes": 282
+                },
+                {
+                    "id": "3-fit.000002.000003.txt",
+                    "sizeInBytes": 280
+                },
+                {
+                    "id": "3-fit.000002.000004.txt",
+                    "sizeInBytes": 286
+                },
+                {
+                    "id": "3-fit.000003.000004.txt",
+                    "sizeInBytes": 285
+                },
+                {
+                    "id": "3-stat.tbl",
+                    "sizeInBytes": 1160
+                },
+                {
+                    "id": "3-fits.tbl",
+                    "sizeInBytes": 1457
+                },
+                {
+                    "id": "3-images.tbl",
+                    "sizeInBytes": 2246
+                },
+                {
+                    "id": "3-corrections.tbl",
+                    "sizeInBytes": 276
+                },
+                {
+                    "id": "3-projected.tbl",
+                    "sizeInBytes": 940
+                },
+                {
+                    "id": "cposs2ukstu_ir_001_001_area.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "cposs2ukstu_ir_001_001.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "cposs2ukstu_ir_001_002_area.fits",
+                    "sizeInBytes": 53029440
+                },
+                {
+                    "id": "cposs2ukstu_ir_001_002.fits",
+                    "sizeInBytes": 53029440
+                },
+                {
+                    "id": "cposs2ukstu_ir_002_001.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "cposs2ukstu_ir_002_001_area.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "cposs2ukstu_ir_002_002_area.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "cposs2ukstu_ir_002_002.fits",
+                    "sizeInBytes": 53009280
+                },
+                {
+                    "id": "3-corrected.tbl",
+                    "sizeInBytes": 940
+                },
+                {
+                    "id": "3-updated-corrected.tbl",
+                    "sizeInBytes": 2594
+                },
+                {
+                    "id": "3-mosaic_area.fits",
+                    "sizeInBytes": 25922880
+                },
+                {
+                    "id": "3-mosaic.fits",
+                    "sizeInBytes": 25922880
+                },
+                {
+                    "id": "3-mosaic.jpg",
+                    "sizeInBytes": 1691841
+                },
+                {
+                    "id": "mosaic-color.jpg",
+                    "sizeInBytes": 5698193
+                }
+            ],
+            "metrics": {
+                "numberOfTasks": 58,
+                "numberOfFiles": 111,
+                "sumOfFileSizesInBytes": 2795142706,
+                "numberOfLevels": 8,
+                "minimumWidth": 3,
+                "maximumWidth": 18
+            }
         },
-        {
-          "id": "mProject_ID0000002",
-          "runtimeInSeconds": 543.888,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_blue_001_002.fits",
-              "pposs2ukstu_blue_001_002.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 97.4668,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mProject_ID0000003",
-          "runtimeInSeconds": 543.136,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_blue_002_001.fits",
-              "pposs2ukstu_blue_002_001.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 97.0551,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mProject_ID0000004",
-          "runtimeInSeconds": 546.161,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_blue_002_002.fits",
-              "pposs2ukstu_blue_002_002.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 97.1054,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000005",
-          "runtimeInSeconds": 3.46,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "1-fit.000001.000002.txt",
-              "pposs2ukstu_blue_001_001.fits",
-              "pposs2ukstu_blue_001_002.fits",
-              "1-diff.000001.000002.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.1156,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000006",
-          "runtimeInSeconds": 4.275,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "1-fit.000001.000003.txt",
-              "pposs2ukstu_blue_001_001.fits",
-              "pposs2ukstu_blue_002_001.fits",
-              "1-diff.000001.000003.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.117,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000007",
-          "runtimeInSeconds": 1.424,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "1-fit.000001.000004.txt",
-              "pposs2ukstu_blue_001_001.fits",
-              "pposs2ukstu_blue_002_002.fits",
-              "1-diff.000001.000004.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.3511,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000008",
-          "runtimeInSeconds": 1.299,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "1-fit.000002.000003.txt",
-              "pposs2ukstu_blue_001_002.fits",
-              "pposs2ukstu_blue_002_001.fits",
-              "1-diff.000002.000003.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.3849,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000009",
-          "runtimeInSeconds": 2.197,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "1-fit.000002.000004.txt",
-              "pposs2ukstu_blue_001_002.fits",
-              "pposs2ukstu_blue_002_002.fits",
-              "1-diff.000002.000004.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.1821,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000010",
-          "runtimeInSeconds": 2.239,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "1-fit.000003.000004.txt",
-              "pposs2ukstu_blue_002_001.fits",
-              "pposs2ukstu_blue_002_002.fits",
-              "1-diff.000003.000004.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.1787,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mConcatFit_ID0000011",
-          "runtimeInSeconds": 0.181,
-          "command": {
-            "program": "mConcatFit",
-            "arguments": [
-              "1-stat.tbl",
-              "1-fits.tbl",
-              "."
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 40,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBgModel_ID0000012",
-          "runtimeInSeconds": 0.563,
-          "command": {
-            "program": "mBgModel",
-            "arguments": [
-              "-i",
-              "100000",
-              "1-images.tbl",
-              "1-fits.tbl",
-              "1-corrections.tbl"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 50,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000013",
-          "runtimeInSeconds": 5.807,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_blue_001_001.fits",
-              "cposs2ukstu_blue_001_001.fits",
-              "1-projected.tbl",
-              "1-corrections.tbl"
-            ]
-          },
-          "avgCPU": 11.5722,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000014",
-          "runtimeInSeconds": 5.03,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_blue_001_002.fits",
-              "cposs2ukstu_blue_001_002.fits",
-              "1-projected.tbl",
-              "1-corrections.tbl"
-            ]
-          },
-          "avgCPU": 12.4254,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000015",
-          "runtimeInSeconds": 5.073,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_blue_002_001.fits",
-              "cposs2ukstu_blue_002_001.fits",
-              "1-projected.tbl",
-              "1-corrections.tbl"
-            ]
-          },
-          "avgCPU": 13.1678,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000016",
-          "runtimeInSeconds": 5.068,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_blue_002_002.fits",
-              "cposs2ukstu_blue_002_002.fits",
-              "1-projected.tbl",
-              "1-corrections.tbl"
-            ]
-          },
-          "avgCPU": 12.9242,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mImgtbl_ID0000017",
-          "runtimeInSeconds": 0.169,
-          "command": {
-            "program": "mImgtbl",
-            "arguments": [
-              ".",
-              "-t",
-              "1-corrected.tbl",
-              "1-updated-corrected.tbl"
-            ]
-          },
-          "avgCPU": 99.4083,
-          "priority": 70,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mAdd_ID0000018",
-          "runtimeInSeconds": 0.546,
-          "command": {
-            "program": "mAdd",
-            "arguments": [
-              "-e",
-              "1-updated-corrected.tbl",
-              "region.hdr",
-              "1-mosaic.fits"
-            ]
-          },
-          "avgCPU": 96.5201,
-          "priority": 80,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mViewer_ID0000019",
-          "runtimeInSeconds": 1.423,
-          "command": {
-            "program": "mViewer",
-            "arguments": [
-              "-ct",
-              "0",
-              "-gray",
-              "1-mosaic.fits",
-              "0s",
-              "99.999%",
-              "gaussian",
-              "-out",
-              "1-mosaic.jpg"
-            ]
-          },
-          "avgCPU": 99.9297,
-          "priority": 90,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mProject_ID0000020",
-          "runtimeInSeconds": 337.772,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_red_001_001.fits",
-              "pposs2ukstu_red_001_001.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 99.8064,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mProject_ID0000021",
-          "runtimeInSeconds": 350.744,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_red_001_002.fits",
-              "pposs2ukstu_red_001_002.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 99.9116,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mProject_ID0000022",
-          "runtimeInSeconds": 336.649,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_red_002_001.fits",
-              "pposs2ukstu_red_002_001.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 99.8589,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mProject_ID0000023",
-          "runtimeInSeconds": 348.14,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_red_002_002.fits",
-              "pposs2ukstu_red_002_002.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 99.861,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000024",
-          "runtimeInSeconds": 1.919,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "2-fit.000001.000002.txt",
-              "pposs2ukstu_red_001_001.fits",
-              "pposs2ukstu_red_001_002.fits",
-              "2-diff.000001.000002.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.2084,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000025",
-          "runtimeInSeconds": 1.828,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "2-fit.000001.000003.txt",
-              "pposs2ukstu_red_001_001.fits",
-              "pposs2ukstu_red_002_001.fits",
-              "2-diff.000001.000003.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.2735,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000026",
-          "runtimeInSeconds": 1.294,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "2-fit.000001.000004.txt",
-              "pposs2ukstu_red_001_001.fits",
-              "pposs2ukstu_red_002_002.fits",
-              "2-diff.000001.000004.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.3091,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000027",
-          "runtimeInSeconds": 1.281,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "2-fit.000002.000003.txt",
-              "pposs2ukstu_red_001_002.fits",
-              "pposs2ukstu_red_002_001.fits",
-              "2-diff.000002.000003.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.3123,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000028",
-          "runtimeInSeconds": 1.327,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "2-fit.000002.000004.txt",
-              "pposs2ukstu_red_001_002.fits",
-              "pposs2ukstu_red_002_002.fits",
-              "2-diff.000002.000004.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.3014,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000029",
-          "runtimeInSeconds": 2.267,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "2-fit.000003.000004.txt",
-              "pposs2ukstu_red_002_001.fits",
-              "pposs2ukstu_red_002_002.fits",
-              "2-diff.000003.000004.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.1764,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mConcatFit_ID0000030",
-          "runtimeInSeconds": 0.191,
-          "command": {
-            "program": "mConcatFit",
-            "arguments": [
-              "2-stat.tbl",
-              "2-fits.tbl",
-              "."
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 40,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBgModel_ID0000031",
-          "runtimeInSeconds": 0.607,
-          "command": {
-            "program": "mBgModel",
-            "arguments": [
-              "-i",
-              "100000",
-              "2-images.tbl",
-              "2-fits.tbl",
-              "2-corrections.tbl"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 50,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000032",
-          "runtimeInSeconds": 4.768,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_red_001_001.fits",
-              "cposs2ukstu_red_001_001.fits",
-              "2-projected.tbl",
-              "2-corrections.tbl"
-            ]
-          },
-          "avgCPU": 14.2198,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000033",
-          "runtimeInSeconds": 4.847,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_red_001_002.fits",
-              "cposs2ukstu_red_001_002.fits",
-              "2-projected.tbl",
-              "2-corrections.tbl"
-            ]
-          },
-          "avgCPU": 14.2975,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000034",
-          "runtimeInSeconds": 6.715,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_red_002_001.fits",
-              "cposs2ukstu_red_002_001.fits",
-              "2-projected.tbl",
-              "2-corrections.tbl"
-            ]
-          },
-          "avgCPU": 10.4393,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000035",
-          "runtimeInSeconds": 2.047,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_red_002_002.fits",
-              "cposs2ukstu_red_002_002.fits",
-              "2-projected.tbl",
-              "2-corrections.tbl"
-            ]
-          },
-          "avgCPU": 32.6331,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mImgtbl_ID0000036",
-          "runtimeInSeconds": 0.152,
-          "command": {
-            "program": "mImgtbl",
-            "arguments": [
-              ".",
-              "-t",
-              "2-corrected.tbl",
-              "2-updated-corrected.tbl"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 70,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mAdd_ID0000037",
-          "runtimeInSeconds": 0.617,
-          "command": {
-            "program": "mAdd",
-            "arguments": [
-              "-e",
-              "2-updated-corrected.tbl",
-              "region.hdr",
-              "2-mosaic.fits"
-            ]
-          },
-          "avgCPU": 89.141,
-          "priority": 80,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mViewer_ID0000038",
-          "runtimeInSeconds": 1.541,
-          "command": {
-            "program": "mViewer",
-            "arguments": [
-              "-ct",
-              "0",
-              "-gray",
-              "2-mosaic.fits",
-              "0s",
-              "99.999%",
-              "gaussian",
-              "-out",
-              "2-mosaic.jpg"
-            ]
-          },
-          "avgCPU": 97.0798,
-          "priority": 90,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mProject_ID0000039",
-          "runtimeInSeconds": 483.899,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_ir_001_001.fits",
-              "pposs2ukstu_ir_001_001.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 99.3986,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mProject_ID0000040",
-          "runtimeInSeconds": 478.164,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_ir_001_002.fits",
-              "pposs2ukstu_ir_001_002.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 99.6553,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mProject_ID0000041",
-          "runtimeInSeconds": 482.175,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_ir_002_001.fits",
-              "pposs2ukstu_ir_002_001.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 99.6356,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mProject_ID0000042",
-          "runtimeInSeconds": 483.975,
-          "command": {
-            "program": "mProject",
-            "arguments": [
-              "-X",
-              "poss2ukstu_ir_002_002.fits",
-              "pposs2ukstu_ir_002_002.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 99.3409,
-          "priority": 20,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000043",
-          "runtimeInSeconds": 1.938,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "3-fit.000001.000002.txt",
-              "pposs2ukstu_ir_001_001.fits",
-              "pposs2ukstu_ir_001_002.fits",
-              "3-diff.000001.000002.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.2064,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000044",
-          "runtimeInSeconds": 5.821,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "3-fit.000001.000003.txt",
-              "pposs2ukstu_ir_001_001.fits",
-              "pposs2ukstu_ir_002_001.fits",
-              "3-diff.000001.000003.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.0687,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000045",
-          "runtimeInSeconds": 0.659,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "3-fit.000001.000004.txt",
-              "pposs2ukstu_ir_001_001.fits",
-              "pposs2ukstu_ir_002_002.fits",
-              "3-diff.000001.000004.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.7587,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000046",
-          "runtimeInSeconds": 2.014,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "3-fit.000002.000003.txt",
-              "pposs2ukstu_ir_001_002.fits",
-              "pposs2ukstu_ir_002_001.fits",
-              "3-diff.000002.000003.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.1986,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000047",
-          "runtimeInSeconds": 4.581,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "3-fit.000002.000004.txt",
-              "pposs2ukstu_ir_001_002.fits",
-              "pposs2ukstu_ir_002_002.fits",
-              "3-diff.000002.000004.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.0873,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mDiffFit_ID0000048",
-          "runtimeInSeconds": 4.533,
-          "command": {
-            "program": "mDiffFit",
-            "arguments": [
-              "-d",
-              "-s",
-              "3-fit.000003.000004.txt",
-              "pposs2ukstu_ir_002_001.fits",
-              "pposs2ukstu_ir_002_002.fits",
-              "3-diff.000003.000004.fits",
-              "region-oversized.hdr"
-            ]
-          },
-          "avgCPU": 0.0662,
-          "priority": 30,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mConcatFit_ID0000049",
-          "runtimeInSeconds": 0.19,
-          "command": {
-            "program": "mConcatFit",
-            "arguments": [
-              "3-stat.tbl",
-              "3-fits.tbl",
-              "."
-            ]
-          },
-          "avgCPU": 99.4737,
-          "priority": 40,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBgModel_ID0000050",
-          "runtimeInSeconds": 0.566,
-          "command": {
-            "program": "mBgModel",
-            "arguments": [
-              "-i",
-              "100000",
-              "3-images.tbl",
-              "3-fits.tbl",
-              "3-corrections.tbl"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 50,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000051",
-          "runtimeInSeconds": 4.88,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_ir_001_001.fits",
-              "cposs2ukstu_ir_001_001.fits",
-              "3-projected.tbl",
-              "3-corrections.tbl"
-            ]
-          },
-          "avgCPU": 13.5041,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000052",
-          "runtimeInSeconds": 4.912,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_ir_001_002.fits",
-              "cposs2ukstu_ir_001_002.fits",
-              "3-projected.tbl",
-              "3-corrections.tbl"
-            ]
-          },
-          "avgCPU": 13.3958,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000053",
-          "runtimeInSeconds": 4.928,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_ir_002_001.fits",
-              "cposs2ukstu_ir_002_001.fits",
-              "3-projected.tbl",
-              "3-corrections.tbl"
-            ]
-          },
-          "avgCPU": 13.3523,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mBackground_ID0000054",
-          "runtimeInSeconds": 5.425,
-          "command": {
-            "program": "mBackground",
-            "arguments": [
-              "-t",
-              "pposs2ukstu_ir_002_002.fits",
-              "cposs2ukstu_ir_002_002.fits",
-              "3-projected.tbl",
-              "3-corrections.tbl"
-            ]
-          },
-          "avgCPU": 12.0184,
-          "priority": 60,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mImgtbl_ID0000055",
-          "runtimeInSeconds": 0.165,
-          "command": {
-            "program": "mImgtbl",
-            "arguments": [
-              ".",
-              "-t",
-              "3-corrected.tbl",
-              "3-updated-corrected.tbl"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 70,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mAdd_ID0000056",
-          "runtimeInSeconds": 0.523,
-          "command": {
-            "program": "mAdd",
-            "arguments": [
-              "-e",
-              "3-updated-corrected.tbl",
-              "region.hdr",
-              "3-mosaic.fits"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 80,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mViewer_ID0000057",
-          "runtimeInSeconds": 1.632,
-          "command": {
-            "program": "mViewer",
-            "arguments": [
-              "-ct",
-              "0",
-              "-gray",
-              "3-mosaic.fits",
-              "0s",
-              "99.999%",
-              "gaussian",
-              "-out",
-              "3-mosaic.jpg"
-            ]
-          },
-          "avgCPU": 100.0,
-          "priority": 90,
-          "machines": [
-            "pegasus-5"
-          ]
-        },
-        {
-          "id": "mViewer_ID0000058",
-          "runtimeInSeconds": 4.128,
-          "command": {
-            "program": "mViewer",
-            "arguments": [
-              "-red",
-              "3-mosaic.fits",
-              "-1s",
-              "99.999%",
-              "gaussian-log",
-              "-green",
-              "2-mosaic.fits",
-              "-1s",
-              "99.999%",
-              "gaussian-log",
-              "-blue",
-              "1-mosaic.fits",
-              "-1s",
-              "99.999%",
-              "gaussian-log",
-              "-out",
-              "mosaic-color.jpg"
-            ]
-          },
-          "avgCPU": 99.9758,
-          "priority": 90,
-          "machines": [
-            "pegasus-5"
-          ]
+        "execution": {
+            "makespanInSeconds": 870.0,
+            "executedAt": "20200403T232446+0000",
+            "tasks": [
+                {
+                    "id": "mProject_ID0000001",
+                    "runtimeInSeconds": 534.058,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_blue_001_001.fits",
+                            "pposs2ukstu_blue_001_001.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 97.1885,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000002",
+                    "runtimeInSeconds": 543.888,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_blue_001_002.fits",
+                            "pposs2ukstu_blue_001_002.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 97.4668,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000003",
+                    "runtimeInSeconds": 543.136,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_blue_002_001.fits",
+                            "pposs2ukstu_blue_002_001.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 97.0551,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000004",
+                    "runtimeInSeconds": 546.161,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_blue_002_002.fits",
+                            "pposs2ukstu_blue_002_002.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 97.1054,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000005",
+                    "runtimeInSeconds": 3.46,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "1-fit.000001.000002.txt",
+                            "pposs2ukstu_blue_001_001.fits",
+                            "pposs2ukstu_blue_001_002.fits",
+                            "1-diff.000001.000002.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.1156,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000006",
+                    "runtimeInSeconds": 4.275,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "1-fit.000001.000003.txt",
+                            "pposs2ukstu_blue_001_001.fits",
+                            "pposs2ukstu_blue_002_001.fits",
+                            "1-diff.000001.000003.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.117,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000007",
+                    "runtimeInSeconds": 1.424,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "1-fit.000001.000004.txt",
+                            "pposs2ukstu_blue_001_001.fits",
+                            "pposs2ukstu_blue_002_002.fits",
+                            "1-diff.000001.000004.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.3511,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000008",
+                    "runtimeInSeconds": 1.299,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "1-fit.000002.000003.txt",
+                            "pposs2ukstu_blue_001_002.fits",
+                            "pposs2ukstu_blue_002_001.fits",
+                            "1-diff.000002.000003.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.3849,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000009",
+                    "runtimeInSeconds": 2.197,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "1-fit.000002.000004.txt",
+                            "pposs2ukstu_blue_001_002.fits",
+                            "pposs2ukstu_blue_002_002.fits",
+                            "1-diff.000002.000004.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.1821,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000010",
+                    "runtimeInSeconds": 2.239,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "1-fit.000003.000004.txt",
+                            "pposs2ukstu_blue_002_001.fits",
+                            "pposs2ukstu_blue_002_002.fits",
+                            "1-diff.000003.000004.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.1787,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mConcatFit_ID0000011",
+                    "runtimeInSeconds": 0.181,
+                    "command": {
+                        "program": "mConcatFit",
+                        "arguments": [
+                            "1-stat.tbl",
+                            "1-fits.tbl",
+                            "."
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 40,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBgModel_ID0000012",
+                    "runtimeInSeconds": 0.563,
+                    "command": {
+                        "program": "mBgModel",
+                        "arguments": [
+                            "-i",
+                            "100000",
+                            "1-images.tbl",
+                            "1-fits.tbl",
+                            "1-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 50,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000013",
+                    "runtimeInSeconds": 5.807,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_blue_001_001.fits",
+                            "cposs2ukstu_blue_001_001.fits",
+                            "1-projected.tbl",
+                            "1-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 11.5722,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000014",
+                    "runtimeInSeconds": 5.03,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_blue_001_002.fits",
+                            "cposs2ukstu_blue_001_002.fits",
+                            "1-projected.tbl",
+                            "1-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 12.4254,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000015",
+                    "runtimeInSeconds": 5.073,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_blue_002_001.fits",
+                            "cposs2ukstu_blue_002_001.fits",
+                            "1-projected.tbl",
+                            "1-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 13.1678,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000016",
+                    "runtimeInSeconds": 5.068,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_blue_002_002.fits",
+                            "cposs2ukstu_blue_002_002.fits",
+                            "1-projected.tbl",
+                            "1-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 12.9242,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mImgtbl_ID0000017",
+                    "runtimeInSeconds": 0.169,
+                    "command": {
+                        "program": "mImgtbl",
+                        "arguments": [
+                            ".",
+                            "-t",
+                            "1-corrected.tbl",
+                            "1-updated-corrected.tbl"
+                        ]
+                    },
+                    "avgCPU": 99.4083,
+                    "priority": 70,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mAdd_ID0000018",
+                    "runtimeInSeconds": 0.546,
+                    "command": {
+                        "program": "mAdd",
+                        "arguments": [
+                            "-e",
+                            "1-updated-corrected.tbl",
+                            "region.hdr",
+                            "1-mosaic.fits"
+                        ]
+                    },
+                    "avgCPU": 96.5201,
+                    "priority": 80,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mViewer_ID0000019",
+                    "runtimeInSeconds": 1.423,
+                    "command": {
+                        "program": "mViewer",
+                        "arguments": [
+                            "-ct",
+                            "0",
+                            "-gray",
+                            "1-mosaic.fits",
+                            "0s",
+                            "99.999%",
+                            "gaussian",
+                            "-out",
+                            "1-mosaic.jpg"
+                        ]
+                    },
+                    "avgCPU": 99.9297,
+                    "priority": 90,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000020",
+                    "runtimeInSeconds": 337.772,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_red_001_001.fits",
+                            "pposs2ukstu_red_001_001.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 99.8064,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000021",
+                    "runtimeInSeconds": 350.744,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_red_001_002.fits",
+                            "pposs2ukstu_red_001_002.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 99.9116,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000022",
+                    "runtimeInSeconds": 336.649,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_red_002_001.fits",
+                            "pposs2ukstu_red_002_001.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 99.8589,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000023",
+                    "runtimeInSeconds": 348.14,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_red_002_002.fits",
+                            "pposs2ukstu_red_002_002.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 99.861,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000024",
+                    "runtimeInSeconds": 1.919,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "2-fit.000001.000002.txt",
+                            "pposs2ukstu_red_001_001.fits",
+                            "pposs2ukstu_red_001_002.fits",
+                            "2-diff.000001.000002.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.2084,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000025",
+                    "runtimeInSeconds": 1.828,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "2-fit.000001.000003.txt",
+                            "pposs2ukstu_red_001_001.fits",
+                            "pposs2ukstu_red_002_001.fits",
+                            "2-diff.000001.000003.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.2735,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000026",
+                    "runtimeInSeconds": 1.294,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "2-fit.000001.000004.txt",
+                            "pposs2ukstu_red_001_001.fits",
+                            "pposs2ukstu_red_002_002.fits",
+                            "2-diff.000001.000004.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.3091,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000027",
+                    "runtimeInSeconds": 1.281,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "2-fit.000002.000003.txt",
+                            "pposs2ukstu_red_001_002.fits",
+                            "pposs2ukstu_red_002_001.fits",
+                            "2-diff.000002.000003.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.3123,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000028",
+                    "runtimeInSeconds": 1.327,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "2-fit.000002.000004.txt",
+                            "pposs2ukstu_red_001_002.fits",
+                            "pposs2ukstu_red_002_002.fits",
+                            "2-diff.000002.000004.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.3014,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000029",
+                    "runtimeInSeconds": 2.267,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "2-fit.000003.000004.txt",
+                            "pposs2ukstu_red_002_001.fits",
+                            "pposs2ukstu_red_002_002.fits",
+                            "2-diff.000003.000004.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.1764,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mConcatFit_ID0000030",
+                    "runtimeInSeconds": 0.191,
+                    "command": {
+                        "program": "mConcatFit",
+                        "arguments": [
+                            "2-stat.tbl",
+                            "2-fits.tbl",
+                            "."
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 40,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBgModel_ID0000031",
+                    "runtimeInSeconds": 0.607,
+                    "command": {
+                        "program": "mBgModel",
+                        "arguments": [
+                            "-i",
+                            "100000",
+                            "2-images.tbl",
+                            "2-fits.tbl",
+                            "2-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 50,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000032",
+                    "runtimeInSeconds": 4.768,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_red_001_001.fits",
+                            "cposs2ukstu_red_001_001.fits",
+                            "2-projected.tbl",
+                            "2-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 14.2198,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000033",
+                    "runtimeInSeconds": 4.847,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_red_001_002.fits",
+                            "cposs2ukstu_red_001_002.fits",
+                            "2-projected.tbl",
+                            "2-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 14.2975,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000034",
+                    "runtimeInSeconds": 6.715,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_red_002_001.fits",
+                            "cposs2ukstu_red_002_001.fits",
+                            "2-projected.tbl",
+                            "2-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 10.4393,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000035",
+                    "runtimeInSeconds": 2.047,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_red_002_002.fits",
+                            "cposs2ukstu_red_002_002.fits",
+                            "2-projected.tbl",
+                            "2-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 32.6331,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mImgtbl_ID0000036",
+                    "runtimeInSeconds": 0.152,
+                    "command": {
+                        "program": "mImgtbl",
+                        "arguments": [
+                            ".",
+                            "-t",
+                            "2-corrected.tbl",
+                            "2-updated-corrected.tbl"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 70,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mAdd_ID0000037",
+                    "runtimeInSeconds": 0.617,
+                    "command": {
+                        "program": "mAdd",
+                        "arguments": [
+                            "-e",
+                            "2-updated-corrected.tbl",
+                            "region.hdr",
+                            "2-mosaic.fits"
+                        ]
+                    },
+                    "avgCPU": 89.141,
+                    "priority": 80,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mViewer_ID0000038",
+                    "runtimeInSeconds": 1.541,
+                    "command": {
+                        "program": "mViewer",
+                        "arguments": [
+                            "-ct",
+                            "0",
+                            "-gray",
+                            "2-mosaic.fits",
+                            "0s",
+                            "99.999%",
+                            "gaussian",
+                            "-out",
+                            "2-mosaic.jpg"
+                        ]
+                    },
+                    "avgCPU": 97.0798,
+                    "priority": 90,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000039",
+                    "runtimeInSeconds": 483.899,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_ir_001_001.fits",
+                            "pposs2ukstu_ir_001_001.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 99.3986,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000040",
+                    "runtimeInSeconds": 478.164,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_ir_001_002.fits",
+                            "pposs2ukstu_ir_001_002.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 99.6553,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000041",
+                    "runtimeInSeconds": 482.175,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_ir_002_001.fits",
+                            "pposs2ukstu_ir_002_001.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 99.6356,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mProject_ID0000042",
+                    "runtimeInSeconds": 483.975,
+                    "command": {
+                        "program": "mProject",
+                        "arguments": [
+                            "-X",
+                            "poss2ukstu_ir_002_002.fits",
+                            "pposs2ukstu_ir_002_002.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 99.3409,
+                    "priority": 20,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000043",
+                    "runtimeInSeconds": 1.938,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "3-fit.000001.000002.txt",
+                            "pposs2ukstu_ir_001_001.fits",
+                            "pposs2ukstu_ir_001_002.fits",
+                            "3-diff.000001.000002.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.2064,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000044",
+                    "runtimeInSeconds": 5.821,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "3-fit.000001.000003.txt",
+                            "pposs2ukstu_ir_001_001.fits",
+                            "pposs2ukstu_ir_002_001.fits",
+                            "3-diff.000001.000003.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.0687,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000045",
+                    "runtimeInSeconds": 0.659,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "3-fit.000001.000004.txt",
+                            "pposs2ukstu_ir_001_001.fits",
+                            "pposs2ukstu_ir_002_002.fits",
+                            "3-diff.000001.000004.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.7587,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000046",
+                    "runtimeInSeconds": 2.014,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "3-fit.000002.000003.txt",
+                            "pposs2ukstu_ir_001_002.fits",
+                            "pposs2ukstu_ir_002_001.fits",
+                            "3-diff.000002.000003.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.1986,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000047",
+                    "runtimeInSeconds": 4.581,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "3-fit.000002.000004.txt",
+                            "pposs2ukstu_ir_001_002.fits",
+                            "pposs2ukstu_ir_002_002.fits",
+                            "3-diff.000002.000004.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.0873,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mDiffFit_ID0000048",
+                    "runtimeInSeconds": 4.533,
+                    "command": {
+                        "program": "mDiffFit",
+                        "arguments": [
+                            "-d",
+                            "-s",
+                            "3-fit.000003.000004.txt",
+                            "pposs2ukstu_ir_002_001.fits",
+                            "pposs2ukstu_ir_002_002.fits",
+                            "3-diff.000003.000004.fits",
+                            "region-oversized.hdr"
+                        ]
+                    },
+                    "avgCPU": 0.0662,
+                    "priority": 30,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mConcatFit_ID0000049",
+                    "runtimeInSeconds": 0.19,
+                    "command": {
+                        "program": "mConcatFit",
+                        "arguments": [
+                            "3-stat.tbl",
+                            "3-fits.tbl",
+                            "."
+                        ]
+                    },
+                    "avgCPU": 99.4737,
+                    "priority": 40,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBgModel_ID0000050",
+                    "runtimeInSeconds": 0.566,
+                    "command": {
+                        "program": "mBgModel",
+                        "arguments": [
+                            "-i",
+                            "100000",
+                            "3-images.tbl",
+                            "3-fits.tbl",
+                            "3-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 50,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000051",
+                    "runtimeInSeconds": 4.88,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_ir_001_001.fits",
+                            "cposs2ukstu_ir_001_001.fits",
+                            "3-projected.tbl",
+                            "3-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 13.5041,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000052",
+                    "runtimeInSeconds": 4.912,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_ir_001_002.fits",
+                            "cposs2ukstu_ir_001_002.fits",
+                            "3-projected.tbl",
+                            "3-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 13.3958,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000053",
+                    "runtimeInSeconds": 4.928,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_ir_002_001.fits",
+                            "cposs2ukstu_ir_002_001.fits",
+                            "3-projected.tbl",
+                            "3-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 13.3523,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mBackground_ID0000054",
+                    "runtimeInSeconds": 5.425,
+                    "command": {
+                        "program": "mBackground",
+                        "arguments": [
+                            "-t",
+                            "pposs2ukstu_ir_002_002.fits",
+                            "cposs2ukstu_ir_002_002.fits",
+                            "3-projected.tbl",
+                            "3-corrections.tbl"
+                        ]
+                    },
+                    "avgCPU": 12.0184,
+                    "priority": 60,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mImgtbl_ID0000055",
+                    "runtimeInSeconds": 0.165,
+                    "command": {
+                        "program": "mImgtbl",
+                        "arguments": [
+                            ".",
+                            "-t",
+                            "3-corrected.tbl",
+                            "3-updated-corrected.tbl"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 70,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mAdd_ID0000056",
+                    "runtimeInSeconds": 0.523,
+                    "command": {
+                        "program": "mAdd",
+                        "arguments": [
+                            "-e",
+                            "3-updated-corrected.tbl",
+                            "region.hdr",
+                            "3-mosaic.fits"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 80,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mViewer_ID0000057",
+                    "runtimeInSeconds": 1.632,
+                    "command": {
+                        "program": "mViewer",
+                        "arguments": [
+                            "-ct",
+                            "0",
+                            "-gray",
+                            "3-mosaic.fits",
+                            "0s",
+                            "99.999%",
+                            "gaussian",
+                            "-out",
+                            "3-mosaic.jpg"
+                        ]
+                    },
+                    "avgCPU": 100.0,
+                    "priority": 90,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                },
+                {
+                    "id": "mViewer_ID0000058",
+                    "runtimeInSeconds": 4.128,
+                    "command": {
+                        "program": "mViewer",
+                        "arguments": [
+                            "-red",
+                            "3-mosaic.fits",
+                            "-1s",
+                            "99.999%",
+                            "gaussian-log",
+                            "-green",
+                            "2-mosaic.fits",
+                            "-1s",
+                            "99.999%",
+                            "gaussian-log",
+                            "-blue",
+                            "1-mosaic.fits",
+                            "-1s",
+                            "99.999%",
+                            "gaussian-log",
+                            "-out",
+                            "mosaic-color.jpg"
+                        ]
+                    },
+                    "avgCPU": 99.9758,
+                    "priority": 90,
+                    "machines": [
+                        "pegasus-5"
+                    ]
+                }
+            ],
+            "machines": [
+                {
+                    "nodeName": "pegasus-5",
+                    "system": "linux",
+                    "architecture": "x86_64",
+                    "release": "4.15.0-88-generic",
+                    "cpu": {
+                        "vendor": "GenuineIntel",
+                        "coreCount": 48,
+                        "speedInMHz": 1299
+                    },
+                    "memoryInBytes": 131795984000
+                }
+            ],
+            "metrics": {
+                "sumTaskRuntimesInSeconds": 5585.811
+            }
         }
-      ],
-      "machines": [
-        {
-          "nodeName": "pegasus-5",
-          "system": "linux",
-          "architecture": "x86_64",
-          "release": "4.15.0-88-generic",
-          "cpu": {
-            "vendor": "GenuineIntel",
-            "coreCount": 48,
-            "speedInMHz": 1299
-          },
-          "memoryInBytes": 131795984000
-        }
-      ],
-      "metrics": {
-        "sumTaskRuntimesInSeconds": 5585.811
-      }
+    },
+    "runtimeSystem": {
+        "url": "http://pegasus.isi.edu",
+        "version": "4.9.3",
+        "name": "Pegasus"
     }
-  },
-  "runtimeSystem": {
-    "url": "http://pegasus.isi.edu",
-    "version": "4.9.3",
-    "name": "Pegasus"
-  }
 }

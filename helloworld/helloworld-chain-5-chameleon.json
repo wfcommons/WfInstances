@@ -1,264 +1,264 @@
 {
-  "name": "chain-5-5000-0.6-100000000-cascadelake-1-0-1683736566.json",
-  "description": "Instance generated with WfCommons - https://wfcommons.org",
-  "createdAt": "2023-05-10T16:36:06.775626",
-  "schemaVersion": "1.5",
-  "author": {
-    "name": "cc",
-    "email": "support@wfcommons.org"
-  },
-  "workflow": {
-    "specification": {
-      "tasks": [
-        {
-          "name": "cpuhog_chain_00000001",
-          "id": "cpuhog_chain_00000001",
-          "children": [
-            "cpuhog_chain_00000002"
-          ],
-          "inputFiles": [
-            "chain_00000001_input.txt"
-          ],
-          "outputFiles": [
-            "chain_00000001_output.txt"
-          ],
-          "parents": []
-        },
-        {
-          "name": "cpuhog_chain_00000002",
-          "id": "cpuhog_chain_00000002",
-          "children": [
-            "cpuhog_chain_00000003"
-          ],
-          "inputFiles": [
-            "chain_00000001_output.txt"
-          ],
-          "outputFiles": [
-            "chain_00000002_output.txt"
-          ],
-          "parents": [
-            "cpuhog_chain_00000001"
-          ]
-        },
-        {
-          "name": "cpuhog_chain_00000003",
-          "id": "cpuhog_chain_00000003",
-          "children": [
-            "cpuhog_chain_00000004"
-          ],
-          "inputFiles": [
-            "chain_00000002_output.txt"
-          ],
-          "outputFiles": [
-            "chain_00000003_output.txt"
-          ],
-          "parents": [
-            "cpuhog_chain_00000002"
-          ]
-        },
-        {
-          "name": "cpuhog_chain_00000004",
-          "id": "cpuhog_chain_00000004",
-          "children": [
-            "cpuhog_chain_00000005"
-          ],
-          "inputFiles": [
-            "chain_00000003_output.txt"
-          ],
-          "outputFiles": [
-            "chain_00000004_output.txt"
-          ],
-          "parents": [
-            "cpuhog_chain_00000003"
-          ]
-        },
-        {
-          "name": "cpuhog_chain_00000005",
-          "id": "cpuhog_chain_00000005",
-          "children": [],
-          "inputFiles": [
-            "chain_00000004_output.txt"
-          ],
-          "outputFiles": [
-            "chain_00000005_output.txt"
-          ],
-          "parents": [
-            "cpuhog_chain_00000004"
-          ]
-        }
-      ],
-      "files": [
-        {
-          "id": "chain_00000001_input.txt",
-          "sizeInBytes": 16666667
-        },
-        {
-          "id": "chain_00000001_output.txt",
-          "sizeInBytes": 16666667
-        },
-        {
-          "id": "chain_00000002_output.txt",
-          "sizeInBytes": 16666667
-        },
-        {
-          "id": "chain_00000003_output.txt",
-          "sizeInBytes": 16666667
-        },
-        {
-          "id": "chain_00000004_output.txt",
-          "sizeInBytes": 16666667
-        },
-        {
-          "id": "chain_00000005_output.txt",
-          "sizeInBytes": 16666667
-        }
-      ],
-      "metrics": {
-        "numberOfTasks": 5,
-        "numberOfFiles": 6,
-        "sumOfFileSizesInBytes": 100000002,
-        "numberOfLevels": 5,
-        "minimumWidth": 1,
-        "maximumWidth": 1
-      }
+    "name": "chain-5-5000-0.6-100000000-cascadelake-1-0-1683736566.json",
+    "description": "Instance generated with WfCommons - https://wfcommons.org",
+    "createdAt": "2023-05-10T16:36:06.775626",
+    "schemaVersion": "1.6",
+    "author": {
+        "name": "cc",
+        "email": "support@wfcommons.org"
     },
-    "execution": {
-      "makespanInSeconds": 661.0,
-      "executedAt": "05-10-23T16:23:32Z",
-      "tasks": [
-        {
-          "id": "cpuhog_chain_00000001",
-          "runtimeInSeconds": 100.376,
-          "command": {
-            "program": "cpuhog",
-            "arguments": [
-              "chain_00000001",
-              "--percent-cpu 0.6",
-              "--cpu-work 5000",
-              "--path-lock /var/lib/condor/execute/cores.txt.lock",
-              "--path-cores /var/lib/condor/execute/cores.txt",
-              "--out \"{\\\"chain_00000001_output.txt\\\":16666667}\"",
-              "chain_00000001_input.txt"
-            ]
-          },
-          "avgCPU": 59.9884,
-          "memoryInBytes": 87824,
-          "priority": 20,
-          "machines": [
-            "ubuntu"
-          ]
+    "workflow": {
+        "specification": {
+            "tasks": [
+                {
+                    "name": "cpuhog_chain_00000001",
+                    "id": "cpuhog_chain_00000001",
+                    "children": [
+                        "cpuhog_chain_00000002"
+                    ],
+                    "inputFiles": [
+                        "chain_00000001_input.txt"
+                    ],
+                    "outputFiles": [
+                        "chain_00000001_output.txt"
+                    ],
+                    "parents": []
+                },
+                {
+                    "name": "cpuhog_chain_00000002",
+                    "id": "cpuhog_chain_00000002",
+                    "children": [
+                        "cpuhog_chain_00000003"
+                    ],
+                    "inputFiles": [
+                        "chain_00000001_output.txt"
+                    ],
+                    "outputFiles": [
+                        "chain_00000002_output.txt"
+                    ],
+                    "parents": [
+                        "cpuhog_chain_00000001"
+                    ]
+                },
+                {
+                    "name": "cpuhog_chain_00000003",
+                    "id": "cpuhog_chain_00000003",
+                    "children": [
+                        "cpuhog_chain_00000004"
+                    ],
+                    "inputFiles": [
+                        "chain_00000002_output.txt"
+                    ],
+                    "outputFiles": [
+                        "chain_00000003_output.txt"
+                    ],
+                    "parents": [
+                        "cpuhog_chain_00000002"
+                    ]
+                },
+                {
+                    "name": "cpuhog_chain_00000004",
+                    "id": "cpuhog_chain_00000004",
+                    "children": [
+                        "cpuhog_chain_00000005"
+                    ],
+                    "inputFiles": [
+                        "chain_00000003_output.txt"
+                    ],
+                    "outputFiles": [
+                        "chain_00000004_output.txt"
+                    ],
+                    "parents": [
+                        "cpuhog_chain_00000003"
+                    ]
+                },
+                {
+                    "name": "cpuhog_chain_00000005",
+                    "id": "cpuhog_chain_00000005",
+                    "children": [],
+                    "inputFiles": [
+                        "chain_00000004_output.txt"
+                    ],
+                    "outputFiles": [
+                        "chain_00000005_output.txt"
+                    ],
+                    "parents": [
+                        "cpuhog_chain_00000004"
+                    ]
+                }
+            ],
+            "files": [
+                {
+                    "id": "chain_00000001_input.txt",
+                    "sizeInBytes": 16666667
+                },
+                {
+                    "id": "chain_00000001_output.txt",
+                    "sizeInBytes": 16666667
+                },
+                {
+                    "id": "chain_00000002_output.txt",
+                    "sizeInBytes": 16666667
+                },
+                {
+                    "id": "chain_00000003_output.txt",
+                    "sizeInBytes": 16666667
+                },
+                {
+                    "id": "chain_00000004_output.txt",
+                    "sizeInBytes": 16666667
+                },
+                {
+                    "id": "chain_00000005_output.txt",
+                    "sizeInBytes": 16666667
+                }
+            ],
+            "metrics": {
+                "numberOfTasks": 5,
+                "numberOfFiles": 6,
+                "sumOfFileSizesInBytes": 100000002,
+                "numberOfLevels": 5,
+                "minimumWidth": 1,
+                "maximumWidth": 1
+            }
         },
-        {
-          "id": "cpuhog_chain_00000002",
-          "runtimeInSeconds": 100.12,
-          "command": {
-            "program": "cpuhog",
-            "arguments": [
-              "chain_00000002",
-              "--percent-cpu 0.6",
-              "--cpu-work 5000",
-              "--path-lock /var/lib/condor/execute/cores.txt.lock",
-              "--path-cores /var/lib/condor/execute/cores.txt",
-              "--out \"{\\\"chain_00000002_output.txt\\\":16666667}\"",
-              "chain_00000001_output.txt"
-            ]
-          },
-          "avgCPU": 59.9441,
-          "memoryInBytes": 88688,
-          "priority": 30,
-          "machines": [
-            "ubuntu"
-          ]
-        },
-        {
-          "id": "cpuhog_chain_00000003",
-          "runtimeInSeconds": 99.396,
-          "command": {
-            "program": "cpuhog",
-            "arguments": [
-              "chain_00000003",
-              "--percent-cpu 0.6",
-              "--cpu-work 5000",
-              "--path-lock /var/lib/condor/execute/cores.txt.lock",
-              "--path-cores /var/lib/condor/execute/cores.txt",
-              "--out \"{\\\"chain_00000003_output.txt\\\":16666667}\"",
-              "chain_00000002_output.txt"
-            ]
-          },
-          "avgCPU": 59.9602,
-          "memoryInBytes": 86508,
-          "priority": 40,
-          "machines": [
-            "ubuntu"
-          ]
-        },
-        {
-          "id": "cpuhog_chain_00000004",
-          "runtimeInSeconds": 100.886,
-          "command": {
-            "program": "cpuhog",
-            "arguments": [
-              "chain_00000004",
-              "--percent-cpu 0.6",
-              "--cpu-work 5000",
-              "--path-lock /var/lib/condor/execute/cores.txt.lock",
-              "--path-cores /var/lib/condor/execute/cores.txt",
-              "--out \"{\\\"chain_00000004_output.txt\\\":16666667}\"",
-              "chain_00000003_output.txt"
-            ]
-          },
-          "avgCPU": 60.0024,
-          "memoryInBytes": 88204,
-          "priority": 50,
-          "machines": [
-            "ubuntu"
-          ]
-        },
-        {
-          "id": "cpuhog_chain_00000005",
-          "runtimeInSeconds": 100.462,
-          "command": {
-            "program": "cpuhog",
-            "arguments": [
-              "chain_00000005",
-              "--percent-cpu 0.6",
-              "--cpu-work 5000",
-              "--path-lock /var/lib/condor/execute/cores.txt.lock",
-              "--path-cores /var/lib/condor/execute/cores.txt",
-              "--out \"{\\\"chain_00000005_output.txt\\\":16666667}\"",
-              "chain_00000004_output.txt"
-            ]
-          },
-          "avgCPU": 59.9968,
-          "memoryInBytes": 87316,
-          "priority": 60,
-          "machines": [
-            "ubuntu"
-          ]
+        "execution": {
+            "makespanInSeconds": 661.0,
+            "executedAt": "05-10-23T16:23:32Z",
+            "tasks": [
+                {
+                    "id": "cpuhog_chain_00000001",
+                    "runtimeInSeconds": 100.376,
+                    "command": {
+                        "program": "cpuhog",
+                        "arguments": [
+                            "chain_00000001",
+                            "--percent-cpu 0.6",
+                            "--cpu-work 5000",
+                            "--path-lock /var/lib/condor/execute/cores.txt.lock",
+                            "--path-cores /var/lib/condor/execute/cores.txt",
+                            "--out \"{\\\"chain_00000001_output.txt\\\":16666667}\"",
+                            "chain_00000001_input.txt"
+                        ]
+                    },
+                    "avgCPU": 59.9884,
+                    "memoryInBytes": 87824,
+                    "priority": 20,
+                    "machines": [
+                        "ubuntu"
+                    ]
+                },
+                {
+                    "id": "cpuhog_chain_00000002",
+                    "runtimeInSeconds": 100.12,
+                    "command": {
+                        "program": "cpuhog",
+                        "arguments": [
+                            "chain_00000002",
+                            "--percent-cpu 0.6",
+                            "--cpu-work 5000",
+                            "--path-lock /var/lib/condor/execute/cores.txt.lock",
+                            "--path-cores /var/lib/condor/execute/cores.txt",
+                            "--out \"{\\\"chain_00000002_output.txt\\\":16666667}\"",
+                            "chain_00000001_output.txt"
+                        ]
+                    },
+                    "avgCPU": 59.9441,
+                    "memoryInBytes": 88688,
+                    "priority": 30,
+                    "machines": [
+                        "ubuntu"
+                    ]
+                },
+                {
+                    "id": "cpuhog_chain_00000003",
+                    "runtimeInSeconds": 99.396,
+                    "command": {
+                        "program": "cpuhog",
+                        "arguments": [
+                            "chain_00000003",
+                            "--percent-cpu 0.6",
+                            "--cpu-work 5000",
+                            "--path-lock /var/lib/condor/execute/cores.txt.lock",
+                            "--path-cores /var/lib/condor/execute/cores.txt",
+                            "--out \"{\\\"chain_00000003_output.txt\\\":16666667}\"",
+                            "chain_00000002_output.txt"
+                        ]
+                    },
+                    "avgCPU": 59.9602,
+                    "memoryInBytes": 86508,
+                    "priority": 40,
+                    "machines": [
+                        "ubuntu"
+                    ]
+                },
+                {
+                    "id": "cpuhog_chain_00000004",
+                    "runtimeInSeconds": 100.886,
+                    "command": {
+                        "program": "cpuhog",
+                        "arguments": [
+                            "chain_00000004",
+                            "--percent-cpu 0.6",
+                            "--cpu-work 5000",
+                            "--path-lock /var/lib/condor/execute/cores.txt.lock",
+                            "--path-cores /var/lib/condor/execute/cores.txt",
+                            "--out \"{\\\"chain_00000004_output.txt\\\":16666667}\"",
+                            "chain_00000003_output.txt"
+                        ]
+                    },
+                    "avgCPU": 60.0024,
+                    "memoryInBytes": 88204,
+                    "priority": 50,
+                    "machines": [
+                        "ubuntu"
+                    ]
+                },
+                {
+                    "id": "cpuhog_chain_00000005",
+                    "runtimeInSeconds": 100.462,
+                    "command": {
+                        "program": "cpuhog",
+                        "arguments": [
+                            "chain_00000005",
+                            "--percent-cpu 0.6",
+                            "--cpu-work 5000",
+                            "--path-lock /var/lib/condor/execute/cores.txt.lock",
+                            "--path-cores /var/lib/condor/execute/cores.txt",
+                            "--out \"{\\\"chain_00000005_output.txt\\\":16666667}\"",
+                            "chain_00000004_output.txt"
+                        ]
+                    },
+                    "avgCPU": 59.9968,
+                    "memoryInBytes": 87316,
+                    "priority": 60,
+                    "machines": [
+                        "ubuntu"
+                    ]
+                }
+            ],
+            "machines": [
+                {
+                    "nodeName": "ubuntu",
+                    "system": "linux",
+                    "architecture": "x86_64",
+                    "memoryInBytes": 196483612,
+                    "release": "5.4.0-139-generic",
+                    "cpu": {
+                        "vendor": "GenuineIntel",
+                        "coreCount": 64,
+                        "speedInMHz": 1200
+                    }
+                }
+            ],
+            "metrics": {
+                "sumTaskRuntimesInSeconds": 501.24
+            }
         }
-      ],
-      "machines": [
-        {
-          "nodeName": "ubuntu",
-          "system": "linux",
-          "architecture": "x86_64",
-          "memoryInBytes": 196483612,
-          "release": "5.4.0-139-generic",
-          "cpu": {
-            "vendor": "GenuineIntel",
-            "coreCount": 64,
-            "speedInMHz": 1200
-          }
-        }
-      ],
-      "metrics": {
-        "sumTaskRuntimesInSeconds": 501.24
-      }
+    },
+    "runtimeSystem": {
+        "name": "Pegasus",
+        "version": "5.0",
+        "url": "https://pegasus.isi.edu"
     }
-  },
-  "runtimeSystem": {
-    "name": "Pegasus",
-    "version": "5.0",
-    "url": "https://pegasus.isi.edu"
-  }
 }
