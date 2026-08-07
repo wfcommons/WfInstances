@@ -22,12 +22,12 @@ input for generating realistic synthetic workflows.
 
 | Runtime system | Directory | Applications |
 | --- | --- | --- |
-| [Pegasus](http://pegasus.isi.edu) | [`pegasus/`](./pegasus) | 1000Genome, Cycles, Epigenomics, Montage, Seismology, SoyKB, SRA Search |
-| [Nextflow](https://nextflow.io) | [`nextflow/`](./nextflow) | [nf-core](https://nf-co.re) pipelines (incl. Sarek and RNA-Seq campaigns) |
-| [Snakemake](https://snakemake.readthedocs.io) | [`snakemake/`](./snakemake) | RASflow, rna-seq-star-deseq2, Varlociraptor |
 | [Makeflow](https://ccl.cse.nd.edu/software/makeflow/) | [`makeflow/`](./makeflow) | BLAST, BWA |
-| [Pegasus](http://pegasus.isi.edu) (synthetic) | [`helloworld/`](./helloworld) | chain and fork-join test patterns |
+| [Nextflow](https://nextflow.io) | [`nextflow/`](./nextflow) | [nf-core](https://nf-co.re) pipelines (incl. Sarek and RNA-Seq campaigns) |
+| [Pegasus](http://pegasus.isi.edu) | [`pegasus/`](./pegasus) | 1000Genome, Cycles, Epigenomics, Montage, Seismology, SoyKB, SRA Search |
+| [Snakemake](https://snakemake.readthedocs.io) | [`snakemake/`](./snakemake) | RASflow, rna-seq-star-deseq2, Varlociraptor |
 | [StreamFlow](https://streamflow.di.unito.it/) | [`streamflow/`](./streamflow) | 1000Genome (CWL) |
+| synthetic | [`helloworld/`](./helloworld) | chain and fork-join test patterns |
 
 Every runtime-system directory has its own README describing the applications, the
 file naming convention, and how the instances were obtained. The
