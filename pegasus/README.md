@@ -5,32 +5,44 @@
 # Pegasus Workflow Execution Instances
 
 This directory contains workflow execution instances generated from
-[Pegasus](http://pegasus.isi.edu) workflow executions. The instances
-hosted in this directory use the
-[WfCommons JSON format](https://github.com/wfcommons/workflow-schema)
-for describing workflow executions.
+[Pegasus](http://pegasus.isi.edu) workflow executions. The instances hosted in this
+directory use [WfFormat](https://github.com/wfcommons/WfFormat) (version 1.6) for
+describing workflow executions.
 
-#### Repository Structure
+### Directory Structure
 
-Workflow execution instances are organized into sub-directories within this
-directory. Each sub-directory represents a _workflow application_, which
-itself contains sub-directories for workflow executions in different
-_computing platforms_.
+Each sub-directory represents a _workflow application_ and contains:
 
-#### Workflow Simulator
+- a `README.md` describing the workflow, its tasks, its structure, and the naming
+  convention of the instance files;
+- a `docs/images/` directory with a figure of the workflow structure;
+- one JSON file per execution instance, whose name encodes the computing platform
+  and the execution parameters that determine the size and shape of the workflow.
+
+### Provenance
+
+Instances were obtained by parsing Pegasus execution logs with the Pegasus log
+parser of the [WfCommons Python package](https://github.com/wfcommons/wfcommons).
+All executions in this directory were performed on the
+[Chameleon](https://www.chameleoncloud.org) cloud testbed.
+
+### Workflow Simulator
 
 The execution instances provided in this directory are compatible with any
 [simulation framework](https://wfcommons.org/simulation) that implements
-the [WfCommons JSON format](https://github.com/wfcommons/workflow-schema).
+[WfFormat](https://github.com/wfcommons/WfFormat).
 
 ## Summary of Workflow Execution Instances
 
-| Application | Science Domain | Category | Computing Platforms | # Execution Instances |
-| --- | --- | --- | --- | --- |
-| 1000Genome | Bioinformatics | Data-intensive | 1 | 22 |
-| Cycles | Agroecosystem | Compute-intensive | 1 | 24 |
-| Epigenomics | Bioinformatics | Data-intensive | 1 | 26 |
-| Montage | Astronomy | Compute-intensive | 1 | 17 |
-| Seismic Cross Correlation | Seismology | Data-intensive | 1 | 11 |
-| SoyKB | Bioinformatics | Data-intensive | 1 | 10 |
-| SRA Search | Bioinformatics | Data-intensive | 1 | 25 |
+| Application | Science Domain | Category | Platform |
+| --- | --- | --- | --- |
+| [1000Genome](./1000genome) | Bioinformatics | Data-intensive | Chameleon |
+| [Cycles](./cycles) | Agroecosystem | Compute-intensive | Chameleon |
+| [Epigenomics](./epigenomics) | Bioinformatics | Data-intensive | Chameleon |
+| [Montage](./montage) | Astronomy | Compute-intensive | Chameleon |
+| [Seismic Cross Correlation](./seismology) | Seismology | Data-intensive | Chameleon |
+| [SoyKB](./soykb) | Bioinformatics | Data-intensive | Chameleon |
+| [SRA Search](./srasearch) | Bioinformatics | Data-intensive | Chameleon |
+
+Purely synthetic Pegasus executions used for testing are kept separately, in the
+[`helloworld`](../helloworld) directory.

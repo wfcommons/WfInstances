@@ -1,19 +1,19 @@
-<img src="https://wfcommons.org/images/wfcommons-horizontal.png" width="350" />
+<a href="https://wfcommons.org" target="_blank"><img src="https://wfcommons.org/images/wfcommons-horizontal.png" width="350" /></a>
+
 <img src="https://pegasus.isi.edu/documentation/_static/pegasus_circular_white_logo.png" width="100"/>
 
-# Execution Instances for Soybean Workflow (SoyKB)
+# Execution Instances for the Soybean Workflow (SoyKB)
 
 ## Workflow Description
 
 The Soybean workflow (SoyKB) is a genomics pipeline that re-sequences soybean
-germplasm lines selected for desirable traits such as oil, protein, soybean
-cyst nematode resistance, stress resistance, and root system architecture.
-The workflow implemented as a
-[Pegasus workflow](https://github.com/pegasus-isi/Soybean-Workflow) provides
-a Single Nucleotide Polymorphism (SNP) and injection/deletion (indel)
+germplasm lines selected for desirable traits such as oil, protein, soybean cyst
+nematode resistance, stress resistance, and root system architecture. The workflow
+implemented as a [Pegasus workflow](https://github.com/pegasus-isi/Soybean-Workflow)
+provides a Single Nucleotide Polymorphism (SNP) and insertion/deletion (indel)
 identification and analysis pipeline using the
-[GATK](https://www.broadinstitute.org/gatk) haplotype caller and a soybean
-reference genome. The workflow is composed of fourteen different tasks:
+[GATK](https://www.broadinstitute.org/gatk) haplotype caller and a soybean reference
+genome. The workflow is composed of fourteen different tasks:
 
   1. `alignment_to_reference`
   2. `sort_sam`
@@ -24,7 +24,7 @@ reference genome. The workflow is composed of fourteen different tasks:
   7. `haplotype_caller`
   8. `genotype_gvcfs`
   9. `combine_variants`
-  10. `merge_gvcfs`
+  10. `merge_gcvf`
   11. `select_variants_indel`
   12. `select_variants_snp`
   13. `filtering_indel`
@@ -36,8 +36,8 @@ The figure below shows an overview of the SoyKB workflow structure:
 
 ### Research Publication
 
-Details of the SoyKB workflow description, computational jobs, and
-performance metrics can be found in the following research publication:
+Details of the SoyKB workflow description, computational jobs, and performance
+metrics can be found in the following research publication:
 
 - Y. Liu, S. M. Khan, J. Wang, M. Rynge, Y. Zhang, S. Zeng, S. Chen, J. V.
   Maldonado dos Santos, B. Valliyodan, P. P. Calyam, N. Merchant, H. T.
@@ -47,41 +47,55 @@ performance metrics can be found in the following research publication:
 
 ## Execution Instances
 
-Execution instances are formatted according to the
-[WfCommons JSON format](https://github.com/wfcommons/workflow-schema)
-for describing workflow executions. Execution instances from different
-computing platforms are organized into sub-directories.
+Execution instances are formatted according to
+[WfFormat](https://github.com/wfcommons/WfFormat) (version 1.6) for describing
+workflow executions.
 
 Instance files are named using the following convention:
-`soykb-<COMPUTE_PLATFORM>-<NUM_FASTQ>-<NUM_CH>-<RUN_ID>.json`, where:
+`soykb-<COMPUTE_PLATFORM>-<NUM_FASTQ>fastq-<NUM_CH>ch-<RUN_ID>.json`, where:
 
-- `<COMPUTE_PLATFORM>`: The compute platform where the actual Pegasus workflow
-  was executed (e.g., `chameleon`).
-- `<NUM_FASTQ>`:
-- `<NUM_CH>`:
+- `<COMPUTE_PLATFORM>`: The compute platform where the actual Pegasus workflow was
+  executed (`chameleon`).
+- `<NUM_FASTQ>`: The number of input FASTQ files processed by the workflow (10 to
+  50, in steps of 10). Each `alignment_to_reference` task consumes two of them, so
+  this parameter defines the number of parallel pipelines.
+- `<NUM_CH>`: The number of chromosomes analyzed (10 or 20). This parameter defines
+  the number of `genotype_gvcfs` tasks and multiplies the number of
+  `haplotype_caller` tasks.
 - `<RUN_ID>`: The workflow execution identification.
+
+The table below summarizes the parameter combinations available in this directory.
+SoyKB has the longest makespans in this repository (over 15 hours for the largest
+configuration):
+
+| `<NUM_FASTQ>` | Tasks (`10ch`) | Makespan (`10ch`) | Tasks (`20ch`) | Makespan (`20ch`) |
+| ---: | ---: | ---: | ---: | ---: |
+| 10 | 96 | 9,323 s | 156 | 13,459 s |
+| 20 | 176 | 14,086 s | 286 | 24,583 s |
+| 30 | 256 | 15,545 s | 416 | 35,300 s |
+| 40 | 336 | 21,506 s | 546 | 44,358 s |
+| 50 | 416 | 25,912 s | 676 | 54,029 s |
 
 ### Workflow Structure
 
-The SoyKB workflow structure depends on the _number of FASTQ files_
-(`<NUM_FASTQ>`) and the _number of chromossomes_ (`<NUM_CH>`). In this
-implementation, the workflow has a subset of tasks that form **pipelines**,
-which are defined as follows:
+The SoyKB workflow structure depends on the _number of FASTQ files_ (`<NUM_FASTQ>`)
+and the _number of chromosomes_ (`<NUM_CH>`). In this implementation, the workflow
+has a subset of tasks that form **pipelines**, which are defined as follows:
 
 - The number of pipelines is defined as half of the number of FASTQ files
-  (i.e., `<NUM_FASTQ>/2`), since each `alignment_to_reference` task processes
-  two FASTQ files.
-- Each pipeline has only one instance of `alignment_to_reference`, `sort_sam`,
+  (i.e., `<NUM_FASTQ>/2`), since each `alignment_to_reference` task processes two
+  FASTQ files.
+- Each pipeline has only one instance of the `alignment_to_reference`, `sort_sam`,
   `dedup`, `add_replace`, `realign_target_creator`, and `indel_realign` tasks.
-- The number of `haplotype_caller` tasks is proportional to the number of
-  chromossomes (`<NUM_CH>`).
+- Each pipeline is followed by one `haplotype_caller` task per chromosome, so the
+  total number of `haplotype_caller` tasks is `<NUM_FASTQ>/2 × <NUM_CH>`.
 
 For the **entire workflow**:
 
-- The number of `genotype_gvcfs` tasks is proportional to the number of
-  chromossomes (`<NUM_CH>`). The number of `haplotype_caller` parent tasks
-  for each `genotype_gvcfs` is equal to the number of pipelines, however
-  each task analyzes data from a single chromossome.
-- There is only one instance for each of the following tasks:
-  `combine_variants`, `merge_gvcfs`, `select_variants_indel`,
-  `select_variants_snp`, `filtering_indel`, and `filtering_snp`.
+- The number of `genotype_gvcfs` tasks is equal to the number of chromosomes
+  (`<NUM_CH>`). The number of `haplotype_caller` parent tasks for each
+  `genotype_gvcfs` is equal to the number of pipelines, however each task analyzes
+  data from a single chromosome.
+- There is only one instance of each of the following tasks: `combine_variants`,
+  `merge_gcvf`, `select_variants_indel`, `select_variants_snp`, `filtering_indel`,
+  and `filtering_snp`.
