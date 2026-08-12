@@ -1,20 +1,29 @@
 <a href="https://wfcommons.org" target="_blank"><img src="https://wfcommons.org/images/wfcommons-horizontal.png" width="350"/></a>
 
-
 # Sample "hello world!" Workflow Execution Instances
 
-This directory contains made up workflow execution instances for testing
-purposes, described using the [WfCommons JSON format](https://github.com/wfcommons/workflow-schema). These have been constructed based on real-world executions of purely synthetic benchmark workflows on using [Pegasus](http://pegasus.isi.edu).
+This directory contains small, made-up workflow execution instances for **testing
+purposes**, described using [WfFormat](https://github.com/wfcommons/WfFormat)
+(version 1.6). They have been constructed from real executions of purely synthetic
+benchmark workflows run with [Pegasus](http://pegasus.isi.edu) 5.0, and are useful
+as minimal fixtures for tools that consume WfFormat.
+
+These instances are *not* representative of any scientific application — see the
+other directories of this repository for production workflow executions.
 
 #### Workflow Instances
 
-There are two workflow instances: 
-  - `chain-5-chameleon.json`: a linear workflow with 5 tasks.
-  - `forkjoin-10-chameleon.json`: a fork-join workflow with 18 tasks.
+| Instance | Structure | Tasks | Files | Makespan |
+| --- | --- | ---: | ---: | ---: |
+| `helloworld-chain-5-chameleon.json` | linear chain | 5 | 6 | 661 s |
+| `helloworld-forkjoin-10-chameleon.json` | fork-join | 10 | 11 | 437 s |
+
+All tasks are synthetic CPU-bound kernels (`cpuhog_chain_*` and
+`cpuhog_forkjoin_*`), so the recorded runtimes reflect pure compute with negligible
+I/O.
 
 #### Workflow Simulator
 
 The execution instances provided in this directory are compatible with any
 [simulation framework](https://wfcommons.org/simulation) that implements
-the [WfCommons JSON format](https://github.com/wfcommons/workflow-schema).
-
+[WfFormat](https://github.com/wfcommons/WfFormat).
