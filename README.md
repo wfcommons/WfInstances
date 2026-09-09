@@ -42,10 +42,10 @@ repository.
 
 <a href="https://wfinstances.ics.hawaii.edu" target="_blank"><img src="./wfinstances-browser-screenshot.jpeg" width=600 style="border-radius: 0.5em" /></a>
 
-![Downloads](https://img.shields.io/badge/downloads-1175-blue.svg)
-![Visualizations](https://img.shields.io/badge/visualizations-1516-orange.svg)
-![Simulations](https://img.shields.io/badge/simulations-444-success.svg)
-![Users](https://img.shields.io/badge/users-306-lightgrey.svg)
+![Downloads](https://img.shields.io/badge/downloads-1178-blue.svg)
+![Visualizations](https://img.shields.io/badge/visualizations-1526-orange.svg)
+![Simulations](https://img.shields.io/badge/simulations-446-success.svg)
+![Users](https://img.shields.io/badge/users-307-lightgrey.svg)
 
 ## Repository organization
 
