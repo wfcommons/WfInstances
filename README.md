@@ -42,7 +42,7 @@ repository.
 
 <a href="https://wfinstances.ics.hawaii.edu" target="_blank"><img src="./wfinstances-browser-screenshot.jpeg" width=600 style="border-radius: 0.5em" /></a>
 
-![Downloads](https://img.shields.io/badge/downloads-6835-blue.svg)
+![Downloads](https://img.shields.io/badge/downloads-6838-blue.svg)
 ![Visualizations](https://img.shields.io/badge/visualizations-1606-orange.svg)
 ![Simulations](https://img.shields.io/badge/simulations-491-success.svg)
 ![Users](https://img.shields.io/badge/users-335-lightgrey.svg)
