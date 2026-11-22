@@ -44,8 +44,8 @@ repository.
 
 ![Downloads](https://img.shields.io/badge/downloads-7589-blue.svg)
 ![Visualizations](https://img.shields.io/badge/visualizations-1660-orange.svg)
-![Simulations](https://img.shields.io/badge/simulations-491-success.svg)
-![Users](https://img.shields.io/badge/users-343-lightgrey.svg)
+![Simulations](https://img.shields.io/badge/simulations-492-success.svg)
+![Users](https://img.shields.io/badge/users-344-lightgrey.svg)
 
 ## Repository organization
 
